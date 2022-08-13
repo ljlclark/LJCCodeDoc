@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>RequestDataKeys</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCDBMessage">Assembly List</a>
+    / <a href="../LJCDBMessage.html">LJCDBMessage</a>
+    / <a href="../DbCommon.html">DbCommon</a>
+    / RequestDataKeys
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBMessage</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method RequestDataKeys</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>keyColumns - The Key record object.</div>
+  <div class='Text'>baseDefinition - The Base DataDefinition columns.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>
+      The <span class="userType">DbColumns</span>
+      object.
+    </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public static DbColumns RequestDataKeys(DbColumns keyColumns, DbColumns baseDefinition)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Get Request Key columns from the baseDefinition using the keyColumns.
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        Generally used in the Update() manager method to define the update key
+        columns and values.
+      </div>
+  <br />
+  <div class='Text'>
+        Creates a DbColumns collection of data definitions from the
+        baseDefinition parameter whose PropertyName values match the names in
+        the keyColumns parameter.
+      </div>
+  <br />
+  <div class='Text'>
+        The DbColumn definitions include the Key Column ColumnName and Value.
+      </div>
+  <br />
+  <div class='Text'>
+        A Key Column is not created if it is an AutoIncrement column, the
+        value equals "0" or it is an invalid DateTime.
+      </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

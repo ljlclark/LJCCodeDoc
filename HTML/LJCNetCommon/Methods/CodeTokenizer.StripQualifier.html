@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>StripQualifier</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+    / <a href="../CodeTokenizer.html">CodeTokenizer</a>
+    / StripQualifier
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method StripQualifier</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>text - The text value.</div>
+  <div class='Text'>prefixCount - The recursive prefix count.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The strip text value.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public String StripQualifier(String text, Int32& prefixCount)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Strips the leading qualifiers and from next qualifier to end of string.
+      (E)
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
+
+<span class='commonType'>var</span> tokenizer = <span class='keyWord'>new</span> <span class='userType'>CodeTokenizer</span>();
+<span class='commonType'>string</span> text = " <span class='modifier'>private</span> <span class='libType'>List</span>&lt;<span class='commonType'>string</span>&gt; list;"
+tokenizer.SetTokens(text);
+<span class='commonType'>short</span> tokenIndex = 1;
+<span class='commonType'>string</span> token = tokenizer.GetToken(tokenIndex);
+
+<span class='commonType'>int</span> prefixCount = 0;
+<span class='commonType'>string</span> stripToken = tokenizer.StripQualifier(token, <span class='keyWord'>ref</span> prefixCount);
+<span class='comment'>// stripToken = "List".</span></pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Base64BytesToTextBytes</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+    / <a href="../NetCommon.html">NetCommon</a>
+    / Base64BytesToTextBytes
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method Base64BytesToTextBytes</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>bytes - The base64 byte array.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The Text byte array.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public static Byte[] Base64BytesToTextBytes(Byte[] bytes)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Decodes a Base64 byte array to a Text byte array. (E)
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
+        
+<span class='comment'>// Decodes a Base64 byte array to a Text byte array.</span>
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> Base64BytesToTextBytes()
+{
+  <span class='comment'>// Setup</span>
+  <span class='commonType'>byte</span>[] base64Bytes = <span class='userType'>NetCommon</span>.TextToBase64Bytes("Text");
+
+  <span class='comment'>// Decodes a Base64 byte array to a Text byte array.</span>
+  <span class='commonType'>byte</span>[] textBytes = <span class='userType'>NetCommon</span>.Base64BytesToTextBytes(base64Bytes);
+
+  <span class='comment'>// Check the text.</span>
+  <span class='commonType'>string</span> text = <span class='userType'>NetCommon</span>.BytesToText(textBytes);
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

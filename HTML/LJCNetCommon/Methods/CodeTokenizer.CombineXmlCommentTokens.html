@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CombineXmlCommentTokens</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+    / <a href="../CodeTokenizer.html">CodeTokenizer</a>
+    / CombineXmlCommentTokens
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method CombineXmlCommentTokens</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>tokenIndex - The token index.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public Void CombineXmlCommentTokens(Int16 tokenIndex)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Combines the tokens for an XMLComment. (E)
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
+        
+<span class='commonType'>var</span> tokenizer = <span class='keyWord'>new</span> <span class='userType'>CodeTokenizer</span>();
+<span class='commonType'>string</span> text = " /// &lt;summary&gt;This <span class='keyWord'>is</span> an XML comment.&lt;/summary&gt;";
+tokenizer.SetTokens(text);
+<span class='commonType'>short</span> tokenIndex = 0;
+<span class='commonType'>string</span> token = tokenizer.GetToken(tokenIndex);
+<span class='keyWord'>if</span> (tokenizer.IsCodeXMLComment(token))
+{
+  <span class='comment'>// All text is processed as one token.</span>
+  tokenizer.CombineXmlCommentTokens(tokenIndex);
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CreateFolder</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+    / <a href="../NetFile.html">NetFile</a>
+    / CreateFolder
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method CreateFolder</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>path - The File specification.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public static Void CreateFolder(String path)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Creates a Folder Path if it does not already exist. (E)
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
+
+<span class='comment'>// Creates a Folder Path if it does not already exist.</span>
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> CreateFolder()
+{
+  <span class='commonType'>string</span> fileSpec = @"SubFolder\File.txt";
+
+  <span class='comment'>// Creates folder "SubFolder" from the current folder.</span>
+  <span class='userType'>NetFile</span>.CreateFolder(fileSpec);
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Add</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
+    / <a href="../LJCDBClientLib.html">LJCDBClientLib</a>
+    / <a href="../DataManager.html">DataManager</a>
+    / Add
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBClientLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method Add</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>dataObject - The record object.</div>
+  <div class='Text'>propertyNames - The included column property names.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The result object.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public DbResult Add(Object dataObject, List&lt;String&gt; propertyNames = null)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Adds a record to the database.
+      (RE)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'><b>Parameters</b></div>
+  <br />
+  <div class='Text'>
+        propertyNames<br \>
+        This parameter defines the primary table column values that are to be
+        added. If it is null, then all the primary table column values are
+        added.<br \>
+        It must not include Calculated or Join columns or it will cause an error.
+      </div>
+  <br />
+  <div class='Text'>
+        Creates an "Insert"
+        <span class="userType">DbRequest</span>
+        object, which is available in the Request property. The request object is
+        passed to the
+        <span class="commonType">ExecuteRequest()</span>
+        method.
+      </div>
+  <br />
+  <div class='Text'>
+        The Key Columns are assigned from the LookupColumnNames property.
+      </div>
+  <br />
+  <div class='Text'>
+        The Key Columns are those columns whose value will be used to find the
+        added record. This is to return the DB Assigned column values to the
+        calling program.
+      </div>
+  <br />
+  <div class='Text'>
+        The Key Columns must include the DB Assigned columns for the assigned
+        values to be returned to the calling program. The value must be set to
+        zero to prevent including it as a key value?
+      </div>
+  <br />
+  <div class='Text'>
+        The Lookup Retrieve call will not include keys with a value of "0".
+      </div>
+  <br />
+  <div class='Text'>
+        The Add Data Object property names must be the same as the Request Column
+        property names to map the values into the Key Columns.
+      </div>
+  <br />
+  <div class='Text'><b>Method Graph</b></div>
+  <br />
+  <div class='Text'>
+        All methods are in LJCDBMessage.DbCommon.
+      </div>
+  <br />
+  <div class='Text'>
+        RequestDataColumns(dataObject)
+        <div class='Text'>RequestColumns(baseDefinition)</div>
+        <div class='Text'>DataColumns(dataObject)</div>
+        <div class='Text2'>CreateValueColumn(dbColumn)</div>
+        RequestLookupKeys(dataObject)
+        <div class='Text'>RequestColumns(baseDefinition)</div>
+        <div class='Text'>LookupKeys(dataObject)</div>
+        <div class='Text2'>IsKeyColumn(dbColumn)</div>
+      </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='comment'>// This is an example of the Person Manager code that would access the</span>
+<span class='comment'>// DataManager Add() method. The supporting class code is listed at the</span>
+<span class='comment'>// DataManager class level.</span>
+    
+<span class='keyWord'>using</span> LJCNetCommon;
+<span class='keyWord'>using</span> LJCDBMessage;
+    
+<span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Provides Person specific data manipulation methods.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+<span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>PersonManager</span>
+{
+  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Adds a person record to the database.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+  <span class='xmlComment'>/// &lt;param name="</span>dataObject<span class='xmlComment'>"&gt;</span><span class='comment'>The data record.</span><span class='xmlComment'>&lt;/param&gt;</span>
+  <span class='xmlComment'>/// &lt;param name="</span>propertyNames<span class='xmlComment'>"&gt;</span><span class='comment'>The included column property names.</span><span class='xmlComment'>&lt;/param&gt;</span>
+  <span class='xmlComment'>/// &lt;returns&gt;</span><span class='comment'>A person object with the DB assigned key values.</span><span class='xmlComment'>&lt;/returns&gt;</span>
+  <span class='modifier'>public</span> <span class='userType'>Person</span> Add(<span class='userType'>Person</span> dataObject, <span class='libType'>List</span>&lt;<span class='commonType'>string</span>&gt; propertyNames = null)
+  {
+    <span class='userType'>Person</span> retValue = <span class='keyWord'>null</span>;
+    
+    <span class='comment'>// The database assigned column names.</span>
+    mDataManager.SetDbAssignedColumnNames(new <span class='commonType'>string</span>[]
+    {
+      "Id"
+    });
+    
+    <span class='comment'>// The lookup column names to find the inserted record for</span>
+    <span class='comment'>// the Add() method to retrieve the DB assigned column values.</span>
+    mDataManager.AddLookupColumnNames(new <span class='commonType'>string</span>[]
+    {
+      "Name"
+    });
+    
+    <span class='userType'>DbResult</span> dbResult = mDataManager.Add(dataObject, propertyNames);
+    AffectedCount = mDataManager.AffectedCount;
+    SQLStatement = mDataManager.SQLStatement;
+    <span class='keyWord'>if</span> (dbResult != <span class='keyWord'>null</span> && dbResult.DbRecords.Count &gt; 0)
+    {
+      <span class='comment'>// Populate a data object with the result values.</span>
+      retValue = <span class='keyWord'>new</span> <span class='userType'>Person</span>();
+      DbCommon.SetObjectValues(dbResult.DbRecords[0], retValue);
+    }
+    
+    <span class='commonType'>int</span> personId = retValue.PersonId;
+    <span class='keyWord'>return</span> retValue;
+  }
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

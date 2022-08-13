@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>TextDataReader</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCTextDataReaderLib">Assembly List</a>
+    / <a href="LJCTextDataReaderLib.html">LJCTextDataReaderLib</a>
+    / TextDataReader
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCTextDataReaderLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class TextDataReader</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class TextDataReader : IDataReader , IDataRecord 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      A text file data reader.
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        A class that implements IDataReader must implement the Read() and GetValue()
+        methods. It must also implement the FieldCount property.
+      </div>
+  <br />
+  <div class='Text'>
+        If field name mapping is used, it must implement the GetOrdinal() method.
+      </div>
+  <br />
+  <div class='Text'>
+        This data reader expects the lines to be terminated with CR/LF.
+        It can parse comma or tab delimited fields and can handle quoted fields.<br />
+        Only use quoted fields when necessary to get a slight performance increase.
+      </div>
+  <br />
+  <div class='Text'>
+        Use the LJCSetFile() method to initialize for the file to be read. Use the
+        Read() method to read the next line from the file.
+      </div>
+  <br />
+  <div class='Text'>
+        Alternately, you can use the LJCSetLines() method if you want to process
+        a string array. Use the LJCReadLine() method to read the next line from
+        the string array.
+      </div>
+  <br />
+  <div class='Text'>
+        The data field definition names can be parsed from the file heading line.
+        This can be accomplished in two ways:<br />
+        1. When creating the TextDataReader, set the hasheadingLine constructor
+        property to 'true' or leave it blank to let it default to 'true'.<br />
+        2. After creating the TextDataReader, you can set the LJCHasHeadingLine
+        property to 'true'. This must be done before calling the LJCSetFile() or
+        LJCSetLines() method.
+      </div>
+  <br />
+  <div class='Text'>
+        The data field definitions can also be loaded from an XML layout file.<br />
+        Use the LJCSetFields() method to initialize the data field definitions
+        from an XML data definition file. This file uses the DbColumns format.<br />
+        Set LJCHasHeaderLine to 'false' before calling LJCSetFile() or LJCSetLines().
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.Close.html'>Close</a></td>
+      <td class='ListTable'>
+      Closes the data reader.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.ctor.html'>TextDataReader #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.Dispose.html'>Dispose</a></td>
+      <td class='ListTable'>
+      Disposes the object.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetBoolean.html'>GetBoolean</a></td>
+      <td class='ListTable'>
+      Returns the bool value of the data field at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetBoolean1.html'>GetBoolean</a></td>
+      <td class='ListTable'>
+      Returns the bool value of the data field with the specified name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetByte.html'>GetByte</a></td>
+      <td class='ListTable'>
+      Returns the byte value of the data field at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetByte1.html'>GetByte</a></td>
+      <td class='ListTable'>
+      Returns the byte value of the data field with the specified name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetBytes.html'>GetBytes</a></td>
+      <td class='ListTable'>
+      Place bytes from field at the specified index into a byte array buffer.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetBytes1.html'>GetBytes</a></td>
+      <td class='ListTable'>
+      Place bytes from field with the specified name into a byte array buffer.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetChar.html'>GetChar</a></td>
+      <td class='ListTable'>
+      Returns the char value of the data field at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetChar1.html'>GetChar</a></td>
+      <td class='ListTable'>
+      Returns the char value of the data field with the specified name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetChars.html'>GetChars</a></td>
+      <td class='ListTable'>
+      Place characters from field at the specified index into a character array buffer.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetChars1.html'>GetChars</a></td>
+      <td class='ListTable'>
+      Place characters from field with the specified name into a character array buffer.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetData.html'>GetData</a></td>
+      <td class='ListTable'>
+      Not supported. Currently returns null.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetDataTypeName.html'>GetDataTypeName</a></td>
+      <td class='ListTable'>
+      Retrieves the data type name for the specified field index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetDataTypeName1.html'>GetDataTypeName</a></td>
+      <td class='ListTable'>
+      Retrieves the data type name for the specified field name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetDateTime.html'>GetDateTime</a></td>
+      <td class='ListTable'>
+      Returns the DateTime value of the data field at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetDateTime1.html'>GetDateTime</a></td>
+      <td class='ListTable'>
+      Returns the DateTime value of the data field with the specified name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetDecimal.html'>GetDecimal</a></td>
+      <td class='ListTable'>
+      Returns the decimal value of the data field at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetDecimal1.html'>GetDecimal</a></td>
+      <td class='ListTable'>
+      Returns the decimal value of the data field with the specified name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetDouble.html'>GetDouble</a></td>
+      <td class='ListTable'>
+      Returns the double value of the data field at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetDouble1.html'>GetDouble</a></td>
+      <td class='ListTable'>
+      Returns the double value of the data field with the specified name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetFieldType.html'>GetFieldType</a></td>
+      <td class='ListTable'>
+      Retrieves the type of the field for the specified field index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetFloat.html'>GetFloat</a></td>
+      <td class='ListTable'>
+      Returns the float value of the data field at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetFloat1.html'>GetFloat</a></td>
+      <td class='ListTable'>
+      Returns the float value of the data field with the specified name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetGuid.html'>GetGuid</a></td>
+      <td class='ListTable'>
+      Returns the Guid value of the data field at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetGuid1.html'>GetGuid</a></td>
+      <td class='ListTable'>
+      Returns the Guid value of the data field with the specified name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetInt16.html'>GetInt16</a></td>
+      <td class='ListTable'>
+      Returns the short int value of the data field at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetInt161.html'>GetInt16</a></td>
+      <td class='ListTable'>
+      Returns the short int value of the data field with the specified name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetInt32.html'>GetInt32</a></td>
+      <td class='ListTable'>
+      Returns the int value of the data field at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetInt321.html'>GetInt32</a></td>
+      <td class='ListTable'>
+      Returns the int value of the data field with the specified name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetInt64.html'>GetInt64</a></td>
+      <td class='ListTable'>
+      Returns the long int value of the data field at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetInt641.html'>GetInt64</a></td>
+      <td class='ListTable'>
+      Returns the long int value of the data field with the specified name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetName.html'>GetName</a></td>
+      <td class='ListTable'>
+      Retrieves the name of the data field with the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetOrdinal.html'>GetOrdinal</a></td>
+      <td class='ListTable'>
+      Retrieves the index of the data field with the specified name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetSchemaTable.html'>GetSchemaTable</a></td>
+      <td class='ListTable'>
+      Gets the Schema DataTable object.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetString.html'>GetString</a></td>
+      <td class='ListTable'>
+      Returns the string value of the data field at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetString1.html'>GetString</a></td>
+      <td class='ListTable'>
+      Returns the string value of the data field with the specified name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetValue.html'>GetValue</a></td>
+      <td class='ListTable'>
+      Returns the object value of the data field at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetValues.html'>GetValues</a></td>
+      <td class='ListTable'>
+      Gets an array of record values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.IsDBNull.html'>IsDBNull</a></td>
+      <td class='ListTable'>
+      Indicates if the field value is null or whitespace.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCGetFieldNames.html'>LJCGetFieldNames</a></td>
+      <td class='ListTable'>
+      Returns the field names.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCReadLine.html'>LJCReadLine</a></td>
+      <td class='ListTable'>
+      Reads the next line from the line string array.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCSetFields.html'>LJCSetFields</a></td>
+      <td class='ListTable'>
+      Sets the DataFields layout from an XML file.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCSetFile.html'>LJCSetFile</a></td>
+      <td class='ListTable'>
+      Sets the source text file values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCSetLine.html'>LJCSetLine</a></td>
+      <td class='ListTable'>
+      Sets the line field values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCSetLines.html'>LJCSetLines</a></td>
+      <td class='ListTable'>
+      Set the source line string array.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCSetNames.html'>LJCSetNames</a></td>
+      <td class='ListTable'>
+      Sets the data field names.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCSetObjectValues.html'>LJCSetObjectValues</a></td>
+      <td class='ListTable'>
+      Sets the data object property values from the TextDataReader.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCSetStartIndex.html'>LJCSetStartIndex</a></td>
+      <td class='ListTable'>
+      Sets the starting record index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCSetValues.html'>LJCSetValues</a></td>
+      <td class='ListTable'>
+      Sets the current, fixed length, line values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCSetValues1.html'>LJCSetValues</a></td>
+      <td class='ListTable'>
+      Sets the current line values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.NextResult.html'>NextResult</a></td>
+      <td class='ListTable'>
+      Sets to the next result. Currently returns false.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\TextDataReader.Read.html'>Read</a></td>
+      <td class='ListTable'>
+      Reads the next line of the text file.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>54 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.Depth.html'>Depth</a></td>
+      <td class='ListTable'>Currently returns 0.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.FieldCount.html'>FieldCount</a></td>
+      <td class='ListTable'>
+      Gets the field count.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.IsClosed.html'>IsClosed</a></td>
+      <td class='ListTable'>Indicates if the reader is closed.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.Item.html'>Item</a></td>
+      <td class='ListTable'>
+      Gets the data field value for the specified field index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.Item1.html'>Item</a></td>
+      <td class='ListTable'>
+      Gets the data field value for the specified field name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCCurrentLineIndex.html'>LJCCurrentLineIndex</a></td>
+      <td class='ListTable'>Gets or sets the Current Line index.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCCurrentRecordCount.html'>LJCCurrentRecordCount</a></td>
+      <td class='ListTable'>Gets or sets the Current RecordCount value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCDataFields.html'>LJCDataFields</a></td>
+      <td class='ListTable'>Gets or sets the current DataField values.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCFieldDelimiter.html'>LJCFieldDelimiter</a></td>
+      <td class='ListTable'>Gets or sets the field delimiter.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCFileName.html'>LJCFileName</a></td>
+      <td class='ListTable'>Gets or sets the FileName value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCFixedLengthFields.html'>LJCFixedLengthFields</a></td>
+      <td class='ListTable'>Gets or sets the FixedLength fields indicator.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCHasHeadingLine.html'>LJCHasHeadingLine</a></td>
+      <td class='ListTable'>Gets or sets the HasHeadingLine value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCLineOffsets.html'>LJCLineOffsets</a></td>
+      <td class='ListTable'>Gets the LineOffsets collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCLines.html'>LJCLines</a></td>
+      <td class='ListTable'>Gets or sets the Lines value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCPageSize.html'>LJCPageSize</a></td>
+      <td class='ListTable'>Gets or sets the PageSize value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCPageStartIndex.html'>LJCPageStartIndex</a></td>
+      <td class='ListTable'>Gets or sets the PageStart index.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCSkipHeaderLines.html'>LJCSkipHeaderLines</a></td>
+      <td class='ListTable'>Gets or sets the number of lines to skip.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCStream.html'>LJCStream</a></td>
+      <td class='ListTable'>Gets the Stream value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.LJCStreamReader.html'>LJCStreamReader</a></td>
+      <td class='ListTable'>Gets or sets the StreamReader value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\TextDataReader.RecordsAffected.html'>RecordsAffected</a></td>
+      <td class='ListTable'>Currently returns -1.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

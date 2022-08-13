@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>GenerateText</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCGenTextLib">Assembly List</a>
+    / <a href="LJCGenTextLib.html">LJCGenTextLib</a>
+    / GenerateText
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCGenTextLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class GenerateText</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class GenerateText 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Generates text using a text template.
+    </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.CreateSections.html'>CreateSections</a></td>
+      <td class='ListTable'>
+            Create Sections from template definition.
+            </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.ctor.html'>GenerateText #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.Generate.html'>Generate</a></td>
+      <td class='ListTable'>
+      Generates a merged output file from the specified template
+      and Sections data.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.Generate1.html'>Generate</a></td>
+      <td class='ListTable'>
+      Generates a merged output file from the specified template
+      and data file.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.Generate2.html'>Generate</a></td>
+      <td class='ListTable'>
+      Generates a merged output file from the template lines and Sections data.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.Reset.html'>Reset</a></td>
+      <td class='ListTable'>
+      Resets the current values.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>6 Methods</div>
+  <br />
+  <div id='Title'>Private Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.ActiveSessionRepeateItems.html'>ActiveSessionRepeateItems</a></td>
+      <td class='ListTable'>
+      Retrieves the active session current repeat items.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.ActiveSessionReplacementValue.html'>ActiveSessionReplacementValue</a></td>
+      <td class='ListTable'>
+      Retrieves the active session replacement value.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.GenIfBlock.html'>GenIfBlock</a></td>
+      <td class='ListTable'>
+      Generate the IfBegin directive statements.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.GenRepeatItem.html'>GenRepeatItem</a></td>
+      <td class='ListTable'>
+      Generates the code for the current RepeatItem.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.GenSection.html'>GenSection</a></td>
+      <td class='ListTable'>
+      Generates each RepeatItem in a section.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.PopSection.html'>PopSection</a></td>
+      <td class='ListTable'>
+      Pops the completed Section off of the Active stack.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.PushSection.html'>PushSection</a></td>
+      <td class='ListTable'>
+      Pushes the current Section object on the Active stack.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\GenerateText.ReplaceValues.html'>ReplaceValues</a></td>
+      <td class='ListTable'>
+      Replaces the values for the active RepeateItems.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>8 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\GenerateText.ActiveSections.html'>ActiveSections</a></td>
+      <td class='ListTable'>Gets or sets the active sections.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\GenerateText.OutFileSpec.html'>OutFileSpec</a></td>
+      <td class='ListTable'>Gets or sets the output file specification.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\GenerateText.OutLines.html'>OutLines</a></td>
+      <td class='ListTable'>Gets or sets the output text lines.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\GenerateText.Sections.html'>Sections</a></td>
+      <td class='ListTable'>Gets or sets the data sections.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\GenerateText.TemplateLines.html'>TemplateLines</a></td>
+      <td class='ListTable'>Gets or sets the template text lines.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

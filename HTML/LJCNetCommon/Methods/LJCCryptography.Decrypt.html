@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Decrypt</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+    / <a href="../LJCCryptography.html">LJCCryptography</a>
+    / Decrypt
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method Decrypt</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>cipher - The cipher byte array.</div>
+  <div class='Text'>key - The encryption key.</div>
+  <div class='Text'>initializationVector - The IV value.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The decrypted text value.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public String Decrypt(Byte[] cipher, Byte[] key, Byte[] initializationVector)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Returns a decrypted string from a cipher byte array. (E)
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='userType'>MemoryCrypto</span> crypto = <span class='keyWord'>new</span> <span class='userType'>MemoryCrypto</span>();
+<span class='commonType'>string</span> text = <span class='keyWord'>null</span>;
+<span class='commonType'>byte</span>[] key = {230, 191, 149, 1, 207, 136, 112, 200
+               , 7, 192, 109, 130, 188, 192, 27, 183
+               , 238, 1, 248, 74, 35, 47, 1, 144
+               , 90, 91, 5, 167, 87, 170, 11, 141};
+<span class='commonType'>byte</span>[] iv = {94, 9, 42, 5, 218, 86, 120, 94
+             , 209, 208, 216, 111, 24, 4, 255, 67};
+<span class='commonType'>byte</span>[] cipher;
+        
+<span class='comment'>// Retrieve value.</span>
+text = GetEncryptedValue();
+        
+<span class='comment'>// Convert from Base64 and decrypt to text.</span>
+cipher = <span class='userType'>Convert</span>.FromBase64String(text);
+crypto.CryptoType = <span class='userType'>Crypto_Type</span>.Crypto_Rijndael;
+text = crypto.Decrypt(cipher, key, iv);</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>SetTypeReference</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+    / <a href="../LJCAssemblyReflect.html">LJCAssemblyReflect</a>
+    / SetTypeReference
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method SetTypeReference</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>typeName - The fully qualified Type name.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The Type reference.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public Type SetTypeReference(String typeName)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Set the Type reference. (RE)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+      Sets the TypeName property value and attempts to set the TypeReference
+      property value if the assembly reference and type name exist.
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> System;
+<span class='keyWord'>using</span> System.Reflection;
+<span class='keyWord'>using</span> LJC.Net.Common;
+
+<span class='modifier'>public</span> <span class='userType'>Type</span> RetrieveTypeReference(string assemblyFileSpec, <span class='commonType'>string</span> fullTypeName)
+{
+  <span class='userType'>Type</span> retValue = <span class='keyWord'>null</span>;
+
+  <span class='comment'>// These calls are not required if an LJCAssemblyReflect reference is</span>
+  <span class='comment'>// used and the the following set methods have already been executed.</span>
+  <span class='userType'>LJCAssemblyReflect</span> assemblyReflect = <span class='keyWord'>new</span> <span class='userType'>LJCAssemblyReflect</span>();
+  <span class='userType'>Assembly</span> assembly = assemblyReflect.SetAssembly(assemblyFileSpec);
+
+  retValue = assemblyReflect.SetTypeReference(fullTypeName);
+  <span class='keyWord'>return</span> retValue;
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>SetFieldInfo</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+    / <a href="../LJCAssemblyReflect.html">LJCAssemblyReflect</a>
+    / SetFieldInfo
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method SetFieldInfo</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>fieldName - The Field name.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The FieldInfo value.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public FieldInfo SetFieldInfo(String fieldName)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Set the FieldInfo reference. (RE)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+      Sets the FieldName property value and attempts to set the FieldInfo
+      property value if the type reference and the field exist.
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> System;
+<span class='keyWord'>using</span> System.Reflection;
+<span class='keyWord'>using</span> LJC.Net.Common;
+
+<span class='modifier'>public</span> <span class='userType'>FieldInfo</span> RetrieveFieldInfo(string assemblyFileSpec, <span class='commonType'>string</span> fullTypeName
+  , <span class='commonType'>string</span> fieldName)
+{
+  <span class='userType'>FieldInfo</span> retValue = <span class='keyWord'>null</span>;
+
+  <span class='comment'>// These calls are not required if an LJCAssemblyReflect reference is</span>
+  <span class='comment'>// used and the the following set methods have already been executed.</span>
+  <span class='userType'>LJCAssemblyReflect</span> assemblyReflect = <span class='keyWord'>new</span> <span class='userType'>LJCAssemblyReflect</span>();
+  <span class='userType'>Assembly</span> assembly = assemblyReflect.SetAssembly(assemblyFileSpec);
+  <span class='userType'>Type</span> typeReference = assemblyReflect.SetTypeReference(fullTypeName);
+    
+  retValue = assemblyReflect.SetFieldInfo(fieldName);
+  <span class='keyWord'>return</span> retValue;
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

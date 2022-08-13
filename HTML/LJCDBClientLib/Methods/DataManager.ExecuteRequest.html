@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ExecuteRequest</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
+    / <a href="../LJCDBClientLib.html">LJCDBClientLib</a>
+    / <a href="../DataManager.html">DataManager</a>
+    / ExecuteRequest
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBClientLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method ExecuteRequest</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>dbRequest - The request object.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The result object.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public DbResult ExecuteRequest(DbRequest dbRequest)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Executes the supplied request.
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        The DataManager can communicate with one of three different Data Access
+        objects.
+      </div>
+  <br />
+  <div class='Text'>
+        It first checks the
+        <span class="userType">DbServiceRef</span>.DbDataAccess
+        property for an instance of the
+        <span class="userType">DbDataAccess</span> object.
+        If the DbDataAccess property is set, it uses this reference for data
+        access.
+      </div>
+  <br />
+  <div class='Text'>
+        If the DbDataAccess property is null, then it checks the
+        <span class="userType">DbServiceRef</span>.DbService
+        property for an instance of the
+        <span class="userType">DbService</span> object.
+        If the DbService property is set, it uses this reference for data
+        access.
+      </div>
+  <br />
+  <div class='Text'>
+        If the DbDataAccess and DbService properties are null, then it
+        checks the
+        <span class="userType">DbServiceRef</span>.DbServiceClient
+        property for an instance of the
+        <span class="userType">DbServiceClient</span> object.
+        If the DbServiceClient property is set, it uses this reference for data
+        access.
+      </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

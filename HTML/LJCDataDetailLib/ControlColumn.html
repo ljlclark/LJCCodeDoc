@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ControlColumn</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCDataDetailLib">Assembly List</a>
+    / <a href="LJCDataDetailLib.html">LJCDataDetailLib</a>
+    / ControlColumn
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDataDetailLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class ControlColumn</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class ControlColumn 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Represents a column of Controls consisting of ControlRows.
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        A ControlColumn is a definition of the logically contained Labels column
+        and Controls columns. These are defined by the LabelsWidth and ControlsWidth
+        properties.
+      </div>
+  <br />
+  <div class='Text'>
+        Index - A unique value which defines the relative position of the ControlColumn
+        in the Dialog.
+      </div>
+  <br />
+  <div class='Text'>
+        LabelsWidth - The width of the widest Label in the Labels column. The Label
+        width is calculated from the Label Text value. The Label controls are left
+        aligned to the Dialog BorderHorizontal value.
+      </div>
+  <br />
+  <div class='Text'>
+        ControlsWidth - The width of the widest data Control in the Controls column.
+        This is usually a TextBox control. The Control width is calculated from the
+        Control MaxLength property. The controls are left aligned to the associated
+        Labels column.
+      </div>
+  <br />
+  <div class='Text'>
+        RowCount - Contains the count of the ControlRows in that ControlColumn.
+      </div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlColumn.ControlsWidth.html'>ControlsWidth</a></td>
+      <td class='ListTable'>Gets or sets the Controls column width.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlColumn.Index.html'>Index</a></td>
+      <td class='ListTable'>Gets or sets the unique Index value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlColumn.LabelsWidth.html'>LabelsWidth</a></td>
+      <td class='ListTable'>Gets or sets the Labels column width.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlColumn.RowCount.html'>RowCount</a></td>
+      <td class='ListTable'>Gets or sets the number of ControlRows.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlColumn.Width.html'>Width</a></td>
+      <td class='ListTable'>Gets the ControlColumn width.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ControlRow</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCDataDetailLib">Assembly List</a>
+    / <a href="LJCDataDetailLib.html">LJCDataDetailLib</a>
+    / ControlRow
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDataDetailLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class ControlRow</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class ControlRow : IComparable&lt;ControlRow&gt;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Represents the controls for a DataValue.
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        A ControlRow is a definition of the contained RowLabel and RowControl controls.
+        A ControlRow is created for each Data Record value. The controls in a ControlRow
+        are top aligned based on the Dialog BorderVertical, ControlRowSpacing and
+        ControlRowHeight values.
+      </div>
+  <br />
+  <div class='Text'>
+        DataValueName - The name of the Data Record value in the DataValues
+        collection. The DataValues property is a DbColumns collection object.
+      </div>
+  <br />
+  <div class='Text'>
+        RowLabel - A reference to the row Label control.
+      </div>
+  <br />
+  <div class='Text'>
+        RowControl - A reference to the row data control.
+      </div>
+  <br />
+  <div class='Text'>
+        TabPageIndex - The TabPage where the ControlRow is displayed.
+      </div>
+  <br />
+  <div class='Text'>
+        ColumnIndex - The ControlColumn where the ControlRow is displayed.
+      </div>
+  <br />
+  <div class='Text'>
+        RowIndex - The row index where the Label and data Controls are displayed.
+      </div>
+  <br />
+  <div class='Text'>
+        TabIndex - The tabbing index for the Label control in the ControlRow.
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ControlRow.Clone.html'>Clone</a></td>
+      <td class='ListTable'>
+      Clones the structure of the object.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ControlRow.CompareTo.html'>CompareTo</a></td>
+      <td class='ListTable'>
+      Provides the default Sort functionality.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ControlRow.ctor.html'>ControlRow #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ControlRow.ToString.html'>ToString</a></td>
+      <td class='ListTable'>
+      The object string identifier.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>4 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlRow.AllowDisplay.html'>AllowDisplay</a></td>
+      <td class='ListTable'>The AllowDisplay value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlRow.ColumnIndex.html'>ColumnIndex</a></td>
+      <td class='ListTable'>Gets or sets the ControlColumn index.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlRow.DataValueName.html'>DataValueName</a></td>
+      <td class='ListTable'>Gets or sets the DataValue name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlRow.RowControl.html'>RowControl</a></td>
+      <td class='ListTable'>Gets or sets the Row Control value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlRow.RowIndex.html'>RowIndex</a></td>
+      <td class='ListTable'>Gets or sets the ControlRow index.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlRow.RowLabel.html'>RowLabel</a></td>
+      <td class='ListTable'>Gets or sets the Row Label value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlRow.TabIndex.html'>TabIndex</a></td>
+      <td class='ListTable'>Gets or sets the ControlRow Tabbing Index.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlRow.TabPageIndex.html'>TabPageIndex</a></td>
+      <td class='ListTable'>Gets or sets the TabPage index.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ControlRow.Width.html'>Width</a></td>
+      <td class='ListTable'>Gets or sets the ControlRow width.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

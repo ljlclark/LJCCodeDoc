@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>DbFilters</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCDBMessage">Assembly List</a>
+    / <a href="LJCDBMessage.html">LJCDBMessage</a>
+    / DbFilters
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBMessage</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class DbFilters</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class DbFilters : List&lt;DbFilter&gt;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Represents a collection of
+      <span class="userType">DbFilter</span> objects.
+      (E)
+    </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbFilters.Add.html'>Add</a></td>
+      <td class='ListTable'>
+      Creates and adds the element from the supplied values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbFilters.Add1.html'>Add</a></td>
+      <td class='ListTable'>
+      Creates and adds the element from the supplied values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbFilters.Clone.html'>Clone</a></td>
+      <td class='ListTable'>
+      Clones the structure of the object.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbFilters.ctor.html'>DbFilters #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbFilters.ctor1.html'>DbFilters #ctor</a></td>
+      <td class='ListTable'>
+      The Copy constructor.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbFilters.HasItems.html'>HasItems</a></td>
+      <td class='ListTable'>
+      Checks if the collection has items.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbFilters.SQLSoundexFilters.html'>SQLSoundexFilters</a></td>
+      <td class='ListTable'>
+      Creates the SQL Soundex filters from the supplied values.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>7 Methods</div>
+  <br />
+  <div id='Title'>Private Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbFilters.SoundexFilters.html'>SoundexFilters</a></td>
+      <td class='ListTable'>
+      Creates the Soundex filters from the supplied values.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>1 Methods</div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCDBMessage;
+      
+<span class='comment'>// Create the Conditions collection and Condition objects.</span>
+<span class='userType'>DbConditions</span> dbConditions = <span class='keyWord'>new</span> <span class='userType'>DbConditions</span>();
+<span class='userType'>DbCondition</span> dbCondition = <span class='keyWord'>new</span> <span class='userType'>DbCondition</span>()
+{
+  FirstValue = "Name",
+  ComparisonOperator = "=",
+  SecondValue = "John"
+};
+dbConditions.Add(dbCondition);
+      
+<span class='comment'>// Create the ConditionSet and add the Conditions collection.</span>
+<span class='userType'>DbConditionSet</span> dbConditionSet = <span class='keyWord'>new</span> <span class='userType'>DbConditionSet</span>()
+{
+  <span class='comment'>// The boolean operator is added before each condition except the first.</span>
+  BooleanOperator = "and",
+  Conditions = dbConditions
+};
+      
+<span class='comment'>// Create the Filter and add the ConditionSet.</span>
+<span class='userType'>DbFilter</span> dbFilter = <span class='keyWord'>new</span> <span class='userType'>DbFilter</span>()
+{
+  Name = "Main Filter",
+      
+  <span class='comment'>// The boolean operator is added before each filter except the first.</span>
+  BooleanOperator = "and",
+  ConditionSet = dbConditionSet
+};
+      
+<span class='comment'>// Create the Filters collection and add the Filter.</span>
+<span class='userType'>DbFilters</span> dbFilters = <span class='keyWord'>new</span> <span class='userType'>DbFilters</span>();
+dbFilters.Add(dbFilter);
+      
+<span class='comment'>// Shortcut using object initialization, only required values and defaults.</span>
+<span class='userType'>DbFilter</span> dbFilter = <span class='keyWord'>new</span> <span class='userType'>DbFilter</span>();
+<span class='userType'>DbConditions</span> conditions = dbFilter.ConditionSet.Conditions;
+conditions.Add("FirstName", "'John'");
+conditions.Add("LastName", "'Smith'");
+<span class='userType'>DbFilters</span> dbFilters = <span class='keyWord'>new</span> <span class='userType'>DbFilters</span>
+{
+  dbFilter
+};
+      
+<span class='comment'>// The Data Service creates the following SQL from this request which.</span>
+<span class='comment'>// includes the DbFilters object.</span>
+DbRequest dbRequest = <span class='keyWord'>new</span> <span class='userType'>DbRequest</span>("Select", "Person")
+{
+  DataConfigName = "PersonData",
+  Columns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>() { {"Name" }},
+  Filters = dbFilters
+};
+      
+<span class='comment'>// select</span>
+<span class='comment'>//  [Person].[Name]</span>
+<span class='comment'>// from [Person]</span>
+<span class='comment'>// where ((FirstName = 'John' and LastName = 'Smith'))</span>
+      
+<span class='comment'>// Adding an "or" filter.</span>
+<span class='userType'>DbFilter</span> secondFilter = <span class='keyWord'>new</span> <span class='userType'>DbFilter</span>
+{
+  BooleanOperator = "or"
+};
+<span class='userType'>DbConditions</span> secondConditions = secondFilter.ConditionSet.Conditions;
+secondConditions.Add("Street", "'Somewhere%'", "like");
+dbFilters.Add(secondFilter);
+      
+<span class='comment'>// where ((FirstName = 'John' and LastName = 'Smith'))</span>
+<span class='comment'>//  or ((Street like 'Somewhere%'))</span>
+      
+<span class='comment'>// If the second filter is incuded inside the first as in the following</span>
+<span class='comment'>// example,then the second filter conditions are grouped with the first</span>
+<span class='comment'>// filter conditions.</span>
+dbFilter.Filters.Add(secondFilter);
+      
+<span class='comment'>// where ((FirstName = 'John' and LastName = 'Smith')</span>
+<span class='comment'>//  or (Street like 'Somewhere%'))</span></pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

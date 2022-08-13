@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>StandardAddress</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCAddressParserLib">Assembly List</a>
+    / <a href="LJCAddressParserLib.html">LJCAddressParserLib</a>
+    / StandardAddress
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCAddressParserLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class StandardAddress</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class StandardAddress 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Provides methods to parse Address information into standardized component
+      properties. (R)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+      Conforms to USPS AIS (Address Information System) products such as Zip+4
+      and City State files. Based on the USPS Pub28 PDF.
+      </div>
+  <br />
+  <div class='Text'>
+        The line parsing methods are: ParseMixedAddress(), ParseDeliveryAddressLine()
+        and ParseLastLine().
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.CreateDeliveryLine.html'>CreateDeliveryLine</a></td>
+      <td class='ListTable'>
+      Creates the Standardized Delivery Address Line from the Delivery Address
+      Properties.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.CreateLastLine.html'>CreateLastLine</a></td>
+      <td class='ListTable'>
+      Creates the standardized Last Line form the Last Line Properties.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.ctor.html'>StandardAddress #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.DeliveryAddressToken.html'>DeliveryAddressToken</a></td>
+      <td class='ListTable'>
+      Retrieves the token at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.GetAddressPreviousIndex.html'>GetAddressPreviousIndex</a></td>
+      <td class='ListTable'>
+      Sets the currentIndex value to the previous index value if
+      it is within the token index range.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.GetSeparatedValue.html'>GetSeparatedValue</a></td>
+      <td class='ListTable'>
+      Gets the value with a preceding blank if the value exists.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.IsCurrentTokenZip4.html'>IsCurrentTokenZip4</a></td>
+      <td class='ListTable'>
+      Checks if the current token is the Zip4 value.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.IsCurrentTokenZipcode.html'>IsCurrentTokenZipcode</a></td>
+      <td class='ListTable'>
+      Checks if the current token is the Zipcode value.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.IsDigits.html'>IsDigits</a></td>
+      <td class='ListTable'>
+      Checks a token value for digits.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.IsInt.html'>IsInt</a></td>
+      <td class='ListTable'>
+      Checks a token value for an integer.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.LastLinePreviousIndex.html'>LastLinePreviousIndex</a></td>
+      <td class='ListTable'>
+      Sets the currentIndex value to the previous index value if
+      it is within the token index range.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.LastLineToken.html'>LastLineToken</a></td>
+      <td class='ListTable'>
+      Retrieves the token at the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.LookupDirectional.html'>LookupDirectional</a></td>
+      <td class='ListTable'>
+      Search Directional Code and Name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.LookupRoad.html'>LookupRoad</a></td>
+      <td class='ListTable'>
+      Search the SuffixLookup LookupName and Code.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.LookupState.html'>LookupState</a></td>
+      <td class='ListTable'>
+      Search the StateLookup LookupName, LSoundex and PSoundex.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.LookupSuffix.html'>LookupSuffix</a></td>
+      <td class='ListTable'>
+      Search the SuffixLookup LookupName and Code.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.LookupUnit.html'>LookupUnit</a></td>
+      <td class='ListTable'>
+      Search Units Name and Code.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.ParseAddressNumber.html'>ParseAddressNumber</a></td>
+      <td class='ListTable'>
+      Parses a token into the AddressNumber Property.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.ParseCity.html'>ParseCity</a></td>
+      <td class='ListTable'>
+      Parses the tokens from index zero to the currentIndex.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.ParseDeliveryAddressLine.html'>ParseDeliveryAddressLine</a></td>
+      <td class='ListTable'>
+      Parses the Delivery Address into the standardized DeliveryAddressLine
+      Property. It also parses the Delivery Address into the Component
+      Properties. (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.ParseLastLine.html'>ParseLastLine</a></td>
+      <td class='ListTable'>
+      Parses the Last Line into the standardized LastLine Property. It
+      also parses the Last Line into the Component Properties.
+      (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.ParseMixedAddress.html'>ParseMixedAddress</a></td>
+      <td class='ListTable'>
+      Parses the combined Delivery Address and Last Line values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.ParsePostDirectional.html'>ParsePostDirectional</a></td>
+      <td class='ListTable'>
+      Parses a token into the PostDirectional Property.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.ParsePreDirectional.html'>ParsePreDirectional</a></td>
+      <td class='ListTable'>
+      Parses a token into the PreDirectional Property.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.ParseState.html'>ParseState</a></td>
+      <td class='ListTable'>
+      Parses a token into the StateOrProvince Property.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.ParseStreetName.html'>ParseStreetName</a></td>
+      <td class='ListTable'>
+      Parses the tokens from the currentIndex to the appropriate end Index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.ParseSuffix.html'>ParseSuffix</a></td>
+      <td class='ListTable'>
+      Parses any preceding suffix token into the Suffix Property.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.ParseUnit.html'>ParseUnit</a></td>
+      <td class='ListTable'>
+      Parses a token into the Unit Property.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\StandardAddress.ParseZipCode.html'>ParseZipCode</a></td>
+      <td class='ListTable'>
+      Parses a token into the Zipcode Property.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>29 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.AddressNumber.html'>AddressNumber</a></td>
+      <td class='ListTable'>Gets or sets the Address Number value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.AttentionLine.html'>AttentionLine</a></td>
+      <td class='ListTable'>Gets or sets the Attention Line.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.City.html'>City</a></td>
+      <td class='ListTable'>Gets or sets the City value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.CountryLine.html'>CountryLine</a></td>
+      <td class='ListTable'>Gets or sets the Country Line.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.DeliveryAddressLine.html'>DeliveryAddressLine</a></td>
+      <td class='ListTable'>Gets or sets the Delivery Address Line.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.DeliveryAddressTokens.html'>DeliveryAddressTokens</a></td>
+      <td class='ListTable'>Gets or sets the Delivery Address Tokens.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.Directionals.html'>Directionals</a></td>
+      <td class='ListTable'>Gets or sets the Directionals collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.ErrorMessages.html'>ErrorMessages</a></td>
+      <td class='ListTable'>Gets or sets the ErrorMessages value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.LastLine.html'>LastLine</a></td>
+      <td class='ListTable'>Gets or sets the Last Line.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.LastLineTokens.html'>LastLineTokens</a></td>
+      <td class='ListTable'>Gets or sets the Last Line Tokens.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.PhysicalAddressLine.html'>PhysicalAddressLine</a></td>
+      <td class='ListTable'>Gets or sets the Physical Address Line.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.PostDirectional.html'>PostDirectional</a></td>
+      <td class='ListTable'>Gets or sets the Post Directional value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.PreDirectional.html'>PreDirectional</a></td>
+      <td class='ListTable'>Gets or sets the Pre Directional value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.PrimaryRoads.html'>PrimaryRoads</a></td>
+      <td class='ListTable'>Gets or sets the Primary Roads collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.RecipientLine.html'>RecipientLine</a></td>
+      <td class='ListTable'>Gets or sets the Recipient Line.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.RoadLookups.html'>RoadLookups</a></td>
+      <td class='ListTable'>Gets or sets the Road Lookup collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.SecondaryAddressLine.html'>SecondaryAddressLine</a></td>
+      <td class='ListTable'>Gets or sets the Secondary Address Line.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.StateLookups.html'>StateLookups</a></td>
+      <td class='ListTable'>Gets or sets the State Lookup collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.StateOrProvince.html'>StateOrProvince</a></td>
+      <td class='ListTable'>Gets or sets the State or Province value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.States.html'>States</a></td>
+      <td class='ListTable'>Gets or sets the State collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.StreetName.html'>StreetName</a></td>
+      <td class='ListTable'>Gets or sets the Street Name value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.Suffix.html'>Suffix</a></td>
+      <td class='ListTable'>Gets or sets the Suffix value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.Suffixes.html'>Suffixes</a></td>
+      <td class='ListTable'>Gets or sets the Suffix collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.SuffixLookups.html'>SuffixLookups</a></td>
+      <td class='ListTable'>Gets or sets the Suffix Lookup collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.UnitLookups.html'>UnitLookups</a></td>
+      <td class='ListTable'>Gets or sets the Units Lookup collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.UnitNumber.html'>UnitNumber</a></td>
+      <td class='ListTable'>Gets or sets the Secondary Unit Number value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.Units.html'>Units</a></td>
+      <td class='ListTable'>Gets or sets the Unit collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.UnitType.html'>UnitType</a></td>
+      <td class='ListTable'>Gets or sets the Unit Identifier.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.Zip4.html'>Zip4</a></td>
+      <td class='ListTable'>Gets or sets the Zip4 value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\StandardAddress.Zipcode.html'>Zipcode</a></td>
+      <td class='ListTable'>Gets or sets the Zipcode value.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

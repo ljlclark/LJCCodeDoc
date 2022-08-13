@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>NetCommon</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="LJCNetCommon.html">LJCNetCommon</a>
+    / NetCommon
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class NetCommon</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class NetCommon 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Contains common static functions. (RDE)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        The NetCommon class contains static helper functions for all .NET
+        program types.
+      </div>
+  <br />
+  <div class='Text'>
+        There are three groups of static functions:
+      </div>
+  <br />
+  <div class='Text'>
+        <b>Text Transform Functions</b> <br />
+        These are useful for transforming text between different formats.
+        <br />
+        These include: <br />
+        Base64BytesToText(), TextToBase64Bytes(),<br />
+        Base64BytesToTextBytes(), TextBytesToBase64Bytes(),<br />
+        Base64ToText(), TextToBase64(),<br />
+        Base64ToTextBytes(), TextBytesToBase64(),<br />
+        BytesToText(), TextToBytes(),<br />
+        MemStreamToBytes(), BytesToMemStream(),<br />
+        MemStreamToString(), StringToMemSream(),<br />
+        XmlDecode(), XmlEncode().
+      </div>
+  <br />
+  <div class='Text'>
+        <b>Object Data Functions</b> <br />
+        These are useful for taking object values such as those in
+        a DataTable and converting them to their correct types.<br />
+        These include: GetDecimal(), GetInt16(), GetInt32(), GetInt64(),
+        GetObject() and GetString().
+      </div>
+  <br />
+  <div class='Text'>
+        <b>Serialization Functions</b> <br />
+        These are helper functions for serializing and deserializing strings.
+        <br />
+        These include: XmlDeserialize, XmlDeserializeMessage(), XmlSerialize()
+        and XmlSerializeToString().
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.Base64BytesToText.html'>Base64BytesToText</a></td>
+      <td class='ListTable'>
+      Decodes a Base64 byte array to a Text value. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.Base64BytesToTextBytes.html'>Base64BytesToTextBytes</a></td>
+      <td class='ListTable'>
+      Decodes a Base64 byte array to a Text byte array. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.Base64ToText.html'>Base64ToText</a></td>
+      <td class='ListTable'>
+      Decodes a Base64 value to a Text value. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.Base64ToTextBytes.html'>Base64ToTextBytes</a></td>
+      <td class='ListTable'>
+      Decodes a Base64 value to a Text byte array. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.BytesToMemStream.html'>BytesToMemStream</a></td>
+      <td class='ListTable'>
+      Copies a byte array to a memory stream. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.BytesToText.html'>BytesToText</a></td>
+      <td class='ListTable'>
+      Creates text from a byte array. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.CompareNull.html'>CompareNull</a></td>
+      <td class='ListTable'>
+      Compare null values. (DE)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.ConfigBool.html'>ConfigBool</a></td>
+      <td class='ListTable'>
+      Retrieves the Config bool value. (RE)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.ConfigColor.html'>ConfigColor</a></td>
+      <td class='ListTable'>
+      Retrieves the Config Color value. (RE)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.ConfigString.html'>ConfigString</a></td>
+      <td class='ListTable'>
+      Retrieves the Config string value. (RE)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.GetDecimal.html'>GetDecimal</a></td>
+      <td class='ListTable'>
+      Gets a decimal value from an object. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.GetInt16.html'>GetInt16</a></td>
+      <td class='ListTable'>
+      Gets a short value from an object. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.GetInt32.html'>GetInt32</a></td>
+      <td class='ListTable'>
+      Gets an integer value from an object. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.GetInt64.html'>GetInt64</a></td>
+      <td class='ListTable'>
+      Gets a long value from an object. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.GetObject.html'>GetObject</a></td>
+      <td class='ListTable'>
+      Gets an instantiated object value.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.GetString.html'>GetString</a></td>
+      <td class='ListTable'>
+      Gets a trimmed string value from an object. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.HasData.html'>HasData</a></td>
+      <td class='ListTable'>
+      Checks a data table and returns true if it contains any rows. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.IsEqual.html'>IsEqual</a></td>
+      <td class='ListTable'>
+      Checks if two values are equal.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.MemStreamToBytes.html'>MemStreamToBytes</a></td>
+      <td class='ListTable'>
+      Copies a memory stream to a byte array. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.MemStreamToString.html'>MemStreamToString</a></td>
+      <td class='ListTable'>
+      Creates a string from a memory stream. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.StringToMemStream.html'>StringToMemStream</a></td>
+      <td class='ListTable'>
+      Creates a memory stream from a string. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.TextBytesToBase64.html'>TextBytesToBase64</a></td>
+      <td class='ListTable'>
+      Encodes a Text byte array to a Base64 value. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.TextBytesToBase64Bytes.html'>TextBytesToBase64Bytes</a></td>
+      <td class='ListTable'>
+      Encodes a byte array to a Base64 byte array. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.TextToBase64.html'>TextToBase64</a></td>
+      <td class='ListTable'>
+      Encodes a Text value to a Base64 value. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.TextToBase64Bytes.html'>TextToBase64Bytes</a></td>
+      <td class='ListTable'>
+      Encodes a Text value to a Base64 byte array. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.TextToBytes.html'>TextToBytes</a></td>
+      <td class='ListTable'>
+      Creates a byte array from text. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.XmlDecode.html'>XmlDecode</a></td>
+      <td class='ListTable'>
+      Decodes an encoded XML string. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.XmlDeserialize.html'>XmlDeserialize</a></td>
+      <td class='ListTable'>
+      Deserialize an XML message file to an object. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.XmlDeserializeMessage.html'>XmlDeserializeMessage</a></td>
+      <td class='ListTable'>
+      Deserialize an XML message string to an object. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.XmlEncode.html'>XmlEncode</a></td>
+      <td class='ListTable'>
+      Encodes a string with XML escape values. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.XmlSerialize.html'>XmlSerialize</a></td>
+      <td class='ListTable'>
+      Serialize an object to an XML message file. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetCommon.XmlSerializeToString.html'>XmlSerializeToString</a></td>
+      <td class='ListTable'>
+      Serialize an object to an XML message string. (E)
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>32 Methods</div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

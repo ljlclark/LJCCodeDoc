@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Retrieve</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
+    / <a href="../LJCDBClientLib.html">LJCDBClientLib</a>
+    / <a href="../DataManager.html">DataManager</a>
+    / Retrieve
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBClientLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method Retrieve</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>keyColumns - The record containing the key field values.</div>
+  <div class='Text'>propertyNames - The incuded column property names.</div>
+  <div class='Text'>filters - The filter values.</div>
+  <div class='Text'>joins - The join values.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The result object.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public DbResult Retrieve(DbColumns keyColumns, List&lt;String&gt; propertyNames = null, DbFilters filters = null, DbJoins joins = null)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Retrieves a record from the database.
+      (DE)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'><b>Parameters</b></div>
+  <br />
+  <div class='Text'>
+        keyColumns<br \>
+        This parameter defines the values to be used in the SQL where clause. It
+        is only used if the 'filters' parameter is null.<br \>
+        The values are separated with the 'AND' operator.
+      </div>
+  <br />
+  <div class='Text'>
+        propertyNames<br \>
+        This parameter defines the primary table columns that are to be included
+        in the request. If it is null, then all the primary table columns are
+        included.<br \>
+        It must not include Calculated or Join columns or it will cause an error.
+      </div>
+  <br />
+  <div class='Text'>
+        filters<br \>
+        This parameter defines the values to be used in the SQL where clause. If
+        it is defined, then the keyColumns parameter is not used.<br \>
+        The 'filters' object can define a complex where clause including
+        combinations of 'AND' and 'OR' operators.
+      </div>
+  <br />
+  <div class='Text'>
+        joins<br \>
+        The 'joins' parameter defines the join tables, join on values and join
+        column definitions.
+      </div>
+  <br />
+  <div class='Text'>
+        Creates a "Select"
+        <span class="userType">DbRequest</span>
+        object, which is available in the Request property. The request object is
+        passed to the
+        <span class="commonType">ExecuteRequest()</span>
+        method.
+      </div>
+  <br />
+  <div class='Text'>
+        Request Column property names and values are added to the Result Value columns.
+      </div>
+  <br />
+  <div class='Text'>
+        The Result Data Object property names must match the Result Value Column
+        property names to map the values into the Result Data Object.
+      </div>
+  <br />
+  <div class='Text'>
+        Result Data Object property names that are different from the Request Column
+        names can be handled by setting the Request Column Property name. The
+        MapNames() method is a helper method for setting the Property name.
+      </div>
+  <br />
+  <div class='Text'><b>Method Graph</b></div>
+  <br />
+  <div class='Text'>
+        All methods are in LJCDBMessage.DbCommon.
+      </div>
+  <br />
+  <div class='Text'>
+        ResultColumns(baseDefinition)<br \>
+        ResultKeys(keyColumns)
+        <div class='Text'>CreateKeyColumn(keyColumn)</div>
+      </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='comment'>// This is an example of the code to use the Person Manager Retrieve()</span>
+<span class='comment'>// method.</span>
+PersonManager personManager = <span class='keyWord'>new</span> <span class='userType'>PersonManager</span>();
+<span class='userType'>Person</span> personKey = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
+{
+  PersonId = 1
+};
+<span class='userType'>Person</span> person = personManager.Retrieve(personKey);
+
+<span class='comment'>// This is an example of the Person Manager code that would access the</span>
+<span class='comment'>// DataManager Retrieve() method. The supporting class code is listed at</span>
+<span class='comment'>// the DataManager class level.</span>
+
+<span class='keyWord'>using</span> LJCNetCommon;
+<span class='keyWord'>using</span> LJCDBMessage;
+
+<span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Provides Person specific data manipulation methods.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+<span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>PersonManager</span>
+{
+  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Retrieves a person record from the database.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+  <span class='xmlComment'>/// &lt;param name="</span>keyObject<span class='xmlComment'>"&gt;</span><span class='comment'>The record containing the key field values.</span><span class='xmlComment'>&lt;/param&gt;</span>
+  <span class='xmlComment'>/// &lt;param name="</span>propertyNames<span class='xmlComment'>"&gt;</span><span class='comment'>The incuded column property names.</span><span class='xmlComment'>&lt;/param&gt;</span>
+  <span class='xmlComment'>/// &lt;param name="</span>filters<span class='xmlComment'>"&gt;</span><span class='comment'>The filter values.</span><span class='xmlComment'>&lt;/param&gt;</span>
+  <span class='xmlComment'>/// &lt;param name="</span>dbJoins<span class='xmlComment'>"&gt;</span><span class='comment'>The join values.</span><span class='xmlComment'>&lt;/param&gt;</span>
+  <span class='xmlComment'>/// &lt;returns&gt;</span><span class='comment'>A person object.</span><span class='xmlComment'>&lt;/returns&gt;</span>
+  <span class='modifier'>public</span> <span class='userType'>Person</span> Retrieve(<span class='userType'>Person</span> keyObject, <span class='libType'>List</span>&lt;<span class='commonType'>string</span>&gt; propertyNames = <span class='keyWord'>null</span>
+    , <span class='userType'>DbFilters</span> filters = <span class='keyWord'>null</span>, <span class='userType'>DbJoins</span> dbJoins = null)
+  {
+    <span class='userType'>Person</span> retValue = <span class='keyWord'>null</span>;
+    
+    <span class='userType'>DbResult</span> dbResult = mDataManager.Retrieve(keyObject, propertyNames, filters, dbJoins);
+    SQLStatement = mDataManager.SQLStatement;
+    <span class='keyWord'>if</span> (dbResult != <span class='keyWord'>null</span> && dbResult.DbRecords.Count &gt; 0)
+    {
+      <span class='comment'>// Populate a data object with the result values.</span>
+      retValue = <span class='keyWord'>new</span> <span class='userType'>Person</span>();
+      DbCommon.SetObjectValues(dbResult.DbRecords[0], retValue);
+    }
+    <span class='keyWord'>return</span> retValue;
+  }
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

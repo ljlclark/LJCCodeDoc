@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>DbJoins</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCDBMessage">Assembly List</a>
+    / <a href="LJCDBMessage.html">LJCDBMessage</a>
+    / DbJoins
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBMessage</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class DbJoins</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class DbJoins : List&lt;DbJoin&gt;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+       Represents a collection of table joins.
+       (E)
+    </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbJoins.Add.html'>Add</a></td>
+      <td class='ListTable'>
+      Creates the element from the supplied values and adds it to the collection.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbJoins.Clone.html'>Clone</a></td>
+      <td class='ListTable'>
+      Clones the structure of the object.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbJoins.ctor.html'>DbJoins #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbJoins.ctor1.html'>DbJoins #ctor</a></td>
+      <td class='ListTable'>
+      The Copy constructor.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbJoins.HasItems.html'>HasItems</a></td>
+      <td class='ListTable'>
+      Checks if the collection has items.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>5 Methods</div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
+<span class='keyWord'>using</span> LJCDBMessage;
+        
+<span class='comment'>// A Person Data Record class.</span>
+<span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>Person</span>
+{
+  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Gets or sets the PersonId value.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+  <span class='modifier'>public</span> <span class='commonType'>Int32</span> PersonId { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+        
+  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Gets or sets the Name value.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+  <span class='modifier'>public</span> <span class='commonType'>string</span> Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+        
+  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Gets or sets the City value.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+  <span class='modifier'>public</span> <span class='commonType'>string</span> City { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+}
+        
+<span class='comment'>// Creating the Joins collection object.</span>
+        
+<span class='comment'>// Create the Joins collection and Join definition objects.</span>
+<span class='userType'>DbJoins</span> dbJoins = <span class='keyWord'>new</span> <span class='userType'>DbJoins</span>();
+dbJoin = <span class='keyWord'>new</span> <span class='userType'>DbJoin</span>()
+{
+  TableName = "Address",
+  JoinType = "Left"
+};
+        
+<span class='comment'>// Create the JoinOn definitions and add them to the JoinOns collection.</span>
+<span class='comment'>// Add the JoinOns collection to the Join definition.</span>
+<span class='userType'>DbJoinOns</span> dbJoinOns = <span class='keyWord'>new</span> <span class='userType'>DbJoinOns</span>();
+<span class='userType'>DbJoinOn</span> dbJoinOn = <span class='keyWord'>new</span> <span class='userType'>DbJoinOn</span>()
+{
+  FromColumnName = "ID",
+  ToColumnName = "PersonID",
+  JoinOnOperator = "=" // Default
+};
+dbJoinOns.Add(dbJoinOn);
+dbJoin.JoinOns = dbJoinOns;
+        
+<span class='comment'>// Create the Column definitions and add them to the Columns collection.</span>
+<span class='comment'>// Add the Columns collection to the Join definition.</span>
+<span class='comment'>// Add the Join definition to the Joins collection.</span>
+<span class='userType'>DbColumns</span> columns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>();
+<span class='userType'>DbColumn</span> column = <span class='keyWord'>new</span> <span class='userType'>DbColumn</span>()
+{
+  ColumnName = "City_Name",
+  PropertyName = "City", // Defaults to same as ColumnName
+  DataTypeName = "String" // Default
+};
+columns.Add(column);
+dbJoin.Columns = columns;
+dbJoins.Add(dbJoin);
+        
+<span class='comment'>// Shortcut using object initialization, only required values and defaults.</span>
+<span class='comment'>// Note: JoinOn Columns must have properties in the Data Object</span>
+<span class='comment'>// to recieve the join values.</span>
+<span class='comment'>// The RenameAs property is required if there is another table column</span>
+<span class='comment'>// with the same name.</span>
+<span class='comment'>// dbJoinOns.Add(string fromColumnName, string toColumnName</span>
+<span class='comment'>//   , string joinOperator = "=")</span>
+<span class='comment'>// dbColumns.Add(string columnName, string propertyName = null</span>
+<span class='comment'>//   , string renameAs = null, string dataTypeName = "String", string caption = null)</span>
+<span class='userType'>DbJoins</span> dbJoins = <span class='keyWord'>new</span> <span class='userType'>DbJoins</span>();
+dbJoin = <span class='keyWord'>new</span> <span class='userType'>DbJoin</span>()
+{
+  TableName = "Address",
+  JoinOns = <span class='keyWord'>new</span> <span class='userType'>DbJoinOns</span>() {
+    { "ID", "PersonID" }
+  },
+  Columns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>() {
+    { "City_Name", "City" }
+  }
+};
+dbJoins.Add(dbJoin);
+        
+<span class='comment'>// The Data Service creates the following SQL from this request which</span>
+<span class='comment'>// includes the DbJoins object.</span>
+DbRequest dbRequest = <span class='keyWord'>new</span> <span class='userType'>DbRequest</span>("Select", "Person")
+{
+  DataConfigName = "PersonData",
+  Columns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>() { { "Name" }},
+  Joins = dbJoins
+};
+        
+<span class='comment'>// select</span>
+<span class='comment'>//  [Person].[Name],</span>
+<span class='comment'>//  [Address].[City_Name]</span>
+<span class='comment'>// from [Person]</span>
+<span class='comment'>// left join [Address]</span>
+<span class='comment'>//  on [Person].[ID] = [Address].[PersonID]</span></pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

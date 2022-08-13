@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>GetConnectionStringFromText</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCDataAccessConfig">Assembly List</a>
+    / <a href="../LJCDataAccessConfig.html">LJCDataAccessConfig</a>
+    / <a href="../DataConfig.html">DataConfig</a>
+    / GetConnectionStringFromText
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDataAccessConfig</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method GetConnectionStringFromText</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>templateText - The connection template text value.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The connection string.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public String GetConnectionStringFromText(String templateText)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+			Creates the populated connection string from the template text.
+		</div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCDataAccessConfig;
+
+<span class='userType'>DataConfigs</span> configs = <span class='keyWord'>new</span> <span class='userType'>DataConfigs</span>();
+configs.LJCLoadData();
+<span class='userType'>DataConfig</span> config = configs.LJCGetByName("ConfigName");
+
+<span class='userType'>ConnectionTemplates</span> templates = <span class='keyWord'>new</span> <span class='userType'>ConnectionTemplates</span>();
+templates.LJCLoadData();
+<span class='userType'>ConnectionTemplate</span> template = templates.LJCGetByName("SQLServer");
+
+<span class='commonType'>string</span> connString;
+connString = config.GetConnectionStringFromText(template.Template);</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

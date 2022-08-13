@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>DataPagination</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCDataPageList">Assembly List</a>
+    / <a href="LJCDataPageList.html">LJCDataPageList</a>
+    / DataPagination
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDataPageList</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class DataPagination</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class DataPagination 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Provides pagination. (D)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        The Pagination Initial Load Process
+      </div>
+  <br />
+  <div class='Text'>
+        The Form that includes the LJCDataGrid control, contains a private
+        DataManager object. This DataManager object is initialized and the
+        PageSize set before the LJCDataGrid columns are configured.
+      </div>
+  <br />
+  <div class='Text'>
+        The LJCDataGrid columns must be configured before attempting to display
+        any data in the LJCDataGrid control.
+      </div>
+  <br />
+  <div class='Text'>
+        The Form also includes a private Pagination object. This object is
+        initialized before attempting to display any data in the LJCDataGrid
+        control.
+      </div>
+  <br />
+  <div class='Text'>
+        After an instance of the Pagination object is created, an Event
+        Handler is created for the Pagination.DataRetrieve event and the
+        SelectCurrentRow event. Then the Pagination.PageSize is set and the
+        Pagination.Initialize() method is called.
+      </div>
+  <br />
+  <div class='Text'>
+        The Pagination.Initialize() method fires the Pagination.DataRetrieve
+        event. The DataRetrieve event handler saves the Pagination.PageStartIndex
+        and PageSize to the DataManager properties of the same name. It then
+        calls the List Form private DataRetrieve() method.
+      </div>
+  <br />
+  <div class='Text'>
+        The List Form DataRetrieve() method calls the DataManager.Load() method.
+        This method uses the DataManager PageStartIndex and PageSize values to
+        load the next or previous pages of data. The DataRetrieve() method shows
+        the first page of data for the initial load.
+      </div>
+  <br />
+  <div class='Text'>
+        The Paging Process
+      </div>
+  <br />
+  <div class='Text'>
+        The PageGridProcess() method is called when the user changes the
+        selected item in the list.
+      </div>
+  <br />
+  <div class='Text'>
+        The PageGridProcess() method calls the Pagination.PageUp() method if
+        the selected record is in the top 10 records of the list and pagination
+        is not at the beginning of the data. The Pagination FirstRowIndex and
+        CurrentRowIndex are saved from the current position of the grid.
+      </div>
+  <br />
+  <div class='Text'>
+        The PageGridProcess() method calls the Pagination.PageDown() method
+        if the selected record is in the last 10 of the list and pagination is
+        not at the end of the data. The Pagination.FirstRowIndex,
+        CurrentRowIndex and RowCount are set from the current position and
+        content of the grid.
+      </div>
+  <br />
+  <div class='Text'>
+        As the user pages through the data, the Pagination PageUp() and
+        PageDown() methods include the old previous or next page of data so
+        that two pages of data are displayed. This provides the user with better
+        data context as they can always see the rows of data on both sides of a
+        page break.
+      </div>
+  <br />
+  <div class='Text'>
+        The Pagination PageUp() and PageDown() methods also calculate the new
+        FirstRowIndex and CurrentRowIndex values. Then they call the form
+        SelectCurrentRow event which sets those values. This prevents the list
+        from appearing to move which preserves the current item context and
+        provides a smoother visual experience for the user.
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataPagination.ctor.html'>DataPagination #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataPagination.Initialize.html'>Initialize</a></td>
+      <td class='ListTable'>
+      Initializes the object data.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataPagination.PageDown.html'>PageDown</a></td>
+      <td class='ListTable'>
+      Retrieves the records for a PageDown request.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataPagination.PageUp.html'>PageUp</a></td>
+      <td class='ListTable'>
+      Retrieves the records for a PageUp request.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>4 Methods</div>
+  <br />
+  <div id='Title'>Private Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataPagination.OnDataRetrieve.html'>OnDataRetrieve</a></td>
+      <td class='ListTable'>
+      Calls the DataRetrieve event handlers.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataPagination.OnSelectCurrentRow.html'>OnSelectCurrentRow</a></td>
+      <td class='ListTable'>
+      Calls the SelectCurrentRow event handlers.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>2 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataPagination.BeginningOfData.html'>BeginningOfData</a></td>
+      <td class='ListTable'>
+      Gets or sets a value indicating if at the beginning
+      of the pagination data.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataPagination.ClearRows.html'>ClearRows</a></td>
+      <td class='ListTable'>Gets or sets the clear rows flag.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataPagination.CurrentRowIndex.html'>CurrentRowIndex</a></td>
+      <td class='ListTable'>
+      Gets or sets the grid CurrentRowIndex value.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataPagination.EndOfData.html'>EndOfData</a></td>
+      <td class='ListTable'>
+      Gets or sets a value indicating if at the end
+      of the pagination data.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataPagination.FirstRowIndex.html'>FirstRowIndex</a></td>
+      <td class='ListTable'>
+      Gets or sets the grid FirstRowIndex value.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataPagination.PageDirection.html'>PageDirection</a></td>
+      <td class='ListTable'>The Paging direction.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataPagination.PageSize.html'>PageSize</a></td>
+      <td class='ListTable'>
+      Gets or sets the PageSize value.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataPagination.PageStartIndex.html'>PageStartIndex</a></td>
+      <td class='ListTable'>
+      Gets or sets the PageStartIndex value.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataPagination.RowCount.html'>RowCount</a></td>
+      <td class='ListTable'>Gets or sets the RetrievedCount value.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

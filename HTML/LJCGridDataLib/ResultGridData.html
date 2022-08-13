@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ResultGridData</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCGridDataLib">Assembly List</a>
+    / <a href="LJCGridDataLib.html">LJCGridDataLib</a>
+    / ResultGridData
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCGridDataLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class ResultGridData</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class ResultGridData 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Provides DbResult helpers for an LJCDataGrid control.
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        A List Form contains one or more List Grids for displaying a list of items.<br />
+        When the data formats are known in advance, the List Form can contain data
+        methods that use strongly typed Data Objects.<br />
+        Each List Grid is coded to have Row Data Methods to display and modify the
+        items in the grid.<br />
+        These methods are DataRetrieve(), LoadRows(), RowAdd(), RowUpdate(),
+        SetStoredValues() and RowSelect().<br />
+        The methods may be postfixed with a value that identifies the
+        grid to which it applies. E.G. DataRetrieveAddress(), RowAddAddress(), etc.<br />
+        This is especially true if the form contains more than one grid.<br />
+      </div>
+  <br />
+  <div class='Text'>
+        The ResultGrid class is designed to allow for display of data items when the
+        data formats are not known in advance.<br />
+        It provides methods for displaying data directly from the DbResult values.
+      </div>
+  <br />
+  <div class='Text'>
+        <b>The Row Data Methods</b><br />
+        There are methods for managing rows and row data using DbColumn values.<br />
+        These methods are LoadRows() with 2 overrides, RowAdd(), RowUpdate()
+        and RowSetValues().<br />
+      </div>
+  <br />
+  <div class='Text'>
+        <b>The Grid Configuration Methods</b><br />
+        This class has methods for the contained grid configuration.<br />
+        These methods are GetDisplayColumns(), SetDisplayColumns() with 3 overrides
+        and RemoveDisplayColumn().<br />
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ResultGridData.ctor.html'>ResultGridData #ctor</a></td>
+      <td class='ListTable'>
+      Initalizes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ResultGridData.LoadRows.html'>LoadRows</a></td>
+      <td class='ListTable'>
+      Loads the grid rows from the result DbRecords records.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ResultGridData.LoadRows1.html'>LoadRows</a></td>
+      <td class='ListTable'>
+      Loads the grid rows from the DbRecords object.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ResultGridData.RemoveDisplayColumn.html'>RemoveDisplayColumn</a></td>
+      <td class='ListTable'>
+      Removes a display column.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ResultGridData.RowAdd.html'>RowAdd</a></td>
+      <td class='ListTable'>
+      Adds a grid row and updates it with the DbValues.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ResultGridData.RowSetValues.html'>RowSetValues</a></td>
+      <td class='ListTable'>
+      Updates a grid row with the DbValues.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ResultGridData.RowUpdate.html'>RowUpdate</a></td>
+      <td class='ListTable'>
+      Updates the current row with the DbValues.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ResultGridData.SetDisplayColumns.html'>SetDisplayColumns</a></td>
+      <td class='ListTable'>
+      Configure the Display Columns from the DbRequest object definition.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ResultGridData.SetDisplayColumns1.html'>SetDisplayColumns</a></td>
+      <td class='ListTable'>
+      Configure the Display Columns from the DbColumns definition.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ResultGridData.SetDisplayColumns2.html'>SetDisplayColumns</a></td>
+      <td class='ListTable'>
+      Configure the Display Columns from the Data object properties.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>10 Methods</div>
+  <br />
+  <div id='Title'>Private Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ResultGridData.OnAddRow.html'>OnAddRow</a></td>
+      <td class='ListTable'>
+      Fires the AddRow event.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>1 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ResultGridData.DataDefinition.html'>DataDefinition</a></td>
+      <td class='ListTable'>Gets or sets the DataDefinition value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ResultGridData.DataRecord.html'>DataRecord</a></td>
+      <td class='ListTable'>Gets or sets the DataRecord value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ResultGridData.DisplayColumns.html'>DisplayColumns</a></td>
+      <td class='ListTable'>Gets or sets the Display Columns.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ResultGridData.GridRow.html'>GridRow</a></td>
+      <td class='ListTable'>Gets or sets the GridRow value.</td>
+    </tr>
+  </table>
+  <br />
+  <div id='Title'>Fields</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Fields\ResultGridData.Grid.html'>Grid</a></td>
+      <td class='ListTable'>Gets or sets the Grid control value.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

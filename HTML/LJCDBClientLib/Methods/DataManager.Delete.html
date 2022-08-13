@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Delete</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
+    / <a href="../LJCDBClientLib.html">LJCDBClientLib</a>
+    / <a href="../DataManager.html">DataManager</a>
+    / Delete
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBClientLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method Delete</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>keyColumns - The record containing the key field values.</div>
+  <div class='Text'>filters - The filter values.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public Void Delete(DbColumns keyColumns, DbFilters filters = null)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Deletes the records with the specified key values.
+      (DE)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'><b>Parameters</b></div>
+  <br />
+  <div class='Text'>
+        keyColumns<br \>
+        This parameter defines the values to be used in the SQL where clause. It
+        is only used if the 'filters' parameter is null.<br \>
+        The values are separated with the 'AND' operator.
+      </div>
+  <br />
+  <div class='Text'>
+        filters<br \>
+        This parameter defines the values to be used in the SQL where clause. If
+        it is defined, then the keyColumns parameter is not used.<br \>
+        The 'filters' object can define a complex where clause including
+        combinations of 'AND' and 'OR' operators.
+      </div>
+  <br />
+  <div class='Text'>
+        Creates a "Delete"
+        <span class="userType">DbRequest</span>
+        object, which is available in the Request property. The request object is
+        passed to the ExecuteRequest() method.
+      </div>
+  <br />
+  <div class='Text'><b>Method Graph</b></div>
+  <br />
+  <div class='Text'>
+        All methods are in LJCDBMessage.DbCommon.
+      </div>
+  <br />
+  <div class='Text'>
+        RequestKeys(keyColumns)
+        <div class='Text'>CreateKeyColumn(keyColumn)</div>
+      </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='comment'>// This is an example of the Person Manager code that would access the</span>
+<span class='comment'>// DataManager Delete() method. The supporting class code is listed at</span>
+<span class='comment'>// the DataManager class level.</span>
+
+<span class='keyWord'>using</span> LJCNetCommon;
+<span class='keyWord'>using</span> LJCDBMessage;
+
+<span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Provides Person specific data manipulation methods.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+<span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>PersonManager</span>
+{
+  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Deletes a record from the database.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+  <span class='xmlComment'>/// &lt;param name="</span>keyObject<span class='xmlComment'>"&gt;</span><span class='comment'>The key record object.</span><span class='xmlComment'>&lt;/param&gt;</span>
+  <span class='xmlComment'>/// &lt;param name="</span>filters<span class='xmlComment'>"&gt;</span><span class='comment'>The filter values.</span><span class='xmlComment'>&lt;/param&gt;</span>
+  <span class='modifier'>public</span> <span class='commonType'>void</span> Delete(<span class='userType'>Person</span> keyObject, <span class='userType'>DbFilters</span> filters = null)
+  {
+    mDataManager.Delete(keyObject, filters);
+    AffectedCount = mDataManager.AffectedCount;
+    SQLStatement = mDataManager.SQLStatement;
+  }
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

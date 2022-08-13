@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ObjectManager`2</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
+    / <a href="LJCDBClientLib.html">LJCDBClientLib</a>
+    / ObjectManager`2
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBClientLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class ObjectManager`2</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class ObjectManager&lt;TData, TList&gt; 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Provides object specific data methods.
+      (RE)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        The Object Manager is a generic class that is used by a client application
+        to interface with the contained
+        <span class="userType">DataManager</span>
+        object.
+      </div>
+  <br />
+  <div class='Text'>
+        The Object Manager converts the Result XML message data into client Data
+        objects. The Data object property names must match those in the Data
+        Definition.
+      </div>
+  <br />
+  <div class='Text'>
+        The <span class="commonType">Add()</span>,
+        <span class="commonType">Delete()</span>,
+        <span class="commonType">Load()</span>,
+        <span class="commonType">Retrieve()</span> and
+        <span class="commonType">Update()</span>
+        methods take a client Data object as a parameter. They access properties
+        in the Data object using reflection.
+      </div>
+  <br />
+  <div class='Text'>
+        <span class="commonType">The CreateCollection()</span> and
+        <span class="commonType">CreateData()</span>
+        methods use reflection to populate client Data objects with the result
+        data.
+      </div>
+  <br />
+  <div class='Text'>
+        The test code is found in project LJCDBClientLib\TestObjectManager and
+        LJCDataManagerTest.
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.Add.html'>Add</a></td>
+      <td class='ListTable'>
+      Adds a record to the database.
+      (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.CreateCollection.html'>CreateCollection</a></td>
+      <td class='ListTable'>
+      Creates a Data Object collection from the result records.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.CreateData.html'>CreateData</a></td>
+      <td class='ListTable'>
+      Creates a Data Object from the result record.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.CreateLoadRequest.html'>CreateLoadRequest</a></td>
+      <td class='ListTable'>
+      Creates and returns the Load DbRequest object.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.ctor.html'>ObjectManager`2 #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.Delete.html'>Delete</a></td>
+      <td class='ListTable'>
+      Deletes the records with the specified key values.
+      (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.ExecuteClientSql.html'>ExecuteClientSql</a></td>
+      <td class='ListTable'>
+      Executes a non-query client SQL statement.
+      (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.ExecuteRequest.html'>ExecuteRequest</a></td>
+      <td class='ListTable'>
+      Execute the supplied request.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.GetColumns.html'>GetColumns</a></td>
+      <td class='ListTable'>
+      Creates a set of columns that match the supplied list.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.Load.html'>Load</a></td>
+      <td class='ListTable'>
+      Retrieves a collection of data records.
+      (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.LoadClientSql.html'>LoadClientSql</a></td>
+      <td class='ListTable'>
+      Executes a "Load" client SQL statement.
+      (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.LoadProcedure.html'>LoadProcedure</a></td>
+      <td class='ListTable'>
+      Retrieves a collection of data records.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.MapNames.html'>MapNames</a></td>
+      <td class='ListTable'>
+      Maps the column property and rename values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.Retrieve.html'>Retrieve</a></td>
+      <td class='ListTable'>
+      Retrieves a record from the database.
+      (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.RetrieveClientSql.html'>RetrieveClientSql</a></td>
+      <td class='ListTable'>
+      Executes a "Retrieve" client SQL statement.
+      (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.SetDbAssignedColumns.html'>SetDbAssignedColumns</a></td>
+      <td class='ListTable'>
+      Sets the database assigned value columns.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.SetLookupColumns.html'>SetLookupColumns</a></td>
+      <td class='ListTable'>
+      Adds the lookup column names.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\ObjectManager`2.Update.html'>Update</a></td>
+      <td class='ListTable'>
+      Updates the record.
+      (E)
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>18 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ObjectManager`2.AffectedCount.html'>AffectedCount</a></td>
+      <td class='ListTable'>Gets or sets the non-select affected record count.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ObjectManager`2.BaseDefinition.html'>BaseDefinition</a></td>
+      <td class='ListTable'>Gets the base data definition columns collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ObjectManager`2.DataConfigName.html'>DataConfigName</a></td>
+      <td class='ListTable'>Gets or sets the data configuration name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ObjectManager`2.DataDefinition.html'>DataDefinition</a></td>
+      <td class='ListTable'>Gets a reference to the Data Definition columns collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ObjectManager`2.DataManager.html'>DataManager</a></td>
+      <td class='ListTable'>The Data Manager object.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ObjectManager`2.DbServiceRef.html'>DbServiceRef</a></td>
+      <td class='ListTable'>Gets DbServiceRef object.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ObjectManager`2.SchemaName.html'>SchemaName</a></td>
+      <td class='ListTable'>The Schema name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ObjectManager`2.SQLStatement.html'>SQLStatement</a></td>
+      <td class='ListTable'>Gets or sets the last SQL statement.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\ObjectManager`2.TableName.html'>TableName</a></td>
+      <td class='ListTable'>The primary table name.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'>IF NOT EXISTS(SELECT* FROM INFORMATION_SCHEMA.TABLES
+ WHERE TABLE_NAME = N'PersonTest')
+BEGIN
+CREATE TABLE[dbo].[PersonTest]
+(
+  [Id][int] IDENTITY(1,1) NOT NULL,
+  [Name] [nvarchar] (60) NULL,
+  [PrincipleFlag] [bit] NOT NULL,
+  CONSTRAINT[PK_PersonTest]
+  PRIMARY KEY CLUSTERED(
+  [Id] ASC),
+)
+END
+GO
+
+<span class='keyWord'>using</span> System;
+<span class='keyWord'>using</span> System.Collections.Generic;
+<span class='keyWord'>using</span> System.Data.Common;
+<span class='keyWord'>using</span> System.Text;
+<span class='keyWord'>using</span> LJCDBClientLib;
+<span class='keyWord'>using</span> LJCDBMessage;
+<span class='keyWord'>using</span> LJCDBDataAccessLib;
+<span class='keyWord'>using</span> LJCDBServiceLib;
+
+<span class='comment'>// A Person Data Record class.</span>
+<span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>Person</span>
+{
+  <span class='modifier'>public</span> <span class='commonType'>Int32</span> ID { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+  <span class='modifier'>public</span> <span class='commonType'>string</span> Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+  <span class='modifier'>public</span> <span class='commonType'>bool</span> PrincipleFlag { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+}
+
+<span class='comment'>// A collection of Person records.</span>
+<span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>Persons</span> : <span class='libType'>List</span>&lt;<span class='userType'>Person</span>&gt; { }
+
+<span class='comment'>// Test ObjectManager.</span>
+<span class='modifier'>public</span> <span class='modifier'>static</span> <span class='commonType'>void</span> TestObjectDataAccess()
+{
+  DbConnectionStringBuilder connectionBuilder;
+  DbDataAccess dbDataAccess;
+
+  <span class='commonType'>string</span> databaseName = "DatabaseName";
+  connectionBuilder = <span class='keyWord'>new</span> <span class='userType'>DbConnectionStringBuilder</span>()
+  {
+    { "Data Source", "DataServiceName" },
+    { "Initial Catalog", databaseName },
+    { "Integrated Security", "True" }
+  };
+  <span class='commonType'>string</span> connectionString = connectionBuilder.ConnectionString;
+  <span class='commonType'>string</span> providerName = "System.Data.SqlClient";
+  dbDataAccess = <span class='keyWord'>new</span> <span class='userType'>DbDataAccess</span>(connectionString, providerName
+    , databaseName);
+
+  <span class='comment'>// Create the Data Access object for the desired communication type.</span>
+  <span class='comment'>//string endPointConfigurationName = "NetTcpBinding_IDbService";</span>
+  <span class='userType'>DbServiceRef</span> dbServiceRef = <span class='keyWord'>new</span> <span class='userType'>DbServiceRef</span>()
+  {
+    <span class='comment'>// Direct Message Data Access communication.</span>
+    <span class='userType'>DbDataAccess</span> = dbDataAccess,
+
+    <span class='comment'>// Direct Database Service.</span>
+    <span class='comment'>//DbService = new DbService(),</span>
+
+    <span class='comment'>// Remote Database Service with Client Proxy.</span>
+    <span class='comment'>//DbServiceClient = new DbServiceClient(endPointConfigurationName)</span>
+  };
+    
+  <span class='comment'>// Create the ObjectManager.</span>
+  <span class='comment'>//  - Creates the DataDefinition object.</span>
+  <span class='comment'>//  - Creates the DbRequest object with all data and key columns.</span>
+  <span class='comment'>//  - Sets and returns the database assigned values.</span>
+  <span class='userType'>ObjectManager</span>&lt;Person, Persons&gt; personManager;
+  personManager = <span class='keyWord'>new</span> <span class='userType'>ObjectManager</span>&lt;Person, Persons&gt;(dbServiceRef, <span class='keyWord'>null</span>
+    , "PersonTest");
+        
+  <span class='keyWord'>if</span> (personManager.IsSuccess)
+  {
+    <span class='comment'>// Map table names with property names or captions</span>
+    <span class='comment'>// that differ from the column names.</span>
+    personManager.MapNames("Id", "ID");
+
+    <span class='comment'>// Create the list of database assigned columns.</span>
+    <span class='comment'>// And make sure the AutoIncrement value is set.</span>
+    personManager.DbAssignedColumnNames = <span class='keyWord'>new</span> <span class='commonType'>string</span>[]
+    {
+      "Id"
+    };
+
+    <span class='comment'>// Create the list of lookup column names.</span>
+    <span class='comment'>// This list must include the database assigned columns.</span>
+    personManager.LookupColumnNames = <span class='keyWord'>new</span> <span class='commonType'>string</span>[]
+    {
+      "Id",
+      "Name"
+    };
+
+    <span class='userType'>Persons</span> persons = Load(personManager);
+    Add(personManager);
+    <span class='userType'>Person</span> person = Retrieve(personManager);
+    persons = Load(personManager);
+    Update(personManager);
+    persons = Load(personManager);
+    Delete(personManager);
+    persons = Load(personManager);
+
+    Add(personManager);
+    person = RetrieveClientSql(personManager);
+    persons = LoadClientSql(personManager);
+    ExecuteClientSql(personManager);
+    persons = LoadClientSql(personManager);
+  }
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LJCMetadata</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCSQLUtilLib">Assembly List</a>
+    / <a href="LJCSQLUtilLib.html">LJCSQLUtilLib</a>
+    / LJCMetadata
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCSQLUtilLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class LJCMetadata</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class LJCMetadata 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Contains Metadata helper methods.
+    </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.ctor.html'>LJCMetadata #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.GetCreateColumnSql.html'>GetCreateColumnSql</a></td>
+      <td class='ListTable'>
+      Creates and returns the Column Definitions SQL for the Create Table SQL
+      statement from the Metadata.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.GetCreateTableSql.html'>GetCreateTableSql</a></td>
+      <td class='ListTable'>
+      Builds and returns the Create Table SQL statement with the specified
+      Metadata columns.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.GetCreateTableSql1.html'>GetCreateTableSql</a></td>
+      <td class='ListTable'>
+      Builds and returns the Create Table SQL statement from the Metadata.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.GetForeignKeyConstraintSql.html'>GetForeignKeyConstraintSql</a></td>
+      <td class='ListTable'>
+      Creates and returns the Foreign Key Constraing SQL for the foreign keys.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.GetPrimaryKeyConstraintSql.html'>GetPrimaryKeyConstraintSql</a></td>
+      <td class='ListTable'>
+      Creates and returns the Primary Key Constraint SQL for the Create Table
+      SQL statement from the Metadata.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.GetRemakeTableScript.html'>GetRemakeTableScript</a></td>
+      <td class='ListTable'>
+            Remake table with new column names and/or column sequences.
+            </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.GetSqlDbTypeName.html'>GetSqlDbTypeName</a></td>
+      <td class='ListTable'>
+      Get the .NET to SQL data type names.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.LoadSchemaForeignKeys.html'>LoadSchemaForeignKeys</a></td>
+      <td class='ListTable'>
+      Loads a collection of Foreign Key data records.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.LoadSchemaPrimaryKeys.html'>LoadSchemaPrimaryKeys</a></td>
+      <td class='ListTable'>
+      Loads a collection of Primary Key data records.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.SaveMdColumn.html'>SaveMdColumn</a></td>
+      <td class='ListTable'>
+      Saves the MD Column from the DbColumn object.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.SaveMdKey.html'>SaveMdKey</a></td>
+      <td class='ListTable'>
+      Saves the MD Key from the ForeignKey object.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.SaveMdTable.html'>SaveMdTable</a></td>
+      <td class='ListTable'>
+      Saves the MD Table from the table name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.UpdateMetadataFromSchema.html'>UpdateMetadataFromSchema</a></td>
+      <td class='ListTable'>
+      Creates/Updates the Metadata from the Schema data.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>14 Methods</div>
+  <br />
+  <div id='Title'>Private Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCMetadata.InitializeData.html'>InitializeData</a></td>
+      <td class='ListTable'>
+      Configures the controls and loads the selection control data.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>1 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCMetadata.ForeignKeyManager.html'>ForeignKeyManager</a></td>
+      <td class='ListTable'>Gets or sets the ForeignKeyManager value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCMetadata.MdColumnManager.html'>MdColumnManager</a></td>
+      <td class='ListTable'>Gets or sets the MdColumnManager value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCMetadata.MdKeyManager.html'>MdKeyManager</a></td>
+      <td class='ListTable'>Gets or sets the MdKeyManager value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCMetadata.MdTableManager.html'>MdTableManager</a></td>
+      <td class='ListTable'>Gets or sets the MdTableManager value.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

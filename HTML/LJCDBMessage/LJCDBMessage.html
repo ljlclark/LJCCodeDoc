@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- AssemblyTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LJCDBMessage</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <meta name="author" content="Lester J. Clark" />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCDBMessage">Assembly List</a>
+    / LJCDBMessage
+  </div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Assembly LJCDBMessage</div>
+  </div>
+  <br />
+  <div class='Text'>Data Service Message Library</div>
+  <br />
+  <div class='Text'>
+        The Data Service Message library contains classes for utilizing Request XML
+        messages and Result XML messages.
+      </div>
+  <br />
+  <div class='Text'>
+        The Data Service Client Library
+        (<span class="commonType">LJCDBCLientLib</span>)
+        and the Data Service library
+        (<span class="commonType">LJCDBServiceLib</span>)
+        use the Request and Result XML messages to communicate between them.
+      </div>
+  <br />
+  <div class='Text'>
+        <b>The
+        <span class="userType">DbRequest</span>
+        Object Graph</b><br />
+        The <span class="userType">DbRequest</span>
+        object is the top-level of an object hierarchy to serialize and
+        deserialize the Request XML Message.<br />
+        It uses the objects:
+        <span class="userType">DbRequest</span>,
+        Columns(<span class="userType">DbColumns</span>),
+        KeyColumns(<span class="userType">DbColumns</span>),
+        Joins(<span class="userType">DbJoins</span>),
+        <span class="userType">DbJoin</span>,
+        JoinOns(<span class="userType">DbJoinOns</span>),
+        <span class="userType">DbJoinOn</span>,
+        Filters(<span class="userType">DbFilters</span>),
+        <span class="userType">DbFilter</span>,
+        (ConditionSet)<span class="userType">DbConditionSet</span>,
+        (Conditions)<span class="userType">DbConditions</span> and
+        <span class="userType">DbCondition</span>.
+      </div>
+  <br />
+  <div class='Text'>
+        <b>The
+        <span class="userType">DbResult</span>
+        Object Graph</b><br />
+        The <span class="userType">DbResult</span>
+        object is the top-level of an object hierarchy to serialize and
+        deserialize the Result XML Message.<br />
+        It uses the objects:
+        <span class="userType">DbResult</span> and
+        <span class="userType">DbRecords</span>.
+      </div>
+  <br />
+  <div class='Text'>
+    <a href='DbRequestColumn.html' target='_blank'>DbRequest Column Diagram</a>
+    <a href='DbRequestJoin.html' target='_blank'>DbRequest Join Diagram</a>
+    <a href='DbRequestResult.html' target='_blank'>DbResult Diagram</a>
+  </div>
+  <br />
+  <div id='Title'>Classes<br></div>
+  <table>
+    <tr>
+      <td>
+        <table class='ListTable'>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbCommon.html'>DbCommon</a></td>
+            <td class='ListTable'>Common data message methods.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbCondition.html'>DbCondition</a></td>
+            <td class='ListTable'>Represents a filter condition.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbConditions.html'>DbConditions</a></td>
+            <td class='ListTable'>Represents a collection of
+    <span class="userType">DbCondition</span>
+    objects.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbConditionSet.html'>DbConditionSet</a></td>
+            <td class='ListTable'>
+      Represents the conditions and properties.
+      (E)
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbFilter.html'>DbFilter</a></td>
+            <td class='ListTable'>Represents a filter which is part of a where clause.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbFilters.html'>DbFilters</a></td>
+            <td class='ListTable'>
+      Represents a collection of
+      <span class="userType">DbFilter</span> objects.
+      (E)
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbJoin.html'>DbJoin</a></td>
+            <td class='ListTable'>Represents a database table join.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbJoinOn.html'>DbJoinOn</a></td>
+            <td class='ListTable'>Represents a Join On definition.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbJoinOns.html'>DbJoinOns</a></td>
+            <td class='ListTable'>Represents a collection of join on definitions.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbJoins.html'>DbJoins</a></td>
+            <td class='ListTable'>
+       Represents a collection of table joins.
+       (E)
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbRequest.html'>DbRequest</a></td>
+            <td class='ListTable'>
+      Represents a database request.
+      (E)
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbResult.html'>DbResult</a></td>
+            <td class='ListTable'>
+      Represents a Request result.
+      (R)
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbRow.html'>DbRow</a></td>
+            <td class='ListTable'>Represents a result Row.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbRows.html'>DbRows</a></td>
+            <td class='ListTable'> Represents a collection of DbRow objects.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbSqlBuilder.html'>DbSqlBuilder</a></td>
+            <td class='ListTable'>
+      Provides SQL builder methods.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='RequestType.html'>RequestType</a></td>
+            <td class='ListTable'>The RequestType values.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='ResultConverter`2.html'>ResultConverter`2</a></td>
+            <td class='ListTable'>
+      Converts
+      <span class="userType">DbColumns</span> and
+      <span class="userType">DbResult</span>
+      objects to data objects.
+    </td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <img src='DBMessageGraph.jpg' height='350' />
+      </td>
+    </tr>
+  </table>
+  <div class='Text'>17 Types</div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

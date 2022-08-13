@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- AssemblyTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LJCAddressParserLib</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <meta name="author" content="Lester J. Clark" />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCAddressParserLib">Assembly List</a>
+    / LJCAddressParserLib
+  </div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Assembly LJCAddressParserLib</div>
+  </div>
+  <br />
+  <div class='Text'>Address Parsing Classes</div>
+  <br />
+  <div class='Text'>
+        The main parsing class is StandardAddress. It contains methods for parsing
+        address strings and parsed component properties which contain the
+        standardized data.<br />
+        The line parsing methods are: ParseMixedAddress(), ParseDeliveryAddressLine()
+        and ParseLastLine().
+      </div>
+  <br />
+  <div class='Text'>Directional Standardizing Classes</div>
+  <br />
+  <div class='Text'>
+        The Directional classes are for standardizing the Predirectionals and
+        Postdirectionals.<br />
+        Examples of a Directional are: North(N), South(S) and Northwest(NW).<br />
+        The Directional classes are: Directionals, Directional, NameComparer
+        and SpanishNameComparer.
+      </div>
+  <br />
+  <div class='Text'>Suffix Standardizing Classes</div>
+  <br />
+  <div class='Text'>
+        The Suffix classes are for standardizing the Suffix value.<br />
+        Examples of a Suffix are: Street(ST), Drive(DR) and Avenue(AVE).<br />
+        The Suffix classes are: Suffixes, Suffix, SuffixLookups, SuffixLookup,
+        SuffixCodeComparer, SuffixLSoundexComparer and SuffixPSoundexComparer.
+      </div>
+  <br />
+  <div class='Text'>Unit Standardizing Objects</div>
+  <br />
+  <div class='Text'>
+        The Unit classes are for standardizing the Secondary Address (Unit) value.<br />
+        Examples of a Unit are: Apartment(APT), Building(BLDG) and Department(DEPT).<br />
+        The Unit classes are: Units, Unit, UnitLookups, UnitLookup, UnitCodeComparer,
+        UnitNameComparer, UnitLSoundexComparer and UnitPSoundexComparer.
+      </div>
+  <br />
+  <div class='Text'>State Standardizing Objects</div>
+  <br />
+  <div class='Text'>
+        The State classes are for standardizing the State or Province value.<br />
+        The State classes are: States, State, StateLookups, StateLookup,
+        StateLSoundexComparer and StatePSoundexComparer, .
+      </div>
+  <br />
+  <div id='Title'>Classes<br></div>
+        <table class='ListTable'>
+          <tr>
+            <td class='ListTable' width='25%'><a href='Directional.html'>Directional</a></td>
+            <td class='ListTable'>
+      Represents an Address Directional component.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='Directionals.html'>Directionals</a></td>
+            <td class='ListTable'>
+      Represents a collection of Directional objects.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='ErrorMessage.html'>ErrorMessage</a></td>
+            <td class='ListTable'>
+            Represents an Address Parsing error.
+            </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='ErrorMessages.html'>ErrorMessages</a></td>
+            <td class='ListTable'>Represents a collection of ErrorMessage objects.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='NameComparer.html'>NameComparer</a></td>
+            <td class='ListTable'>Sort and search on Name value.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='PrimaryRoad.html'>PrimaryRoad</a></td>
+            <td class='ListTable'>Represents a Primary Road.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='PrimaryRoads.html'>PrimaryRoads</a></td>
+            <td class='ListTable'>Represents a collection of PrimaryRoad objects.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='RoadLookup.html'>RoadLookup</a></td>
+            <td class='ListTable'>Represents a RoadLookup component.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='RoadLookups.html'>RoadLookups</a></td>
+            <td class='ListTable'>Represents a collection of RoadLookup objects.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='RoadLSoundexComparer.html'>RoadLSoundexComparer</a></td>
+            <td class='ListTable'>Sort and search on Letter Soundex value.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='RoadPSoundexComparer.html'>RoadPSoundexComparer</a></td>
+            <td class='ListTable'>Sort and search on Phonetic Soundex value.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='SpanishNameComparer.html'>SpanishNameComparer</a></td>
+            <td class='ListTable'>Sort and search on Spanish Name value.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='StandardAddress.html'>StandardAddress</a></td>
+            <td class='ListTable'>
+      Provides methods to parse Address information into standardized component
+      properties. (R)
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='State.html'>State</a></td>
+            <td class='ListTable'>
+      Represents an Address State component
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='StateLookup.html'>StateLookup</a></td>
+            <td class='ListTable'>
+      Represents a StateLookup component.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='StateLookups.html'>StateLookups</a></td>
+            <td class='ListTable'>
+      Represents a colletion of StateLookup objects.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='StateLSoundexComparer.html'>StateLSoundexComparer</a></td>
+            <td class='ListTable'>Sort and search on Letter Soundex value.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='StatePSoundexComparer.html'>StatePSoundexComparer</a></td>
+            <td class='ListTable'>Sort and search on Phonetic Soundex value.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='States.html'>States</a></td>
+            <td class='ListTable'>
+      Represents a collection of State objects.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='Suffix.html'>Suffix</a></td>
+            <td class='ListTable'>
+      Represents a Suffix component.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='Suffixes.html'>Suffixes</a></td>
+            <td class='ListTable'>
+      Represents a colletion of StateLookup objects.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='SuffixLookup.html'>SuffixLookup</a></td>
+            <td class='ListTable'>
+      Represents a SuffixLookup component.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='SuffixLookups.html'>SuffixLookups</a></td>
+            <td class='ListTable'>
+      Represents a colletion of SuffixLookup objects.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='SuffixLSoundexComparer.html'>SuffixLSoundexComparer</a></td>
+            <td class='ListTable'>Sort and search on Letter Soundex value.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='SuffixPSoundexComparer.html'>SuffixPSoundexComparer</a></td>
+            <td class='ListTable'>Sort and search on Phonetic Soundex value.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='Unit.html'>Unit</a></td>
+            <td class='ListTable'>
+      Represents a Unit component.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='UnitLookup.html'>UnitLookup</a></td>
+            <td class='ListTable'>
+      Represents a UnitLookup component.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='UnitLookups.html'>UnitLookups</a></td>
+            <td class='ListTable'>
+      Represents a colletion of SuffixLookup objects.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='UnitLSoundexComparer.html'>UnitLSoundexComparer</a></td>
+            <td class='ListTable'>Sort and search on Letter Soundex value.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='UnitNameComparer.html'>UnitNameComparer</a></td>
+            <td class='ListTable'>Sort and search on Name value.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='UnitPSoundexComparer.html'>UnitPSoundexComparer</a></td>
+            <td class='ListTable'>Sort and search on Phonetic Soundex value.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='Units.html'>Units</a></td>
+            <td class='ListTable'>
+      Represents a colletion of Unit objects.
+    </td>
+          </tr>
+        </table>
+  <div class='Text'>32 Types</div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

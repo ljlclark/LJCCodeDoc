@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>DataDetailDialog</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#DataDetail">Assembly List</a>
+    / <a href="DataDetail.html">DataDetail</a>
+    / DataDetailDialog
+  </div>
+  <br />
+  <div id='Title'>Namespace - DataDetail</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class DataDetailDialog</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class DataDetailDialog : Form 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      The DataDetail Dynamic Detail dialog.
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        The DataDetailDialog form is designed to dynamically create a Detail Dialog
+        to allow display and edit of Data Record values which are contained in the
+        LJCRecord (DbColumns) collection.
+      </div>
+  <br />
+  <div class='Text'>
+        The Dialog contains one or more TabControl pages. Each TabPage can consist
+        of multiple ControlColumn objects. Each ControlColumn object can consist of
+        multiple ControlRow objects.
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataDetailDialog.ctor.html'>DataDetailDialog #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>1 Methods</div>
+  <br />
+  <div id='Title'>Private Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataDetailDialog.CreateControlRow.html'>CreateControlRow</a></td>
+      <td class='ListTable'>
+      Creates the ControlRow and associated controls.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataDetailDialog.DataRetrieve.html'>DataRetrieve</a></td>
+      <td class='ListTable'>
+      Retrieves the initial control data.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataDetailDialog.Dispose.html'>Dispose</a></td>
+      <td class='ListTable'>
+            Clean up any resources being used.
+            </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataDetailDialog.InitializeComponent.html'>InitializeComponent</a></td>
+      <td class='ListTable'>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataDetailDialog.LJCOnChange.html'>LJCOnChange</a></td>
+      <td class='ListTable'>
+      Fires the LJCChange event.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataDetailDialog.OnPaintBackground.html'>OnPaintBackground</a></td>
+      <td class='ListTable'>
+      Paint the form background.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataDetailDialog.SearchControls.html'>SearchControls</a></td>
+      <td class='ListTable'>
+      Returns a reference to a Control by name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataDetailDialog.SearchLabel.html'>SearchLabel</a></td>
+      <td class='ListTable'>
+      Returns a reference to a Label control by name.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataDetailDialog.SearchTextBox.html'>SearchTextBox</a></td>
+      <td class='ListTable'>
+      Return a reference to a TextBox control by name.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>9 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataDetailDialog.LJCConfigRows.html'>LJCConfigRows</a></td>
+      <td class='ListTable'>
+      The Configuration Rows.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataDetailDialog.LJCConfigRowsFileName.html'>LJCConfigRowsFileName</a></td>
+      <td class='ListTable'>Gets or sets the ConfigRows file name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataDetailDialog.LJCDataColumns.html'>LJCDataColumns</a></td>
+      <td class='ListTable'>
+      Gets a reference to the record object.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataDetailDialog.LJCDataConfigName.html'>LJCDataConfigName</a></td>
+      <td class='ListTable'>Gets or sets the DataConfig name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataDetailDialog.LJCDbServiceRef.html'>LJCDbServiceRef</a></td>
+      <td class='ListTable'>Gets or sets the DbServiceRef value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataDetailDialog.LJCIsUpdate.html'>LJCIsUpdate</a></td>
+      <td class='ListTable'>Gets the LJCIsUpdate value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataDetailDialog.LJCKeyItems.html'>LJCKeyItems</a></td>
+      <td class='ListTable'>
+      Gets or sets the ControlItems collection.
+    </td>
+    </tr>
+  </table>
+  <br />
+  <div id='Title'>Fields</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Fields\DataDetailDialog.components.html'>components</a></td>
+      <td class='ListTable'>
+            Required designer variable.
+            </td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

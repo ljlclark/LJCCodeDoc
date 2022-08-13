@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LJCSetObjectValues</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCTextDataReaderLib">Assembly List</a>
+    / <a href="../LJCTextDataReaderLib.html">LJCTextDataReaderLib</a>
+    / <a href="../TextDataReader.html">TextDataReader</a>
+    / LJCSetObjectValues
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCTextDataReaderLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method LJCSetObjectValues</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>dataObject - The data object.</div>
+  <div class='Text'>dataFields - The DbColumns data field definitions object.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public Void LJCSetObjectValues(Object dataObject, DbColumns dataFields = null)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Sets the data object property values from the TextDataReader.
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        The custom DbColumns data field definitions are used if provided.
+        Otherwise the internal LJCDataFields property value is used.
+      </div>
+  <br />
+  <div class='Text'>
+        This method uses the DbColumn.ColumnName (or DbColumn.RenameAs if provided)
+        for the source column name and the DbColumn.PropertyName for the object
+        property name.
+      </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

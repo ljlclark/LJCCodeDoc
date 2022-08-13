@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Update</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
+    / <a href="../LJCDBClientLib.html">LJCDBClientLib</a>
+    / <a href="../ObjectManager`2.html">ObjectManager`2</a>
+    / Update
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBClientLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method Update</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>dataObject - The record object.</div>
+  <div class='Text'>keyColumns - The record containing the key field values.</div>
+  <div class='Text'>propertyNames - The incuded column property names.</div>
+  <div class='Text'>filters - The filter values.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public Void Update(TData dataObject, DbColumns keyColumns, List&lt;String&gt; propertyNames = null, DbFilters filters = null)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Updates the record.
+      (E)
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='comment'>// Updates a record.</span>
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> Update(<span class='userType'>ObjectManager</span>&lt;Person, Persons&gt; personManager)
+{
+  <span class='comment'>// Create the list of included columns.</span>
+  <span class='comment'>// This list must not include the DB assigned columns</span>
+  <span class='comment'>// or the database assigned columns must have the AutoIncrement</span>
+  <span class='comment'>// value set to "true".</span>
+  List&lt;string&gt; columnNames = <span class='keyWord'>new</span> <span class='userType'>List</span>&lt;string&gt;() { "Name" };
+
+  <span class='userType'>Person</span> dataObject = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
+  {
+    Name = "TestNameUpdated"
+  };
+
+  <span class='comment'>// Create Key Columns.</span>
+  <span class='commonType'>var</span> keyColumns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>()
+  {
+    Name = "TestName"
+  };
+
+  <span class='comment'>// Update the record.</span>
+  personManager.Update(dataObject, keyColumns, columnNames);
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

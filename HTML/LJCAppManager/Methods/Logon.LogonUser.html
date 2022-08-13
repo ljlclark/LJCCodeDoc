@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LogonUser</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCAppManager">Assembly List</a>
+    / <a href="../LJCAppManager.html">LJCAppManager</a>
+    / <a href="../Logon.html">Logon</a>
+    / LogonUser
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCAppManager</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method LogonUser</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>userName - The domain user name.</div>
+  <div class='Text'>domainName - The domain name.</div>
+  <div class='Text'>password - The user password.</div>
+  <div class='Text'>LogonType - The logon type.</div>
+  <div class='Text'>LogonProvider - The logon provider.</div>
+  <div class='Text'>phToken - The pointer to the token handler.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>True if the user exists, othwerwise false.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public static Boolean LogonUser(String userName, String domainName, String password, Int32 LogonType, Int32 LogonProvider, IntPtr& phToken)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Retrieves the logged on user.
+    </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

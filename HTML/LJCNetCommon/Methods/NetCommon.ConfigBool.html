@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ConfigBool</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+    / <a href="../NetCommon.html">NetCommon</a>
+    / ConfigBool
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method ConfigBool</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>key - The key value.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The bool config value.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public static Boolean ConfigBool(String key)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Retrieves the Config bool value. (RE)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        This uses the program config file which is the name of the program plus
+        the extension ".config".
+      </div>
+  <br />
+  <div class='Text'>
+        // An example config file.<br />
+        <<span class="ltgt">?</span><span class="name">xml</span><span
+        class="attrib"> version</span>="<span class="data">1.0</span>"<span
+        class="attrib"> encoding</span>="<span class="data">utf-8</span>"<span
+        class="ltgt"> ?</span>><br />
+        <<span class="name">configuration</span>><br />
+        <span class="pad1"></span><<span class="name">appSettings</span>><br />
+        <span class="pad2"></span><<span class="name">add</span><span
+        class="attrib"> key</span>="<span class="data">LocalDbDataAccess</span>"<span
+        class="attrib"> value</span>="<span class="data">true</span>"<span
+        class="ltgt"> /</span>><br />
+        <span class="pad1"></span><<span class="ltgt">/</span><span class="name">appSettings</span>><br />
+        <<span class="ltgt">/</span><span class="name">configuration</span>>
+      </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
+        
+<span class='comment'>// This returns true.</span>
+<span class='commonType'>bool</span> localDbAccess = <span class='userType'>NetCommon</span>.ConfigBool("LocalDbDataAccess");</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

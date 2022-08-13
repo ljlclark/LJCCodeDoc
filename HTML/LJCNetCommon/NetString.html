@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>NetString</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="LJCNetCommon.html">LJCNetCommon</a>
+    / NetString
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class NetString</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class NetString 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Contains common string related static functions.
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        The NetCommon class contains string related static helper functions for
+        all .NET program types.
+      </div>
+  <br />
+  <div class='Text'>
+        <b>Checking String Values</b> <br />
+        These include: HasValue(), IsDigits() and IsEqual().
+      </div>
+  <br />
+  <div class='Text'>
+        <b>Formatting a String</b> <br />
+        These include: GetPropertyName(), ExceptionString() and InitString().
+      </div>
+  <br />
+  <div class='Text'>
+        <b>Parsing Delimited String Values</b> <br />
+        These include: GetDelimitedAndIndexes(), GetDelimitedString() and
+        GetStringWithDelimiters().
+      </div>
+  <br />
+  <div class='Text'>
+        <b>Soundex Functions</b> <br />
+        These are helper functions for creating Soundex values. <br />
+        These include: CreateLSoundex(), CreatePSoundex(), IsSoundexLetter()
+        and Phonetic().
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.AddMissingArgument.html'>AddMissingArgument</a></td>
+      <td class='ListTable'>
+            Adds the missing argument name to the message.
+            </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.CreateLSoundex.html'>CreateLSoundex</a></td>
+      <td class='ListTable'>
+      Creates a letter based soundex value. (D)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.CreatePSoundex.html'>CreatePSoundex</a></td>
+      <td class='ListTable'>
+      Creates a Phonetic based soundex value. (D)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.ExceptionString.html'>ExceptionString</a></td>
+      <td class='ListTable'>
+      Creates an exception string with outer and inner exception.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.GetDelimitedAndIndexes.html'>GetDelimitedAndIndexes</a></td>
+      <td class='ListTable'>
+      Get the delimited string begin and end index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.GetDelimitedString.html'>GetDelimitedString</a></td>
+      <td class='ListTable'>
+      Gets the string between the specified delimiters.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.GetPropertyName.html'>GetPropertyName</a></td>
+      <td class='ListTable'>
+      Gets a column name with underscores converted to Pascal case.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.GetStringWithDelimiters.html'>GetStringWithDelimiters</a></td>
+      <td class='ListTable'>
+      Get the string including the specified delimiters.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.HasValue.html'>HasValue</a></td>
+      <td class='ListTable'>
+      Checks if a text value exists.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.InitString.html'>InitString</a></td>
+      <td class='ListTable'>
+      Initializes a string to the trimmed value or null.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.IsDigits.html'>IsDigits</a></td>
+      <td class='ListTable'>
+      Checks a string value for digits.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.IsEqual.html'>IsEqual</a></td>
+      <td class='ListTable'>
+      Do an Ignore Case string compare.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.IsSoundexLetter.html'>IsSoundexLetter</a></td>
+      <td class='ListTable'>
+      Checks if the letter is a soundex skipped letter. (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.Phonetic.html'>Phonetic</a></td>
+      <td class='ListTable'>
+      Creates a Phonetic character from the supplied text starting at the
+      supplied index. (D)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\NetString.ThrowInvalidArgument.html'>ThrowInvalidArgument</a></td>
+      <td class='ListTable'>
+            Throws the invalid argument exception if message has a value.
+            </td>
+    </tr>
+  </table>
+  <div class='Text'>15 Methods</div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>DbService</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCDBServiceLib">Assembly List</a>
+    / <a href="LJCDBServiceLib.html">LJCDBServiceLib</a>
+    / DbService
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBServiceLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class DbService</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class DbService : IDbService 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      The Service Type for performing database operations using database query
+      XML messages. (RE)
+    </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbService.Execute.html'>Execute</a></td>
+      <td class='ListTable'>
+      Executes the specified request XML message.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>1 Methods</div>
+  <br />
+  <div id='Title'>Private Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbService.ctor.html'>DbService #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>1 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbService.UseEncryption.html'>UseEncryption</a></td>
+      <td class='ListTable'>Gets or sets the UseEncyption flag.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='Text'>
+        The <span class="userType">DbService</span>
+        can be hosted in a windows service or web service which could run on a
+        separate server machine.
+      </div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='comment'>// The DbService object retrieves the data configuration from a file named</span>
+<span class='comment'>// "DataConfigs.xml". This file must be in the same folder as the application.</span>
+<span class='comment'>// This is the XML file layout.</span>
+
+&lt;?xml version="1.0"?&gt;
+&lt;DataConfigs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;DataConfig&gt;
+    &lt;Name&gt;PersonData&lt;/Name&gt;
+    &lt;DBServer&gt;Machine_Name\SQL_Instance_Name&lt;/DBServer&gt;
+    &lt;Database&gt;Database_Name&lt;/Database&gt;
+    &lt;ConnectionType&gt;SQLServer&lt;/ConnectionType&gt;
+  &lt;/DataConfig&gt;
+&lt;/DataConfigs&gt;</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

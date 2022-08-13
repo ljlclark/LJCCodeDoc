@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CodeTokenizer</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="LJCNetCommon.html">LJCNetCommon</a>
+    / CodeTokenizer
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class CodeTokenizer</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class CodeTokenizer 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      A C# Code Tokenizer class. (RE)
+    </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.ClearRemainingTokens.html'>ClearRemainingTokens</a></td>
+      <td class='ListTable'>
+      Clears all the remaining tokens; starting with the specified token index.
+      (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.CombineXmlCommentTokens.html'>CombineXmlCommentTokens</a></td>
+      <td class='ListTable'>
+      Combines the tokens for an XMLComment. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.ctor.html'>CodeTokenizer #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.EndTokens.html'>EndTokens</a></td>
+      <td class='ListTable'>
+      Sets the tokenIndex to the end of the tokens array. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.GetNextToken.html'>GetNextToken</a></td>
+      <td class='ListTable'>
+      Gets the next token after the specified token index. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.GetToken.html'>GetToken</a></td>
+      <td class='ListTable'>
+      Gets the token at the specified token index. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.HasBeginDelimiter.html'>HasBeginDelimiter</a></td>
+      <td class='ListTable'>
+      Check if the text has the begin delimiter. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.HasBothDelimiters.html'>HasBothDelimiters</a></td>
+      <td class='ListTable'>
+      Check if the text is a Full summary comment. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.HasEndDelimiter.html'>HasEndDelimiter</a></td>
+      <td class='ListTable'>
+      Check if the text has the end delimiter. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.InitializeKeywords.html'>InitializeKeywords</a></td>
+      <td class='ListTable'>
+      Initializes the Keywords. (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.IsCodeXmlComment.html'>IsCodeXmlComment</a></td>
+      <td class='ListTable'>
+      Check if a XML comment. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.IsComment.html'>IsComment</a></td>
+      <td class='ListTable'>
+      Check if a code comment. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.IsDataType.html'>IsDataType</a></td>
+      <td class='ListTable'>
+      Check if the text is a DataType. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.IsDataValue.html'>IsDataValue</a></td>
+      <td class='ListTable'>
+      Check if the text is a Data value. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.IsDelimiters.html'>IsDelimiters</a></td>
+      <td class='ListTable'>
+      Check if the text contains a common delimiter. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.IsKeyword.html'>IsKeyword</a></td>
+      <td class='ListTable'>
+      Check if the text is a Keyword. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.IsLibType.html'>IsLibType</a></td>
+      <td class='ListTable'>
+      Check if the text is a LibType. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.IsModifier.html'>IsModifier</a></td>
+      <td class='ListTable'>
+      Check if the text is a Modifier. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.IsParam.html'>IsParam</a></td>
+      <td class='ListTable'>
+      Check if the text is a param comment. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.IsRefType.html'>IsRefType</a></td>
+      <td class='ListTable'>
+      Check if the text is a RefType. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.SetKeywords.html'>SetKeywords</a></td>
+      <td class='ListTable'>
+      Sets the Keywords from the previously initialized CodeTokens. (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.SetTokens.html'>SetTokens</a></td>
+      <td class='ListTable'>
+      Sets the Tokens value, split on blanks. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\CodeTokenizer.StripQualifier.html'>StripQualifier</a></td>
+      <td class='ListTable'>
+      Strips the leading qualifiers and from next qualifier to end of string.
+      (E)
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>23 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\CodeTokenizer.CommonDataTypes.html'>CommonDataTypes</a></td>
+      <td class='ListTable'>The most common Data Types.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\CodeTokenizer.CommonKeywords.html'>CommonKeywords</a></td>
+      <td class='ListTable'>The most common Keywords.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\CodeTokenizer.CommonModifiers.html'>CommonModifiers</a></td>
+      <td class='ListTable'>The most common Modifiers.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\CodeTokenizer.DataTypes.html'>DataTypes</a></td>
+      <td class='ListTable'>The additional Data Types.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\CodeTokenizer.Keywords.html'>Keywords</a></td>
+      <td class='ListTable'>The additional Keywords.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\CodeTokenizer.LibTypes.html'>LibTypes</a></td>
+      <td class='ListTable'>The Library Types.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\CodeTokenizer.Modifiers.html'>Modifiers</a></td>
+      <td class='ListTable'>The additional Modifiers.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\CodeTokenizer.RefTypes.html'>RefTypes</a></td>
+      <td class='ListTable'>The Reference types.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\CodeTokenizer.Tokens.html'>Tokens</a></td>
+      <td class='ListTable'>Gets or sets the Token values.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ExecuteClientSql</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
+    / <a href="../LJCDBClientLib.html">LJCDBClientLib</a>
+    / <a href="../ObjectManager`2.html">ObjectManager`2</a>
+    / ExecuteClientSql
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBClientLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method ExecuteClientSql</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>sql - The client SQL statement.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public Void ExecuteClientSql(String sql)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Executes a non-query client SQL statement.
+      (E)
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='comment'>// Executes a non-query SQL statement.</span>
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> ExecuteClientSql(<span class='userType'>ObjectManager</span>&lt;Person, Persons&gt; personManager)
+{
+  StringBuilder builder = <span class='keyWord'>new</span> <span class='userType'>StringBuilder</span>(64);
+  builder.AppendLine("update PersonTest");
+  builder.AppendLine("set Name = 'TestNameUpdated'");
+  builder.AppendLine("where Name = 'TestName'");
+  <span class='commonType'>string</span> sql = builder.ToString();
+
+  <span class='comment'>// Update the record.</span>
+  personManager.ExecuteClientSql(sql);
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

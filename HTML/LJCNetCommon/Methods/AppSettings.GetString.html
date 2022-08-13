@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>GetString</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+    / <a href="../AppSettings.html">AppSettings</a>
+    / GetString
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method GetString</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>keyName - The setting key name.</div>
+  <div class='Text'>allowMissingValue - 
+      Indicates if a missing value throws an exception.
+    </div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The string setting value.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public String GetString(String keyName, Boolean allowMissingValue = True)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Get the string value of the specified setting. (E)
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='comment'>// App.Config file.</span>
+<span class='comment'>// &lt;configuration&gt;</span>
+<span class='comment'>//   &lt;appSettings&gt;</span>
+<span class='comment'>//     &lt;add key="DataConfigName" value="AppTables" /&gt;</span>
+<span class='comment'>//   &lt;/appSettings&gt;</span>
+<span class='comment'>// &lt;/configuration&gt;</span>
+
+<span class='keyWord'>using</span> System.Drawing;
+<span class='keyWord'>using</span> LJCNetCommon;
+
+<span class='commonType'>var</span> appSettings = <span class='keyWord'>new</span> <span class='userType'>AppSettings</span>("AppName.exe.config");
+<span class='commonType'>string</span> dataConfigName = appSettings.GetString("DataConfigName");</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

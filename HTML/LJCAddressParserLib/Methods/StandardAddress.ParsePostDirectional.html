@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ParsePostDirectional</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCAddressParserLib">Assembly List</a>
+    / <a href="../LJCAddressParserLib.html">LJCAddressParserLib</a>
+    / <a href="../StandardAddress.html">StandardAddress</a>
+    / ParsePostDirectional
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCAddressParserLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method ParsePostDirectional</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>currentToken - The token value.</div>
+  <div class='Text'>currentIndex - The token index value.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>True if the token is a Postdirectional, otherwise false.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public Boolean ParsePostDirectional(String currentToken, Int32& currentIndex)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Parses a token into the PostDirectional Property.
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        Decrements currentIndex by one if the token is a PostDirectional.
+      </div>
+  <br />
+  <div class='Text'>
+        <pre>
+The vertical bar indicates the Current Token Index.
+
+Check current token for PostDirectional.
+  If the token appears to be a PostDirectional.
+    a. If The current token index is 1, then check if the first token(0) is an
+       AddressNumber.
+                   |
+       Before: 123 South
+
+       If it is an AddressNumber, then the current token must be the StreetName
+       so do not use the current token as a PostDirectional.
+     
+       PostDirectional = null.
+                  |
+       After: 123 South
+     
+       The PostDirectional Parsing ends
+     
+    b. If the first token is not an AddressNumber, then it is considered a street name.
+       Use the current token as a PostDirectional.
+                    |
+       Before: Main South
+
+       PostDirectional = "S".
+              |
+       After: Main South
+       
+    c. If the current token index is greater than 1, then use the current token as
+       a PostDirectional.
+                              |
+       Before: 123 Main South East
+       
+       PostDirectional = "E".
+                       |
+       After: 123 Main South East 
+       
+   Check for a Multi-word PostDirectional.
+
+   If the following directional is "E", or "W" and the current directional is "N" or "S".
+     a. If the current token index is 1, then check if the first token is an
+        AddressNumber.
+
+        If the first token is an AddressNumber, then the current token must
+        be the StreetName, so do not create a combined PostDirectional.
+                    |
+        Before: 123 North East
+        
+        PostDirectional = "E".
+                   |
+        After: 123 North East
+
+        The PostDirectional parsing ends.
+
+     b. If the first token is not an AddressNumber, then it is considered a
+        StreetName.
+                     |
+        Before: Main North East
+
+        Create the two character PostDirectional and decrement the current
+        token index by 1.
+        
+        PostDirectional = "NE".
+               |
+        After: Main North East
+        
+     c. If the current token index is greater than 1, then use the current token
+        as a PostDirectional.
+                         |
+        Before: 123 Main North East
+        
+        Create the two character PostDirectional and decrement the current
+        token index by 1.
+        
+        PostDirectional = "NE".
+                   |
+        After: 123 Main North East
+        </pre>
+      </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>DbColumn</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="LJCNetCommon.html">LJCNetCommon</a>
+    / DbColumn
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class DbColumn</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class DbColumn : IComparable&lt;DbColumn&gt;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Represents a Data Column definition. (D)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        The <span class="userType">DbColumn</span>
+        object is used extensively throughout the LJC libraries, utilities and
+        applications; wherever data elements need to be dynamically defined or
+        manipulated. It is commonly used to define database table columns, grid
+        control columns and text file columns.
+      </div>
+  <br />
+  <div class='Text'>
+        The <span class="userType">DbColumn</span>
+        object contains several properties that are also defined in the
+        <span class="userType">System.Data.DataColumn</span>
+        object plus additional properties to support extended usage in the LJC
+        libraries, utilities and applications.
+      </div>
+  <br />
+  <div class='Text'>
+        The <span class="userType">DbColumn</span>
+        object is often used to facilitate moving data between a database table
+        column, grid control column, text file column or other data source and
+        a data object.
+      </div>
+  <br />
+  <div class='Text'>
+        A Data Object is an instance of a class that contains properties for
+        each data element in a data source row. It is a strongly typed, object
+        oriented representation of the data source row for use in code. It may
+        contain common methods to assist with cloning, sorting and displaying
+        an object string identifier.
+      </div>
+  <br />
+  <div class='Text'>
+        When the ColumnName property is set, it will set the PropertyName
+        property to the same value if PropertyName is null. This is the most
+        common scenario where the data object property name is the same as the
+        data source column name.
+      </div>
+  <br />
+  <div class='Text'>
+        If a data object property name is different than the data source column
+        name, then the PropertyName value must be set to the data object
+        property name.
+      </div>
+  <br />
+  <div class='Text'>
+        For join columns, it may be the case that a different PropertyName needs
+        to be chosen as there is already a property with that name. This often
+        means that a RenameAs value must be assigned as there is most likely
+        also a table column name conflict with the primary table.
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbColumn.Clone.html'>Clone</a></td>
+      <td class='ListTable'>
+      Clones the structure of the object.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbColumn.CompareTo.html'>CompareTo</a></td>
+      <td class='ListTable'>
+      Provides the default Sort functionality.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbColumn.ctor.html'>DbColumn #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbColumn.ctor1.html'>DbColumn #ctor</a></td>
+      <td class='ListTable'>
+      The Copy constructor.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbColumn.ctor2.html'>DbColumn #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance with the supplied values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbColumn.FormatValue.html'>FormatValue</a></td>
+      <td class='ListTable'>
+      Formats the column value for the SQL string. (D)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbColumn.op_Implicit.html'>op_Implicit</a></td>
+      <td class='ListTable'>
+      Creates a
+      <span class="userType">DbValue</span>
+      object from a
+      <span class="userType">DbColumn</span>
+      object. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbColumn.ToString.html'>ToString</a></td>
+      <td class='ListTable'>
+      The object string identifier.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>8 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.AllowDBNull.html'>AllowDBNull</a></td>
+      <td class='ListTable'>Gets or sets the AllowDBNull value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.AutoIncrement.html'>AutoIncrement</a></td>
+      <td class='ListTable'>Gets or sets the AutoIncrement value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.Caption.html'>Caption</a></td>
+      <td class='ListTable'>
+      Gets or sets the Caption value. (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.ColumnName.html'>ColumnName</a></td>
+      <td class='ListTable'>
+      Gets or sets the ColumnName value. (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.DataTypeName.html'>DataTypeName</a></td>
+      <td class='ListTable'>Gets or sets the DataTypeName value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.DefaultValue.html'>DefaultValue</a></td>
+      <td class='ListTable'>Gets or sets the DefaultValue value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.ID.html'>ID</a></td>
+      <td class='ListTable'>
+      Gets or sets the ID value. (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.IsChanged.html'>IsChanged</a></td>
+      <td class='ListTable'>Indicates that the value has changed.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.IsPrimaryKey.html'>IsPrimaryKey</a></td>
+      <td class='ListTable'>Gets or sets the IsPrimaryKey value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.MaxLength.html'>MaxLength</a></td>
+      <td class='ListTable'>Gets or sets the MaxLength value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.Position.html'>Position</a></td>
+      <td class='ListTable'>
+      Gets or sets the Position value. (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.PropertyName.html'>PropertyName</a></td>
+      <td class='ListTable'>
+      Gets or sets the PropertyName value. (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.RenameAs.html'>RenameAs</a></td>
+      <td class='ListTable'>
+      Gets or sets the RenameAs value.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.Sequence.html'>Sequence</a></td>
+      <td class='ListTable'>
+      Gets or sets the Sequence value. (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.SQLTypeName.html'>SQLTypeName</a></td>
+      <td class='ListTable'>Gets or sets the SQLTypeName value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.Unique.html'>Unique</a></td>
+      <td class='ListTable'>Gets or sets the Unique value.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.Value.html'>Value</a></td>
+      <td class='ListTable'>Gets or sets the Value object.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.ViewDataID.html'>ViewDataID</a></td>
+      <td class='ListTable'>
+      Gets or sets the ViewData ID value. (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.ViewJoinID.html'>ViewJoinID</a></td>
+      <td class='ListTable'>
+      Gets or sets the ViewJoin ID value. (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumn.Width.html'>Width</a></td>
+      <td class='ListTable'>
+      Gets or sets the Width value. (R)
+    </td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

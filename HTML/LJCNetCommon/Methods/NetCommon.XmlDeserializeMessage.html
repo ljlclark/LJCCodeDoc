@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>XmlDeserializeMessage</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+    / <a href="../NetCommon.html">NetCommon</a>
+    / XmlDeserializeMessage
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method XmlDeserializeMessage</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>type - The object type.</div>
+  <div class='Text'>message - The message string.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The deserialized object.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public static Object XmlDeserializeMessage(Type type, String message)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Deserialize an XML message string to an object. (E)
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
+      
+<span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>Person</span>
+{
+  <span class='modifier'>public</span> <span class='commonType'>long</span> Id { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+  <span class='modifier'>public</span> <span class='commonType'>string</span> Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+  <span class='modifier'>public</span> <span class='commonType'>bool</span> PrincipleFlag { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+}
+        
+<span class='comment'>// Deserialize an XML message string to an object.</span>
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> XmlDeserializeMessage()
+{
+  <span class='comment'>// Setup</span>
+  <span class='userType'>Person</span> person = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
+  {
+    Id = 2,
+    Name = "Text",
+    PrincipleFlag = <span class='keyWord'>true</span>
+  };
+  <span class='commonType'>string</span> message = <span class='userType'>NetCommon</span>.XmlSerializeToString(person.GetType(), person, null);
+
+  <span class='comment'>// Deserialize an XML message string to an object.</span>
+  <span class='userType'>Person</span> newPerson;
+  newPerson = <span class='userType'>NetCommon</span>.XmlDeserializeMessage(typeof(Person), message) <span class='keyWord'>as</span> <span class='userType'>Person</span>;
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Add</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
+    / <a href="../LJCDBClientLib.html">LJCDBClientLib</a>
+    / <a href="../ObjectManager`2.html">ObjectManager`2</a>
+    / Add
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBClientLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method Add</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>dataObject - The record object.</div>
+  <div class='Text'>propertyNames - The included column property names.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The object with the DB assigned key values.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public TData Add(TData dataObject, List&lt;String&gt; propertyNames = null)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Adds a record to the database.
+      (E)
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='comment'>// Adds a Person record.</span>
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> Add(<span class='userType'>ObjectManager</span>&lt;Person, Persons&gt; personManager)
+{
+  <span class='comment'>// The inserted columns must not include the DB assigned columns.</span>
+  <span class='userType'>Person</span> dataObject = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
+  {
+    Name = "TestName",
+    PrincipleFlag = <span class='keyWord'>false</span>
+  };
+
+  <span class='comment'>// Insert record and return the database assigned values.</span>
+  <span class='userType'>Person</span> resultPerson = personManager.Add(dataObject);
+  <span class='keyWord'>if</span> (resultPerson != null)
+  {
+    dataObject.ID = resultPerson.ID;
+  }
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

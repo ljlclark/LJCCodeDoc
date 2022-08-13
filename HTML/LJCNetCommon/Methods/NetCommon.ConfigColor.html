@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ConfigColor</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+    / <a href="../NetCommon.html">NetCommon</a>
+    / ConfigColor
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method ConfigColor</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>key - The key value.</div>
+  <div class='Text'>color - The default color value.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The Color setting value.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public static Boolean ConfigColor(String key, out Color& color)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Retrieves the Config Color value. (RE)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        This uses the program config file which is the name of the program plus
+        the extension ".config".<br />
+      </div>
+  <br />
+  <div class='Text'>
+        // An example config file.<br />
+        <<span class="ltgt">?</span><span class="name">xml</span><span
+        class="attrib"> version</span>="<span class="data">1.0</span>"<span
+        class="attrib"> encoding</span>="<span class="data">utf-8</span>"<span
+        class="ltgt"> ?</span>><br />
+        <<span class="name">configuration</span>><br />
+        <span class="pad1"></span><<span class="name">appSettings</span>><br />
+        <span class="pad2"></span><<span class="name">add</span><span
+        class="attrib"> key</span>="<span class="data">BeginColor</span>"<span
+        class="attrib"> value</span>="<span class="data">AliceBlue</span>"<span
+        class="ltgt"> /</span>><br />
+        <span class="pad1"></span><<span class="ltgt">/</span><span class="name">appSettings</span>><br />
+        <<span class="ltgt">/</span><span class="name">configuration</span>>
+      </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
+        
+<span class='comment'>// This returns var beginColor that is Color.AliceBlue.</span>
+<span class='comment'>// If the key is not found it returns Color.Black.</span>
+<span class='userType'>NetCommon</span>.ConfigColor("BeginColor", <span class='keyWord'>out</span> <span class='userType'>Color</span> beginColor);</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

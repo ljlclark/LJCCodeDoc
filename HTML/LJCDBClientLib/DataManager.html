@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>DataManager</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
+    / <a href="LJCDBClientLib.html">LJCDBClientLib</a>
+    / DataManager
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBClientLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class DataManager</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class DataManager : IDataManager 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Provides standard message data manipulation methods.
+      (DE)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        The Data Manager is the client code that creates a table specific
+        <span class="userType">LJCDBMessage.DbRequest</span>
+        object. It then serializes the
+        <span class="userType">DbRequest</span>
+        object into a Request XML message to pass to the
+        <span class="commonType">DbService.Execute()</span>
+        method.
+      </div>
+  <br />
+  <div class='Text'>
+        When the Data Manager object is first created, it initializes the
+        DataDefinition property with the definitions for the primary table
+        columns. The DataDefinition property is an
+        <span class="userType">LJCNetCommon.DbColumns</span>
+        object. Each element
+        <span class="userType">DbColumn</span>
+        contains the table ColumnName, PropertyName, Caption, DataTypeName
+        and MaxLength.
+      </div>
+  <br />
+  <div class='Text'>
+        The <span class="userType">DbColumn</span>
+        Caption is initially set to the same value as the ColumnName
+        as that is how it is returned from ADO.NET. The PropertyName is initially
+        set to the same value as the ColumnName which is what the
+        <span class="userType">DbColumn</span>
+        object does if it is initialized with a blank PropertyName value. These
+        values can be modified later as required.
+      </div>
+  <br />
+  <div class='Text'>
+        The DataDefinition is used to create the
+        <span class="userType">DbColumn</span>
+        objects that are defined in a
+        <span class="userType">DbRequest</span>
+        object. These objects are then used to create the SQL Statements that
+        are executed to perform the requested data operation.
+      </div>
+  <br />
+  <div class='Text'>
+        The test code is found in project LJCDataManagerTest\PersonDALTest.
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.Add.html'>Add</a></td>
+      <td class='ListTable'>
+      Adds a record to the database.
+      (RE)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.CreateLoadRequest.html'>CreateLoadRequest</a></td>
+      <td class='ListTable'>
+      Creates and returns the Load
+      <span class="userType">DbRequest</span>
+      object.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.CreateSchemaColumnsResult.html'>CreateSchemaColumnsResult</a></td>
+      <td class='ListTable'>
+      Takes a result object and transforms it into a result of column names.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.CreateSchemaColumnsResult1.html'>CreateSchemaColumnsResult</a></td>
+      <td class='ListTable'>
+      Retrieves the schema result for the specified table and transforms
+      it into a result of column names.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.ctor.html'>DataManager #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.ctor1.html'>DataManager #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.Delete.html'>Delete</a></td>
+      <td class='ListTable'>
+      Deletes the records with the specified key values.
+      (DE)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.ExecuteClientSql.html'>ExecuteClientSql</a></td>
+      <td class='ListTable'>
+      Executes a non-query client SQL statement.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.ExecuteRequest.html'>ExecuteRequest</a></td>
+      <td class='ListTable'>
+      Executes the supplied request.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.GetSchemaOnly.html'>GetSchemaOnly</a></td>
+      <td class='ListTable'>
+      Retrieves the column names for the specified table.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.GetTableNames.html'>GetTableNames</a></td>
+      <td class='ListTable'>
+      Retrieves the table names for the data configuration database.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.Load.html'>Load</a></td>
+      <td class='ListTable'>
+      Retrieves a collection of data records.
+      (DE)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.LoadProcedure.html'>LoadProcedure</a></td>
+      <td class='ListTable'>
+      Retrieves a collection of data records.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.MapNames.html'>MapNames</a></td>
+      <td class='ListTable'>
+      Maps the column property and rename values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.Reset.html'>Reset</a></td>
+      <td class='ListTable'>
+      Resets the data access configuration.
+      (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.Retrieve.html'>Retrieve</a></td>
+      <td class='ListTable'>
+      Retrieves a record from the database.
+      (DE)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.SetDbAssignedColumns.html'>SetDbAssignedColumns</a></td>
+      <td class='ListTable'>
+      Sets the database assigned value columns.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.SetLookupColumns.html'>SetLookupColumns</a></td>
+      <td class='ListTable'>
+      Adds the lookup column names.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DataManager.Update.html'>Update</a></td>
+      <td class='ListTable'>
+      Updates the record.
+      (DE)
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>19 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.AffectedCount.html'>AffectedCount</a></td>
+      <td class='ListTable'>Gets or sets the non-select affected record count.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.BaseDefinition.html'>BaseDefinition</a></td>
+      <td class='ListTable'>Gets the base data definition columns collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.DataConfigName.html'>DataConfigName</a></td>
+      <td class='ListTable'>Gets or sets the data configuration name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.DataDefinition.html'>DataDefinition</a></td>
+      <td class='ListTable'>Gets the data definition columns collection.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.DbAssignedColumns.html'>DbAssignedColumns</a></td>
+      <td class='ListTable'>Gets or sets the Database assigned columns.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.DbServiceRef.html'>DbServiceRef</a></td>
+      <td class='ListTable'>Gets DbServiceRef object.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.LookupColumnNames.html'>LookupColumnNames</a></td>
+      <td class='ListTable'>Gets or sets the LookupColumn names.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.OrderByNames.html'>OrderByNames</a></td>
+      <td class='ListTable'>Gets or sets the order by names.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.PageSize.html'>PageSize</a></td>
+      <td class='ListTable'>Gets or sets the pagination size.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.PageStartIndex.html'>PageStartIndex</a></td>
+      <td class='ListTable'>Gets or sets the pagination start index.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.Request.html'>Request</a></td>
+      <td class='ListTable'>
+      Gets or sets the
+      <span class="userType">DbRequest</span>
+      object reference.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.SchemaName.html'>SchemaName</a></td>
+      <td class='ListTable'>The Schema name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.SQLStatement.html'>SQLStatement</a></td>
+      <td class='ListTable'>Gets or sets the last SQL statement.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.TableName.html'>TableName</a></td>
+      <td class='ListTable'>The primary table name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DataManager.UseEncryption.html'>UseEncryption</a></td>
+      <td class='ListTable'>Gets or sets the UseEncyption flag.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='Text'>
+        This is sample supporting code for a Person Manager class. The
+        additional code for the suggested Person manager methods Add(),
+        Retrieve(), Load(), Update() and Delete() is listed under the
+        DataManager methods with the same names.
+      </div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> System;
+<span class='keyWord'>using</span> System.Collections.Generic;
+<span class='keyWord'>using</span> <span class='userType'>LJCNetCommon</span>;
+<span class='keyWord'>using</span> LJCDBClientLib;
+<span class='keyWord'>using</span> LJCDBServiceLib;
+
+<span class='xmlComment'>/// &lt;summary&gt;</span>
+<span class='xmlComment'>///<span class='comment'> Represents a collection of Person objects.</span>&lt;/summary&gt;</span>
+<span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>Persons</span> : <span class='libType'>List</span>&lt;<span class='userType'>Person</span>&gt; { }
+
+<span class='xmlComment'>/// &lt;summary&gt;</span>
+<span class='xmlComment'>///<span class='comment'> A Data Record class.</span></span>
+<span class='xmlComment'>/// &lt;/summary&gt;</span>
+<span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>Person</span>
+{
+  <span class='xmlComment'>/// &lt;summary&gt;<span class='comment'>Gets or sets the PersonId value.</span></span>
+  <span class='xmlComment'>/// &lt;/summary&gt;</span>
+  <span class='modifier'>public</span> <span class='commonType'>Int32</span> PersonId { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+
+  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Gets or sets the Name value.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+  <span class='modifier'>public</span> <span class='commonType'>String</span> Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+}
+
+<span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Provides Person specific data manipulation methods.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+<span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>PersonManager</span>
+{
+  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Initializes an object instance.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+  <span class='xmlComment'>/// &lt;param name="</span>dbService<span class='xmlComment'>"&gt;</span><span class='comment'>The database service object.</span><span class='xmlComment'>&lt;/param&gt;</span>
+  <span class='modifier'>public</span> <span class='userType'>PersonManager</span>()
+  {
+    <span class='userType'>DbServiceRef</span> dbServiceRef = <span class='keyWord'>new</span> <span class='userType'>DbServiceRef</span>();
+    {
+      DbService = <span class='keyWord'>new</span> <span class='userType'>DbService</span>();
+    };
+
+    <span class='commonType'>string</span> dataConfigName = "PersonData";
+    <span class='commonType'>string</span> tableName = "Person";
+    mDataManager = <span class='keyWord'>new</span> <span class='userType'>DataManager</span>(dbServiceRef, dataConfigName, tableName);
+    mDataManager.MapNames("Id", "PersonId");
+  }
+
+  <span class='comment'>// The Add(), Delete(), Load(), Retrieve() and Update() methods would go here.</span>
+  <span class='comment'>// These are listed under the DataManager methods with the same names.</span>
+
+  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Gets or sets the non-select affected record count.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+  <span class='modifier'>public</span> <span class='commonType'>int</span> AffectedCount { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+
+  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Gets a reference to the Data Definition columns collection.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+  <span class='modifier'>public</span> <span class='userType'>DbColumns</span> DataDefinition
+  {
+    <span class='keyWord'>get</span> { <span class='keyWord'>return</span> mDataManager.DataDefinition; }
+  }
+
+  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Gets or sets the last SQL statement.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+  <span class='modifier'>public</span> <span class='commonType'>string</span> SQLStatement { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+
+  <span class='modifier'>private</span> <span class='userType'>DataManager</span> mDataManager;
+}
+
+<span class='comment'>// The DbService object retrieves the data configuration from a file named</span>
+<span class='comment'>// "DataConfigs.xml". This file must be in the same folder as the application.</span>
+<span class='comment'>// This is the XML file layout.</span>
+&lt;? xml version="1.0"?&gt;
+&lt;DataConfigs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;DataConfig&gt;
+    &lt;Name&gt;PersonData&lt;/Name&gt;
+    &lt;DbServer&gt;Machine_Name\SQL_Instance_Name&lt;/DbServer&gt;
+    &lt;Database&gt;Database_Name&lt;/Database&gt;
+    &lt;ConnectionType&gt;SQLServer&lt;/ConnectionType&gt;
+  &lt;/DataConfig&gt;
+&lt;/DataConfigs&gt;</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

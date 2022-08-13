@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Load</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
+    / <a href="../LJCDBClientLib.html">LJCDBClientLib</a>
+    / <a href="../ObjectManager`2.html">ObjectManager`2</a>
+    / Load
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBClientLib</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method Load</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>keyColumns - The record containing the key field values.</div>
+  <div class='Text'>propertyNames - The incuded column property names.</div>
+  <div class='Text'>filters - The filter values.</div>
+  <div class='Text'>joins - The join values.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>The data record collection.</div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public TList Load(DbColumns keyColumns = null, List&lt;String&gt; propertyNames = null, DbFilters filters = null, DbJoins joins = null)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Retrieves a collection of data records.
+      (E)
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='comment'>// Loads multiple Person objects.</span>
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='userType'>Persons</span> Load(<span class='userType'>ObjectManager</span>&lt;Person, Persons&gt; personManager)
+{
+  <span class='userType'>Persons</span> retValue;
+
+  <span class='comment'>// Create Key Columns.</span>
+  <span class='commonType'>var</span> keyColumns = <span class='keyWord'>new</span> <span class='userType'>DBColumns</span>()
+  {
+    Name = "TestName"
+  };
+
+  <span class='comment'>// Load the records.</span>
+  retValue = personManager.Load(keyColumns);
+  <span class='keyWord'>return</span> retValue;
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

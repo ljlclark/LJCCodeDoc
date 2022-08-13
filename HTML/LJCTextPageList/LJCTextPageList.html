@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- AssemblyTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LJCTextPageList</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <meta name="author" content="Lester J. Clark" />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCTextPageList">Assembly List</a>
+    / LJCTextPageList
+  </div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Assembly LJCTextPageList</div>
+  </div>
+  <br />
+  <div class='Text'>
+        An End-to-End Pagination Process is by necessity fairly complicated. This
+        is because there are several objects involved. These are the Datasource
+        Manager, Pagination Object and List Control.
+      </div>
+  <br />
+  <div class='Text'>
+        A Datasource Manager is responsible for interacting with the Datastore.
+        This may be a DBMS Table, a Disk File, a Data Service or some other
+        source of data.
+      </div>
+  <br />
+  <div class='Text'>
+        The PageStartIndex and PageSize values are added to the Datasource Manager.
+        These values are used for retrieving the next or previous pages of data.
+      </div>
+  <br />
+  <div class='Text'>
+        The Pagination Object performs the task of determining the records that
+        appear in the page by setting the PageStartIndex and PageSize values. It
+        also determines if the list should be cleared for the next or previous
+        pair of pages.
+      </div>
+  <br />
+  <div id='Title'>Classes<br></div>
+        <table class='ListTable'>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DataPage.html'>DataPage</a></td>
+            <td class='ListTable'>Represents a data page.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='FileDataSource.html'>FileDataSource</a></td>
+            <td class='ListTable'>
+      Represents a File Data source.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='IDataSource.html'>IDataSource</a></td>
+            <td class='ListTable'>
+      Represents a Data source.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='ListLocation.html'>ListLocation</a></td>
+            <td class='ListTable'>The list location types.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='PageDirection.html'>PageDirection</a></td>
+            <td class='ListTable'>The Paging Direction types.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='Program.html'>Program</a></td>
+            <td class='ListTable'>
+      The program entry point class.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='Resources.html'>Resources</a></td>
+            <td class='ListTable'>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='TextPageList.html'>TextPageList</a></td>
+            <td class='ListTable'>
+      Represents a list of data from a DataSource.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='TextPagination.html'>TextPagination</a></td>
+            <td class='ListTable'>
+      Provides pagination.
+    </td>
+          </tr>
+        </table>
+  <div class='Text'>9 Types</div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

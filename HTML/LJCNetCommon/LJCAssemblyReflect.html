@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LJCAssemblyReflect</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="LJCNetCommon.html">LJCNetCommon</a>
+    / LJCAssemblyReflect
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class LJCAssemblyReflect</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class LJCAssemblyReflect 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Provides Assembly Reflection methods.
+      (DE)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        Provides information for Constructors, Types, Methods, Properties and Fields.
+      </div>
+  <br />
+  <div class='Text'>
+        The object reflection properties are set using the methods: SetAssembly(),
+        SetConstructorInfo(), SetFieldInfo(), SetMethodInfo(), SetPropertyInfo()
+        and SetTypeReference().
+      </div>
+  <br />
+  <div class='Text'>
+        Once the reflection properties are set, the Syntax strings can be retrieved
+        with the syntax methods: Get*Syntax();
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.ctor.html'>LJCAssemblyReflect #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.GetConstructorSyntax.html'>GetConstructorSyntax</a></td>
+      <td class='ListTable'>
+      Creates and returns the Constructor syntax. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.GetFieldSyntax.html'>GetFieldSyntax</a></td>
+      <td class='ListTable'>
+      Creates and returns the Field syntax string. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.GetGenericTypeSyntax.html'>GetGenericTypeSyntax</a></td>
+      <td class='ListTable'>
+      Creates and returns the Generic Type syntax.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.GetMethodSyntax.html'>GetMethodSyntax</a></td>
+      <td class='ListTable'>
+      Creates and returns the Method syntax. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.GetPropertySyntax.html'>GetPropertySyntax</a></td>
+      <td class='ListTable'>
+      Creates and returns the Property syntax string. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.GetTypeSyntax.html'>GetTypeSyntax</a></td>
+      <td class='ListTable'>
+      Creates and returns the Type syntax. (E)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.IsNotCommonClassification.html'>IsNotCommonClassification</a></td>
+      <td class='ListTable'>
+      Indicates if the Type is not a common type.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.IsNotCommonInterface.html'>IsNotCommonInterface</a></td>
+      <td class='ListTable'>
+      Indicates if the Interface is not a common type.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.IsNotProperty.html'>IsNotProperty</a></td>
+      <td class='ListTable'>
+      Indicates if the Method is not a property getter or setter.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.IsOverride.html'>IsOverride</a></td>
+      <td class='ListTable'>
+      Indicates if the method is "override".
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.IsPublic.html'>IsPublic</a></td>
+      <td class='ListTable'>
+      Indicates if the method is "public".
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.SetAssembly.html'>SetAssembly</a></td>
+      <td class='ListTable'>
+      Retrieves the Assembly reference. (R)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.SetConstructorInfo.html'>SetConstructorInfo</a></td>
+      <td class='ListTable'>
+      Set the ConstructorInfo reference. (RE)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.SetFieldInfo.html'>SetFieldInfo</a></td>
+      <td class='ListTable'>
+      Set the FieldInfo reference. (RE)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.SetMethodInfo.html'>SetMethodInfo</a></td>
+      <td class='ListTable'>
+      Set the MethodInfo reference. (RE)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.SetPropertyInfo.html'>SetPropertyInfo</a></td>
+      <td class='ListTable'>
+      Set the PropertyInfo reference. (RE)
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.SetTypeReference.html'>SetTypeReference</a></td>
+      <td class='ListTable'>
+      Set the Type reference. (RE)
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>18 Methods</div>
+  <br />
+  <div id='Title'>Private Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCAssemblyReflect.GetIndexerInfo.html'>GetIndexerInfo</a></td>
+      <td class='ListTable'>
+      Gets the Indexer Property info.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>1 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCAssemblyReflect.Assembly.html'>Assembly</a></td>
+      <td class='ListTable'>The Assembly reference.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCAssemblyReflect.ConstructorInfo.html'>ConstructorInfo</a></td>
+      <td class='ListTable'>The constructor information.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCAssemblyReflect.FieldInfo.html'>FieldInfo</a></td>
+      <td class='ListTable'>The Field information.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCAssemblyReflect.FieldName.html'>FieldName</a></td>
+      <td class='ListTable'>The Field name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCAssemblyReflect.FileSpec.html'>FileSpec</a></td>
+      <td class='ListTable'>The Assembly file name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCAssemblyReflect.MethodInfo.html'>MethodInfo</a></td>
+      <td class='ListTable'>The Method information.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCAssemblyReflect.MethodName.html'>MethodName</a></td>
+      <td class='ListTable'>The Method name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCAssemblyReflect.PropertyInfo.html'>PropertyInfo</a></td>
+      <td class='ListTable'>The Property information.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCAssemblyReflect.PropertyName.html'>PropertyName</a></td>
+      <td class='ListTable'>The Property name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCAssemblyReflect.TypeName.html'>TypeName</a></td>
+      <td class='ListTable'>The Type name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCAssemblyReflect.TypeReference.html'>TypeReference</a></td>
+      <td class='ListTable'>The Type reference.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

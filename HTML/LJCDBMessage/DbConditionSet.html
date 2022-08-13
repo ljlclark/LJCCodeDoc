@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>DbConditionSet</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCDBMessage">Assembly List</a>
+    / <a href="LJCDBMessage.html">LJCDBMessage</a>
+    / DbConditionSet
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCDBMessage</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class DbConditionSet</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class DbConditionSet 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Represents the conditions and properties.
+      (E)
+    </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbConditionSet.ctor.html'>DbConditionSet #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbConditionSet.ctor1.html'>DbConditionSet #ctor</a></td>
+      <td class='ListTable'>
+      The Copy constructor.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbConditionSet.Clone.html'>Clone</a></td>
+      <td class='ListTable'>
+      Creates and returns a clone of the object.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>3 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbConditionSet.BooleanOperator.html'>BooleanOperator</a></td>
+      <td class='ListTable'>The conditions boolean operator.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbConditionSet.Conditions.html'>Conditions</a></td>
+      <td class='ListTable'>Gets or sets the conditions.</td>
+    </tr>
+  </table>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCDBMessage;
+        
+<span class='comment'>// Initialize a Filter object.</span>
+<span class='userType'>DbFilter</span> dbFilter = <span class='keyWord'>new</span> <span class='userType'>DbFilter</span>();
+        
+<span class='comment'>// The BooleanOperator seperatates each Condition statement.</span>
+<span class='comment'>// The BooleanOperator can be "and" or "or". If not specified, it</span>
+<span class='comment'>// defaults to "and".</span>
+<span class='userType'>DbConditionSet</span> conditionSet = dbFilter.ConditionSet;
+conditionSet.BooleanOperator = "and";
+        
+<span class='comment'>// Note that a condition without a specified ComparisonOperator defaults</span>
+<span class='comment'>// to the equals "=" comparison operator.</span>
+<span class='userType'>DbConditions</span> conditions = conditionSet.Conditions;
+conditions.Add("Street", "'First Street'", "=");
+conditions.Add("City", "'Lake Mary'");
+conditions.Add("PostalCode", "'32746'");
+        
+<span class='comment'>// These conditions result in this Where clause.</span>
+<span class='comment'>// where ((Street = 'First Street' and City = 'Lake Mary'</span>
+<span class='comment'>//   and PostalCode = '32746'))</span>
+        
+<span class='userType'>DbFilter</span> secondFilter = <span class='keyWord'>new</span> <span class='userType'>DbFilter</span>
+{
+  BooleanOperator = "or"
+};
+<span class='userType'>DbConditions</span> secondConditions = secondFilter.ConditionSet.Conditions;
+secondConditions.Add("Street", "'Somewhere%'", "like");
+dbFilters.Add(secondFilter);
+        
+<span class='comment'>// where ((Street = 'First Street' and City = 'Lake Mary'</span>
+<span class='comment'>//    and PostalCode = '32746'))</span>
+<span class='comment'>//  or ((Street like 'Somewhere%'))</span></pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

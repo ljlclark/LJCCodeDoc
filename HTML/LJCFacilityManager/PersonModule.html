@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>PersonModule</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCFacilityManager">Assembly List</a>
+    / <a href="LJCFacilityManager.html">LJCFacilityManager</a>
+    / PersonModule
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCFacilityManager</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class PersonModule</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class PersonModule : UserControl 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      The Tab Composite User Controls
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        The Person Module Tab contains the PersonGrid control. This grid is
+        populated based on a Data View.
+      </div>
+  <br />
+  <div class='Text'>
+        A Data View is a user query that defines the retrieved data. It defines
+        the retrieved columns, joins, filters and row order. A
+        <span class="userType">DbQuery</span>
+        object is created from the View definition. The
+        <span class="userType">DbQuery</span>
+        object is then used to retrieve the data. The
+        <span class="userType">ViewHelper</span>
+        object is used to access the View definition.
+      </div>
+  <br />
+  <div class='Text'>
+        A Data View also defines the displayed grid columns and column order.
+      </div>
+  <br />
+  <div class='Text'>
+        A custom View object is created that manages the Views for a specific
+        table. It is normally named "ViewTableName" where TableName is the name
+        of the base table for the view. So in this case the View object is
+        named
+        <span class="userType">ViewPerson</span>.
+      </div>
+  <br />
+  <div class='Text'>
+        If a View for a table is not available, then a default view is created
+        and selected. The
+        <span class="userType">ViewPerson</span>
+        object has a
+        <span class="commonType">CreateStandardView()</span>
+        method to create a default view.
+      </div>
+  <br />
+  <div class='Text'>
+        A static grid setup method is called in the
+        <span class="commonType">InitializeControls()</span>
+        method. In this case the grid is dynamically configured based on the
+        View. So the private
+        <span class="commonType">SetupGridPerson()</span>
+        method is called when the View is selected.
+      </div>
+  <br />
+  <div class='Text'>
+        If the View does not have grid columns defined, then the
+        <span class="userType">ViewPerson</span>
+        object
+        <span class="commonType">SaveDefaultDisplayColumns()</span>
+        method is called to create the default display columns.
+      </div>
+  <br />
+  <div class='Text'>
+        The grid column values are not restored until after the grid has been
+        configured from the View.
+      </div>
+  <br />
+  <div class='Text'>
+        The
+        <span class="commonType">DataRetrievePersonView()</span>
+        method is called to populate the control.
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\PersonModule.ClosePage.html'>ClosePage</a></td>
+      <td class='ListTable'>
+      Closes the current page.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\PersonModule.ctor.html'>PersonModule #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\PersonModule.LJCInit.html'>LJCInit</a></td>
+      <td class='ListTable'>
+      Initializes the module.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\PersonModule.LJCTabs.html'>LJCTabs</a></td>
+      <td class='ListTable'>
+      Returns a reference to the module tab control.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>4 Methods</div>
+  <br />
+  <div id='Title'>Private Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\PersonModule.Dispose.html'>Dispose</a></td>
+      <td class='ListTable'> 
+            Clean up any resources being used.
+            </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\PersonModule.InitializeComponent.html'>InitializeComponent</a></td>
+      <td class='ListTable'> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\PersonModule.OnPageClose.html'>OnPageClose</a></td>
+      <td class='ListTable'>Calls the PageClose event handlers.</td>
+    </tr>
+  </table>
+  <div class='Text'>3 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\PersonModule.CloseTabPage.html'>CloseTabPage</a></td>
+      <td class='ListTable'>Gets or sets the close tab page.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\PersonModule.ControlValues.html'>ControlValues</a></td>
+      <td class='ListTable'>Gets or sets the ControlValues item.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\PersonModule.LJCHelpFile.html'>LJCHelpFile</a></td>
+      <td class='ListTable'>The help file name.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\PersonModule.LJCProgramName.html'>LJCProgramName</a></td>
+      <td class='ListTable'>Gets the module assembly name.</td>
+    </tr>
+  </table>
+  <br />
+  <div id='Title'>Fields</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Fields\PersonModule.components.html'>components</a></td>
+      <td class='ListTable'> 
+            Required designer variable.
+            </td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

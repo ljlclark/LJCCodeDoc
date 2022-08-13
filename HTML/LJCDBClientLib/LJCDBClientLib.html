@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- AssemblyTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LJCDBClientLib</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <meta name="author" content="Lester J. Clark" />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
+    / LJCDBClientLib
+  </div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Assembly LJCDBClientLib</div>
+  </div>
+  <br />
+  <div class='Text'>Data Service Client Library</div>
+  <br />
+  <div class='Text'>
+        The Data Service Client library contains classes for applications to
+        communicate with the Data Service
+        <span class="commonType">LJCDBServiceLib.DbService</span>.<br />
+        These classes can also be used to directly communicate with the Message
+        Data Access class
+        <span class="commonType">LJCDBDataAccessLib.DbDataAccess</span>.
+      </div>
+  <br />
+  <div class='Text'>
+        The Data Service Client library uses Data Definitions.These definitions
+        identify the available columns in the queried tables.The primary table
+        Data Definitions are created automatically when the Data Manager object
+        is created.
+      </div>
+  <br />
+  <div class='Text'>
+        The Data Manager creates
+        <span class="userType">LJCDBMessage.DbRequest</span>
+        Objects that are serialized to Request XML messages.These Request XML
+        messages are sent to the Data Service.
+      </div>
+  <br />
+  <div class='Text'>
+        The Data Service returns Result XML messages. These are formatted into
+        <span class="userType">LJCDBMessage.DbResult</span>
+        objects. The Result objects can be used to populate application Data
+        Objects.
+      </div>
+  <br />
+  <div class='Text'>
+        The Object Manager is designed to work with application Data Objects.
+        Some of the class methods take a Data Object as a parameter and can
+        manipulate properties in the Data Object using Reflection.
+      </div>
+  <br />
+  <div class='Text'>
+        - LJC.DBClientLib
+        <div class='Text'>- LJCNetCommon</div>
+        <div class='Text'>- LJCDBMessage</div>
+        <div class='Text'>- LJCDBServiceLib</div>
+        <div class='Text2'>- LJCDataAccess</div>
+        <div class='Text2'>- LJCDataAccessConfig</div>
+      </div>
+  <br />
+  <div class='Text'>
+    <a href='Configuration.html' target='_blank'>Manager Configuration Diagram</a>
+    <a href='DataMethods.html' target='_blank'>Manager Data Methods Diagram</a>
+  </div>
+  <br />
+  <div id='Title'>Classes<br></div>
+        <table class='ListTable'>
+          <tr>
+            <td class='ListTable' width='25%'><a href='ChangedNames.html'>ChangedNames</a></td>
+            <td class='ListTable'>
+      Contains the list of changed property names.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DataManager.html'>DataManager</a></td>
+            <td class='ListTable'>
+      Provides standard message data manipulation methods.
+      (DE)
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbManager.html'>DbManager</a></td>
+            <td class='ListTable'>Provides DbDataAccess data manipulation methods.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbServiceClient.html'>DbServiceClient</a></td>
+            <td class='ListTable'>The Proxy client object.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='DbServiceRef.html'>DbServiceRef</a></td>
+            <td class='ListTable'>
+      Contains the
+      <span class="userType">DbDataAccess</span>,
+      local <span class="userType">DbService</span> and
+      <span class="userType">DbServiceClient</span>
+      proxy references.
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='IDataManager.html'>IDataManager</a></td>
+            <td class='ListTable'>Provides standard data manipulation.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='IDbService.html'>IDbService</a></td>
+            <td class='ListTable'>The Proxy DbService contract.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='IDbServiceChannel.html'>IDbServiceChannel</a></td>
+            <td class='ListTable'>The Proxy ServiceChannel contract.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='ManagerCommon.html'>ManagerCommon</a></td>
+            <td class='ListTable'>Contains common static manager methods.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='ObjectManager`2.html'>ObjectManager`2</a></td>
+            <td class='ListTable'>
+      Provides object specific data methods.
+      (RE)
+    </td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='SQLManager.html'>SQLManager</a></td>
+            <td class='ListTable'>Provides SQL data manipulation methods.</td>
+          </tr>
+          <tr>
+            <td class='ListTable' width='25%'><a href='StandardSettings.html'>StandardSettings</a></td>
+            <td class='ListTable'>The Standard Setting values.</td>
+          </tr>
+        </table>
+  <div class='Text'>12 Types</div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

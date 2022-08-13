@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- TypeTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LJCDataGrid</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../CodeDoc.html#LJCWinFormControls">Assembly List</a>
+    / <a href="LJCWinFormControls.html">LJCWinFormControls</a>
+    / LJCDataGrid
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCWinFormControls</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Class LJCDataGrid</div>
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public class LJCDataGrid : DataGridView 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Provides custom functionality for a DataGridView control. (D)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        <b>The Row Data Methods</b><br />
+        The grid has extended methods for managing rows and row data.<br />
+        These methods are LJCRowsClear(), LJCAddRow(), LJCInsertRow()
+        and LJCRowSetValues().<br />
+      </div>
+  <br />
+  <div class='Text'>
+        <b>The Row Selection Methods</b><br />
+        The grid has extended methods for managing the current row.<br />
+        These methods are LJCGetMouseRow(), LJCSetMouseCurrentRow()
+        and LJCSetCurrentRow().<br />
+      </div>
+  <br />
+  <div class='Text'>
+        <b>The Row Selection Changed Methods</b><br />
+        There are extended methods for checking if the selected row has changed.<br />
+        These methods are LJCIsDifferentRow() and LJCSetLastRow().<br />
+      </div>
+  <br />
+  <div class='Text'>
+        <b>The Grid Configuration Methods</b><br />
+        The grid has extended methods for grid configuration.<br />
+        These methods are LJCSetPlain(), LJCAddColumn(), LJCAddDisplayColumns()
+        and LJCRestoreColumnValues().<br />
+      </div>
+  <br />
+  <div id='Title'>Public Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.ctor.html'>LJCDataGrid #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.ctor1.html'>LJCDataGrid #ctor</a></td>
+      <td class='ListTable'>
+      Initializes an object instance and adds it to a container.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCAddCheckColumn.html'>LJCAddCheckColumn</a></td>
+      <td class='ListTable'>
+      Adds a Checkbox column.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCAddColumn.html'>LJCAddColumn</a></td>
+      <td class='ListTable'>
+      Adds a column to the grid.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCAddColumn1.html'>LJCAddColumn</a></td>
+      <td class='ListTable'>
+      Adds a grid column.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCAddDisplayColumns.html'>LJCAddDisplayColumns</a></td>
+      <td class='ListTable'>
+      Adds the display columns to the grid.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCExportData.html'>LJCExportData</a></td>
+      <td class='ListTable'>
+      Exports the grid values to a data file.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCGetCurrentRow.html'>LJCGetCurrentRow</a></td>
+      <td class='ListTable'>Returns the current or first row.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCGetMouseColumn.html'>LJCGetMouseColumn</a></td>
+      <td class='ListTable'>
+      Retrieves the column where the mouse was clicked.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCGetMouseColumnIndex.html'>LJCGetMouseColumnIndex</a></td>
+      <td class='ListTable'>
+      Retrieves the column index where the mouse was clicked.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCGetMouseRow.html'>LJCGetMouseRow</a></td>
+      <td class='ListTable'>
+      Retrieves the row where the mouse was clicked
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCGetMouseRowIndex.html'>LJCGetMouseRowIndex</a></td>
+      <td class='ListTable'>
+            Retrieves the row index for the X and Y values.
+            </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCGetMouseRowIndex1.html'>LJCGetMouseRowIndex</a></td>
+      <td class='ListTable'>
+      Retrieves the row index where the mouse was clicked.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCIsDifferentRow.html'>LJCIsDifferentRow</a></td>
+      <td class='ListTable'>
+      Compares the current row against the last selected row.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCRestoreColumnValues.html'>LJCRestoreColumnValues</a></td>
+      <td class='ListTable'>
+      Restores the grid column values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCRowAdd.html'>LJCRowAdd</a></td>
+      <td class='ListTable'>
+      Adds a GridRow control to the grid.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCRowInsert.html'>LJCRowInsert</a></td>
+      <td class='ListTable'>
+      Inserts a GridRow control into the grid.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCRowsClear.html'>LJCRowsClear</a></td>
+      <td class='ListTable'>
+      Clears the rows without allowing SelectionChange.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCRowSetValues.html'>LJCRowSetValues</a></td>
+      <td class='ListTable'>
+      Updates a grid row with the record values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCSaveColumnValues.html'>LJCSaveColumnValues</a></td>
+      <td class='ListTable'>
+      Saves the grid column values.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCSetCounter.html'>LJCSetCounter</a></td>
+      <td class='ListTable'>
+      Sets the grid count in the counter label.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCSetCurrentRow.html'>LJCSetCurrentRow</a></td>
+      <td class='ListTable'>
+      Sets the current row to the specified index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCSetCurrentRow1.html'>LJCSetCurrentRow</a></td>
+      <td class='ListTable'>
+      Sets the current row.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCSetCurrentRow2.html'>LJCSetCurrentRow</a></td>
+      <td class='ListTable'>
+      Sets the current row to the mouse row.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCSetLastColumnAutoSizeFill.html'>LJCSetLastColumnAutoSizeFill</a></td>
+      <td class='ListTable'>
+      Sets the last column AutoSizeMode to "Fill" if the columns width is less
+      than the grid width.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCSetLastRow.html'>LJCSetLastRow</a></td>
+      <td class='ListTable'>
+      Saves the last selected row index.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.LJCSetPlain.html'>LJCSetPlain</a></td>
+      <td class='ListTable'>
+      Sets the grid to a simple read-only grid.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>27 Methods</div>
+  <br />
+  <div id='Title'>Private Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.Dispose.html'>Dispose</a></td>
+      <td class='ListTable'>
+            Clean up any resources being used.
+            </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.InitializeComponent.html'>InitializeComponent</a></td>
+      <td class='ListTable'>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.OnColumnWidthChanged.html'>OnColumnWidthChanged</a></td>
+      <td class='ListTable'>
+      The OnColumnWidthChanged event method.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.OnCreateControl.html'>OnCreateControl</a></td>
+      <td class='ListTable'>Sets the initial NoFocus colors.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.OnEnter.html'>OnEnter</a></td>
+      <td class='ListTable'>
+      Sets the focus colors.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.OnLeave.html'>OnLeave</a></td>
+      <td class='ListTable'>
+      Sets the NoFocus colors.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\LJCDataGrid.OnResize.html'>OnResize</a></td>
+      <td class='ListTable'>
+      The OnResize event method.
+    </td>
+    </tr>
+  </table>
+  <div class='Text'>7 Methods</div>
+  <br />
+  <div id='Title'>Properties</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCDataGrid.LJCAllowSelectionChange.html'>LJCAllowSelectionChange</a></td>
+      <td class='ListTable'>Gets or sets the allow SelectionChange indicator.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCDataGrid.LJCLastRowIndex.html'>LJCLastRowIndex</a></td>
+      <td class='ListTable'>The last changed row index.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\LJCDataGrid.LJCRowHeight.html'>LJCRowHeight</a></td>
+      <td class='ListTable'>Gets or sets the Row Height value.</td>
+    </tr>
+  </table>
+  <br />
+  <div id='Title'>Fields</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Fields\LJCDataGrid.components.html'>components</a></td>
+      <td class='ListTable'>
+            Required designer variable.
+            </td>
+    </tr>
+  </table>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>

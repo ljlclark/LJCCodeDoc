@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark 2021,2022 - All Rights Reserved -->
+<!-- MethodTemplate.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CompareNull</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+</head>
+<body>
+  <br />
+  <div class="PathText">
+    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+    / <a href="../NetCommon.html">NetCommon</a>
+    / CompareNull
+  </div>
+  <br />
+  <div id='Title'>Namespace - LJCNetCommon</div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Method CompareNull</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>x - The compare object.</div>
+  <div class='Text'>y - The compare to object.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>
+      The integer that indicates the order relationship of the objects.
+    </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public static Int32 CompareNull(Object x, Object y)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+      Compare null values. (DE)
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+      -2    - Neither object is null.<br />
+      -1    - Null object x precedes object y.<br />
+      0     - Object x and object y are both null.<br />
+      1     - Object x follows null object y.
+    </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> System;
+<span class='keyWord'>using</span> LJCNetCommon;
+        
+<span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Sort and search on Name value.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+<span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>NameComparer</span> : IComparer&lt;ClassName&gt;
+{
+  <span class='comment'>// Compares two objects.</span>
+  <span class='xmlComment'>/// &lt;include path='items/Compare/*' file='../../LJCDocLib/Common/Data.xml'/&gt;</span>
+  <span class='modifier'>public</span> <span class='commonType'>int</span> Compare(<span class='userType'>ClassName</span> x, <span class='userType'>ClassName</span> y)
+  {
+    <span class='commonType'>int</span> retValue;
+
+    retValue = <span class='userType'>NetCommon</span>.CompareNull(x, y);
+    <span class='keyWord'>if</span> (-2 == retValue)
+    {
+      retValue = <span class='userType'>NetCommon</span>.CompareNull(x.Name, y.Name);
+      <span class='keyWord'>if</span> (-2 == retValue)
+      {
+        <span class='comment'>// Case sensitive.</span>
+        <span class='comment'>//retValue = x.Name_.CompareTo(y.Name);</span>
+
+        <span class='comment'>// Not case sensitive.</span>
+        retValue = <span class='commonType'>string</span>.Compare(x.Name, y.Name, true);
+      }
+    }
+    <span class='keyWord'>return</span> retValue;
+  }
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
+</body>
+</html>
