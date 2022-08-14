@@ -6,8 +6,8 @@
   <title>Add</title>
   <meta charset="utf-8" />
   <meta name="author" content="Lester J. Clark" />
-  <meta name="viewport" content="width=device-width" , initial-scale=1 />
-  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
 </head>
 <body>
   <br />
@@ -26,18 +26,12 @@
   <br />
   <div id='Title'>Parameters</div>
   <div class='Text'>columnName - The column name.</div>
-  <div class='Text'>propertyName - The property name.</div>
-  <div class='Text'>renameAs - The rename value.</div>
+  <div class='Text'>value - The value object.</div>
   <div class='Text'>dataTypeName - The data type name.</div>
-  <div class='Text'>caption - The caption value.</div>
   <br />
   <div class='Text'>Returns</div>
   <br />
-  <div class='Text'>
-      The created
-      <span class="userType">DbColumn</span>
-      object.
-    </div>
+  <div class='Text'>The created DbColumn object.</div>
   <br />
   <div class='Text'>Syntax</div>
   <br />
@@ -47,7 +41,7 @@
         <tr><th class='CodeTable'>C#</th></tr>
         <tr class='CodeTable'>
           <td class='CodeTable'>
-            public DbColumn Add(String columnName, String propertyName = null, String renameAs = null, String dataTypeName = String, String caption = null)
+            public DbColumn Add(String columnName, Object value, String dataTypeName = String)
           </td>
         </tr>
       </tbody>

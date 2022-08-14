@@ -6,8 +6,8 @@
   <title>DbValues</title>
   <meta charset='utf-8' />
   <meta name="author" content="Lester J. Clark" />
-  <meta name="viewport" content="width=device-width" , initial-scale=1 />
-  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
 </head>
 <body>
   <br />
@@ -39,9 +39,38 @@
   </div>
   <br />
   <div class='Text'>
-            Represents a collection of
-            <span class="userType">DbValue</span> objects.
-            </div>
+      Represents a collection of
+      <span class="userType">DbValue</span> objects.
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        The common collection static methods are: HasItems() and
+        LJCDeserialize().<br />
+        The collection contains a copy constructor.<br />
+        The common collection instance methods are: Add(), Clone, HasItems()
+        and LJCSerialize().
+      </div>
+  <br />
+  <div class='Text'>
+        Public methods are: LJCClearChanged() and LJCGetChanged().
+      </div>
+  <br />
+  <div class='Text'>
+        The Search method is LJCSearchName().
+      </div>
+  <br />
+  <div class='Text'>
+        The get data methods are: LJCGetBoolean(), LJCGetInt32(),
+        LJCGetValue(), etc..<br />
+        The set data method is LJCSetValue().
+      </div>
+  <br />
+  <div class='Text'>
+        A DbValues collection can be converted to a DbColumns collection using
+        the LJCCreateColumns() method.
+      </div>
   <br />
   <div id='Title'>Public Methods</div>
   <table class='ListTable'>

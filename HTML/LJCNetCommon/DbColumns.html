@@ -6,8 +6,8 @@
   <title>DbColumns</title>
   <meta charset='utf-8' />
   <meta name="author" content="Lester J. Clark" />
-  <meta name="viewport" content="width=device-width" , initial-scale=1 />
-  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
 </head>
 <body>
   <br />
@@ -43,23 +43,64 @@
       <span class="userType">DbColumn</span> objects.
     </div>
   <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        The common collection static methods are: HasItems() and
+        LJCDeserialize(). Another static method is LJCCreateObjectColumns().
+        <br />
+        The collection contains a copy constructor.<br />
+        The common collection instance methods are: Add() + 3 overloads,
+        Clone, HasItems() and LJCSerialize(). Another add method is
+        LJCAddPropertyAs().
+      </div>
+  <br />
+  <div class='Text'>
+        Public methods are: LJCClearChanged(), LJCGetChanged() and
+        LJCGetColumns().
+      </div>
+  <br />
+  <div class='Text'>
+        Search and Sort methods are LJCSearchName(), LJCSearchPropertyName(),
+        LJCSearchRenameAs(), LJCSortAddOrderIndex(), LJCSortName(),
+        LJCSortProperty() and LJCSortRenameAs().<br />
+        A DbColumn collection element can also be retrieved by name using
+        the collection object: columns["ColumnName"];
+      </div>
+  <br />
+  <div class='Text'>
+        The get data methods are: LJCGetBoolean(), LJCGetInt32(),
+        LJCGetValue(), etc.
+      </div>
+  <br />
+  <div class='Text'>
+        A DbColumns collection can be converted to a DbValues collection using
+        the static op_implicit conversion.
+      </div>
+  <br />
   <div id='Title'>Public Methods</div>
   <table class='ListTable'>
     <tr>
       <td class='ListTable' width='25%'><a href='Methods\DbColumns.Add.html'>Add</a></td>
       <td class='ListTable'>
-      Creates the Object from the arguments and adds it to the collection.
-      (R)
+      Adds the object element to the collection
     </td>
     </tr>
     <tr>
       <td class='ListTable' width='25%'><a href='Methods\DbColumns.Add1.html'>Add</a></td>
       <td class='ListTable'>
       Creates the Object from the arguments and adds it to the collection.
+      (R)
     </td>
     </tr>
     <tr>
       <td class='ListTable' width='25%'><a href='Methods\DbColumns.Add2.html'>Add</a></td>
+      <td class='ListTable'>
+      Creates the Object from the arguments and adds it to the collection.
+    </td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbColumns.Add3.html'>Add</a></td>
       <td class='ListTable'>
       Creates the Object from the arguments and adds it to the collection.
     </td>
@@ -219,6 +260,10 @@
     </td>
     </tr>
     <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbColumns.LJCSortAddOrderIndex.html'>LJCSortAddOrderIndex</a></td>
+      <td class='ListTable'>Sort on AddOrderIndex.</td>
+    </tr>
+    <tr>
       <td class='ListTable' width='25%'><a href='Methods\DbColumns.MapNames.html'>MapNames</a></td>
       <td class='ListTable'>
       Maps the column property and rename values.
@@ -231,13 +276,37 @@
       <span class="userType">DbValues</span>
       object from a
       <span class="userType">DbColumns</span> object.
+      (E)
     </td>
     </tr>
   </table>
-  <div class='Text'>29 Methods</div>
+  <div class='Text'>31 Methods</div>
+  <br />
+  <div id='Title'>Private Methods</div>
+  <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbColumns.LJCSortName.html'>LJCSortName</a></td>
+      <td class='ListTable'>Sort on ColumnName.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbColumns.LJCSortProperty.html'>LJCSortProperty</a></td>
+      <td class='ListTable'>Sort on RenameAs.</td>
+    </tr>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Methods\DbColumns.LJCSortRenameAs.html'>LJCSortRenameAs</a></td>
+      <td class='ListTable'>Sort on RenameAs.</td>
+    </tr>
+  </table>
+  <div class='Text'>3 Methods</div>
   <br />
   <div id='Title'>Properties</div>
   <table class='ListTable'>
+    <tr>
+      <td class='ListTable' width='25%'><a href='Properties\DbColumns.Item.html'>Item</a></td>
+      <td class='ListTable'>
+      The column for the specified name.
+    </td>
+    </tr>
     <tr>
       <td class='ListTable' width='25%'><a href='Properties\DbColumns.LJCDefaultFileName.html'>LJCDefaultFileName</a></td>
       <td class='ListTable'>Gets the Default File Name.</td>

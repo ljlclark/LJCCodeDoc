@@ -6,8 +6,8 @@
   <title>LJCReadLine</title>
   <meta charset="utf-8" />
   <meta name="author" content="Lester J. Clark" />
-  <meta name="viewport" content="width=device-width" , initial-scale=1 />
-  <link rel='stylesheet' type='text/css' href='../../../../CSS/CodeDoc.css' />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
 </head>
 <body>
   <br />
@@ -45,6 +45,7 @@
   <br />
   <div class='Text'>
       Reads the next line from the line string array.
+      (DE)
     </div>
   <br />
   <div class='Text'>Remarks</div>
@@ -53,6 +54,43 @@
       This is used to read a line from the string array that was loaded
       with the LJCSetLines() method.
     </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCTextDataReaderLib;
+
+<span class='comment'>// The hasHeadingLine defaults to true if the parameter is not included.</span>
+<span class='userType'>TextDataReader</span> textReader = <span class='keyWord'>new</span> <span class='userType'>TextDataReader</span>();
+
+<span class='commonType'>string</span>[] lines = <span class='keyWord'>new</span> <span class='commonType'>string</span>[]
+{
+  "FirstName, LastName",
+  "John, Doe",
+  "Jane, Doe"
+};
+
+<span class='comment'>// The field delimiter defaults to "," if the parameter is not included.</span>
+textReader.LJCSetLines(lines);
+
+<span class='keyWord'>while</span>(textReader.ReadLine())
+{
+  <span class='comment'>// Get the current line values as strings.</span>
+  <span class='keyWord'>for</span> <span class='commonType'>int</span> index = 0; index &lt; textReader.FieldCount; index++)
+  {
+    <span class='commonType'>string</span> data = textReader.GetString(index);
+  }
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <br />
   <div class='SmallText'>Copyright &copy; Lester J. Clark 2021,2022 - All Rights Reserved</div>
 </body>

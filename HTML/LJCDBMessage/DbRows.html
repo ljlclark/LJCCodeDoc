@@ -6,8 +6,8 @@
   <title>DbRows</title>
   <meta charset='utf-8' />
   <meta name="author" content="Lester J. Clark" />
-  <meta name="viewport" content="width=device-width" , initial-scale=1 />
-  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
 </head>
 <body>
   <br />
@@ -38,7 +38,27 @@
     </table>
   </div>
   <br />
-  <div class='Text'> Represents a collection of DbRow objects.</div>
+  <div class='Text'>
+      Represents a collection of
+      <span class="userType">LJCNetCommon.DbValues</span>.
+    </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+        Each element of the collection is an
+        <span class="userType">LJCNetCommon.DbValues</span>
+        object which contains the values of a data row.
+      </div>
+  <br />
+  <div class='Text'>
+        The common collection static methods are: HasItems() and
+        LJCDeserialize().
+        <br />
+        The collection contains a copy constructor.<br />
+        The common collection instance methods are: Add(), Clone(), HasItems(),
+        and Serialize().
+      </div>
   <br />
   <div id='Title'>Public Methods</div>
   <table class='ListTable'>

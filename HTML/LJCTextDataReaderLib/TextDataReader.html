@@ -6,8 +6,8 @@
   <title>TextDataReader</title>
   <meta charset='utf-8' />
   <meta name="author" content="Lester J. Clark" />
-  <meta name="viewport" content="width=device-width" , initial-scale=1 />
-  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
 </head>
 <body>
   <br />
@@ -45,23 +45,41 @@
   <div class='Text'>Remarks</div>
   <br />
   <div class='Text'>
-        A class that implements IDataReader must implement the Read() and GetValue()
-        methods. It must also implement the FieldCount property.
+        A class that implements IDataReader must implement the Read() and
+        IDataRecord GetValue() methods. It must also implement the IDataRecord
+        FieldCount property.
       </div>
   <br />
   <div class='Text'>
-        If field name mapping is used, it must implement the GetOrdinal() method.
+        The GetOrdinal() method must be implemented if field name mapping is used.
+      </div>
+  <br />
+  <div class='Text'>
+        The currently supported common IDataReader methods are:
+        GetDataTypeName(int/string), GetFieldType(), GetName(), GetOrdinal(),
+        GetSchemaTable(), GetValues(), IsDBNull() and Read().<br />
+        All IDataRecord Get Type by index methods are supported including:
+        GetBoolean(), GetInt32(), GetString(), GetValue(), etc.
+      </div>
+  <br />
+  <div class='Text'>
+        Also included are custom Get Type by name method overloads to get the
+        data values by the field name. These methods overload the IDataRecord
+        Get Type by index methods.
       </div>
   <br />
   <div class='Text'>
         This data reader expects the lines to be terminated with CR/LF.
-        It can parse comma or tab delimited fields and can handle quoted fields.<br />
-        Only use quoted fields when necessary to get a slight performance increase.
+        It can parse comma or tab delimited fields and can handle quoted fields.
+        <br />
+        Only use quoted fields when necessary to get a slight performance
+        increase.
       </div>
   <br />
   <div class='Text'>
-        Use the LJCSetFile() method to initialize for the file to be read. Use the
-        Read() method to read the next line from the file.
+        Use the LJCSetFile() method to initialize for the file to be read. This
+        sets the LJCDataFields property with the data field definitions. Use the
+        Read() method to read the next line values from the file.
       </div>
   <br />
   <div class='Text'>
@@ -74,17 +92,51 @@
         The data field definition names can be parsed from the file heading line.
         This can be accomplished in two ways:<br />
         1. When creating the TextDataReader, set the hasheadingLine constructor
-        property to 'true' or leave it blank to let it default to 'true'.<br />
+        property to 'true' or leave it blank to let it default to 'true'.
+        <br />
         2. After creating the TextDataReader, you can set the LJCHasHeadingLine
         property to 'true'. This must be done before calling the LJCSetFile() or
-        LJCSetLines() method.
+        LJCSetLines() method.<br />
       </div>
   <br />
   <div class='Text'>
-        The data field definitions can also be loaded from an XML layout file.<br />
+        The data fields can be in a fixed length format. This can be set in two
+        ways:<br />
+        1. When creating the TextDataReader, set the fixedLengthFields constructor
+        property to 'true'.<br />
+        2. After creating the TextDataReader, you can set the LJCFixedLengthFields
+        property to 'true'. This must be done before calling the LJCSetFile() or
+        LJCSetLines() method.<br />
+        The field MaxLength and DataTypeName can be included in the file heading
+        line. The formats are: Name|MaxLength or Name|MaxLength|DataTypeName.
+        The MaxLength value is required for fixed length fields.
+      </div>
+  <br />
+  <div class='Text'>
+        The data field definitions can also be loaded from an XML layout file.
+        <br />
         Use the LJCSetFields() method to initialize the data field definitions
-        from an XML data definition file. This file uses the DbColumns format.<br />
-        Set LJCHasHeaderLine to 'false' before calling LJCSetFile() or LJCSetLines().
+        from an XML data definition file. This file uses the DbColumns format.
+        <br />
+        Set LJCHasHeaderLine to 'false' before calling LJCSetFile() or
+        LJCSetLines().<br />
+        The MaxLength and Position values are required for fixed length fields.
+        <br />
+        The field names can be retrieved with the LJCGetFieldNames() method.
+      </div>
+  <br />
+  <div class='Text'>
+        The Read() or LJCReadLine() methods set the next line values in the
+        LJCDataFields property. A field value can be retrieved by index or field
+        name as in object value = textDataReader[1]; or
+        value = textDataReader["Name"];. A value can also be retrieved as a
+        specific type by index or name using the Get Type methods such as
+        GetBoolean(), GetInt32(), GetString(), GetValue(), etc.
+      </div>
+  <br />
+  <div class='Text'>
+        A Data Object can be populated with the field values using the
+        LJCSetObjectValues() method.
       </div>
   <br />
   <div id='Title'>Public Methods</div>
@@ -297,6 +349,7 @@
       <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetOrdinal.html'>GetOrdinal</a></td>
       <td class='ListTable'>
       Retrieves the index of the data field with the specified name.
+      (DE)
     </td>
     </tr>
     <tr>
@@ -321,6 +374,7 @@
       <td class='ListTable' width='25%'><a href='Methods\TextDataReader.GetValue.html'>GetValue</a></td>
       <td class='ListTable'>
       Returns the object value of the data field at the specified index.
+      (DE)
     </td>
     </tr>
     <tr>
@@ -345,18 +399,21 @@
       <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCReadLine.html'>LJCReadLine</a></td>
       <td class='ListTable'>
       Reads the next line from the line string array.
+      (DE)
     </td>
     </tr>
     <tr>
       <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCSetFields.html'>LJCSetFields</a></td>
       <td class='ListTable'>
       Sets the DataFields layout from an XML file.
+      (E)
     </td>
     </tr>
     <tr>
       <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCSetFile.html'>LJCSetFile</a></td>
       <td class='ListTable'>
       Sets the source text file values.
+      (E)
     </td>
     </tr>
     <tr>
@@ -369,6 +426,7 @@
       <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCSetLines.html'>LJCSetLines</a></td>
       <td class='ListTable'>
       Set the source line string array.
+      (RE)
     </td>
     </tr>
     <tr>
@@ -381,6 +439,7 @@
       <td class='ListTable' width='25%'><a href='Methods\TextDataReader.LJCSetObjectValues.html'>LJCSetObjectValues</a></td>
       <td class='ListTable'>
       Sets the data object property values from the TextDataReader.
+      (RE)
     </td>
     </tr>
     <tr>
@@ -411,6 +470,7 @@
       <td class='ListTable' width='25%'><a href='Methods\TextDataReader.Read.html'>Read</a></td>
       <td class='ListTable'>
       Reads the next line of the text file.
+      (DE)
     </td>
     </tr>
   </table>
