@@ -1,5 +1,4 @@
 "use strict";
-// Copyright(c) Lester J. Clark 2022 - All Rights Reserved
 // CCodeDocNavEvents.js
 
 class CNavEvents

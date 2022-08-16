@@ -1,6 +1,5 @@
 "use strict";
-// Copyright(c) Lester J. Clark 2022 - All Rights Reserved
-// CodeDocNavItems.js
+// CCodeDocNavItems.js
 
 // ***************
 /// <summary>Contains CityDetail event handlers.</summary>
