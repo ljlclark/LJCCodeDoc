@@ -39,7 +39,7 @@ ul {
   height: 100%;
   overflow: hidden;
   vertical-align: top;
-  width: 80%;
+  width: 75%;
 }
 
 #contentFrame {
@@ -48,13 +48,24 @@ ul {
   width: 100%;
 }
 
+#menuIco {
+  display: none;
+  height: 23px;
+  width: 23px;
+}
+
+#menubar {
+  display: none;
+  height: 21px;
+}
+
 #sidebar {
   background-color: lightsteelblue;
   display: inline-block;
   height: 100%;
   overflow: auto;
   vertical-align: top;
-  width: 20%;
+  width: 25%;
 }
 
   /* Combined Selectors */
