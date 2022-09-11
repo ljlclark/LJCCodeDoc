@@ -46,5 +46,47 @@
       Configure the Display Columns from the DbColumns definition.
     </div>
   <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCDataGridLib;
+<span class='keyWord'>using</span> LJCDBClientLib;
+<span class='keyWord'>using</span> LJCDBMessage;
+        
+<span class='userType'>DbConnectionStringBuilder</span> connectionBuilder;
+<span class='commonType'>string</span> databaseName = "DatabaseName";
+connectionBuilder = <span class='keyWord'>new</span> <span class='userType'>DbConnectionStringBuilder</span>()
+{
+  { "Data Source", "DataServiceName" },
+  { "Initial Catalog", databaseName },
+  { "Integrated Security", "True" }
+};
+<span class='commonType'>string</span> connectionString = connectionBuilder.ConnectionString;
+<span class='commonType'>string</span> providerName = "System.Data.SqlClient";
+        
+<span class='commonType'>var</span> dbServiceRef = <span class='keyWord'>new</span> <span class='userType'>DbServiceRef</span>()
+{
+  <span class='userType'>DbDataAccess</span> = <span class='keyWord'>new</span> <span class='userType'>DbDataAccess</span>(connectionString
+    , providerName, databaseName)
+};
+<span class='commonType'>var</span> dataManager = <span class='keyWord'>new</span> <span class='userType'>DataManager</span>(dbServiceRef, <span class='keyWord'>null</span>, "TableName");
+<span class='commonType'>var</span> dbResult = dataManager.Load();
+<span class='keyWord'>if</span> (dbResult.HasData())
+{
+  <span class='comment'>// Setup grid columns.</span>
+  <span class='commonType'>var</span> resultGridData = <span class='keyWord'>new</span> <span class='userType'>ResultGridData</span>(LJCDataGridName);
+  resultGridData.SetDisplayColumns(dbResult.Columns);
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
 </body>
 </html>
