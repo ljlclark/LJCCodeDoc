@@ -44,7 +44,8 @@
   <div class='Text'>Remarks</div>
   <br />
   <div class='Text'>
-        A List Form contains one or more List Grids for displaying a list of items.<br />
+        A List Form contains one or more List Grids for displaying a list of
+        items.<br />
         When the data formats are known in advance, the List Form can contain data
         methods that use strongly typed Data Objects.<br />
         Each List Grid is coded to have Row Data Methods to display and modify the
@@ -52,7 +53,8 @@
         These methods are DataRetrieve(), LoadRows(), RowAdd(), RowUpdate(),
         SetStoredValues() and RowSelect().<br />
         The methods may be postfixed with a value that identifies the
-        grid to which it applies. E.G. DataRetrieveAddress(), RowAddAddress(), etc.<br />
+        grid to which it applies. E.G. DataRetrieveAddress(), RowAddAddress(),
+        etc.<br />
         This is especially true if the form contains more than one grid.<br />
       </div>
   <br />
@@ -63,17 +65,17 @@
       </div>
   <br />
   <div class='Text'>
+        <b>The Grid Configuration Methods</b><br />
+        This class has methods for the contained grid configuration.<br />
+        These methods are SetDisplayColumns() with 3 overrides and
+        RemoveDisplayColumn().<br />
+      </div>
+  <br />
+  <div class='Text'>
         <b>The Row Data Methods</b><br />
         There are methods for managing rows and row data using DbColumn values.<br />
         These methods are LoadRows() with 2 overrides, RowAdd(), RowUpdate()
         and RowSetValues().<br />
-      </div>
-  <br />
-  <div class='Text'>
-        <b>The Grid Configuration Methods</b><br />
-        This class has methods for the contained grid configuration.<br />
-        These methods are GetDisplayColumns(), SetDisplayColumns() with 3 overrides
-        and RemoveDisplayColumn().<br />
       </div>
   <br />
   <div id='Title'>Public Methods</div>
