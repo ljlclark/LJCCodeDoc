@@ -57,14 +57,13 @@
         <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
         <tr class='CodeTable'>
           <td class='CodeTable'>
-            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCDataAccessConfig;
+            <pre style='margin-left: 2px;'><span class='comment'>// See the DataConfig setup code on the DataConfig class page.</span>
 
-<span class='userType'>DataConfigs</span> configs = <span class='keyWord'>new</span> <span class='userType'>DataConfigs</span>();
-configs.LJCLoadData();
-<span class='userType'>DataConfig</span> config = dataConfigs.LJCGetByName("ConfigName");
-
-<span class='commonType'>string</span> connTypeName = config.ConnectionTypeName;
-<span class='commonType'>string</span> connString = config.GetConnectionString(connTypeName);</pre>
+<span class='comment'>// Creates the populated connection string from the ConnectionType name.</span>
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> GetConnectionString2(string connTypeName)
+{
+  <span class='commonType'>var</span> connString = dataConfig.GetConnectionString(connTypeName);
+}</pre>
           </td>
         </tr>
       </tbody>

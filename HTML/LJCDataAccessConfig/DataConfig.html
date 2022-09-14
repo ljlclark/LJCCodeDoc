@@ -83,8 +83,8 @@
     <tr>
       <td class='ListTable' width='25%'><a href='Methods\DataConfig.GetProviderName1.html'>GetProviderName</a></td>
       <td class='ListTable'>
-			Retrieves the provider name value.
-		</td>
+      Retrieves the provider name value.
+    </td>
     </tr>
     <tr>
       <td class='ListTable' width='25%'><a href='Methods\DataConfig.SQLIntegratedConnectionString.html'>SQLIntegratedConnectionString</a></td>
@@ -128,6 +128,42 @@
       <td class='ListTable'>Gets or sets the User ID.</td>
     </tr>
   </table>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='Text'>
+        This is main function sample code for testing. The code for the additional
+        test functions is listed under the methods with the same names.
+      </div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCDataAccessConfig;
+
+<span class='comment'>// Test DataConfig.</span>
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> TestDataConfig()
+{
+  <span class='userType'>DataConfigs</span> dataConfigs = <span class='keyWord'>new</span> <span class='userType'>DataConfigs</span>();
+  dataConfigs.LJCLoadData();
+  dataConfig = dataConfigs.LJCGetByName("ConfigName");
+
+  <span class='commonType'>var</span> connTypeName = "SQLServer";
+  GetConnectionString(dataConfig);
+  GetConnectionString2(connTypeName);
+  GetConnectionStringFromText(dataConfig);
+  SQLIntegratedConnectionString(dataConfig);
+  GetProviderName(connTypeName);
+  GetProviderName2(dataConfig);
+}</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <br />
 </body>
 </html>

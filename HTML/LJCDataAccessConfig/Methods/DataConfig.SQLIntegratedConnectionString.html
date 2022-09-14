@@ -54,13 +54,15 @@
         <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
         <tr class='CodeTable'>
           <td class='CodeTable'>
-            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCDataAccessConfig;
+            <pre style='margin-left: 2px;'><span class='comment'>// See the DataConfig setup code on the DataConfig class page.</span>
 
-<span class='userType'>DataConfigs</span> configs = <span class='keyWord'>new</span> <span class='userType'>DataConfigs</span>();
-configs.LJCLoadData();
-<span class='userType'>DataConfig</span> config = configs.LJCGetByName("ConfigName");
-
-<span class='commonType'>string</span> connString = config.SQLIntegratedConnectionString("SQLServer");</pre>
+<span class='comment'>// Creates the SQL integrated connection string from an internal value.</span>
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> SQLIntegratedConnectionString(<span class='userType'>DataConfig</span> dataConfig)
+{
+  <span class='commonType'>var</span> connTypeName = dataConfig.ConnectionTypeName;
+  <span class='commonType'>string</span> connString;
+  connString = dataConfig.SQLIntegratedConnectionString(connTypeName);
+}</pre>
           </td>
         </tr>
       </tbody>
