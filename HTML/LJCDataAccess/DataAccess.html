@@ -230,15 +230,16 @@
 <span class='comment'>// Test DataAccess.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> TestDataAccess()
 {
-  <span class='userType'>DbConnectionStringBuilder</span> connectionBuilder;
   DataAccess dataAccess;
   <span class='commonType'>string</span> connectionString;
   <span class='commonType'>string</span> providerName;
 
+  <span class='comment'>// Create Data Configuration values.</span>
   <span class='commonType'>bool</span> useInternal = <span class='keyWord'>false</span>;
   <span class='keyWord'>if</span> (useInternal)
   {
     <span class='comment'>// Use internal configuration.</span>
+    <span class='userType'>DbConnectionStringBuilder</span> connectionBuilder;
     connectionBuilder = <span class='keyWord'>new</span> <span class='userType'>DbConnectionStringBuilder</span>()
     {
       { "Data Source", "DataServiceName" },
@@ -258,8 +259,10 @@
     providerName = dataConfig.GetProviderName();
   }
 
+  <span class='comment'>// Create DataAccess object.</span>
   dataAccess = <span class='keyWord'>new</span> <span class='userType'>DataAccess</span>(connectionString, providerName);
 
+  <span class='comment'>// Method Tests.</span>
   GetDataReader(dataAccess);
   GetDataTable(dataAccess);
   GetDataSet(dataAccess);
