@@ -63,7 +63,7 @@
 <span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>Person</span>
 {
   <span class='modifier'>public</span> <span class='commonType'>long</span> Id { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
-  <span class='modifier'>public</span> <span class='commonType'>string</span> Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+  <span class='modifier'>public</span> <span class='commonType'>string</span> ?Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
   <span class='modifier'>public</span> <span class='commonType'>bool</span> PrincipleFlag { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
 }
         
@@ -80,7 +80,7 @@
   <span class='commonType'>string</span> message = <span class='userType'>NetCommon</span>.XmlSerializeToString(person.GetType(), person, null);
 
   <span class='comment'>// Deserialize an XML message string to an object.</span>
-  <span class='userType'>Person</span> newPerson;
+  <span class='userType'>Person</span> ?newPerson;
   newPerson = <span class='userType'>NetCommon</span>.XmlDeserializeMessage(typeof(Person), message) <span class='keyWord'>as</span> <span class='userType'>Person</span>;
 }</pre>
           </td>
