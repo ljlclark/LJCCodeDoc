@@ -64,7 +64,7 @@
 <span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>Person</span>
 {
   <span class='modifier'>public</span> <span class='commonType'>long</span> Id { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
-  <span class='modifier'>public</span> <span class='commonType'>string</span> Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+  <span class='modifier'>public</span> <span class='commonType'>string?</span> Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
   <span class='modifier'>public</span> <span class='commonType'>bool</span> PrincipleFlag { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
 }
 
@@ -72,7 +72,7 @@
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> XmlSerializeToString()
 {
   <span class='comment'>// Serialize an object to an XML message string.</span>
-  <span class='userType'>Person</span> person = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
+  <span class='userType'>var</span> person = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
   {
     Id = 2,
     Name = "Text",
@@ -81,7 +81,7 @@
   <span class='commonType'>string</span> message = <span class='userType'>NetCommon</span>.XmlSerializeToString(person.GetType(), person, null);
 
   <span class='comment'>// Check the object.</span>
-  <span class='userType'>Person</span> newPerson;
+  <span class='userType'>Person?</span> newPerson;
   newPerson = <span class='userType'>NetCommon</span>.XmlDeserializeMessage(typeof(Person), message) <span class='keyWord'>as</span> <span class='userType'>Person</span>;
 }</pre>
           </td>
