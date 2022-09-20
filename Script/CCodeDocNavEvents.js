@@ -20,7 +20,6 @@ class CNavEvents
     document.addEventListener("click", this.DocumentClick.bind(this));
     menuIco.addEventListener("click", this.MenuClick.bind(this));
     content.addEventListener("mouseenter", this.ContentMouseEnter.bind(this));
-
     this.menubar = document.getElementById("menubar");
     this.menuIco = document.getElementById("menuIco");
     this.sidebar = document.getElementById("sidebar");
