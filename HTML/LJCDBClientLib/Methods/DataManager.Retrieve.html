@@ -9,84 +9,85 @@
   <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
 </head>
 <body>
-  <br />
-  <div class="PathText">
-    / <a href="../../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
-    / <a href="../LJCDBClientLib.html">LJCDBClientLib</a>
-    / <a href="../DataManager.html">DataManager</a>
-    / Retrieve
-  </div>
-  <br />
-  <div id='Title'>Namespace - LJCDBClientLib</div>
-  <br />
-  <div id='Header'>
-    <div id='Title'>Method Retrieve</div>
-  </div>
-  <br />
-  <div id='Title'>Parameters</div>
-  <div class='Text'>keyColumns - The record containing the key field values.</div>
-  <div class='Text'>propertyNames - The incuded column property names.</div>
-  <div class='Text'>filters - The filter values.</div>
-  <div class='Text'>joins - The join values.</div>
-  <br />
-  <div class='Text'>Returns</div>
-  <br />
-  <div class='Text'>The result object.</div>
-  <br />
-  <div class='Text'>Syntax</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            public DbResult Retrieve(DbColumns keyColumns, List&lt;String&gt; propertyNames = null, DbFilters filters = null, DbJoins joins = null)
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br />
-  <div class='Text'>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
+      / <a href="../LJCDBClientLib.html">LJCDBClientLib</a>
+      / <a href="../DataManager.html">DataManager</a>
+      / Retrieve
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCDBClientLib</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method Retrieve</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>keyColumns - The record containing the key field values.</div>
+    <div class='Text'>propertyNames - The incuded column property names.</div>
+    <div class='Text'>filters - The filter values.</div>
+    <div class='Text'>joins - The join values.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The result object.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public DbResult Retrieve(DbColumns keyColumns, List&lt;String&gt; propertyNames = null, DbFilters filters = null, DbJoins joins = null)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
       Retrieves a record from the database.
       (DE)
     </div>
-  <br />
-  <div class='Text'>Remarks</div>
-  <br />
-  <div class='Text'><b>Parameters</b></div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'><b>Parameters</b></div>
+    <br />
+    <div class='Text'>
         keyColumns<br \>
         This parameter defines the values to be used in the SQL where clause. It
         is only used if the 'filters' parameter is null.<br \>
         The values are separated with the 'AND' operator.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         propertyNames<br \>
         This parameter defines the primary table columns that are to be included
         in the request. If it is null, then all the primary table columns are
         included.<br \>
         It must not include Calculated or Join columns or it will cause an error.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         filters<br \>
         This parameter defines the values to be used in the SQL where clause. If
         it is defined, then the keyColumns parameter is not used.<br \>
         The 'filters' object can define a complex where clause including
         combinations of 'AND' and 'OR' operators.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         joins<br \>
         The 'joins' parameter defines the join tables, join on values and join
         column definitions.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         Creates a "Select"
         <span class="userType">DbRequest</span>
         object, which is available in the Request property. The request object is
@@ -94,43 +95,43 @@
         <span class="commonType">ExecuteRequest()</span>
         method.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         Request Column property names and values are added to the Result Value columns.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         The Result Data Object property names must match the Result Value Column
         property names to map the values into the Result Data Object.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         Result Data Object property names that are different from the Request Column
         names can be handled by setting the Request Column Property name. The
         MapNames() method is a helper method for setting the Property name.
       </div>
-  <br />
-  <div class='Text'><b>Method Graph</b></div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'><b>Method Graph</b></div>
+    <br />
+    <div class='Text'>
         All methods are in LJCDBMessage.DbCommon.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         ResultColumns(baseDefinition)<br \>
         ResultKeys(keyColumns)
         <div class='Text'>CreateKeyColumn(keyColumn)</div>
       </div>
-  <br />
-  <div class='Text'>Example</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            <pre style='margin-left: 2px;'><span class='comment'>// This is an example of the code to use the Person Manager Retrieve()</span>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// This is an example of the code to use the Person Manager Retrieve()</span>
 <span class='comment'>// method.</span>
 PersonManager personManager = <span class='keyWord'>new</span> <span class='userType'>PersonManager</span>();
 <span class='userType'>Person</span> personKey = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
@@ -171,11 +172,12 @@ PersonManager personManager = <span class='keyWord'>new</span> <span class='user
     <span class='keyWord'>return</span> retValue;
   }
 }</pre>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
   </div>
-  <br />
 </body>
 </html>

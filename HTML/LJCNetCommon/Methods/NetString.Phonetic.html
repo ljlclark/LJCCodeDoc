@@ -9,52 +9,53 @@
   <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
 </head>
 <body>
-  <br />
-  <div class="PathText">
-    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
-    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
-    / <a href="../NetString.html">NetString</a>
-    / Phonetic
-  </div>
-  <br />
-  <div id='Title'>Namespace - LJCNetCommon</div>
-  <br />
-  <div id='Header'>
-    <div id='Title'>Method Phonetic</div>
-  </div>
-  <br />
-  <div id='Title'>Parameters</div>
-  <div class='Text'>text - The text value.</div>
-  <div class='Text'>index - The start index.</div>
-  <div class='Text'>letter - The Phonetic letter.</div>
-  <br />
-  <div class='Text'>Returns</div>
-  <br />
-  <div class='Text'>True if a Phonetic was created, otherwise false.</div>
-  <br />
-  <div class='Text'>Syntax</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            public static Boolean Phonetic(String text, Int32& index, out Char& letter)
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br />
-  <div class='Text'>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+      / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+      / <a href="../NetString.html">NetString</a>
+      / Phonetic
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCNetCommon</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method Phonetic</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>text - The text value.</div>
+    <div class='Text'>index - The start index.</div>
+    <div class='Text'>letter - The Phonetic letter.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>True if a Phonetic was created, otherwise false.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public static Boolean Phonetic(String text, Int32& index, out Char& letter)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
       Creates a Phonetic character from the supplied text starting at the
       supplied index. (D)
     </div>
-  <br />
-  <div class='Text'>Remarks</div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
         Sets the letter parameter to:<br />  -
         "F" if the current and following letter are "PH"<br />
         - "S" if the current letter is "P", the following letter is "S"
@@ -65,6 +66,7 @@
         or "Y".<br />
         - Otherwise, the same letter as at the current index.
       </div>
-  <br />
+    <br />
+  </div>
 </body>
 </html>

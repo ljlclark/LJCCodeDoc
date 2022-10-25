@@ -9,54 +9,55 @@
   <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
 </head>
 <body>
-  <br />
-  <div class="PathText">
-    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
-    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
-    / <a href="../NetCommon.html">NetCommon</a>
-    / ConfigString
-  </div>
-  <br />
-  <div id='Title'>Namespace - LJCNetCommon</div>
-  <br />
-  <div id='Header'>
-    <div id='Title'>Method ConfigString</div>
-  </div>
-  <br />
-  <div id='Title'>Parameters</div>
-  <div class='Text'>key - The key value.</div>
-  <br />
-  <div class='Text'>Returns</div>
-  <br />
-  <div class='Text'>The string config value.</div>
-  <br />
-  <div class='Text'>Syntax</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            public static String ConfigString(String key)
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br />
-  <div class='Text'>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+      / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+      / <a href="../NetCommon.html">NetCommon</a>
+      / ConfigString
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCNetCommon</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method ConfigString</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>key - The key value.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The string config value.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public static String ConfigString(String key)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
       Retrieves the Config string value. (RE)
     </div>
-  <br />
-  <div class='Text'>Remarks</div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
         This uses the program config file which is the name of the program plus
         the extension ".config".
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         // An example config file.<br />
         <<span class="ltgt">?</span><span class="name">xml</span><span
         class="attrib"> version</span>="<span class="data">1.0</span>"<span
@@ -71,24 +72,25 @@
         <span class="pad1"></span><<span class="ltgt">/</span><span class="name">appSettings</span>><br />
         <<span class="ltgt">/</span><span class="name">configuration</span>>
       </div>
-  <br />
-  <div class='Text'>Example</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
         
 <span class='comment'>// This returns "MySql".</span>
 <span class='commonType'>string</span> dbType = <span class='userType'>NetCommon</span>.ConfigString("ConnectionType");</pre>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
   </div>
-  <br />
 </body>
 </html>

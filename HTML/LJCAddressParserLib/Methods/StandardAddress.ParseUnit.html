@@ -9,55 +9,56 @@
   <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
 </head>
 <body>
-  <br />
-  <div class="PathText">
-    / <a href="../../../CodeDoc.html#LJCAddressParserLib">Assembly List</a>
-    / <a href="../LJCAddressParserLib.html">LJCAddressParserLib</a>
-    / <a href="../StandardAddress.html">StandardAddress</a>
-    / ParseUnit
-  </div>
-  <br />
-  <div id='Title'>Namespace - LJCAddressParserLib</div>
-  <br />
-  <div id='Header'>
-    <div id='Title'>Method ParseUnit</div>
-  </div>
-  <br />
-  <div id='Title'>Parameters</div>
-  <div class='Text'>currentToken - The token value.</div>
-  <div class='Text'>currentIndex - The token index value.</div>
-  <br />
-  <div class='Text'>Returns</div>
-  <br />
-  <div class='Text'>True if the token is a Unit, otherwise false.</div>
-  <br />
-  <div class='Text'>Syntax</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            public Boolean ParseUnit(String currentToken, Int32& currentIndex)
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br />
-  <div class='Text'>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCAddressParserLib">Assembly List</a>
+      / <a href="../LJCAddressParserLib.html">LJCAddressParserLib</a>
+      / <a href="../StandardAddress.html">StandardAddress</a>
+      / ParseUnit
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCAddressParserLib</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method ParseUnit</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>currentToken - The token value.</div>
+    <div class='Text'>currentIndex - The token index value.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>True if the token is a Unit, otherwise false.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public Boolean ParseUnit(String currentToken, Int32& currentIndex)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
       Parses a token into the Unit Property.
     </div>
-  <br />
-  <div class='Text'>Remarks</div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
         Decrements currentIndex by one if the token is a non-range Unit.<br / >
         Decrements currentIndex by two if the token is a range Unit.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         <pre>
 The vertical bar indicates the Current Token Index.
 
@@ -114,6 +115,7 @@ The vertical bar indicates the Current Token Index.
   After: 123 Main Street Apartment 3
         </pre>
       </div>
-  <br />
+    <br />
+  </div>
 </body>
 </html>

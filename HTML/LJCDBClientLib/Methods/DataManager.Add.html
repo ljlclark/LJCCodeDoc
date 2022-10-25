@@ -9,61 +9,62 @@
   <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
 </head>
 <body>
-  <br />
-  <div class="PathText">
-    / <a href="../../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
-    / <a href="../LJCDBClientLib.html">LJCDBClientLib</a>
-    / <a href="../DataManager.html">DataManager</a>
-    / Add
-  </div>
-  <br />
-  <div id='Title'>Namespace - LJCDBClientLib</div>
-  <br />
-  <div id='Header'>
-    <div id='Title'>Method Add</div>
-  </div>
-  <br />
-  <div id='Title'>Parameters</div>
-  <div class='Text'>dataObject - The record object.</div>
-  <div class='Text'>propertyNames - The included column property names.</div>
-  <br />
-  <div class='Text'>Returns</div>
-  <br />
-  <div class='Text'>The result object.</div>
-  <br />
-  <div class='Text'>Syntax</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            public DbResult Add(Object dataObject, List&lt;String&gt; propertyNames = null)
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br />
-  <div class='Text'>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCDBClientLib">Assembly List</a>
+      / <a href="../LJCDBClientLib.html">LJCDBClientLib</a>
+      / <a href="../DataManager.html">DataManager</a>
+      / Add
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCDBClientLib</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method Add</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>dataObject - The record object.</div>
+    <div class='Text'>propertyNames - The included column property names.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The result object.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public DbResult Add(Object dataObject, List&lt;String&gt; propertyNames = null)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
       Adds a record to the database.
       (RE)
     </div>
-  <br />
-  <div class='Text'>Remarks</div>
-  <br />
-  <div class='Text'><b>Parameters</b></div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'><b>Parameters</b></div>
+    <br />
+    <div class='Text'>
         propertyNames<br \>
         This parameter defines the primary table column values that are to be
         added. If it is null, then all the primary table column values are
         added.<br \>
         It must not include Calculated or Join columns or it will cause an error.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         Creates an "Insert"
         <span class="userType">DbRequest</span>
         object, which is available in the Request property. The request object is
@@ -71,39 +72,39 @@
         <span class="commonType">ExecuteRequest()</span>
         method.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         The Key Columns are assigned from the LookupColumnNames property.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         The Key Columns are those columns whose value will be used to find the
         added record. This is to return the DB Assigned column values to the
         calling program.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         The Key Columns must include the DB Assigned columns for the assigned
         values to be returned to the calling program. The value must be set to
         zero to prevent including it as a key value?
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         The Lookup Retrieve call will not include keys with a value of "0".
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         The Add Data Object property names must be the same as the Request Column
         property names to map the values into the Key Columns.
       </div>
-  <br />
-  <div class='Text'><b>Method Graph</b></div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'><b>Method Graph</b></div>
+    <br />
+    <div class='Text'>
         All methods are in LJCDBMessage.DbCommon.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         RequestDataColumns(dataObject)
         <div class='Text'>RequestColumns(baseDefinition)</div>
         <div class='Text'>DataColumns(dataObject)</div>
@@ -113,16 +114,16 @@
         <div class='Text'>LookupKeys(dataObject)</div>
         <div class='Text2'>IsKeyColumn(dbColumn)</div>
       </div>
-  <br />
-  <div class='Text'>Example</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            <pre style='margin-left: 2px;'><span class='comment'>// This is an example of the Person Manager code that would access the</span>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// This is an example of the Person Manager code that would access the</span>
 <span class='comment'>// DataManager Add() method. The supporting class code is listed at the</span>
 <span class='comment'>// DataManager class level.</span>
     
@@ -167,11 +168,12 @@
     <span class='keyWord'>return</span> retValue;
   }
 }</pre>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
   </div>
-  <br />
 </body>
 </html>

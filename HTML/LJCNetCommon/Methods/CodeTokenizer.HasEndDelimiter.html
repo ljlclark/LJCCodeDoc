@@ -9,56 +9,57 @@
   <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
 </head>
 <body>
-  <br />
-  <div class="PathText">
-    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
-    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
-    / <a href="../CodeTokenizer.html">CodeTokenizer</a>
-    / HasEndDelimiter
-  </div>
-  <br />
-  <div id='Title'>Namespace - LJCNetCommon</div>
-  <br />
-  <div id='Header'>
-    <div id='Title'>Method HasEndDelimiter</div>
-  </div>
-  <br />
-  <div id='Title'>Parameters</div>
-  <div class='Text'>text - The text value.</div>
-  <div class='Text'>endDelimiter - The end delimiter.</div>
-  <br />
-  <div class='Text'>Returns</div>
-  <br />
-  <div class='Text'>True if the end delimiter is found.</div>
-  <br />
-  <div class='Text'>Syntax</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            public Boolean HasEndDelimiter(String text, String endDelimiter)
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br />
-  <div class='Text'>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+      / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+      / <a href="../CodeTokenizer.html">CodeTokenizer</a>
+      / HasEndDelimiter
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCNetCommon</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method HasEndDelimiter</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>text - The text value.</div>
+    <div class='Text'>endDelimiter - The end delimiter.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>True if the end delimiter is found.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public Boolean HasEndDelimiter(String text, String endDelimiter)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
       Check if the text has the end delimiter. (E)
     </div>
-  <br />
-  <div class='Text'>Example</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
 
 <span class='commonType'>var</span> tokenizer = <span class='keyWord'>new</span> <span class='userType'>CodeTokenizer</span>();
 <span class='commonType'>string</span> text = " /// &lt;summary&gt;This <span class='keyWord'>is</span> an XML comment.&lt;/summary&gt;";
@@ -67,11 +68,12 @@ tokenizer.SetTokens(text);
 <span class='commonType'>string</span> token = tokenizer.GetToken(tokenIndex);
 <span class='commonType'>bool</span> hasEnd = tokenizer.HasEndDelimiter(token, "&lt;/summary&gt;");
 <span class='comment'>// Value hasEnd is true.</span></pre>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
   </div>
-  <br />
 </body>
 </html>

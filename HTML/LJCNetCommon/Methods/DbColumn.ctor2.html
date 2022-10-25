@@ -9,64 +9,66 @@
   <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
 </head>
 <body>
-  <br />
-  <div class="PathText">
-    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
-    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
-    / <a href="../DbColumn.html">DbColumn</a>
-    / DbColumn
-  </div>
-  <br />
-  <div id='Title'>Namespace - LJCNetCommon</div>
-  <br />
-  <div id='Header'>
-    <div id='Title'>Constructor DbColumn</div>
-  </div>
-  <br />
-  <div id='Title'>Parameters</div>
-  <div class='Text'>columnName - The column name.</div>
-  <div class='Text'>value - The data string value.</div>
-  <div class='Text'>dataTypeName - The data type name.</div>
-  <div class='Text'>propertyName - the property name.</div>
-  <div class='Text'>assignedKey - The assigned key indicator.</div>
-  <div class='Text'>renameValue - The RenameAs value.</div>
-  <br />
-  <div class='Text'>Syntax</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            public DbColumn(String columnName, String value = null, String dataTypeName = String, String propertyName = null, Boolean assignedKey = False, String renameValue = null)
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br />
-  <div class='Text'>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+      / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+      / <a href="../DbColumn.html">DbColumn</a>
+      / DbColumn
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCNetCommon</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Constructor DbColumn</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>columnName - The column name.</div>
+    <div class='Text'>value - The data string value.</div>
+    <div class='Text'>dataTypeName - The data type name.</div>
+    <div class='Text'>propertyName - the property name.</div>
+    <div class='Text'>assignedKey - The assigned key indicator.</div>
+    <div class='Text'>renameValue - The RenameAs value.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public DbColumn(String columnName, String value = null, String dataTypeName = String, String propertyName = null, Boolean assignedKey = False, String renameValue = null)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
       Initializes an object instance with the supplied values.
     </div>
-  <br />
-  <div class='Text'>Example</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCNetCommon;
 
 <span class='comment'>// Must use (object) with a string value to execute this constructor.</span>
 <span class='commonType'>var</span> dbColumn = <span class='keyWord'>new</span> <span class='userType'>DbColumn</span>("ColumnName", (object)"Value");</pre>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
   </div>
-  <br />
 </body>
 </html>

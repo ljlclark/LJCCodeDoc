@@ -9,66 +9,67 @@
   <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
 </head>
 <body>
-  <br />
-  <div class="PathText">
-    / <a href="../../../CodeDoc.html#LJCTextDataReaderLib">Assembly List</a>
-    / <a href="../LJCTextDataReaderLib.html">LJCTextDataReaderLib</a>
-    / <a href="../TextDataReader.html">TextDataReader</a>
-    / LJCSetObjectValues
-  </div>
-  <br />
-  <div id='Title'>Namespace - LJCTextDataReaderLib</div>
-  <br />
-  <div id='Header'>
-    <div id='Title'>Method LJCSetObjectValues</div>
-  </div>
-  <br />
-  <div id='Title'>Parameters</div>
-  <div class='Text'>dataObject - The data object.</div>
-  <div class='Text'>dataFields - The DbColumns data field definitions object.</div>
-  <br />
-  <div class='Text'>Syntax</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            public Void LJCSetObjectValues(Object dataObject, DbColumns dataFields = null)
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br />
-  <div class='Text'>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCTextDataReaderLib">Assembly List</a>
+      / <a href="../LJCTextDataReaderLib.html">LJCTextDataReaderLib</a>
+      / <a href="../TextDataReader.html">TextDataReader</a>
+      / LJCSetObjectValues
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCTextDataReaderLib</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method LJCSetObjectValues</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>dataObject - The data object.</div>
+    <div class='Text'>dataFields - The DbColumns data field definitions object.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public Void LJCSetObjectValues(Object dataObject, DbColumns dataFields = null)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
       Sets the data object property values from the TextDataReader.
       (RE)
     </div>
-  <br />
-  <div class='Text'>Remarks</div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
         The custom DbColumns data field definitions are used if provided.
         Otherwise the internal LJCDataFields property value is used.
       </div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>
         This method uses the DbColumn.ColumnName (or DbColumn.RenameAs if provided)
         for the source column name and the DbColumn.PropertyName for the object
         property name.
       </div>
-  <br />
-  <div class='Text'>Example</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCTextDataReaderLib;
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCTextDataReaderLib;
 
 <span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>Person</span>
 {
@@ -96,11 +97,12 @@ textReader.LJCSetLines(lines);
   <span class='comment'>// First record person.FirstName = "John", person.LastName = "Doe"</span>
   <span class='comment'>// second record person.FirstName = "Jane", person.LastName = "Doe"</span>
 }</pre>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
   </div>
-  <br />
 </body>
 </html>

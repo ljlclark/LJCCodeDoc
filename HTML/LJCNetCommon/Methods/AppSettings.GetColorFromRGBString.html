@@ -9,55 +9,56 @@
   <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
 </head>
 <body>
-  <br />
-  <div class="PathText">
-    / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
-    / <a href="../LJCNetCommon.html">LJCNetCommon</a>
-    / <a href="../AppSettings.html">AppSettings</a>
-    / GetColorFromRGBString
-  </div>
-  <br />
-  <div id='Title'>Namespace - LJCNetCommon</div>
-  <br />
-  <div id='Header'>
-    <div id='Title'>Method GetColorFromRGBString</div>
-  </div>
-  <br />
-  <div id='Title'>Parameters</div>
-  <div class='Text'>rgbText - The RGB text.</div>
-  <br />
-  <div class='Text'>Returns</div>
-  <br />
-  <div class='Text'>The Color value.</div>
-  <br />
-  <div class='Text'>Syntax</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            public Color GetColorFromRGBString(String rgbText)
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br />
-  <div class='Text'>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+      / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+      / <a href="../AppSettings.html">AppSettings</a>
+      / GetColorFromRGBString
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCNetCommon</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method GetColorFromRGBString</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>rgbText - The RGB text.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The Color value.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public Color GetColorFromRGBString(String rgbText)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
       Gets a Color from an RGB string. (E)
     </div>
-  <br />
-  <div class='Text'>Example</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            <pre style='margin-left: 2px;'><span class='comment'>// App.Config file.</span>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// App.Config file.</span>
 <span class='comment'>// &lt;configuration&gt;</span>
 <span class='comment'>//   &lt;appSettings&gt;</span>
 <span class='comment'>//     &lt;add key="EndColor" value="255,255,255" /&gt;</span>
@@ -70,11 +71,12 @@
 <span class='commonType'>var</span> appSettings = <span class='keyWord'>new</span> <span class='userType'>AppSettings</span>("AppName.exe.config");
 <span class='userType'>Color</span> endColor;
 endColor = appSettings.GetColorFromRGBString("EndColor");</pre>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
   </div>
-  <br />
 </body>
 </html>

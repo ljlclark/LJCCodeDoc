@@ -9,66 +9,68 @@
   <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
 </head>
 <body>
-  <br />
-  <div class="PathText">
-    / <a href="../../../CodeDoc.html#LJCDataAccessConfig">Assembly List</a>
-    / <a href="../LJCDataAccessConfig.html">LJCDataAccessConfig</a>
-    / <a href="../DataConfig.html">DataConfig</a>
-    / GetProviderName
-  </div>
-  <br />
-  <div id='Title'>Namespace - LJCDataAccessConfig</div>
-  <br />
-  <div id='Header'>
-    <div id='Title'>Method GetProviderName</div>
-  </div>
-  <br />
-  <div id='Title'>Parameters</div>
-  <div class='Text'>connectionTypeName - The database connection type string.</div>
-  <br />
-  <div class='Text'>Returns</div>
-  <br />
-  <div class='Text'>The provider name.</div>
-  <br />
-  <div class='Text'>Syntax</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            public static String GetProviderName(String connectionTypeName)
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br />
-  <div class='Text'>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCDataAccessConfig">Assembly List</a>
+      / <a href="../LJCDataAccessConfig.html">LJCDataAccessConfig</a>
+      / <a href="../DataConfig.html">DataConfig</a>
+      / GetProviderName
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCDataAccessConfig</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method GetProviderName</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>connectionTypeName - The database connection type string.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The provider name.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public static String GetProviderName(String connectionTypeName)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
       Retrieves the provider name value.
     </div>
-  <br />
-  <div class='Text'>Example</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            <pre style='margin-left: 2px;'><span class='comment'>// See the DataConfig setup code on the DataConfig class page.</span>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// See the DataConfig setup code on the DataConfig class page.</span>
 
 <span class='comment'>// Retrieves the provider name value.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> GetProviderName(string connTypeName)
 {
   <span class='commonType'>var</span> providerName = <span class='userType'>DataConfig</span>.GetProviderName(connTypeName);
 }</pre>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
   </div>
-  <br />
 </body>
 </html>
