@@ -27,6 +27,7 @@
     <div id='Title'>Parameters</div>
     <div class='Text'>requestType - The request type.</div>
     <div class='Text'>sql - The client SQL statement.</div>
+    <div class='Text'>requestColumns - The request columns.</div>
     <br />
     <div class='Text'>Returns</div>
     <br />
@@ -40,7 +41,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public DbResult ExecuteClientSql(RequestType requestType, String sql)
+              public DbResult ExecuteClientSql(RequestType requestType, String sql, DbColumns requestColumns = null)
             </td>
           </tr>
         </tbody>

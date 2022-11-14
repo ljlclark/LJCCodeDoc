@@ -240,8 +240,7 @@
   <span class='keyWord'>if</span> (useInternal)
   {
     <span class='comment'>// Use internal configuration.</span>
-    <span class='userType'>DbConnectionStringBuilder</span> connectionBuilder;
-    connectionBuilder = <span class='keyWord'>new</span> <span class='userType'>DbConnectionStringBuilder</span>()
+    <span class='commonType'>var</span> connectionBuilder = <span class='keyWord'>new</span> <span class='userType'>DbConnectionStringBuilder</span>()
     {
       { "Data Source", "DataServiceName" },
       { "Initial Catalog", "DatabaseName" },
