@@ -1,3 +1,6 @@
+
+xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCNetCommon\*.* ..\LJCNetCommonCompare /s /y
+
 ren DbColumns.html DbColumnsGen.html
 copy DbColumnsCustom.html DbColumns.html
 
