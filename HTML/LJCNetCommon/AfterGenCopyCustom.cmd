@@ -7,6 +7,9 @@ copy DbValuesCustom.html DbValues.html
 ren KeyItems.html KeyItemsGen.html
 copy KeyItemsCustom.html KeyItems.html
 
+ren LJCAssemblyReflect.html LJCAssemblyReflectGen.html
+copy LJCAssemblyReflectCustom.html LJCAssemblyReflect.html
+
 ren NetCommon.html NetCommonGen.html
 copy NetCommonCustom.html NetCommon.html
 
