@@ -1,5 +1,8 @@
+cd ..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCNetCommon
+xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCNetCommon\*.* ..\LJCNetCommonCompare\ /s /y
 
-xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCNetCommon\*.* ..\LJCNetCommonCompare /s /y
+copy DataTypes.html DataTypesGen.html
+copy DataTypesCustom.html DataTypes.html
 
 copy DbColumns.html DbColumnsGen.html
 copy DbColumnsCustom.html DbColumns.html
@@ -12,6 +15,9 @@ copy KeyItemsCustom.html KeyItems.html
 
 copy LJCAssemblyReflect.html LJCAssemblyReflectGen.html
 copy LJCAssemblyReflectCustom.html LJCAssemblyReflect.html
+
+copy LJCReflect.html LJCReflectGen.html
+copy LJCReflectCustom.html LJCReflect.html
 
 copy NetCommon.html NetCommonGen.html
 copy NetCommonCustom.html NetCommon.html
