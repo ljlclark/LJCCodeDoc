@@ -43,5 +43,8 @@ copy NetCommonCustom.html NetCommon.html
 copy NetString.html NetStringGen.html
 copy NetStringCustom.html NetString.html
 
+copy PropertyDelegates.html PropertyDelegatesGen.html
+copy PropertyDelegatesCustom.html PropertyDelegates.html
+
 copy RefTypes.html RefTypesGen.html
 copy RefTypesCustom.html RefTypes.html
