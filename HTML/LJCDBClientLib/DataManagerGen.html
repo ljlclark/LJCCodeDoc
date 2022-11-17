@@ -31,7 +31,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public class DataManager : IDataManager
+              public class DataManager : IDataManager 
             </td>
           </tr>
         </tbody>
@@ -46,241 +46,222 @@
     <div class='Text'>Remarks</div>
     <br />
     <div class='Text'>
-      The Data Manager is the client code that creates a table specific
-      <span class="userType">LJCDBMessage.DbRequest</span>
-      object. It then serializes the
-      <span class="userType">DbRequest</span>
-      object into a Request XML message to pass to the
-      <span class="commonType">DbService.Execute()</span>
-      method.
-    </div>
+        The Data Manager is the client code that creates a table specific
+        <span class="userType">LJCDBMessage.DbRequest</span>
+        object. It then serializes the
+        <span class="userType">DbRequest</span>
+        object into a Request XML message to pass to the
+        <span class="commonType">DbService.Execute()</span>
+        method.
+      </div>
     <br />
     <div class='Text'>
-      When the Data Manager object is first created, it initializes the
-      DataDefinition property with the definitions for the primary table
-      columns. The DataDefinition property is an
-      <span class="userType">LJCNetCommon.DbColumns</span>
-      object. Each element
-      <span class="userType">DbColumn</span>
-      contains the table ColumnName, PropertyName, Caption, DataTypeName
-      and MaxLength.
-    </div>
+        When the Data Manager object is first created, it initializes the
+        DataDefinition property with the definitions for the primary table
+        columns. The DataDefinition property is an
+        <span class="userType">LJCNetCommon.DbColumns</span>
+        object. Each element
+        <span class="userType">DbColumn</span>
+        contains the table ColumnName, PropertyName, Caption, DataTypeName
+        and MaxLength.
+      </div>
     <br />
     <div class='Text'>
-      The <span class="userType">DbColumn</span>
-      Caption is initially set to the same value as the ColumnName
-      as that is how it is returned from ADO.NET. The PropertyName is initially
-      set to the same value as the ColumnName which is what the
-      <span class="userType">DbColumn</span>
-      object does if it is initialized with a blank PropertyName value. These
-      values can be modified later as required.
-    </div>
+        The <span class="userType">DbColumn</span>
+        Caption is initially set to the same value as the ColumnName
+        as that is how it is returned from ADO.NET. The PropertyName is initially
+        set to the same value as the ColumnName which is what the
+        <span class="userType">DbColumn</span>
+        object does if it is initialized with a blank PropertyName value. These
+        values can be modified later as required.
+      </div>
     <br />
     <div class='Text'>
-      The DataDefinition is used to create the
-      <span class="userType">DbColumn</span>
-      objects that are defined in a
-      <span class="userType">DbRequest</span>
-      object. These objects are then used to create the SQL Statements that
-      are executed to perform the requested data operation.
-    </div>
+        The DataDefinition is used to create the
+        <span class="userType">DbColumn</span>
+        objects that are defined in a
+        <span class="userType">DbRequest</span>
+        object. These objects are then used to create the SQL Statements that
+        are executed to perform the requested data operation.
+      </div>
     <br />
     <div class='Text'>
-      The test code is found in project LJCDataManagerTest\PersonDALTest.
-    </div>
+        The test code is found in project LJCDataManagerTest\PersonDALTest.
+      </div>
     <br />
     <div id='Title'>Public Methods</div>
-
-    <!-- ******************** -->
-    <div class="title2">Constructors</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.ctor.html'>DataManager #ctor</a>
-        </td>
-        <td class='ListTable'>
-          Initializes an object instance.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.ctor1.html'>DataManager #ctor</a>
-        </td>
-        <td class='ListTable'>
-          Initializes an object instance.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.Reset.html'>Reset</a>
-        </td>
-        <td class='ListTable'>
-          Resets the data access configuration.
-          (R)
-        </td>
-      </tr>
-    </table>
-
-    <!-- ******************** -->
-    <div class="title2">Common Data Methods</div>
     <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\DataManager.Add.html'>Add</a>
         </td>
         <td class='ListTable'>
-          Adds a record to the database.
-          (RE)
-        </td>
+      Adds a record to the database.
+      (RE)
+    </td>
       </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.Delete.html'>Delete</a>
-        </td>
-        <td class='ListTable'>
-          Deletes the records with the specified key values.
-          (DE)
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.Load.html'>Load</a>
-        </td>
-        <td class='ListTable'>
-          Retrieves a collection of data records.
-          (DE)
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.LoadProcedure.html'>LoadProcedure</a>
-        </td>
-        <td class='ListTable'>
-          Retrieves a collection of data records.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.Retrieve.html'>Retrieve</a>
-        </td>
-        <td class='ListTable'>
-          Retrieves a record from the database.
-          (DE)
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.Update.html'>Update</a>
-        </td>
-        <td class='ListTable'>
-          Updates the record.
-          (DE)
-        </td>
-      </tr>
-    </table>
-
-    <!-- ******************** -->
-    <div class="title2">Other Data Methods</div>
-    <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\DataManager.CreateLoadRequest.html'>CreateLoadRequest</a>
         </td>
         <td class='ListTable'>
-          Creates and returns the Load
-          <span class="userType">DbRequest</span>
-          object.
-        </td>
+      Creates and returns the Load
+      <span class="userType">DbRequest</span>
+      object.
+    </td>
       </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.ExecuteClientSql.html'>ExecuteClientSql</a>
-        </td>
-        <td class='ListTable'>
-          Executes a non-query client SQL statement.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.ExecuteRequest.html'>ExecuteRequest</a>
-        </td>
-        <td class='ListTable'>
-          Executes the supplied request.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.GetSchemaOnly.html'>GetSchemaOnly</a>
-        </td>
-        <td class='ListTable'>
-          Retrieves the column names for the specified table.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.GetTableNames.html'>GetTableNames</a>
-        </td>
-        <td class='ListTable'>
-          Retrieves the table names for the data configuration database.
-        </td>
-      </tr>
-    </table>
-
-    <!-- ******************** -->
-    <div class="title2">Other Methods</div>
-    <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\DataManager.CreateSchemaColumnsResult.html'>CreateSchemaColumnsResult</a>
         </td>
         <td class='ListTable'>
-          Takes a result object and transforms it into a result of column names.
-        </td>
+      Takes a result object and transforms it into a result of column names.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\DataManager.CreateSchemaColumnsResult1.html'>CreateSchemaColumnsResult</a>
         </td>
         <td class='ListTable'>
-          Retrieves the schema result for the specified table and transforms
-          it into a result of column names.
+      Retrieves the schema result for the specified table and transforms
+      it into a result of column names.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.ctor.html'>DataManager #ctor</a>
         </td>
+        <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.ctor1.html'>DataManager #ctor</a>
+        </td>
+        <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.Delete.html'>Delete</a>
+        </td>
+        <td class='ListTable'>
+      Deletes the records with the specified key values.
+      (DE)
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.ExecuteClientSql.html'>ExecuteClientSql</a>
+        </td>
+        <td class='ListTable'>
+      Executes a non-query client SQL statement.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.ExecuteRequest.html'>ExecuteRequest</a>
+        </td>
+        <td class='ListTable'>
+      Executes the supplied request.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\DataManager.GetPropertyNames.html'>GetPropertyNames</a>
         </td>
         <td class='ListTable'>
-          Creates a PropertyNames list from the data definition.
+            Creates a PropertyNames list from the data definition.
+            </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.GetSchemaOnly.html'>GetSchemaOnly</a>
         </td>
+        <td class='ListTable'>
+      Retrieves the column names for the specified table.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.GetTableNames.html'>GetTableNames</a>
+        </td>
+        <td class='ListTable'>
+      Retrieves the table names for the data configuration database.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.Load.html'>Load</a>
+        </td>
+        <td class='ListTable'>
+      Retrieves a collection of data records.
+      (DE)
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.LoadProcedure.html'>LoadProcedure</a>
+        </td>
+        <td class='ListTable'>
+      Retrieves a collection of data records.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\DataManager.MapNames.html'>MapNames</a>
         </td>
         <td class='ListTable'>
-          Maps the column property and rename values.
+      Maps the column property and rename values.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.Reset.html'>Reset</a>
         </td>
+        <td class='ListTable'>
+      Resets the data access configuration.
+      (R)
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.Retrieve.html'>Retrieve</a>
+        </td>
+        <td class='ListTable'>
+      Retrieves a record from the database.
+      (DE)
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\DataManager.SetDbAssignedColumns.html'>SetDbAssignedColumns</a>
         </td>
         <td class='ListTable'>
-          Sets the database assigned value columns.
-        </td>
+      Sets the database assigned value columns.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\DataManager.SetLookupColumns.html'>SetLookupColumns</a>
         </td>
         <td class='ListTable'>
-          Adds the lookup column names.
+      Adds the lookup column names.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.Update.html'>Update</a>
         </td>
+        <td class='ListTable'>
+      Updates the record.
+      (DE)
+    </td>
       </tr>
     </table>
     <div class='Text'>20 Methods</div>
-
     <br />
     <div id='Title'>Properties</div>
     <table class='ListTable'>
@@ -349,10 +330,10 @@
           <a href='Properties\DataManager.Request.html'>Request</a>
         </td>
         <td class='ListTable'>
-          Gets or sets the
-          <span class="userType">DbRequest</span>
-          object reference.
-        </td>
+      Gets or sets the
+      <span class="userType">DbRequest</span>
+      object reference.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
@@ -383,11 +364,11 @@
     <div class='Text'>Example</div>
     <br />
     <div class='Text'>
-      This is sample supporting code for a Person Manager class. The
-      additional code for the suggested Person manager methods Add(),
-      Retrieve(), Load(), Update() and Delete() is listed under the
-      DataManager methods with the same names.
-    </div>
+        This is sample supporting code for a Person Manager class. The
+        additional code for the suggested Person manager methods Add(),
+        Retrieve(), Load(), Update() and Delete() is listed under the
+        DataManager methods with the same names.
+      </div>
     <br />
     <div class='SectionContainer'>
       <table class='CodeTable'>

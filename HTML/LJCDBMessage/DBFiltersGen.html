@@ -44,89 +44,90 @@
       (E)
     </div>
     <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
+        The common collection static methods are: HasItems(),
+        SQLSoundexFilters() and SoundexFilters().
+        <br />
+        The collection contains a copy constructor.<br />
+        The common collection instance methods are: Add() + 1 overload
+        and Clone().
+      </div>
+    <br />
     <div id='Title'>Public Methods</div>
-
-    <!-- ******************** -->
-    <div class="title2">Static Functions</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DbFilters.HasItems.html'>HasItems</a>
-        </td>
-        <td class='ListTable'>
-          Checks if the collection has items.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DbFilters.SQLSoundexFilters.html'>SQLSoundexFilters</a>
-        </td>
-        <td class='ListTable'>
-          Creates the SQL Soundex filters from the supplied values.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DbFilters.SoundexFilters.html'>SoundexFilters</a>
-        </td>
-        <td class='ListTable'>
-          Creates the Soundex filters from the supplied values.
-        </td>
-      </tr>
-    </table>
-
-    <!-- ******************** -->
-    <div class="title2">Constructors</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DbFilters.ctor.html'>DbFilters #ctor</a>
-        </td>
-        <td class='ListTable'>
-          Initializes an object instance.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DbFilters.ctor1.html'>DbFilters #ctor</a>
-        </td>
-        <td class='ListTable'>
-          The Copy constructor.
-        </td>
-      </tr>
-    </table>
-
-    <!-- ******************** -->
-    <div class="title2">Collection Methods</div>
     <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\DbFilters.Add.html'>Add</a>
         </td>
         <td class='ListTable'>
-          Creates and adds the element from the supplied values.
-        </td>
+      Creates and adds the element from the supplied values.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\DbFilters.Add1.html'>Add</a>
         </td>
         <td class='ListTable'>
-          Creates and adds the element from the supplied values.
-        </td>
+      Creates and adds the element from the supplied values.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\DbFilters.Clone.html'>Clone</a>
         </td>
         <td class='ListTable'>
-          Clones the structure of the object.
+      Clones the structure of the object.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DbFilters.ctor.html'>DbFilters #ctor</a>
         </td>
+        <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DbFilters.ctor1.html'>DbFilters #ctor</a>
+        </td>
+        <td class='ListTable'>
+      The Copy constructor.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DbFilters.HasItems.html'>HasItems</a>
+        </td>
+        <td class='ListTable'>
+      Checks if the collection has items.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DbFilters.SQLSoundexFilters.html'>SQLSoundexFilters</a>
+        </td>
+        <td class='ListTable'>
+      Creates the SQL Soundex filters from the supplied values.
+    </td>
       </tr>
     </table>
-    <div class='Text'>8 Methods</div>
-
-    <!-- ******************** -->
+    <div class='Text'>7 Methods</div>
+    <br />
+    <div id='Title'>Private Methods</div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DbFilters.SoundexFilters.html'>SoundexFilters</a>
+        </td>
+        <td class='ListTable'>
+      Creates the Soundex filters from the supplied values.
+    </td>
+      </tr>
+    </table>
+    <div class='Text'>1 Methods</div>
     <br />
     <div class='Text'>Example</div>
     <br />
@@ -151,7 +152,7 @@ dbConditions.Add(dbCondition);
 <span class='comment'>// Create the ConditionSet and add the Conditions collection.</span>
 <span class='userType'>DbConditionSet</span> dbConditionSet = <span class='keyWord'>new</span> <span class='userType'>DbConditionSet</span>()
 {
-              <span class='comment'>// The boolean operator is added before each condition except the first.</span>
+  <span class='comment'>// The boolean operator is added before each condition except the first.</span>
   BooleanOperator = "and",
   Conditions = dbConditions
 };
@@ -161,7 +162,7 @@ dbConditions.Add(dbCondition);
 {
   Name = "Main Filter",
       
-              <span class='comment'>// The boolean operator is added before each filter except the first.</span>
+  <span class='comment'>// The boolean operator is added before each filter except the first.</span>
   BooleanOperator = "and",
   ConditionSet = dbConditionSet
 };

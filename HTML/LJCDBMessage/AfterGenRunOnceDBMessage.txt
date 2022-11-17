@@ -1,0 +1,23 @@
+cd ..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCDBMessage
+xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCDBMessage\*.* ..\LJCDBMessageCompare\ /s /y
+
+copy DBConditions.html DBConditionsGen.html
+copy DBConditionsCustom.html DBConditions.html
+
+copy DBFilters.html DBFiltersGen.html
+copy DBFiltersCustom.html DBFilters.html
+
+copy DBJoinOns.html DBJoinOnsGen.html
+copy DBJoinOnsCustom.html DBJoinOns.html
+
+copy DBJoins.html DBJoinsGen.html
+copy DBJoinsCustom.html DBJoins.html
+
+copy DBRequest.html DBRequestGen.html
+copy DBRequestCustom.html DBRequest.html
+
+copy DBResult.html DBResultGen.html
+copy DBResultCustom.html DBResult.html
+
+copy DBRows.html DBRowsGen.html
+copy DBRowsCustom.html DBRows.html
