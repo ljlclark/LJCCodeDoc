@@ -7,6 +7,7 @@ e<!DOCTYPE html>
   <meta name="author" content="Lester J. Clark" />
   <meta name="viewport" content="width=device-width" initial-scale=1 />
   <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../CSS/Syntax.css' />
 </head>
 <body>
   <div class="page">
@@ -324,7 +325,7 @@ e<!DOCTYPE html>
 }
 
 <span class='userType'>IF</span> <span class='userType'>NOT</span> EXISTS(SELECT* FROM INFORMATION_SCHEMA.TABLES
-<span class='userType'>WHERE</span> TABLE_NAME = N'PersonTest')
+  <span class='userType'>WHERE</span> TABLE_NAME = N'PersonTest')
 BEGIN
 <span class='userType'>CREATE</span> TABLE[dbo].[PersonTest]
 (

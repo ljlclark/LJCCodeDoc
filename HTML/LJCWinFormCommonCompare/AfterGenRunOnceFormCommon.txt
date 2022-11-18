@@ -1,0 +1,11 @@
+cd ..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCWinFormCommon
+xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCWinFormCommon\*.* ..\LJCWinFormCommonCompare\ /s /y
+
+copy ControlValues.html ControlValuesGen.html
+copy ControlValuesCustom.html ControlValues.html
+
+copy FormCommon.html FormCommonGen.html
+copy FormCommonCustom.html FormCommon.html
+
+copy ModuleReferences.html ModuleReferencesGen.html
+copy ModuleReferencesCustom.html ModuleReferences.html

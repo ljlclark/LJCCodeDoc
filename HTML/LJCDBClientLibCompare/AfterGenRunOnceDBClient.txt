@@ -1,0 +1,5 @@
+cd ..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCDBClientLib
+xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCDBClientLib\*.* ..\LJCDBClientLibCompare\ /s /y
+
+copy DataManager.html DataManagerGen.html
+copy DataManagerCustom.html DataManager.html

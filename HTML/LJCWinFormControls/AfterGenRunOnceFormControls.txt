@@ -1,0 +1,14 @@
+cd ..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCWinFormControls
+xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCWinFormControls\*.* ..\LJCWinFormControlsCompare\ /s /y
+
+copy ColorSettings.html ColorSettingsGen.html
+copy ColorSettingsCustom.html ColorSettings.html
+
+copy LJCDataGrid.html LJCDataGridGen.html
+copy LJCDataGridCustom.html LJCDataGrid.html
+
+copy LJCGridRow.html LJCGridRowGen.html
+copy LJCGridRowCustom.html LJCGridRow.html
+
+copy LJCTabControl.html LJCTabControlGen.html
+copy LJCTabControlCustom.html LJCTabControl.html
