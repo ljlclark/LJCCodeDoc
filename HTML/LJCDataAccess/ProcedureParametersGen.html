@@ -2,7 +2,7 @@
 <!-- TypeTemplate.htm -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>ConnectionType</title>
+  <title>ProcedureParameters</title>
   <meta charset='utf-8' />
   <meta name="author" content="Lester J. Clark" />
   <meta name="viewport" content="width=device-width" initial-scale=1 />
@@ -14,13 +14,13 @@
     <div class="PathText">
       / <a href="../../CodeDoc.html#LJCDataAccess">Assembly List</a>
       / <a href="LJCDataAccess.html">LJCDataAccess</a>
-      / ConnectionType
+      / ProcedureParameters
     </div>
     <br />
     <div id='Title'>Namespace - LJCDataAccess</div>
     <br />
     <div id='Header'>
-      <div id='Title'>Class ConnectionType</div>
+      <div id='Title'>Class ProcedureParameters</div>
     </div>
     <br />
     <div class='Text'>Syntax</div>
@@ -31,54 +31,71 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public enum ConnectionType 
+              public class ProcedureParameters : List&lt;ProcedureParameter&gt;
             </td>
           </tr>
         </tbody>
       </table>
     </div>
     <br />
-    <div class='Text'>The Connection types.</div>
+    <div class='Text'>
+      Represents a collection of
+      <span class="userType">LJCProcedureParameter</span>
+      objects.
+    </div>
     <br />
-    <div id='Title'>Fields</div>
+    <div id='Title'>Public Methods</div>
     <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Fields\ConnectionType.Access.html'>Access</a>
+          <a href='Methods\ProcedureParameters.Add.html'>Add</a>
         </td>
-        <td class='ListTable'>Use an Access connection.</td>
+        <td class='ListTable'>
+      Creates and adds the object from the provided values.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Fields\ConnectionType.MySql.html'>MySql</a>
+          <a href='Methods\ProcedureParameters.Add1.html'>Add</a>
         </td>
-        <td class='ListTable'>Use a MySQL connection.</td>
+        <td class='ListTable'>
+      Creates and adds the object from the provided values.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Fields\ConnectionType.None.html'>None</a>
+          <a href='Methods\ProcedureParameters.ctor.html'>ProcedureParameters #ctor</a>
         </td>
-        <td class='ListTable'>No connection type.</td>
+        <td class='ListTable'>
+      Initializes an object instance.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Fields\ConnectionType.Odbc.html'>Odbc</a>
+          <a href='Methods\ProcedureParameters.ctor1.html'>ProcedureParameters #ctor</a>
         </td>
-        <td class='ListTable'>Use an ODBC connection.</td>
+        <td class='ListTable'>
+      The Copy constructor.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Fields\ConnectionType.OleDb.html'>OleDb</a>
+          <a href='Methods\ProcedureParameters.HasItems.html'>HasItems</a>
         </td>
-        <td class='ListTable'>Use an OleDB connection.</td>
+        <td class='ListTable'>
+      Checks if the collection has items.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Fields\ConnectionType.SqlServer.html'>SqlServer</a>
+          <a href='Methods\ProcedureParameters.LJCSearchName.html'>LJCSearchName</a>
         </td>
-        <td class='ListTable'>Use a SQLServer connection.</td>
+        <td class='ListTable'>
+      Retrieve the collection element with name.
+    </td>
       </tr>
     </table>
+    <div class='Text'>6 Methods</div>
     <br />
   </div>
 </body>

@@ -1,0 +1,8 @@
+cd ..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCDataAccess
+xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCDataAccess\*.* ..\LJCDataAccessCompare\ /s /y
+
+copy DataAccess.html DataAccessGen.html
+copy DataAccessCustom.html DataAccess.html
+
+copy ProcedureParameters.html ProcedureParametersGen.html
+copy ProcedureParametersCustom.html ProcedureParameters.html
