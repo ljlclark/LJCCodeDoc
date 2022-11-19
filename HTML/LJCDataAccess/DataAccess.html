@@ -1,4 +1,5 @@
-e<!DOCTYPE html>
+e
+<!DOCTYPE html>
 <!-- TypeTemplate.htm -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -75,10 +76,8 @@ e<!DOCTYPE html>
     <br />
     <div class='Text'>
       The "Script" methods are:
-      <span class="commonType">
-        ExecuteScript() and
-        class="commonType">ExecuteScriptText()
-      </span>.
+      <span class="commonType">ExecuteScript()</span> and
+      <span class="commonType">ExecuteScriptText()</span>
     </div>
     <br />
     <div class='Text'>
@@ -282,15 +281,15 @@ e<!DOCTYPE html>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> TestDataAccess()
 {
   DataAccess dataAccess;
-  <span class='commonType'>string</span> connectionString;
-  <span class='commonType'>string</span> providerName;
+              <span class='commonType'>string</span> connectionString;
+              <span class='commonType'>string</span> providerName;
 
-  <span class='comment'>// Create Data Configuration values.</span>
-  <span class='commonType'>bool</span> useInternal = <span class='keyWord'>false</span>;
-  <span class='keyWord'>if</span> (useInternal)
+              <span class='comment'>// Create Data Configuration values.</span>
+              <span class='commonType'>bool</span> useInternal = <span class='keyWord'>false</span>;
+              <span class='keyWord'>if</span> (useInternal)
   {
-    <span class='comment'>// Use internal configuration.</span>
-    <span class='commonType'>var</span> connectionBuilder = <span class='keyWord'>new</span> <span class='userType'>DbConnectionStringBuilder</span>()
+              <span class='comment'>// Use internal configuration.</span>
+              <span class='commonType'>var</span> connectionBuilder = <span class='keyWord'>new</span> <span class='userType'>DbConnectionStringBuilder</span>()
     {
       { "Data Source", "DataServiceName" },
       { "Initial Catalog", "DatabaseName" },
@@ -299,9 +298,9 @@ e<!DOCTYPE html>
     connectionString = connectionBuilder.ConnectionString;
     providerName = "System.Data.SqlClient";
   }
-  <span class='keyWord'>else</span>
+              <span class='keyWord'>else</span>
   {
-    <span class='comment'>// Or use external configuration.</span>
+              <span class='comment'>// Or use external configuration.</span>
     DataConfigs dataConfigs = <span class='keyWord'>new</span> <span class='userType'>DataConfigs</span>();
     dataConfigs.LJCLoadData();
     dataConfig = dataConfigs.LJCGetByName("ConfigName");
@@ -309,10 +308,10 @@ e<!DOCTYPE html>
     providerName = dataConfig.GetProviderName();
   }
 
-  <span class='comment'>// Create DataAccess object.</span>
+              <span class='comment'>// Create DataAccess object.</span>
   dataAccess = <span class='keyWord'>new</span> <span class='userType'>DataAccess</span>(connectionString, providerName);
 
-  <span class='comment'>// Method Tests.</span>
+              <span class='comment'>// Method Tests.</span>
   GetDataReader(dataAccess);
   GetDataTable(dataAccess);
   GetDataSet(dataAccess);
@@ -325,7 +324,7 @@ e<!DOCTYPE html>
 }
 
 <span class='userType'>IF</span> <span class='userType'>NOT</span> EXISTS(SELECT* FROM INFORMATION_SCHEMA.TABLES
-  <span class='userType'>WHERE</span> TABLE_NAME = N'PersonTest')
+              <span class='userType'>WHERE</span> TABLE_NAME = N'PersonTest')
 BEGIN
 <span class='userType'>CREATE</span> TABLE[dbo].[PersonTest]
 (
