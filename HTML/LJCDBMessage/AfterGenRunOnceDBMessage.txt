@@ -21,3 +21,6 @@ copy DBResultCustom.html DBResult.html
 
 copy DBRows.html DBRowsGen.html
 copy DBRowsCustom.html DBRows.html
+
+copy LJCDBMessage.html LJCDBMessageGen.html
+copy LJCDBMessageCustom.html LJCDBMessage.html

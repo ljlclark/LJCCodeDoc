@@ -24,39 +24,51 @@
     <div class='Text'>Data Service Message Library</div>
     <br />
     <div class='Text'>
-      The Data Service Message library contains classes for utilizing Request XML
-      messages and Result XML messages.
-    </div>
+        The Data Service Message library contains classes for utilizing Request XML
+        messages and Result XML messages.
+      </div>
     <br />
     <div class='Text'>
-      The Data Service Client Library
-      (<span class="commonType">LJCDBCLientLib</span>)
-      and the Data Service library
-      (<span class="commonType">LJCDBServiceLib</span>)
-      use the Request and Result XML messages to communicate between them.
-    </div>
+        The Data Service Client Library
+        (<span class="commonType">LJCDBCLientLib</span>)
+        and the Data Service library
+        (<span class="commonType">LJCDBServiceLib</span>)
+        use the Request and Result XML messages to communicate between them.
+      </div>
     <br />
     <div class='Text'>
-      <b>
-        The
+        <b>The
         <span class="userType">DbRequest</span>
-        Object Classes
-      </b><br />
-      The <span class="userType">DbRequest</span>
-      object is the top-level of an object hierarchy to serialize and
-      deserialize the Request XML Message.
-    </div>
+        Object Graph</b><br />
+        The <span class="userType">DbRequest</span>
+        object is the top-level of an object hierarchy to serialize and
+        deserialize the Request XML Message.<br />
+        It uses the objects:
+        <span class="userType">DbRequest</span>,
+        Columns(<span class="userType">DbColumns</span>),
+        KeyColumns(<span class="userType">DbColumns</span>),
+        Joins(<span class="userType">DbJoins</span>),
+        <span class="userType">DbJoin</span>,
+        JoinOns(<span class="userType">DbJoinOns</span>),
+        <span class="userType">DbJoinOn</span>,
+        Filters(<span class="userType">DbFilters</span>),
+        <span class="userType">DbFilter</span>,
+        (ConditionSet)<span class="userType">DbConditionSet</span>,
+        (Conditions)<span class="userType">DbConditions</span> and
+        <span class="userType">DbCondition</span>.
+      </div>
     <br />
     <div class='Text'>
-      <b>
-        The
+        <b>The
         <span class="userType">DbResult</span>
-        Object Classes
-      </b><br />
-      The <span class="userType">DbResult</span>
-      object is the top-level of an object hierarchy to serialize and
-      deserialize the Result XML Message.
-    </div>
+        Object Graph</b><br />
+        The <span class="userType">DbResult</span>
+        object is the top-level of an object hierarchy to serialize and
+        deserialize the Result XML Message.<br />
+        It uses the objects:
+        <span class="userType">DbResult</span> and
+        <span class="userType">DbRecords</span>.
+      </div>
     <br />
     <div class='Text'>
       <a href='DbRequestColumn.html' target='_blank'>DbRequest Column Diagram</a>
@@ -65,13 +77,16 @@
     </div>
     <br />
     <div id='Title'>Classes<br></div>
-
     <table>
       <tr>
         <td>
-          <!-- ******************** -->
-          <div class="title2">Request Object Classes</div>
           <table class='ListTable'>
+            <tr>
+              <td class='ListTable' width='25%'>
+                <a href='DbCommon.html'>DbCommon</a>
+              </td>
+              <td class='ListTable'>Common data message methods.</td>
+            </tr>
             <tr>
               <td class='ListTable' width='25%'>
                 <a href='DbCondition.html'>DbCondition</a>
@@ -82,20 +97,18 @@
               <td class='ListTable' width='25%'>
                 <a href='DbConditions.html'>DbConditions</a>
               </td>
-              <td class='ListTable'>
-                Represents a collection of
-                <span class="userType">DbCondition</span>
-                objects.
-              </td>
+              <td class='ListTable'>Represents a collection of
+    <span class="userType">DbCondition</span>
+    objects.</td>
             </tr>
             <tr>
               <td class='ListTable' width='25%'>
                 <a href='DbConditionSet.html'>DbConditionSet</a>
               </td>
               <td class='ListTable'>
-                Represents the conditions and properties.
-                (E)
-              </td>
+      Represents the conditions and properties.
+      (E)
+    </td>
             </tr>
             <tr>
               <td class='ListTable' width='25%'>
@@ -108,10 +121,10 @@
                 <a href='DbFilters.html'>DbFilters</a>
               </td>
               <td class='ListTable'>
-                Represents a collection of
-                <span class="userType">DbFilter</span> objects.
-                (E)
-              </td>
+      Represents a collection of
+      <span class="userType">DbFilter</span> objects.
+      (E)
+    </td>
             </tr>
             <tr>
               <td class='ListTable' width='25%'>
@@ -130,40 +143,35 @@
                 <a href='DbJoinOns.html'>DbJoinOns</a>
               </td>
               <td class='ListTable'>
-                Represents a collection of join on definitions.
-              </td>
+      Represents a collection of join on definitions.
+    </td>
             </tr>
             <tr>
               <td class='ListTable' width='25%'>
                 <a href='DbJoins.html'>DbJoins</a>
               </td>
               <td class='ListTable'>
-                Represents a collection of table joins.
-                (E)
-              </td>
+       Represents a collection of table joins.
+       (E)
+    </td>
             </tr>
             <tr>
               <td class='ListTable' width='25%'>
                 <a href='DbRequest.html'>DbRequest</a>
               </td>
               <td class='ListTable'>
-                Represents a database request.
-                (E)
-              </td>
+      Represents a database request.
+      (E)
+    </td>
             </tr>
-          </table>
-
-          <!-- ******************** -->
-          <div class="title2">Result Object Classes</div>
-          <table class='ListTable'>
             <tr>
               <td class='ListTable' width='25%'>
                 <a href='DbResult.html'>DbResult</a>
               </td>
               <td class='ListTable'>
-                Represents a Request result.
-                (R)
-              </td>
+      Represents a Request result.
+      (R)
+    </td>
             </tr>
             <tr>
               <td class='ListTable' width='25%'>
@@ -176,28 +184,17 @@
                 <a href='DbRows.html'>DbRows</a>
               </td>
               <td class='ListTable'>
-                Represents a collection of
-                <span class="userType">LJCNetCommon.DbValues</span>.
-              </td>
-            </tr>
-          </table>
-
-          <!-- ******************** -->
-          <div class="title2">Other Classes</div>
-          <table class='ListTable'>
-            <tr>
-              <td class='ListTable' width='25%'>
-                <a href='DbCommon.html'>DbCommon</a>
-              </td>
-              <td class='ListTable'>Common data message methods.</td>
+      Represents a collection of
+      <span class="userType">LJCNetCommon.DbValues</span>.
+    </td>
             </tr>
             <tr>
               <td class='ListTable' width='25%'>
                 <a href='DbSqlBuilder.html'>DbSqlBuilder</a>
               </td>
               <td class='ListTable'>
-                Provides SQL builder methods.
-              </td>
+      Provides SQL builder methods.
+    </td>
             </tr>
             <tr>
               <td class='ListTable' width='25%'>
@@ -210,11 +207,11 @@
                 <a href='ResultConverter`2.html'>ResultConverter`2</a>
               </td>
               <td class='ListTable'>
-                Converts
-                <span class="userType">DbColumns</span> and
-                <span class="userType">DbResult</span>
-                objects to data objects.
-              </td>
+      Converts
+      <span class="userType">DbColumns</span> and
+      <span class="userType">DbResult</span>
+      objects to data objects.
+    </td>
             </tr>
           </table>
         </td>
