@@ -7,63 +7,65 @@
   <meta name="author" content="Lester J. Clark" />
   <meta name="viewport" content="width=device-width" initial-scale=1 />
   <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/Syntax.css' />
 </head>
 <body>
-  <br />
-  <div class="PathText">
-    / <a href="../../../CodeDoc.html#LJCDBDataAccessLib">Assembly List</a>
-    / <a href="../LJCDBDataAccessLib.html">LJCDBDataAccessLib</a>
-    / <a href="../DbDataAccess.html">DbDataAccess</a>
-    / Load
-  </div>
-  <br />
-  <div id='Title'>Namespace - LJCDBDataAccessLib</div>
-  <br />
-  <div id='Header'>
-    <div id='Title'>Method Load</div>
-  </div>
-  <br />
-  <div class='Text'>Returns</div>
-  <br />
-  <div class='Text'>The result XML message.</div>
-  <br />
-  <div class='Text'>Syntax</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            private DbResult Load()
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br />
-  <div class='Text'>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCDBDataAccess">Assembly List</a>
+      / <a href="../LJCDBDataAccess.html">LJCDBDataAccess</a>
+      / <a href="../DbDataAccess.html">DbDataAccess</a>
+      / Load
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCDBDataAccess</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method Load</div>
+    </div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The result XML message.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              private DbResult Load()
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
       Retrieves multiple data rows.
       (E)
     </div>
-  <br />
-  <div class='Text'>Remarks</div>
-  <br />
-  <div class='Text'>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
         This method is called from the
         <span class="commonType">Execute()</span>
         method if the DbRequest.QueryType is "Load".
       </div>
-  <br />
-  <div class='Text'>Example</div>
-  <br />
-  <div class='SectionContainer'>
-    <table class='CodeTable'>
-      <tbody>
-        <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
-        <tr class='CodeTable'>
-          <td class='CodeTable'>
-            <pre style='margin-left: 2px;'><span class='comment'>// Loads multiple Person objects.</span>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Loads multiple Person objects.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='userType'>Persons</span> Load(<span class='userType'>DbDataAccess</span> dbDataAccess
   , <span class='userType'>DbColumns</span> dataDefinition)
 {
@@ -117,11 +119,12 @@
   }
   <span class='keyWord'>return</span> retValue;
 }</pre>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
   </div>
-  <br />
 </body>
 </html>
