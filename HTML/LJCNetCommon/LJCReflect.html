@@ -7,6 +7,7 @@
   <meta name="author" content="Lester J. Clark" />
   <meta name="viewport" content="width=device-width" initial-scale=1 />
   <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../CSS/Syntax.css' />
 </head>
 <body>
   <div class="page">
@@ -31,7 +32,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public class LJCReflect
+              public class LJCReflect 
             </td>
           </tr>
         </tbody>
@@ -45,133 +46,128 @@
     <div class='Text'>Remarks</div>
     <br />
     <div class='Text'>
-      This class is commonly used when accessing properties of a Data Object.
-      The object reference is passed to the constructor.
-    </div>
+        This class is commonly used when accessing properties of a Data Object.
+        The object reference is passed to the constructor.
+      </div>
+    <br />
+    <div class='Text'>
+        The property objects can then be accessed with: GetPropertyNames(),
+        GetPropertyType(), GetValue(), SetPropertyValue() and SetValue()
+      </div>
+    <br />
+    <div class='Text'>
+        The typed property values can be retrieved with: GetDateTime(),
+        GetDbDateString(), GetInt32() and GetString().
+      </div>
     <br />
     <div id='Title'>Public Methods</div>
-
-    <!-- ******************** -->
-    <div class="title2">Constructors</div>
     <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCReflect.ctor.html'>LJCReflect #ctor</a>
         </td>
         <td class='ListTable'>
-          Instantiates an instance of the class.
-        </td>
+      Instantiates an instance of the class.
+    </td>
       </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\LJCReflect.SetSource.html'>SetSource</a>
-        </td>
-        <td class='ListTable'>
-          Sets the source object and type values.
-        </td>
-      </tr>
-    </table>
-
-    <!-- ******************** -->
-    <div class="title2">Other Methods</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\LJCReflect.GetPropertyInfo.html'>GetPropertyInfo</a>
-        </td>
-        <td class='ListTable'>
-          Gets the cached PropertyInfo value.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\LJCReflect.GetPropertyNames.html'>GetPropertyNames</a>
-        </td>
-        <td class='ListTable'>
-          Gets a list of the property names.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\LJCReflect.GetPropertyType.html'>GetPropertyType</a>
-        </td>
-        <td class='ListTable'>
-          Get the property type.
-        </td>
-      </tr>
-    </table>
-
-    <!-- ******************** -->
-    <div class="title2">Value Methods</div>
-    <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCReflect.GetDateTime.html'>GetDateTime</a>
         </td>
         <td class='ListTable'>
-          Gets the property value as a DateTime value.
-        </td>
+      Gets the property value as a DateTime value.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCReflect.GetDbDateString.html'>GetDbDateString</a>
         </td>
         <td class='ListTable'>
-          Gets the property value as a DB date/time string.
-        </td>
+      Gets the property value as a DB date/time string.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCReflect.GetInt32.html'>GetInt32</a>
         </td>
         <td class='ListTable'>
-          Gets the property value as an integer.
+      Gets the property value as an integer.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\LJCReflect.GetPropertyInfo.html'>GetPropertyInfo</a>
         </td>
+        <td class='ListTable'>
+      Gets the cached PropertyInfo value.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\LJCReflect.GetPropertyNames.html'>GetPropertyNames</a>
+        </td>
+        <td class='ListTable'>
+      Gets a list of the property names.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\LJCReflect.GetPropertyType.html'>GetPropertyType</a>
+        </td>
+        <td class='ListTable'>
+      Get the property type.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCReflect.GetString.html'>GetString</a>
         </td>
         <td class='ListTable'>
-          Gets the property value as a string.
-        </td>
+      Gets the property value as a string.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCReflect.GetValue.html'>GetValue</a>
         </td>
         <td class='ListTable'>
-          Gets the property value as an object using a delegate. (E)
-        </td>
+      Gets the property value as an object using a delegate. (E)
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCReflect.GetValueReflect.html'>GetValueReflect</a>
         </td>
         <td class='ListTable'>
-          Gets the property value as an object using reflection.
-        </td>
+      Gets the property value as an object using reflection.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCReflect.SetPropertyValue.html'>SetPropertyValue</a>
         </td>
         <td class='ListTable'>
-          Sets the property value based on value type. (E)
+      Sets the property value based on value type. (E)
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\LJCReflect.SetSource.html'>SetSource</a>
         </td>
+        <td class='ListTable'>
+      Sets the source object and type values.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCReflect.SetValue.html'>SetValue</a>
         </td>
         <td class='ListTable'>
-          Sets the property value.
-        </td>
+      Sets the property value.
+    </td>
       </tr>
     </table>
     <div class='Text'>13 Methods</div>
-
-    <!-- ******************** -->
     <br />
     <div id='Title'>Properties</div>
     <table class='ListTable'>

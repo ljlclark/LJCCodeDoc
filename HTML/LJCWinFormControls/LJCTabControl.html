@@ -7,6 +7,7 @@
   <meta name="author" content="Lester J. Clark" />
   <meta name="viewport" content="width=device-width" initial-scale=1 />
   <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../CSS/Syntax.css' />
 </head>
 <body>
   <div class="page">
@@ -31,7 +32,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public class LJCTabControl : TabControl
+              public class LJCTabControl : TabControl 
             </td>
           </tr>
         </tbody>
@@ -41,141 +42,65 @@
     <div class='Text'>Provides custom drag and drop functionality for a TabControl.</div>
     <br />
     <div id='Title'>Public Methods</div>
-
-    <!-- ******************** -->
-    <div class="title2">Constructors</div>
     <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCTabControl.ctor.html'>LJCTabControl #ctor</a>
         </td>
         <td class='ListTable'>
-          Initializes an object instance.
-        </td>
+      Initializes an object instance.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCTabControl.ctor1.html'>LJCTabControl #ctor</a>
         </td>
         <td class='ListTable'>
-          Instantiates an instance of the class and adds it to a container.
-        </td>
+      Instantiates an instance of the class and adds it to a container.
+    </td>
       </tr>
-    </table>
-
-    <!-- ******************** -->
-    <div class="title2">Tab Methods</div>
-    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\LJCTabControl.LJCCloseEmptyPanel.html'>LJCCloseEmptyPanel</a>
+        </td>
+        <td class='ListTable'>
+      Closes the tiled split panel.
+    </td>
+      </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCTabControl.LJCGetTabPage.html'>LJCGetTabPage</a>
         </td>
         <td class='ListTable'>
-          Gets the tab page if the position corresponds to a tab label.
-        </td>
+      Gets the tab page if the position corresponds to a tab label.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCTabControl.LJCGetTabPage1.html'>LJCGetTabPage</a>
         </td>
         <td class='ListTable'>
-          Gets the tab page with the matching text.
-        </td>
+      Gets the tab page with the matching text.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCTabControl.LJCGetTabPageIndex.html'>LJCGetTabPageIndex</a>
         </td>
         <td class='ListTable'>
-          Gets the tab index for a tab page.
-        </td>
+      Gets the tab index for a tab page.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCTabControl.LJCMoveTabPage.html'>LJCMoveTabPage</a>
         </td>
         <td class='ListTable'>
-          Moves a tab page.
-        </td>
+      Moves a tab page.
+    </td>
       </tr>
     </table>
-
-    <!-- ******************** -->
-    <div class="title2">Other Methods</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\LJCTabControl.LJCCloseEmptyPanel.html'>LJCCloseEmptyPanel</a>
-        </td>
-        <td class='ListTable'>
-          Closes the tiled split panel.
-        </td>
-      </tr>
-    </table>
-
-    <!-- ******************** -->
-    <div class="title2">Event Overrides</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\LJCTabControl.OnDragDrop.html'>OnDragDrop</a>
-        </td>
-        <td class='ListTable'>
-          Provides custom DragDrop event code.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\LJCTabControl.OnDragLeave.html'>OnDragLeave</a>
-        </td>
-        <td class='ListTable'>
-          Provides custom DragLeave event code.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\LJCTabControl.OnDragOver.html'>OnDragOver</a>
-        </td>
-        <td class='ListTable'>
-          Provides custom DragOver event code.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\LJCTabControl.OnMouseDown.html'>OnMouseDown</a>
-        </td>
-        <td class='ListTable'>
-          Provides custom MouseDown event code.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\LJCTabControl.OnMouseMove.html'>OnMouseMove</a>
-        </td>
-        <td class='ListTable'>
-          Provides custom MouseMove event code.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\LJCTabControl.OnMouseUp.html'>OnMouseUp</a>
-        </td>
-        <td class='ListTable'>
-          Provides custom MouseUp event code.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\LJCTabControl.OnResize.html'>OnResize</a>
-        </td>
-        <td class='ListTable'>
-          Provides custom Resize event code.
-        </td>
-      </tr>
-    </table>
-    <div class='Text'>14 Methods</div>
-
-    <!-- ******************** -->
+    <div class='Text'>7 Methods</div>
     <br />
     <div id='Title'>Private Methods</div>
     <table class='ListTable'>
@@ -184,30 +109,84 @@
           <a href='Methods\LJCTabControl.Dispose.html'>Dispose</a>
         </td>
         <td class='ListTable'>
-          Clean up any resources being used.
-        </td>
+            Clean up any resources being used.
+            </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCTabControl.InitializeComponent.html'>InitializeComponent</a>
         </td>
         <td class='ListTable'>
-          Required method for Designer support - do not modify
-          the contents of this method with the code editor.
-        </td>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\LJCTabControl.LJCOnLJCPanelAdd.html'>LJCOnLJCPanelAdd</a>
         </td>
         <td class='ListTable'>
-          Calls the LJCPanelAdd event handlers.
+      Calls the LJCPanelAdd event handlers.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\LJCTabControl.OnDragDrop.html'>OnDragDrop</a>
         </td>
+        <td class='ListTable'>
+      Provides custom DragDrop event code.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\LJCTabControl.OnDragLeave.html'>OnDragLeave</a>
+        </td>
+        <td class='ListTable'>
+      Provides custom DragLeave event code.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\LJCTabControl.OnDragOver.html'>OnDragOver</a>
+        </td>
+        <td class='ListTable'>
+      Provides custom DragOver event code.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\LJCTabControl.OnMouseDown.html'>OnMouseDown</a>
+        </td>
+        <td class='ListTable'>
+      Provides custom MouseDown event code.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\LJCTabControl.OnMouseMove.html'>OnMouseMove</a>
+        </td>
+        <td class='ListTable'>
+      Provides custom MouseMove event code.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\LJCTabControl.OnMouseUp.html'>OnMouseUp</a>
+        </td>
+        <td class='ListTable'>
+      Provides custom MouseUp event code.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\LJCTabControl.OnResize.html'>OnResize</a>
+        </td>
+        <td class='ListTable'>
+      Provides custom Resize event code.
+    </td>
       </tr>
     </table>
-    <div class='Text'>3 Methods</div>
-
-    <!-- ******************** -->
+    <div class='Text'>10 Methods</div>
     <br />
     <div id='Title'>Properties</div>
     <table class='ListTable'>
@@ -218,8 +197,6 @@
         <td class='ListTable'>Determines if the custom drag drop is allowed.</td>
       </tr>
     </table>
-
-    <!-- ******************** -->
     <br />
     <div id='Title'>Fields</div>
     <table class='ListTable'>
@@ -228,8 +205,8 @@
           <a href='Fields\LJCTabControl.components.html'>components</a>
         </td>
         <td class='ListTable'>
-          Required designer variable.
-        </td>
+            Required designer variable.
+            </td>
       </tr>
     </table>
     <br />
