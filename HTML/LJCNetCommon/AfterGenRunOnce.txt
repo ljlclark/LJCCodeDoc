@@ -13,6 +13,9 @@ copy CommonModifiersCustom.html CommonModifiers.html
 copy DataTypes.html DataTypesGen.html
 copy DataTypesCustom.html DataTypes.html
 
+copy DbColumn.html DbColumnGen.html
+copy DbColumnCustom.html DbColumn.html
+
 copy DbColumns.html DbColumnsGen.html
 copy DbColumnsCustom.html DbColumns.html
 
