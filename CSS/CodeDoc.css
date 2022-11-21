@@ -2,6 +2,7 @@
 
 /* Type Selectors */
 body {
+  background: #f3f7ff /*#f7f7ff*/;
   font-family: Verdana, Tahoma, Arial, Sans-Serif;
   font-size: 8pt;
   height: 100%;
@@ -63,7 +64,7 @@ table.ListTable {
 }
 
 td.CodeTable {
-  background-color: #f7f7ff;
+  background-color: #f1f7ff /*#f7f7ff*/;
   border-bottom: solid #d5d5d3 1px;
   color: #000066;
   padding-bottom: 5px;
@@ -74,7 +75,7 @@ td.CodeTable {
 }
 
 td.ListTable {
-  background-color: #f7f7ff;
+  background-color: #f1f7ff /*#f7f7ff*/;
   border-bottom: solid #d5d5d3 1px;
   color: #000066;
   padding-bottom: 2px;
