@@ -19,8 +19,14 @@ copy DbColumnCustom.html DbColumn.html
 copy DbColumns.html DbColumnsGen.html
 copy DbColumnsCustom.html DbColumns.html
 
+copy DbValue.html DbValueGen.html
+copy DbValueCustom.html DbValue.html
+
 copy DbValues.html DbValuesGen.html
 copy DbValuesCustom.html DbValues.html
+
+copy KeyItem.html KeyItemGen.html
+copy KeyItemCustom.html KeyItem.html
 
 copy KeyItems.html KeyItemsGen.html
 copy KeyItemsCustom.html KeyItems.html
