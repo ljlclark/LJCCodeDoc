@@ -40,6 +40,9 @@ copy LibTypesCustom.html LibTypes.html
 copy LJCAssemblyReflect.html LJCAssemblyReflectGen.html
 copy LJCAssemblyReflectCustom.html LJCAssemblyReflect.html
 
+copy LJCNetCommon.html LJCNetCommonGen.html
+copy LJCNetCommonCustom.html LJCNetCommon.html
+
 copy LJCReflect.html LJCReflectGen.html
 copy LJCReflectCustom.html LJCReflect.html
 
