@@ -1,26 +1,29 @@
 cd ..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCDBMessage
 xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCDBMessage\*.* ..\LJCDBMessageCompare\ /s /y
 
-copy DBConditions.html DBConditionsGen.html
-copy DBConditionsCustom.html DBConditions.html
+copy DbCommon.html DbCommonGen.html
+copy DbCommonCustom.html DbCommon.html
 
-copy DBFilters.html DBFiltersGen.html
-copy DBFiltersCustom.html DBFilters.html
+copy DbConditions.html DbConditionsGen.html
+copy DbConditionsCustom.html DbConditions.html
 
-copy DBJoinOns.html DBJoinOnsGen.html
-copy DBJoinOnsCustom.html DBJoinOns.html
+copy DbFilters.html DbFiltersGen.html
+copy DbFiltersCustom.html DbFilters.html
 
-copy DBJoins.html DBJoinsGen.html
-copy DBJoinsCustom.html DBJoins.html
+copy DbJoinOns.html DbJoinOnsGen.html
+copy DbJoinOnsCustom.html DbJoinOns.html
 
-copy DBRequest.html DBRequestGen.html
-copy DBRequestCustom.html DBRequest.html
+copy DbJoins.html DbJoinsGen.html
+copy DbJoinsCustom.html DbJoins.html
 
-copy DBResult.html DBResultGen.html
-copy DBResultCustom.html DBResult.html
+copy DbRequest.html DbRequestGen.html
+copy DbRequestCustom.html DbRequest.html
 
-copy DBRows.html DBRowsGen.html
-copy DBRowsCustom.html DBRows.html
+copy DbResult.html DbResultGen.html
+copy DbResultCustom.html DbResult.html
+
+copy DbRows.html DbRowsGen.html
+copy DbRowsCustom.html DbRows.html
 
 copy LJCDBMessage.html LJCDBMessageGen.html
 copy LJCDBMessageCustom.html LJCDBMessage.html
