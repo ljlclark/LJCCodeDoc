@@ -12,3 +12,6 @@ copy LJCGridRowCustom.html LJCGridRow.html
 
 copy LJCTabControl.html LJCTabControlGen.html
 copy LJCTabControlCustom.html LJCTabControl.html
+
+copy LJCWinFormControls.html LJCWinFormControlsGen.html
+copy LJCWinFormControlsCustom.html LJCWinFormControls.html
