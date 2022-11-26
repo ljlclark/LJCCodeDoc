@@ -32,7 +32,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public class TableGridData
+              public class TableGridData 
             </td>
           </tr>
         </tbody>
@@ -41,177 +41,143 @@
     <br />
     <div class='Text'>Provides DataTable helpers for an LJCDataGrid control.</div>
     <br />
-    <div class='Text'>
-      When the data formats are known in advance, the List Form can contain data
-      methods that use strongly typed Data Objects.<br />
-      Each List Grid is coded to have Row Data Methods to display and modify the
-      items in the grid.<br />
-      These methods are DataRetrieve(), LoadRows(), RowAdd(), RowUpdate(),
-      SetStoredValues() and RowSelect().<br />
-      The methods may be postfixed with a value that identifies the
-      grid to which it applies. E.G. DataRetrieveAddress(), RowAddAddress(),
-      etc.<br />
-      This is especially true if the form contains more than one grid.
-    </div>
-    <br />
-    <div class='Text'>
-      The TableGridData class is designed to allow for display of data items when
-      the data formats are not known in advance.<br />
-      It provides methods for displaying data directly from DataTable values.
-    </div>
-    <br />
     <div id='Title'>Public Methods</div>
-
-    <!-- ******************** -->
-    <div class="title2">Constructors</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TableGridData.ctor.html'>TableGridData #ctor</a>
-        </td>
-        <td class='ListTable'>
-          Initalizes an object instance.
-        </td>
-      </tr>
-    </table>
-
-    <!-- ******************** -->
-    <div class="title2">Configuration Methods</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TableGridData.RemoveDisplayColumn.html'>RemoveDisplayColumn</a>
-        </td>
-        <td class='ListTable'>
-          Removes a display column.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TableGridData.SetDisplayColumns1.html'>SetDisplayColumns</a>
-        </td>
-        <td class='ListTable'>
-          Sets the Display Columns from the DataColumns object.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TableGridData.SetDisplayColumns2.html'>SetDisplayColumns</a>
-        </td>
-        <td class='ListTable'>
-          Sets the Display Columns from the DataObject properties.
-        </td>
-      </tr>
-    </table>
-
-    <!-- ******************** -->
-    <div class="title2">Row Data Methods</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TableGridData.LoadRows.html'>LoadRows</a>
-        </td>
-        <td class='ListTable'>
-          Loads the grid rows from the DataRows collection.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TableGridData.OnAddRow.html'>OnAddRow</a>
-        </td>
-        <td class='ListTable'>
-          Fires the AddRow event.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TableGridData.RowAdd.html'>RowAdd</a>
-        </td>
-        <td class='ListTable'>
-          Adds a grid row and updates it with the DataRow values.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TableGridData.RowSetValues.html'>RowSetValues</a>
-        </td>
-        <td class='ListTable'>
-          Updates a grid row with the DataRow values.
-        </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TableGridData.RowUpdate.html'>RowUpdate</a>
-        </td>
-        <td class='ListTable'>
-          Updates the current row with the DataRow values.
-        </td>
-      </tr>
-    </table>
-
-    <!-- ******************** -->
-    <div class="title2">Other Methods</div>
     <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\TableGridData.CreateDataColumns.html'>CreateDataColumns</a>
         </td>
         <td class='ListTable'>
-          Creates a new DataColumns object.
+      Creates a new DataColumns object.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TableGridData.ctor.html'>TableGridData #ctor</a>
         </td>
+        <td class='ListTable'>
+      Initalizes an object instance.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\TableGridData.DataColumnClone.html'>DataColumnClone</a>
         </td>
         <td class='ListTable'>
-          Clones a DataColumn object.
-        </td>
+      Clones a DataColumn object.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\TableGridData.DataColumnsClone.html'>DataColumnsClone</a>
         </td>
         <td class='ListTable'>
-          Clones a DataColumn collection.
-        </td>
+      Clones a DataColumn collection.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\TableGridData.GetColumnNames.html'>GetColumnNames</a>
         </td>
         <td class='ListTable'>
-          Creates a ColumnNames list from a DataColumns collection.
-        </td>
+      Creates a ColumnNames list from a DataColumns collection.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\TableGridData.GetDbColumn.html'>GetDbColumn</a>
         </td>
         <td class='ListTable'>
-          Creates a DbColumn object from a DataColumn object.
-        </td>
+      Creates a DbColumn object from a DataColumn object.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\TableGridData.GetDbColumns.html'>GetDbColumns</a>
         </td>
         <td class='ListTable'>
-          Creates a DbColumns collection from a DataColumns collection.
-        </td>
+      Creates a DbColumns collection from a DataColumns collection.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\TableGridData.GetIncludedColumns.html'>GetIncludedColumns</a>
         </td>
         <td class='ListTable'>
-          Get the Display Columns from the DataColumns definition.
+      Get the Display Columns from the DataColumns definition.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TableGridData.LoadRows.html'>LoadRows</a>
         </td>
+        <td class='ListTable'>
+      Loads the grid rows from the DataRows collection.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TableGridData.RemoveDisplayColumn.html'>RemoveDisplayColumn</a>
+        </td>
+        <td class='ListTable'>
+      Removes a display column.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TableGridData.RowAdd.html'>RowAdd</a>
+        </td>
+        <td class='ListTable'>
+      Adds a grid row and updates it with the DataRow values.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TableGridData.RowSetValues.html'>RowSetValues</a>
+        </td>
+        <td class='ListTable'>
+      Updates a grid row with the DataRow values.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TableGridData.RowUpdate.html'>RowUpdate</a>
+        </td>
+        <td class='ListTable'>
+      Updates the current row with the DataRow values.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TableGridData.SetDisplayColumns.html'>SetDisplayColumns</a>
+        </td>
+        <td class='ListTable'>
+      Sets the Display Columns from the DataColumns object.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TableGridData.SetDisplayColumns1.html'>SetDisplayColumns</a>
+        </td>
+        <td class='ListTable'>
+      Sets the Display Columns from the DataObject properties.
+    </td>
       </tr>
     </table>
-    <div class='Text'>16 Methods</div>
-
-    <!-- ******************** -->
+    <div class='Text'>15 Methods</div>
+    <br />
+    <div id='Title'>Private Methods</div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TableGridData.OnAddRow.html'>OnAddRow</a>
+        </td>
+        <td class='ListTable'>
+      Fires the AddRow event.
+    </td>
+      </tr>
+    </table>
+    <div class='Text'>1 Methods</div>
     <br />
     <div id='Title'>Properties</div>
     <table class='ListTable'>

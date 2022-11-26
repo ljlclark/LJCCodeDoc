@@ -1,0 +1,8 @@
+cd ..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCGridDataLib
+xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCGridDataLib\*.* ..\LJCGridDataLibCompare\ /s /y
+
+copy ResultGridData.html ResultGridDataGen.html
+copy ResultGridDataCustom.html ResultGridData.html
+
+copy TableGridData.html TableGridDataGen.html
+copy TableGridDataCustom.html TableGridData.html
