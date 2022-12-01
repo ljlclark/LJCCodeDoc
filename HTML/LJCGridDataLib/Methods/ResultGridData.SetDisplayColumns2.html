@@ -48,6 +48,38 @@
       Configure the Display Columns from the Data object properties.
     </div>
     <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// See the DataManager setup code on the ResultGridData class page.</span>
+
+<span class='keyWord'>using</span> LJCDBClientLib;
+<span class='keyWord'>using</span> LJCGridDataLib;
+
+<span class='comment'>// Configure the Display Columns from the Data object properties.</span>
+<span class='modifier'>private</span> DbColumns SetDisplayColumns2(<span class='userType'>DataManager</span> dataManager)
+{
+  DbColumns retValue;
+
+  <span class='commonType'>var</span> dataObject = <span class='keyWord'>new</span> <span class='userType'>ADataObject</span>();
+
+  <span class='comment'>// Create the Display columns.</span>
+  <span class='commonType'>var</span> resultGridData = <span class='keyWord'>new</span> <span class='userType'>ResultGridData</span>(LJCDataGridName);
+  resultGridData.SetDisplayColumns(dataObject);
+  retValue = resultGridData.DisplayColumns;
+  <span class='keyWord'>return</span> retValue;
+}</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
   </div>
 </body>
 </html>

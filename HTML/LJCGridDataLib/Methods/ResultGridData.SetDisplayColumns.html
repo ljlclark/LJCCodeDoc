@@ -58,24 +58,32 @@
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='comment'>// See the DataManager setup code on the ResultGridData class page.</span>
 
+<span class='keyWord'>using</span> LJCDBClientLib;
+<span class='keyWord'>using</span> LJCGridDataLib;
 <span class='keyWord'>using</span> LJCDBViewDAL;
 
 <span class='comment'>// Configure the Display Columns from the DbRequest object definition.</span>
-<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> SetDisplayColumns2(<span class='userType'>DataManager</span> dataManager)
+<span class='modifier'>private</span> DbColumns SetDisplayColumns1(<span class='userType'>DataManager</span> dataManager)
 {
-  <span class='comment'>// Get View Request.</span>
+  DbColumns retValue;
+    
+  <span class='comment'>// Get a View Request.</span>
   <span class='commonType'>var</span> dbRequest = ViewHelper.GetViewRequest("TableName", "ViewDataName");
 
-  <span class='comment'>// Execute the dbRequest directly since it was retrieved.</span>
-  <span class='commonType'>var</span> dbResult = dataManager.ExecuteRequest(dbRequest);
-  <span class='keyWord'>if</span> (DbResult.HasData(dbResult))
+  <span class='comment'>// Or Create the Request.</span>
+  dbRequest = <span class='keyWord'>new</span> <span class='userType'>DbRequest</span>()
   {
-    LJCDataGridName.Clear();
+    Columns = dataManager.DataDefinition,
+    DataConfigName = dataManager.DataConfigName,
+    RequestTypeName = RequestType.Load.ToString(),
+    TableName = dataManager.TableName
+  };
 
-    <span class='comment'>// Setup grid columns.</span>
-    <span class='commonType'>var</span> resultGridData = <span class='keyWord'>new</span> <span class='userType'>ResultGridData</span>(LJCDataGridName);
-    resultGridData.SetDisplayColumns(dbRequest);
-  }
+  <span class='comment'>// Create the Display columns.</span>
+  <span class='commonType'>var</span> resultGridData = <span class='keyWord'>new</span> <span class='userType'>ResultGridData</span>(LJCDataGridName);
+  resultGridData.SetDisplayColumns(dbRequest);
+  retValue = resultGridData.DisplayColumns;
+  <span class='keyWord'>return</span> retValue;
 }</pre>
             </td>
           </tr>

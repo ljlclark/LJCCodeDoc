@@ -240,18 +240,19 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCDataAccessConfig;
-<span class='keyWord'>using</span> LJCDataGridLib;
 <span class='keyWord'>using</span> LJCDBClientLib;
-<span class='keyWord'>using</span> LJCDBMessage;
+<span class='keyWord'>using</span> LJCDBDataAccess;
 
 <span class='comment'>// Test DataGrid.</span>
-<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> TestDataGrid()
+<span class='modifier'>private</span> <span class='commonType'>void</span> TestDataGrid()
 {
-  <span class='userType'>DataAccess</span> dataAccess;
   <span class='commonType'>string</span> connectionString;
   <span class='commonType'>string</span> providerName;
 
   <span class='comment'>// Create Data Configuration values.</span>
+  <span class='commonType'>var</span> databaseName = "DatabaseName";
+  <span class='commonType'>var</span> tableName = "TableName";
+      
   <span class='commonType'>bool</span> useInternal = <span class='keyWord'>false</span>;
   <span class='keyWord'>if</span> (useInternal)
   {
@@ -261,7 +262,7 @@
     connectionBuilder = <span class='keyWord'>new</span> <span class='userType'>DbConnectionStringBuilder</span>()
     {
       { "Data Source", "DataServiceName" },
-      { "Initial Catalog", "databaseName" },
+      { "Initial Catalog", databaseName },
       { "Integrated Security", "True" }
     };
     connectionString = connectionBuilder.ConnectionString;
@@ -280,16 +281,17 @@
   <span class='comment'>// Create DataManager.</span>
   <span class='commonType'>var</span> dbServiceRef = <span class='keyWord'>new</span> <span class='userType'>DbServiceRef</span>()
   {
-    <span class='userType'>DbDataAccess</span> = <span class='keyWord'>new</span> <span class='userType'>DbDataAccess</span>(connectionString
-      , providerName, databaseName)
+    <span class='userType'>DbDataAccess</span> = <span class='keyWord'>new</span> <span class='userType'>DbDataAccess</span>(databaseName
+      , connectionString, providerName)
   };
-  <span class='commonType'>var</span> dataManager = <span class='keyWord'>new</span> <span class='userType'>DataManager</span>(dbServiceRef, <span class='keyWord'>null</span>, "TableName");
+  <span class='commonType'>var</span> dataManager = <span class='keyWord'>new</span> <span class='userType'>DataManager</span>(dbServiceRef, <span class='keyWord'>null</span>, tableName);
 
   <span class='comment'>// Method Tests.</span>
+  SetDisplayColumns(dataManager);
   SetDisplayColumns1(dataManager);
-  SetDisplayColumns2(dataManager);
+  SetDisplayColumns2();
+  LoadRows(dataManager);
   LoadRows1(dataManager);
-  LoadRows2(dataManager);
 }</pre>
             </td>
           </tr>

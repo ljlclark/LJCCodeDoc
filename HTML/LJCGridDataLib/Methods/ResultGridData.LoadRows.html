@@ -58,19 +58,20 @@
               <pre style='margin-left: 2px;'><span class='comment'>// See the DataManager setup code on the ResultGridData class page.</span>
 
 <span class='comment'>// Loads the grid rows from the result Rows.</span>
-<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> LoadRows1(<span class='userType'>DataManager</span> dataManager)
+<span class='modifier'>private</span> <span class='commonType'>void</span> LoadRows(<span class='userType'>DataManager</span> dataManager)
 {
   <span class='commonType'>var</span> dbResult = dataManager.Load();
-  <span class='keyWord'>if</span> (dbResult.HasData())
+  <span class='keyWord'>if</span> (DbResult.HasData(dbResult))
   {
-    <span class='userType'>LJCDataGridName</span>.Clear();
-
-    <span class='comment'>// Setup grid columns.</span>
+    <span class='comment'>// Create the Display column definitions.</span>
     <span class='commonType'>var</span> resultGridData = <span class='keyWord'>new</span> <span class='userType'>ResultGridData</span>(LJCDataGridName);
     resultGridData.SetDisplayColumns(dbResult.Columns);
         
-    <span class='comment'>// Set Grid data.</span>
+    <span class='comment'>// Configure the grid columns.</span>
+    <span class='userType'>LJCDataGridName</span>.Columns.Clear();
     <span class='userType'>LJCDataGridName</span>.LJCAddDisplayColumns(resultGridData.DisplayColumns);
+
+    <span class='comment'>// Load the grid rows.</span>
     resultGridData.LoadRows(dbResult);
   }
 }</pre>
