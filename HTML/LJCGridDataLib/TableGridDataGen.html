@@ -39,7 +39,9 @@
       </table>
     </div>
     <br />
-    <div class='Text'>Provides DataTable helpers for an LJCDataGrid control.</div>
+    <div class='Text'>
+      Provides DataTable helpers for an LJCDataGrid control.
+    </div>
     <br />
     <div id='Title'>Public Methods</div>
     <table class='ListTable'>
@@ -85,6 +87,14 @@
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
+          <a href='Methods\TableGridData.GetDataColumns.html'>GetDataColumns</a>
+        </td>
+        <td class='ListTable'>
+      Returns a set of DataColumns that match the supplied list.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
           <a href='Methods\TableGridData.GetDbColumn.html'>GetDbColumn</a>
         </td>
         <td class='ListTable'>
@@ -97,14 +107,6 @@
         </td>
         <td class='ListTable'>
       Creates a DbColumns collection from a DataColumns collection.
-    </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TableGridData.GetIncludedColumns.html'>GetIncludedColumns</a>
-        </td>
-        <td class='ListTable'>
-      Get the Display Columns from the DataColumns definition.
     </td>
       </tr>
       <tr>
@@ -206,6 +208,70 @@
         <td class='ListTable'>Gets or sets the GridRow value.</td>
       </tr>
     </table>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='Text'>
+        This is main function sample code for testing. The code for the additional
+        test functions is listed under the methods with the same names.
+      </div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCDataAccessConfig;
+<span class='keyWord'>using</span> LJCDBClientLib;
+<span class='keyWord'>using</span> LJCDBDataAccess;
+
+<span class='comment'>// Test DataGrid.</span>
+<span class='modifier'>private</span> <span class='commonType'>void</span> TestDataGrid()
+{
+  <span class='commonType'>string</span> connectionString;
+  <span class='commonType'>string</span> providerName;
+
+  <span class='comment'>// Create Data Configuration values.</span>
+  <span class='commonType'>var</span> databaseName = "DatabaseName";
+      
+  <span class='commonType'>bool</span> useInternal = <span class='keyWord'>false</span>;
+  <span class='keyWord'>if</span> (useInternal)
+  {
+    <span class='comment'>// Use internal configuration.</span>
+    <span class='userType'>DbConnectionStringBuilder</span> connectionBuilder;
+    <span class='commonType'>string</span> databaseName = "DatabaseName";
+    connectionBuilder = <span class='keyWord'>new</span> <span class='userType'>DbConnectionStringBuilder</span>()
+    {
+      { "Data Source", "DataServiceName" },
+      { "Initial Catalog", databaseName },
+      { "Integrated Security", "True" }
+    };
+    connectionString = connectionBuilder.ConnectionString;
+    providerName = "System.Data.SqlClient";
+  }
+  <span class='keyWord'>else</span>
+  {
+    <span class='comment'>// Or use external configuration.</span>
+    <span class='userType'>DataConfigs</span> dataConfigs = <span class='keyWord'>new</span> <span class='userType'>DataConfigs</span>();
+    dataConfigs.LJCLoadData();
+    dataConfig = dataConfigs.LJCGetByName("ConfigName");
+    connectionString = dataConfig.GetConnectionString();
+    providerName = dataConfig.GetProviderName();
+  }
+
+  <span class='comment'>// Create DataAccess.</span>
+  retValue = <span class='keyWord'>new</span> <span class='userType'>DataAccess</span>()
+  {
+    ConnectionString = connectionString,
+    ProviderName = providerName
+  };
+}</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <br />
   </div>
 </body>
