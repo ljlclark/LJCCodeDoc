@@ -1,4 +1,4 @@
-set root=..\..\..\LJCProjects
+set root=..\..\LJCProjectsDev
 
 rem ---------------
 set src=\GenealogyManager\GenealogyManager\LinkPages
