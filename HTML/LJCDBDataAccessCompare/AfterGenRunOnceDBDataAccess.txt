@@ -1,5 +1,0 @@
-cd ..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCDBDataAccess
-xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCDBDataAccess\*.* ..\LJCDBDataAccessCompare\ /s /y
-
-copy DBDataAccess.html DBDataAccessGen.html
-copy DBDataAccessCustom.html DBDataAccess.html

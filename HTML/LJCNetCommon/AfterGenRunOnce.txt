@@ -1,5 +1,5 @@
-cd ..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCNetCommon
-xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCNetCommon\*.* ..\LJCNetCommonCompare\ /s /y
+cd ..\..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCNetCommon
+xcopy ..\..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCNetCommon\*.* ..\LJCNetCommonCompare\ /s /y
 
 copy CommonDataTypes.html CommonDataTypesGen.html
 copy CommonDataTypesCustom.html CommonDataTypes.html

@@ -1,5 +1,5 @@
-cd ..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCDBMessage
-xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCDBMessage\*.* ..\LJCDBMessageCompare\ /s /y
+cd ..\..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCDBMessage
+xcopy ..\..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCDBMessage\*.* ..\LJCDBMessageCompare\ /s /y
 
 copy DbCommon.html DbCommonGen.html
 copy DbCommonCustom.html DbCommon.html

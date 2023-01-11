@@ -1,5 +1,5 @@
-cd ..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCGridDataLib
-xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCGridDataLib\*.* ..\LJCGridDataLibCompare\ /s /y
+cd ..\..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCGridDataLib
+xcopy ..\..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCGridDataLib\*.* ..\LJCGridDataLibCompare\ /s /y
 
 copy ResultGridData.html ResultGridDataGen.html
 copy ResultGridDataCustom.html ResultGridData.html

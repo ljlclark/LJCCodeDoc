@@ -1,5 +1,5 @@
-cd ..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCWinFormCommon
-xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCWinFormCommon\*.* ..\LJCWinFormCommonCompare\ /s /y
+cd ..\..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCWinFormCommon
+xcopy ..\..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCWinFormCommon\*.* ..\LJCWinFormCommonCompare\ /s /y
 
 copy ControlValues.html ControlValuesGen.html
 copy ControlValuesCustom.html ControlValues.html
