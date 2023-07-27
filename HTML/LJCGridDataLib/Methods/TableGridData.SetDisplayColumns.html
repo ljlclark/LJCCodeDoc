@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- TableGridData.SetDisplayColumns.html -->
+<!-- Generated 3/30/2023 7:50 AM -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>SetDisplayColumns</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCGridDataLib">Assembly List</a>
+      / <a href="../LJCGridDataLib.html">LJCGridDataLib</a>
+      / <a href="../TableGridData.html">TableGridData</a>
+      / SetDisplayColumns
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCGridDataLib</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method SetDisplayColumns</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>dataColumns - The DataColumnCollection object.</div>
+    <div class='Text'>propertyNames - The Property names.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public Void SetDisplayColumns(DataColumnCollection dataColumns, List&lt;String&gt; propertyNames = null)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Sets the Display Columns from the DataColumns object.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// See the DataAccess setup code on the TableGridData class page.</span>
+
+<span class='comment'>// Sets the Display Columns from the DataColumns object.</span>
+<span class='modifier'>private</span> <span class='userType'>DbColumns</span> SetDisplayColumns(<span class='userType'>DataAccess</span> dataAccess)
+{
+  <span class='userType'>DbColumns</span> retValue = <span class='keyWord'>null</span>;
+
+  <span class='commonType'>var</span> sql = "select * from Province";
+  <span class='commonType'>var</span> dataTable = dataAccess.GetDataTable(sql);
+  <span class='keyWord'>if</span> (NetCommon.HasData(dataTable))
+  {
+    <span class='commonType'>var</span> tableGridData = <span class='keyWord'>new</span> <span class='userType'>TableGridData</span>(LJCDataGridName);
+    tableGridData.SetDisplayColumns(dataTable.Columns);
+    retValue = tableGridData.DisplayColumns;
+  }
+  <span class='keyWord'>return</span> retValue;
+}</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>

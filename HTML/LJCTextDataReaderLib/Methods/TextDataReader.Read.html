@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- TextDataReader.Read.html -->
+<!-- Generated 3/30/2023 7:50 AM -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Read</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCTextDataReaderLib">Assembly List</a>
+      / <a href="../LJCTextDataReaderLib.html">LJCTextDataReaderLib</a>
+      / <a href="../TextDataReader.html">TextDataReader</a>
+      / Read
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCTextDataReaderLib</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method Read</div>
+    </div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>True if read successfully, otherwise false.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public Boolean Read()
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Reads the next line of the text file.
+      (DE)
+    </div>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
+      This is a minimum required method.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// File Contents</span>
+<span class='comment'>// FirstName, LastName</span>
+<span class='comment'>// John, Doe</span>
+<span class='comment'>// Jane, Doe</span>
+        
+<span class='keyWord'>using</span> LJCTextDataReaderLib;
+
+<span class='comment'>// The hasHeadingLine defaults to true if the parameter is not included.</span>
+<span class='userType'>TextDataReader</span> textReader = <span class='keyWord'>new</span> <span class='userType'>TextDataReader</span>();
+
+<span class='comment'>// The field delimiter defaults to "," if the parameter is not included.</span>
+textReader.LJCSetFile("InputFileSpec.txt");
+
+<span class='keyWord'>while</span>(textReader.Read())
+{
+  <span class='comment'>// Get the current line values by index.</span>
+  <span class='keyWord'>for</span> <span class='commonType'>int</span> index = 0; index &lt; textReader.FieldCount; index++)
+  {
+    <span class='commonType'>object</span> fieldValue = textReader[index];
+    <span class='commonType'>string</span> text = textReader.GetString(index);
+  }
+
+  <span class='comment'>// Get the current line values by name.</span>
+  <span class='keyWord'>foreach</span> <span class='commonType'>string</span> fieldName <span class='keyWord'>in</span> textReader.LJCGetFieldNames())
+  {
+    <span class='commonType'>object</span> fieldValue = textReader[fieldName];
+    <span class='commonType'>string</span> text = textReader.GetString(fieldName);
+  }
+}</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>

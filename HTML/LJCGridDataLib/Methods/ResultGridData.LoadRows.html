@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- ResultGridData.LoadRows.html -->
+<!-- Generated 3/30/2023 7:50 AM -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LoadRows</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCGridDataLib">Assembly List</a>
+      / <a href="../LJCGridDataLib.html">LJCGridDataLib</a>
+      / <a href="../ResultGridData.html">ResultGridData</a>
+      / LoadRows
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCGridDataLib</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method LoadRows</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>dbResult - The DbResult object.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public Void LoadRows(DbResult dbResult)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Loads the grid rows from the result Rows.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// See the DataManager setup code on the ResultGridData class page.</span>
+
+<span class='comment'>// Loads the grid rows from the result Rows.</span>
+<span class='modifier'>private</span> <span class='commonType'>void</span> LoadRows(<span class='userType'>DataManager</span> dataManager)
+{
+  <span class='commonType'>var</span> dbResult = dataManager.Load();
+  <span class='keyWord'>if</span> (DbResult.HasData(dbResult))
+  {
+    <span class='comment'>// Create the Display column definitions.</span>
+    <span class='commonType'>var</span> resultGridData = <span class='keyWord'>new</span> <span class='userType'>ResultGridData</span>(LJCDataGridName);
+    resultGridData.SetDisplayColumns(dbResult.Columns);
+        
+    <span class='comment'>// Configure the grid columns.</span>
+    <span class='userType'>LJCDataGridName</span>.Columns.Clear();
+    <span class='userType'>LJCDataGridName</span>.LJCAddDisplayColumns(resultGridData.DisplayColumns);
+
+    <span class='comment'>// Load the grid rows.</span>
+    resultGridData.LoadRows(dbResult);
+  }
+}</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>

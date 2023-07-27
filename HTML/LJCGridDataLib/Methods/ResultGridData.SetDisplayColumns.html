@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- ResultGridData.SetDisplayColumns.html -->
+<!-- Generated 3/30/2023 7:50 AM -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>SetDisplayColumns</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCGridDataLib">Assembly List</a>
+      / <a href="../LJCGridDataLib.html">LJCGridDataLib</a>
+      / <a href="../ResultGridData.html">ResultGridData</a>
+      / SetDisplayColumns
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCGridDataLib</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method SetDisplayColumns</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>dbRequest - The DbRequest object.</div>
+    <div class='Text'>columnNames - The included columns.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public Void SetDisplayColumns(DbRequest dbRequest, List&lt;String&gt; columnNames = null)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Configure the Display Columns from the DbRequest object definition.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// See the DataManager setup code on the ResultGridData class page.</span>
+
+<span class='keyWord'>using</span> LJCDBClientLib;
+<span class='keyWord'>using</span> LJCGridDataLib;
+<span class='keyWord'>using</span> LJCDBViewDAL;
+
+<span class='comment'>// Configure the Display Columns from the DbRequest object definition.</span>
+<span class='modifier'>private</span> DbColumns SetDisplayColumns1(<span class='userType'>DataManager</span> dataManager)
+{
+  DbColumns retValue;
+    
+  <span class='comment'>// Get a View Request.</span>
+  <span class='commonType'>var</span> dbRequest = ViewHelper.GetViewRequest("TableName", "ViewDataName");
+
+  <span class='comment'>// Or Create the Request.</span>
+  dbRequest = <span class='keyWord'>new</span> <span class='userType'>DbRequest</span>()
+  {
+    Columns = dataManager.DataDefinition,
+    DataConfigName = dataManager.DataConfigName,
+    RequestTypeName = RequestType.Load.ToString(),
+    TableName = dataManager.TableName
+  };
+
+  <span class='comment'>// Create the Display columns.</span>
+  <span class='commonType'>var</span> resultGridData = <span class='keyWord'>new</span> <span class='userType'>ResultGridData</span>(LJCDataGridName);
+  resultGridData.SetDisplayColumns(dbRequest);
+  retValue = resultGridData.DisplayColumns;
+  <span class='keyWord'>return</span> retValue;
+}</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>
