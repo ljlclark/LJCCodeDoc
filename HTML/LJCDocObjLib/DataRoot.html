@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- DataRoot.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 7/23/2023 5:11 AM -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DataRoot</title>
@@ -53,54 +53,33 @@
       documentation XML data.
     </div>
     <br />
-    <div class='Title2'>Public Methods</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataRoot.ctor.html'>DataRoot #ctor</a>
-        </td>
-        <td class='ListTable'>
-      Initializes an object instance.
-    </td>
-      </tr>
-    </table>
-    <div class='Text'>1 Methods</div>
+    <div class='Text'>Example</div>
     <br />
-    <div class='Title2'>Private Methods</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataRoot.CreateAssembliesData.html'>CreateAssembliesData</a>
-        </td>
-        <td class='ListTable'>
-      Creates the assembly data.
-      (R)
-    </td>
-      </tr>
-    </table>
-    <div class='Text'>1 Methods</div>
-    <br />
-    <div id='Title'>Properties</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Properties\DataRoot.AssemblyGroups.html'>AssemblyGroups</a>
-        </td>
-        <td class='ListTable'>Gets or sets the AssemblyGroups list.</td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Properties\DataRoot.DataAssemblies.html'>DataAssemblies</a>
-        </td>
-        <td class='ListTable'>Gets or sets the DataAssemblies list.</td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Properties\DataRoot.Managers.html'>Managers</a>
-        </td>
-        <td class='ListTableMissing'>Missing Summary</td>
-      </tr>
-    </table>
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='commonType'>var</span> dataConfigName = "ConfigName";
+  <span class='commonType'>var</span> dbServiceRef = <span class='keyWord'>new</span> <span class='userType'>DbServiceRef</span>()
+  {
+    <span class='userType'>DbDataAccess</span> = <span class='keyWord'>new</span> <span class='userType'>DbDataAccess</span>(dataConfigName)
+  };
+  <span class='commonType'>var</span> managers = <span class='keyWord'>new</span> <span class='userType'>ManagersDocGen</span>();
+  managers.SetDBProperties(dbServiceRef, dataConfigName);
+
+  <span class='commonType'>var</span> assemblyGroupManager = managers.DocAssemblyGroupManager;
+  <span class='commonType'>var</span> assemblyGroups = assemblyGroupManager.Load();
+
+  <span class='comment'>// Creates the DataAssemblies collection with the deserialized</span>
+  <span class='comment'>// "Doc" XML converted to the "Data" XML format.</span>
+  <span class='userType'>DataRoot</span> dataRoot = <span class='keyWord'>new</span> <span class='userType'>DataRoot</span>(assemblyGroups);</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
 Licensed under the MIT License.</div>

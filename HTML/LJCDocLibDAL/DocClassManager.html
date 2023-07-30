@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- DocClassManager.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 7/23/2023 5:11 AM -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DocClassManager</title>
@@ -42,7 +42,7 @@
     <br />
     <div class='Text'>Provides table specific data methods.</div>
     <br />
-    <div class='Title2'>Public Methods</div>
+    <div class='Title1'>Public Methods</div>
     <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
@@ -54,7 +54,15 @@
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Methods\DocClassManager.ctor.html'>DocClassManager #ctor</a>
+          <a href='Methods\DocClassManager.ChangeSequence.html'>ChangeSequence</a>
+        </td>
+        <td class='ListTable'>
+      Changes the moved sequence values.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DocClassManager.ctor.html'>#ctor</a>
         </td>
         <td class='ListTable'>
       Initializes an object instance.
@@ -70,9 +78,19 @@
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Methods\DocClassManager.GetGroupKey.html'>GetGroupKey</a>
+          <a href='Methods\DocClassManager.GetColumns.html'>GetColumns</a>
         </td>
-        <td class='ListTableMissing'>Missing Summary</td>
+        <td class='ListTable'>
+        Gets the collection of specified columns.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DocClassManager.GetForeignKey.html'>GetForeignKey</a>
+        </td>
+        <td class='ListTable'>
+      Gets the Foreign Key columns.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
@@ -84,15 +102,27 @@
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Methods\DocClassManager.GetParentKey.html'>GetParentKey</a>
+          <a href='Methods\DocClassManager.GetParentIDKey.html'>GetParentIDKey</a>
         </td>
-        <td class='ListTableMissing'>Missing Summary</td>
+        <td class='ListTable'>
+      Gets the Parent ID key record.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\DocClassManager.GetUniqueKey.html'>GetUniqueKey</a>
         </td>
-        <td class='ListTableMissing'>Missing Summary</td>
+        <td class='ListTable'>
+      Gets the Unique key columns.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DocClassManager.IsDuplicate.html'>IsDuplicate</a>
+        </td>
+        <td class='ListTable'>
+      Check for duplicate unique key.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
@@ -104,15 +134,33 @@
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Methods\DocClassManager.LoadWithGroup.html'>LoadWithGroup</a>
+          <a href='Methods\DocClassManager.LoadResult.html'>LoadResult</a>
         </td>
-        <td class='ListTableMissing'>Missing Summary</td>
+        <td class='ListTable'>
+      Retrieves a collection of Data Records.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Methods\DocClassManager.LoadWithParent.html'>LoadWithParent</a>
+          <a href='Methods\DocClassManager.LoadWithGroup.html'>LoadWithGroup</a>
         </td>
-        <td class='ListTableMissing'>Missing Summary</td>
+        <td class='ListTable'>
+      // Retrieves a collection of data records with the supplied values.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DocClassManager.LoadWithParentID.html'>LoadWithParentID</a>
+        </td>
+        <td class='ListTable'>
+      Loads a collection of Data Records with the supplied value.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DocClassManager.ResetSequence.html'>ResetSequence</a>
+        </td>
+        <td class='ListTable'>Resets the sequence values.</td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
@@ -134,7 +182,15 @@
         <td class='ListTable' width='25%'>
           <a href='Methods\DocClassManager.RetrieveWithUnique.html'>RetrieveWithUnique</a>
         </td>
-        <td class='ListTableMissing'>Missing Summary</td>
+        <td class='ListTable'>
+      Retrieves a record with the supplied unique values.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DocClassManager.SetOrderBy.html'>SetOrderBy</a>
+        </td>
+        <td class='ListTable'>Sets the current OrderBy names.</td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
@@ -145,10 +201,16 @@
     </td>
       </tr>
     </table>
-    <div class='Text'>14 Methods</div>
+    <div class='Text'>20 Methods</div>
     <br />
     <div id='Title'>Properties</div>
     <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\DocClassManager.ClassGroupID.html'>ClassGroupID</a>
+        </td>
+        <td class='ListTable'>Gets or sets the GroupID value.</td>
+      </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Properties\DocClassManager.Manager.html'>Manager</a>
@@ -160,6 +222,18 @@
           <a href='Properties\DocClassManager.ResultConverter.html'>ResultConverter</a>
         </td>
         <td class='ListTable'>Gets or sets the ResultConverter reference.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\DocClassManager.SourceSequence.html'>SourceSequence</a>
+        </td>
+        <td class='ListTable'>Gets or sets the SourceSequence value.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\DocClassManager.TargetSequence.html'>TargetSequence</a>
+        </td>
+        <td class='ListTable'>Gets or sets the TargetSequence value.</td>
       </tr>
     </table>
     <br />
