@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- LJCDataGrid.Dispose.html -->
+<!-- LJCDataGrid.LJCAddColumns.html -->
 <!-- Generated 9/4/2023 2:17 AM -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Dispose</title>
+  <title>LJCAddColumns</title>
   <meta charset="utf-8" />
   <meta name="author" content="Lester J. Clark" />
   <meta name="viewport" content="width=device-width" initial-scale=1 />
@@ -17,17 +17,17 @@
       / <a href="../../../CodeDoc.html#LJCWinFormControls">Assembly List</a>
       / <a href="../LJCWinFormControls.html">LJCWinFormControls</a>
       / <a href="../LJCDataGrid.html">LJCDataGrid</a>
-      / Dispose
+      / LJCAddColumns
     </div>
     <br />
     <div id='Title'>Namespace - LJCWinFormControls</div>
     <br />
     <div id='Header'>
-      <div id='Title'>Method Dispose</div>
+      <div id='Title'>Method LJCAddColumns</div>
     </div>
     <br />
     <div id='Title'>Parameters</div>
-    <div class='Text'>disposing - true if managed resources should be disposed; otherwise, false.</div>
+    <div class='Text'>columns - The columns collection.</div>
     <br />
     <div class='Text'>Syntax</div>
     <br />
@@ -37,7 +37,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              protected override Void Dispose(Boolean disposing)
+              public Void LJCAddColumns(DbColumns columns)
             </td>
           </tr>
         </tbody>
@@ -45,8 +45,8 @@
     </div>
     <br />
     <div class='Text'>
-            Clean up any resources being used.
-            </div>
+      Adds the grid columns.
+    </div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
 Licensed under the MIT License.</div>

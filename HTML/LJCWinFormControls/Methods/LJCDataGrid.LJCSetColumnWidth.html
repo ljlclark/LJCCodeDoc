@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- LJCDataGrid.Dispose.html -->
+<!-- LJCDataGrid.LJCSetColumnWidth.html -->
 <!-- Generated 9/4/2023 2:17 AM -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Dispose</title>
+  <title>LJCSetColumnWidth</title>
   <meta charset="utf-8" />
   <meta name="author" content="Lester J. Clark" />
   <meta name="viewport" content="width=device-width" initial-scale=1 />
@@ -17,17 +17,19 @@
       / <a href="../../../CodeDoc.html#LJCWinFormControls">Assembly List</a>
       / <a href="../LJCWinFormControls.html">LJCWinFormControls</a>
       / <a href="../LJCDataGrid.html">LJCDataGrid</a>
-      / Dispose
+      / LJCSetColumnWidth
     </div>
     <br />
     <div id='Title'>Namespace - LJCWinFormControls</div>
     <br />
     <div id='Header'>
-      <div id='Title'>Method Dispose</div>
+      <div id='Title'>Method LJCSetColumnWidth</div>
     </div>
     <br />
     <div id='Title'>Parameters</div>
-    <div class='Text'>disposing - true if managed resources should be disposed; otherwise, false.</div>
+    <div class='Text'>gridColumn - </div>
+    <div class='Text'>textLength - </div>
+    <div class='Text'>averageCapsWordSize - </div>
     <br />
     <div class='Text'>Syntax</div>
     <br />
@@ -37,7 +39,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              protected override Void Dispose(Boolean disposing)
+              public Void LJCSetColumnWidth(DataGridViewColumn gridColumn, Int32 textLength, Int32 averageCapsWordSize = 0)
             </td>
           </tr>
         </tbody>
@@ -45,7 +47,7 @@
     </div>
     <br />
     <div class='Text'>
-            Clean up any resources being used.
+            Sets the column width from the supplied character width value.
             </div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />

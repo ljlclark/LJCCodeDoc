@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- LJCDataGrid.LJCAddColumn.html -->
-<!-- Generated 7/11/2023 9:14 AM -->
+<!-- Generated 9/4/2023 2:17 AM -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>LJCAddColumn</title>
@@ -29,7 +29,8 @@
     <div id='Title'>Parameters</div>
     <div class='Text'>name - The column name.</div>
     <div class='Text'>caption - The column heading.</div>
-    <div class='Text'>characterWidth - The initial column character width.</div>
+    <div class='Text'>textLength - The initial column character width.</div>
+    <div class='Text'>averageCapsWordSize - The average word size.</div>
     <br />
     <div class='Text'>Returns</div>
     <br />
@@ -43,7 +44,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public DataGridViewColumn LJCAddColumn(String name, String caption, Int32 characterWidth = 0)
+              public DataGridViewColumn LJCAddColumn(String name, String caption, Int32 textLength = 0, Int32 averageCapsWordSize = 0)
             </td>
           </tr>
         </tbody>
