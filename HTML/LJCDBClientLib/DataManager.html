@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- DataManager.html -->
-<!-- Generated 9/29/2023 5:06 AM -->
+<!-- Generated 10/26/2023 10:03 AM -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DataManager</title>
@@ -109,13 +109,20 @@
         <td class='ListTable' width='25%'>
           <a href='Methods\DataManager.Reset.html'>Reset</a>
         </td>
-        <td class='ListTable'>Resets the data access configuration.
-      (R)</td>
+        <td class='ListTable'>Resets the data access configuration.       (R)</td>
       </tr>
     </table>
     <br />
     <div class='Title1'>Data Access Methods<br></div>
     <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.CreateLoadRequest.html'>CreateLoadRequest</a>
+        </td>
+        <td class='ListTable'>Creates and returns the Load
+      DbRequest
+      object.</td>
+      </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\DataManager.Delete.html'>Delete</a>
@@ -143,6 +150,12 @@
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.GetTableNames.html'>GetTableNames</a>
+        </td>
+        <td class='ListTable'>Retrieves the table names for the data configuration database.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
           <a href='Methods\DataManager.Load.html'>Load</a>
         </td>
         <td class='ListTable'>Retrieves a collection of data records.
@@ -167,37 +180,6 @@
         </td>
         <td class='ListTable'>Updates the record.
       (DE)</td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.CreateLoadRequest.html'>CreateLoadRequest</a>
-        </td>
-        <td class='ListTable'>Creates and returns the Load
-      DbRequest
-      object.</td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.GetTableNames.html'>GetTableNames</a>
-        </td>
-        <td class='ListTable'>Retrieves the table names for the data configuration database.</td>
-      </tr>
-    </table>
-    <br />
-    <div class='Title1'>Create Data Methods<br></div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.CreateSchemaColumnsResult.html'>CreateSchemaColumnsResult</a>
-        </td>
-        <td class='ListTable'>Takes a result object and transforms it into a result of column names.</td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataManager.CreateSchemaColumnsResult1.html'>CreateSchemaColumnsResult</a>
-        </td>
-        <td class='ListTable'>Retrieves the schema result for the specified table and transforms
-      it into a result of column</td>
       </tr>
     </table>
     <br />
@@ -238,6 +220,23 @@
         <td class='ListTable'>
       Adds a record to the database.
       (RE)
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.CreateSchemaColumnsResult.html'>CreateSchemaColumnsResult</a>
+        </td>
+        <td class='ListTable'>
+      Takes a result object and transforms it into a result of column names.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\DataManager.CreateSchemaColumnsResult1.html'>CreateSchemaColumnsResult</a>
+        </td>
+        <td class='ListTable'>
+      Retrieves the schema result for the specified table and transforms
+      it into a result of column names.
     </td>
       </tr>
       <tr>
