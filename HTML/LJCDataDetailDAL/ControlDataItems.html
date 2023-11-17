@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- DataDetailManagers.html -->
+<!-- ControlDataItems.html -->
 <!-- Generated 11/17/2023 2:15 PM -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>DataDetailManagers</title>
+  <title>ControlDataItems</title>
   <meta charset='utf-8' />
   <meta name="author" content="Lester J. Clark" />
   <meta name="viewport" content="width=device-width" initial-scale=1 />
@@ -16,13 +16,13 @@
     <div class="PathText">
       / <a href="../../CodeDoc.html#LJCDataDetailDAL">Assembly List</a>
       / <a href="LJCDataDetailDAL.html">LJCDataDetailDAL</a>
-      / DataDetailManagers
+      / ControlDataItems
     </div>
     <br />
     <div id='Title'>Namespace - LJCDataDetailDAL</div>
     <br />
     <div id='Header'>
-      <div id='Title'>Class DataDetailManagers</div>
+      <div id='Title'>Class ControlDataItems</div>
     </div>
     <br />
     <div class='Text'>Syntax</div>
@@ -33,70 +33,87 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public class DataDetailManagers 
+              public class ControlDataItems : List&lt;ControlData&gt;
             </td>
           </tr>
         </tbody>
       </table>
     </div>
     <br />
-    <div class='Text'>Gets the Manager objects.</div>
+    <div class='Text'>Represents a collection of ControlData objects.</div>
     <br />
-    <div class='Title1'>Constructor<br></div>
+    <div class='Title1'>Public Methods</div>
     <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Methods\DataDetailManagers.ctor.html'>#ctor</a>
+          <a href='Methods\ControlDataItems.ctor.html'>#ctor</a>
         </td>
-        <td class='ListTable'>Initializes an object instance.</td>
+        <td class='ListTable'>
+      Initializes an object instance.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\ControlDataItems.ctor1.html'>#ctor</a>
+        </td>
+        <td class='ListTable'>
+      The Copy constructor.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\ControlDataItems.Add.html'>Add</a>
+        </td>
+        <td class='ListTable'>
+      Creates and adds the object from the provided values.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\ControlDataItems.Clone.html'>Clone</a>
+        </td>
+        <td class='ListTable'>
+      Clones the structure of the object.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\ControlDataItems.DbColumns.html'>DbColumns</a>
+        </td>
+        <td class='ListTableMissing'>Missing Summary</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\ControlDataItems.GetCollection.html'>GetCollection</a>
+        </td>
+        <td class='ListTable'>
+      Get custom collection from List<T>.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\ControlDataItems.HasItems.html'>HasItems</a>
+        </td>
+        <td class='ListTable'>
+      Checks if the collection has items.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\ControlDataItems.LJCSearchID.html'>LJCSearchID</a>
+        </td>
+        <td class='ListTable'>
+      Retrieve the collection element.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\ControlDataItems.LJCSortID.html'>LJCSortID</a>
+        </td>
+        <td class='ListTable'>Sort on ID.</td>
       </tr>
     </table>
-    <br />
-    <div class='Title1'>Data<br></div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\DataDetailManagers.SetDBProperties.html'>SetDBProperties</a>
-        </td>
-        <td class='ListTable'>Sets the DB properties.</td>
-      </tr>
-    </table>
-    </table>
-    <div class='Text'>2 Methods</div>
-    <br />
-    <div id='Title'>Properties</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Properties\DataDetailManagers.ControlColumnManager.html'>ControlColumnManager</a>
-        </td>
-        <td class='ListTable'>Gets the ControlColumnManager object.</td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Properties\DataDetailManagers.ControlDataManager.html'>ControlDataManager</a>
-        </td>
-        <td class='ListTable'>Gets the ControlDataManager object.</td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Properties\DataDetailManagers.ControlDetailManager.html'>ControlDetailManager</a>
-        </td>
-        <td class='ListTable'>Gets the ControlDetailManager object.</td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Properties\DataDetailManagers.ControlRowManager.html'>ControlRowManager</a>
-        </td>
-        <td class='ListTable'>Gets the ControlRowManager object.</td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Properties\DataDetailManagers.ControlTabManager.html'>ControlTabManager</a>
-        </td>
-        <td class='ListTable'>Gets the ControlTabManager object.</td>
-      </tr>
-    </table>
+    <div class='Text'>9 Methods</div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
 Licensed under the MIT License.</div>
