@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- DataManager.html -->
-<!-- Generated 10/26/2023 10:03 AM -->
+<!-- Generated 12/24/2023 10:41 AM -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DataManager</title>
@@ -58,10 +58,15 @@
       </div>
     <br />
     <div class='Text'>
-        When the Data Manager object is first created, it initializes the
-        DataDefinition property with the definitions for the primary table
-        columns. The DataDefinition property is an
-        <span class="userType">LJCNetCommon.DbColumns</span>
+        The DataManager object creates the contained BaseDefinition collection
+        when the DataManager is created. The BaseDefinition contains the column
+        definitions for the base table. These column definitions are retrieved
+        from the database.
+      </div>
+    <br />
+    <div class='Text'>
+        The BaseDefinition property
+        is an <span class="userType">LJCNetCommon.DbColumns</span>
         object. Each element
         <span class="userType">DbColumn</span>
         contains the table ColumnName, PropertyName, Caption, DataTypeName
@@ -243,7 +248,9 @@
         <td class='ListTable' width='25%'>
           <a href='Methods\DataManager.Resequence.html'>Resequence</a>
         </td>
-        <td class='ListTableMissing'>Missing Summary</td>
+        <td class='ListTable'>
+      Resequence the sequence column values.
+    </td>
       </tr>
     </table>
     <div class='Text'>21 Methods</div>
@@ -272,7 +279,9 @@
         <td class='ListTable' width='25%'>
           <a href='Properties\DataManager.DataDefinition.html'>DataDefinition</a>
         </td>
-        <td class='ListTable'>Gets the data definition columns collection.</td>
+        <td class='ListTable'>
+      Gets or sets a reference to the Data Definition columns collection.
+    </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
