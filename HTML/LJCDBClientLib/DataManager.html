@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- DataManager.html -->
-<!-- Generated 12/24/2023 10:41 AM -->
+<!-- Generated 12/26/2023 6:15 AM -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DataManager</title>
@@ -53,47 +53,59 @@
         object. It then serializes the
         <span class="userType">DbRequest</span>
         object into a Request XML message to pass to the
-        <span class="commonType">DbService.Execute()</span>
+        <span class="userType">LJCDBServiceLib.DbService.Execute()</span>
+        method or directly to the
+        <span class="commonType">LJCDBDataAccess.DbDataAccess.Execute()</span>
         method.
       </div>
     <br />
     <div class='Text'>
         The DataManager object creates the contained BaseDefinition collection
-        when the DataManager is created. The BaseDefinition contains the column
-        definitions for the base table. These column definitions are retrieved
-        from the database.
-      </div>
-    <br />
-    <div class='Text'>
-        The BaseDefinition property
-        is an <span class="userType">LJCNetCommon.DbColumns</span>
-        object. Each element
+        when the DataManager is created. The BaseDefinition is an
+        <span class="commonType">LJCNetCommon.DbColumns</span>
+        collection which contains the column definitions for the base table. Each
+        element
         <span class="userType">DbColumn</span>
-        contains the table ColumnName, PropertyName, Caption, DataTypeName
-        and MaxLength.
+        contains the table ColumnName, PropertyName, Caption, DataTypeName and
+        MaxLength. These column definitions are retrieved from the database.
       </div>
     <br />
     <div class='Text'>
-        The <span class="userType">DbColumn</span>
-        Caption is initially set to the same value as the ColumnName
-        as that is how it is returned from ADO.NET. The PropertyName is initially
-        set to the same value as the ColumnName which is what the
+        The contained DataDefinition collection is also created at this time. This
+        enables adding Calculated and Join columns to a grid columns configuration.
+      </div>
+    <br />
+    <div class='Text'>
+        The
+        <span class="commonType">DbColumn.Caption</span>
+        is initially set to the same value as the ColumnName as that is how it is
+        returned from ADO.NET. The PropertyName is initially set to the same value
+        as the ColumnName if the
         <span class="userType">DbColumn</span>
-        object does if it is initialized with a blank PropertyName value. These
-        values can be modified later as required.
+        is initialized with a blank PropertyName value. These values can be modified
+        later as required.
       </div>
     <br />
     <div class='Text'>
-        The DataDefinition is used to create the
+        The BaseDefinition is used to create the
         <span class="userType">DbColumn</span>
         objects that are defined in a
         <span class="userType">DbRequest</span>
-        object. These objects are then used to create the SQL Statements that
-        are executed to perform the requested data operation.
+        object. These objects are then used to create the SQL Statements that are
+        executed to perform the requested data operation.
       </div>
     <br />
     <div class='Text'>
-        The test code is found in project LJCDataManagerTest\PersonDALTest.
+        The Data methods are Add(), Delete(), ExecuteClientSql(), Load,
+        LoadProcedure(), Retrieve() and Update().
+      </div>
+    <br />
+    <div class='Text'>
+        The Data methods create a
+        <span class="userType">DbRequest</span>
+        object and pass it to the
+        <span class="commonType">ExecuteRequest()</span>
+        method.
       </div>
     <br />
     <div class='Title1'>Constructor<br></div>
