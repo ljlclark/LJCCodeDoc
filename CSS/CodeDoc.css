@@ -123,6 +123,10 @@ div#Title {
 }
 
 /* Class Selectors */
+.links {
+  margin-left:5px;
+}
+
 .page {
   margin-left: 18px;
   margin-right: 20px;
