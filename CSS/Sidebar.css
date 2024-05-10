@@ -10,35 +10,44 @@ html {
   height: 100%;
 }
 
-ul {
-  list-style-type: none;
-  padding-left: 15px;
-}
-
-/* Class Selectors */
-.navFirst {
-  padding-top: 7px;
-}
-
+/* Nav text Class Selectors */
 .navGroup {
-  padding-bottom: 4px;
+  font-size: 16px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.navLiveGroup {
+  font-size: 16px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.navSubGroup {
+  font-size: 16px;
+  margin-left: 14px;
+  margin-top: 5px;
 }
 
 .navItem {
-  padding-bottom: 3px;
-  padding-top: 2px;
+  margin-left: 24px;
 }
 
-.navItemGroup {
-  margin-top: 3px;
+  .navLiveGroup:hover, .navItem:hover {
+    background-color: aliceblue;
+  }
+
+/* Sidebar Class Selectors */
+.smallText {
+  font-family: Arial;
+  font-size: 6pt;
+  padding-left: 15px;
 }
 
-/* ID Selectors */
+/* Sidebar ID Selectors */
 #content {
-  display: inline-block;
   height: 100%;
   overflow: hidden;
-  vertical-align: top;
   width: 75%;
 }
 
@@ -61,14 +70,8 @@ ul {
 
 #sidebar {
   background-color: lightsteelblue;
-  display: inline-block;
+  float: left;
   height: 100%;
   overflow: auto;
-  vertical-align: top;
   width: 25%;
 }
-
-  /* Combined Selectors */
-  #sidebar .navGroup:hover, .navItemGroup:hover, .navItem:hover {
-    background-color: aliceblue;
-  }
