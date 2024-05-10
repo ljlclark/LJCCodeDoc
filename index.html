@@ -5,166 +5,156 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>LJC Technical Documentation</title>
+  <meta charset='utf-8' />
   <meta name="description" content="LJC C# CodeDoc">
   <meta name="keywords" content="LJC, GitHub, C#, Code, Documentation">
-  <meta charset='utf-8' />
   <meta name='author' content='Lester J. Clark' />
   <meta name='viewport' content='width=device-width initial-scale=1' />
-  <link rel='stylesheet' type='text/css' href='CSS/CodeDoc.css' />
-  <link rel='stylesheet' type='text/css' href='CSS/Sidebar.css' />
   <script src="Common/Common.js"></script>
   <script src="Script/CCodeDocNavItems.js"></script>
   <script src="Script/CCodeDocNavEvents.js"></script>
+  <style>
+    /* Type Selectors */
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    /* Nav text Class Selectors */
+    .navGroup {
+      font-size: 16px;
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+
+    .navLiveGroup {
+      font-size: 16px;
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+
+    .navSubGroup {
+      font-size: 16px;
+      margin-left: 14px;
+      margin-top: 5px;
+    }
+
+    .navItem {
+      margin-left: 24px;
+    }
+
+      .navLiveGroup:hover, .navItem:hover {
+        background-color: aliceblue;
+      }
+
+    /* Sidebar Class Selectors */
+    .smallText {
+      font-family: Arial;
+      font-size: 6pt;
+      padding-left: 15px;
+    }
+
+    /* Sidebar ID Selectors */
+    #content {
+      height: 100%;
+      overflow: hidden;
+      width: 75%;
+    }
+
+    #contentFrame {
+      border: none;
+      height: 100%;
+      width: 100%;
+    }
+
+    #sidebar {
+      background-color: lightsteelblue;
+      float: left;
+      height: 100%;
+      overflow: auto;
+      width: 25%;
+    }
+  </style>
 </head>
 <body>
   <!-- Show/Hide Menu Icon -->
   <span id="menubar"><img id="menuIco" src="AppManager.ico" /></span>
   <div id="sidebar">
-    <ul>
-      <li id="Projects" class="navGroup">LJC Projects</li>
-      <li id="Build" class="navGroup">System Build</li>
-      <li class="navFirst">
-        <span>Common Libraries</span>
-        <ul>
-          <li>
-            <div class="caption2">.NET Code</div>
-            <ul>
-              <li id="NetCommon" class="navItem">.NET Common Library</li>
-            </ul>
-          </li>
-          <li>
-            <div class="caption2">Text DataReader</div>
-            <ul>
-              <li id="Reader" class="navItem">Text DataReader Library</li>
-            </ul>
-          </li>
-          <li>
-            <div class="caption2">WinForms</div>
-            <ul>
-              <li id="Common" class="navItem">Common Library</li>
-              <li id="Controls" class="navItem">Controls Library</li>
-              <li id="GridLib" class="navItem">DbResult Grid Helper Library</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <span>Data Libraries</span>
-        <ul>
-          <li>
-            <div class="caption2">Data Access</div>
-            <ul>
-              <li id="Overview" class="navItem">Overview</li>
-              <li id="Config" class="navItem">Data Access Config Library</li>
-              <li id="Data" class="navItem">ADO Data Access Library</li>
-              <li id="DBData" class="navItem">Message Data Access Library</li>
-            </ul>
-          </li>
-          <li>
-            <div class="caption2">Client</div>
-            <ul>
-              <li id="Message" class="navItem">DB Message Library</li>
-              <li id="Client" class="navItem">DB Service Client</li>
-            </ul>
-          </li>
-          <li>
-            <div class="caption2">Server</div>
-            <ul>
-              <li id="DBService" class="navItem">DB Service Library</li>
-              <li id="HostCon" class="navItem">DB Service Console Host</li>
-              <li id="Host" class="navItem">DB Service Host</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <span>Text Generator Utility</span>
-        <ul>
-          <li>
-            <div class="caption2">Text Generator</div>
-            <ul>
-              <li id="GenText" class="navItem">Text Generator Program</li>
-              <li id="GenLib" class="navItem">Text Generator Library</li>
-              <li id="GenTable" class="navItem">Table Text Generator Program</li>
-            </ul>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <div class="caption2">Text Generator Editor</div>
-            <ul>
-              <li id="GenEdit" class="navItem">Text Generator Editor Program</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <span>HTML Generator Utility</span>
-        <ul>
-          <li>
-            <div class="caption2">Page Generator</div>
-            <ul>
-              <li id="DocGen" class="navItem">GenDoc Generator Program</li>
-              <li id="DocLib" class="navItem">GenDoc Generator Library</li>
-            </ul>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <div class="caption2">Deserialization Objects</div>
-            <ul>
-              <li id="DocDAL" class="navItem">GenDoc DAL Library</li>
-              <li id="DocObj" class="navItem">GenDoc Data Objects</li>
-              <li id="DocXML" class="navItem">GenDoc XML Doc Objects</li>
-            </ul>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <div class="caption2">Group Editor</div>
-            <ul>
-              <li id="DocEdit" class="navItem">GenDoc Group Edit Program</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <span>DataView Programs and Libraries</span>
-        <ul>
-          <li>
-            <div class="caption2">DataView Data Access Layer</div>
-            <ul>
-              <li id="ViewDAL" class="navItem">DataView DAL Library</li>
-            </ul>
-          </li>
-          <li>
-            <div class="caption2">DataView Editor</div>
-            <ul>
-              <li id="ViewEdit" class="navItem">DataView Editor</li>
-              <li id="ViewEditDAL" class="navItem">DataView DAL Library</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <div class="SmallText">
+    <div id="Projects" class="navLiveGroup">Projects</div>
+    <div id="Build" class="navLiveGroup">Build</div>
+
+    <div class="navGroup">Common Libraries</div>
+    <div class="navSubGroup">.NET Code</div>
+    <div id="NetCommon" class="navItem">.NET Common Library</div>
+
+    <div class="navSubGroup">Text DataReader</div>
+    <div id="Reader" class="navItem">Text DataReader Library</div>
+
+    <div class="navSubGroup">WinForms</div>
+    <div id="Common" class="navItem">Common Library</div>
+    <div id="Controls" class="navItem">Controls Library</div>
+    <div id="GridLib" class="navItem">DbResult Grid Helper</div>
+
+    <div class="navGroup">Data Libraries</div>
+    <div class="navSubGroup">Data Access</div>
+    <div id="Overview" class="navItem">Overview</div>
+    <div id="Config" class="navItem">Data Access Config Library</div>
+    <div id="Data" class="navItem">ADO Data Access Library</div>
+    <div id="DBData" class="navItem">Message Data Access Library</div>
+
+    <div class="navSubGroup">Client</div>
+    <div id="Message" class="navItem">DB Message Library</div>
+    <div id="Client" class="navItem">DB Service Client</div>
+
+    <div class="navSubGroup">Server</div>
+    <div id="DBService" class="navItem">DB Service Library</div>
+    <div id="HostCon" class="navItem">DB Service Console Host</div>
+    <div id="Host" class="navItem">DB Service Host</div>
+
+    <div class="navGroup">Text Generator Utility</div>
+    <div class="navSubGroup">Text Generator</div>
+    <div id="GenText" class="navItem">Text Generator Program</div>
+    <div id="GenLib" class="navItem">Text Generator Library</div>
+    <div id="GenTable" class="navItem">Table Text Generator Program</div>
+
+    <div class="navSubGroup">Text Generator Editor</div>
+    <div id="GenEdit" class="navItem">Text Generator Editor Program</div>
+
+    <div class="navGroup">HTML Generator Utility</div>
+    <div class="navSubGroup">Page Generator</div>
+    <div id="DocGen" class="navItem">GenDoc Generator Program</div>
+    <div id="DocLib" class="navItem">GenDoc Generator Library</div>
+
+    <div class="navSubGroup">Deserialization Objects</div>
+    <div id="DocDAL" class="navItem">GenDoc DAL Library</div>
+    <div id="DocObj" class="navItem">GenDoc Data Objects</div>
+    <div id="DocXML" class="navItem">GenDoc XML Doc Objects</div>
+
+    <div class="navSubGroup">Group Editor</div>
+    <div id="DocEdit" class="navItem">GenDoc Group Edit Program</div>
+
+    <div class="navGroup">DataView Programs and Libraries</div>
+    <div class="navSubGroup">DataView Data Access Layer</div>
+    <div id="ViewDAL" class="navItem">DataView DAL Library</div>
+
+    <div class="navSubGroup">DataView Editor</div>
+    <div id="ViewEdit" class="navItem">DataView Editor</div>
+    <div id="ViewEditDAL" class="navItem">DataView Editor DAL Library</div>
+    <br />
+    <div class="smallText">
       Copyright &copy Lester J. Clark and Contributors.<br />
       Licensed under the MIT License.
     </div>
-  </div><div id="content">
+  </div>
+  <div id="content">
     <iframe id="contentFrame" src="CodeDoc.html"></iframe>
   </div>
-
   <script>
-    const contentFrame = Common.Element("contentFrame");
+    const contentFrame = document.getElementById("contentFrame");
     const navEvents = new CNavEvents(contentFrame);
     navEvents.AddEvents();
   </script>
