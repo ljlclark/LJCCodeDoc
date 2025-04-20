@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- HTMLBuilder.Create.html -->
+<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Create</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+      / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+      / <a href="../HTMLBuilder.html">HTMLBuilder</a>
+      / Create
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCNetCommon</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method Create</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>name - The element name.</div>
+    <div class='Text'>text - The element content text.</div>
+    <div class='Text'>textState - The current text state values.</div>
+    <div class='Text'>htmlAttribs - The element attributes.</div>
+    <div class='Text'>addIndent - 
+      Indicates if the element can be indented.
+    </div>
+    <div class='Text'>childIndent - 
+      Indicates if the child elements should be indented.
+    </div>
+    <div class='Text'>isEmpty - Indicates if an empty element.</div>
+    <div class='Text'>close - Indicates if the element will be closed.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The added HTML element.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public String Create(String name, String text, TextState textState, Attributes htmlAttribs = null, Boolean addIndent = True, Boolean childIndent = True, Boolean isEmpty = False, Boolean close = True)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Appends an element.
+    </div>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
+      Create() is an "Append" method. It creates the element text with
+      GetCreate() and adds it to the builder.
+      The appended text does not end with a new line. This allows for additions
+      after the text.<br />
+      The added text will start with a new line if the builder text already has
+      a value.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+<span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuider</span>();
+
+<span class='commonType'>var</span> attribs = <span class='keyWord'>new</span> <span class='userType'>Attributes</span>()
+{
+    { "src", "fileName.js" },
+};
+hb.Create("script", <span class='keyWord'>null</span>, attribs);
+<span class='commonType'>var</span> result = hb.ToString();
+
+<span class='comment'>// result:</span>
+<span class='comment'>// &lt;script src="fileName.js"&gt;&lt;&gt;</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>

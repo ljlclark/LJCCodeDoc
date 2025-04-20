@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- HTMLBuilder.GetHTMLBegin.html -->
+<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>GetHTMLBegin</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+      / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+      / <a href="../HTMLBuilder.html">HTMLBuilder</a>
+      / GetHTMLBegin
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCNetCommon</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method GetHTMLBegin</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>textState - The current text state values.</div>
+    <div class='Text'>copyright - The copyright array.</div>
+    <div class='Text'>fileName - The HTML file name.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The HTML beginning text.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public String GetHTMLBegin(TextState textState, String[] copyright = null, String fileName = null)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Gets the HTML beginning up to and including &lt;head&gt;.
+  </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+<span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuider</span>();
+
+<span class='commonType'>var</span> copyright = <span class='keyWord'>new</span> <span class='commonType'>string</span>[]
+{
+    "Copyright Line 1",
+    "Copyright Line 2",
+};
+<span class='commonType'>var</span> result = hb.GetHTMLBegin(null, copyright, "fileName.html");
+
+<span class='comment'>// result:</span>
+<span class='comment'>// &lt;!DOCTYPE html&gt;</span>
+<span class='comment'>// &lt;!-- Copyright Line 1 --&gt;</span>
+<span class='comment'>// &lt;!-- Copyright Line 1 --&gt;</span>
+<span class='comment'>// &lt;!-- fileName.html --&gt;</span>
+<span class='comment'>// &lt;html lang="en" xmlns="http://www.w3.org/1999/xhtml"&gt;</span>
+<span class='comment'>// &lt;head&gt;</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- HTMLBuilder.AddIndent.html -->
+<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>AddIndent</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+      / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+      / <a href="../HTMLBuilder.html">HTMLBuilder</a>
+      / AddIndent
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCNetCommon</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method AddIndent</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>increment - 
+      The amount to increment or decrement the indent count.
+    </div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The current indent count.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public Int32 AddIndent(Int32 increment = 1)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Changes the IndentCount by the supplied value.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+<span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuilder</span>();
+
+<span class='comment'>// The builder keeps track of the current number of indents.</span>
+<span class='comment'>// Adds 1 indent by default.</span>
+hb.AddIndent();
+
+<span class='comment'>// Adds text without modification.</span>
+hb.AddText("This text <span class='keyWord'>is</span> not indented.");
+
+<span class='comment'>// Adds a new line before adding the text if the builder</span>
+<span class='comment'>// already has text.</span>
+<span class='comment'>// Starts with the current indent string.</span>
+hb.Text("This text <span class='keyWord'>is</span> indented.");
+
+<span class='comment'>// No Indent</span>
+<span class='commonType'>var</span> addIndent = <span class='keyWord'>false</span>;
+hb.Text("Not indented.", addIndent);
+
+<span class='comment'>// Do not start a new line.</span>
+hb.Text("No New Line.", allowNewLine: false);
+<span class='commonType'>var</span> result = hb.ToString();
+
+<span class='comment'>// result:</span>
+<span class='comment'>// This text is not indented.</span>
+<span class='comment'>//   This text is indented.</span>
+<span class='comment'>// Not Indented.  No New Line</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>

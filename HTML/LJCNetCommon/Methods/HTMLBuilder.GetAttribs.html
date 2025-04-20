@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- HTMLBuilder.GetAttribs.html -->
+<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>GetAttribs</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+      / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+      / <a href="../HTMLBuilder.html">HTMLBuilder</a>
+      / GetAttribs
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCNetCommon</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method GetAttribs</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>htmlAttribs - The attributes collection.</div>
+    <div class='Text'>textState - The current text state values.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The attributes text.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public String GetAttribs(Attributes htmlAttribs, TextState textState)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Gets the attributes text.
+    </div>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
+      The returned text does not end with a new line. This allows for additions
+      after the text.<br />
+      Begin, Create and End text will start with a new line if the builder text
+      already has a value.<br />
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+<span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuider</span>();
+        
+<span class='commonType'>var</span> attribs = <span class='keyWord'>new</span> <span class='userType'>Attributes</span>()
+{
+    { "class", "Selector" },
+};
+hb.Begin("div", <span class='keyWord'>null</span>, attribs);
+hb.End("div");
+<span class='commonType'>var</span> result = hb.ToString();
+
+<span class='comment'>// result:</span>
+<span class='comment'>// &lt;div class="Selector"&gt;</span>
+<span class='comment'>// &lt;div&gt;</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>
