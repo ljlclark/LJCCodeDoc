@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!-- TextBuilder.html -->
+<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>TextBuilder</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+      / <a href="LJCNetCommon.html">LJCNetCommon</a>
+      / TextBuilder
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCNetCommon</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Class TextBuilder</div>
+    </div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public class TextBuilder 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>Provides methods for creating text.</div>
+    <br />
+    <div class='Title1'>Public Methods</div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.AddIndent.html'>AddIndent</a>
+        </td>
+        <td class='ListTable'>
+      Changes the IndentCount by the provided value.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.AddLine.html'>AddLine</a>
+        </td>
+        <td class='ListTable'>
+      Adds a text line without modification.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.AddText.html'>AddText</a>
+        </td>
+        <td class='ListTable'>Adds text without modification.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.GetDelimited.html'>GetDelimited</a>
+        </td>
+        <td class='ListTable'>
+      Adds a delimiter if not the first list item.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.GetIndented.html'>GetIndented</a>
+        </td>
+        <td class='ListTable'>
+      Gets a new potentially indented line.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.GetIndentString.html'>GetIndentString</a>
+        </td>
+        <td class='ListTable'>Returns the current indent string.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.GetLine.html'>GetLine</a>
+        </td>
+        <td class='ListTable'>Gets a modified text line.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.GetText.html'>GetText</a>
+        </td>
+        <td class='ListTable'>
+      Gets potentially modified text.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.GetWrapped.html'>GetWrapped</a>
+        </td>
+        <td class='ListTable'>
+      Gets added text and new wrapped line if combined line > LineLimit.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.Item.html'>Item</a>
+        </td>
+        <td class='ListTable'>
+      Adds a delimiter if not the first list item
+      and adds a newline if line length is greater than CharLength.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.Line.html'>Line</a>
+        </td>
+        <td class='ListTable'>
+      Adds a modified text line to the builder.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.Text.html'>Text</a>
+        </td>
+        <td class='ListTable'>
+      Adds modified text to the builder.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.ToString.html'>ToString</a>
+        </td>
+        <td class='ListTable'>Implements the ToString() method.</td>
+      </tr>
+    </table>
+    <div class='Text'>13 Methods</div>
+    <br />
+    <div class='Title2'>Private Methods</div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.ctor.html'>#ctor</a>
+        </td>
+        <td class='ListTable'>Initializes an object instance.</td>
+      </tr>
+    </table>
+    <div class='Text'>1 Methods</div>
+    <br />
+    <div id='Title'>Properties</div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\TextBuilder.Builder.html'>Builder</a>
+        </td>
+        <td class='ListTable'>The internal StringBuilder class.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\TextBuilder.Delimiter.html'>Delimiter</a>
+        </td>
+        <td class='ListTable'>Gets or sets the delimiter.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\TextBuilder.HasText.html'>HasText</a>
+        </td>
+        <td class='ListTable'>Indicates if the builder has text.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\TextBuilder.IndentCharCount.html'>IndentCharCount</a>
+        </td>
+        <td class='ListTable'>Gets or sets the indent character count.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\TextBuilder.IndentCount.html'>IndentCount</a>
+        </td>
+        <td class='ListTable'>Gets the indent count.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\TextBuilder.IndentLength.html'>IndentLength</a>
+        </td>
+        <td class='ListTable'>Gets the current indent length.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\TextBuilder.IsFirst.html'>IsFirst</a>
+        </td>
+        <td class='ListTable'>Gets or sets the first item indicator.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\TextBuilder.LineLength.html'>LineLength</a>
+        </td>
+        <td class='ListTable'>Gets the current length.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\TextBuilder.LineLimit.html'>LineLimit</a>
+        </td>
+        <td class='ListTable'>Gets or sets the character limit.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\TextBuilder.WrapAtDelimiter.html'>WrapAtDelimiter</a>
+        </td>
+        <td class='ListTable'>
+            Indicates that a wrap should occur at a leading delimiter.
+            </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\TextBuilder.WrapEnabled.html'>WrapEnabled</a>
+        </td>
+        <td class='ListTable'>Indicates if line wrapping is enabled.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\TextBuilder.WrapPrefix.html'>WrapPrefix</a>
+        </td>
+        <td class='ListTable'>Gets or sets the new line prefix.</td>
+      </tr>
+    </table>
+    <br />
+    <div id='Title'>Fields</div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Fields\TextBuilder.DebugText.html'>DebugText</a>
+        </td>
+        <td class='ListTableMissing'>Missing Summary</td>
+      </tr>
+    </table>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>

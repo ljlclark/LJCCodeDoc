@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- ObjectManager`2.html -->
-<!-- Generated 9/27/2023 12:05 PM -->
+<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>ObjectManager`2</title>
@@ -306,16 +308,16 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='userType'>IF</span> <span class='userType'>NOT</span> EXISTS(SELECT* FROM INFORMATION_SCHEMA.TABLES
- <span class='userType'>WHERE</span> TABLE_NAME = N'PersonTest')
+  <span class='userType'>WHERE</span> TABLE_NAME = N'PersonTest')
 BEGIN
 <span class='userType'>CREATE</span> TABLE[dbo].[PersonTest]
 (
-  [Id][int] IDENTITY(1,1) <span class='userType'>NOT</span> NULL,
-  [Name] [nvarchar] (60) NULL,
-  [PrincipleFlag] [bit] <span class='userType'>NOT</span> NULL,
-  CONSTRAINT[PK_PersonTest]
-  <span class='userType'>PRIMARY</span> KEY CLUSTERED(
-  [Id] ASC),
+    [Id][int] IDENTITY(1,1) <span class='userType'>NOT</span> NULL,
+    [Name] [nvarchar] (60) NULL,
+    [PrincipleFlag] [bit] <span class='userType'>NOT</span> NULL,
+    CONSTRAINT[PK_PersonTest]
+    <span class='userType'>PRIMARY</span> KEY CLUSTERED(
+    [Id] ASC),
 )
 END
 GO
@@ -332,9 +334,9 @@ GO
 <span class='comment'>// A Person Data Record class.</span>
 <span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>Person</span>
 {
-  <span class='modifier'>public</span> <span class='commonType'>Int32</span> ID { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
-  <span class='modifier'>public</span> <span class='commonType'>string</span> Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
-  <span class='modifier'>public</span> <span class='commonType'>bool</span> PrincipleFlag { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+    <span class='modifier'>public</span> <span class='commonType'>Int32</span> ID { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+    <span class='modifier'>public</span> <span class='commonType'>string</span> Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+    <span class='modifier'>public</span> <span class='commonType'>bool</span> PrincipleFlag { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
 }
 
 <span class='comment'>// A collection of Person records.</span>
@@ -343,79 +345,79 @@ GO
 <span class='comment'>// Test ObjectManager.</span>
 <span class='modifier'>public</span> <span class='modifier'>static</span> <span class='commonType'>void</span> TestObjectDataAccess()
 {
-  <span class='userType'>DbConnectionStringBuilder</span> connectionBuilder;
-  <span class='userType'>DbDataAccess</span> dbDataAccess;
+    <span class='userType'>DbConnectionStringBuilder</span> connectionBuilder;
+    <span class='userType'>DbDataAccess</span> dbDataAccess;
 
-  <span class='commonType'>string</span> databaseName = "DatabaseName";
-  connectionBuilder = <span class='keyWord'>new</span> <span class='userType'>DbConnectionStringBuilder</span>()
-  {
-    { "Data Source", "DataServiceName" },
-    { "Initial Catalog", databaseName },
-    { "Integrated Security", "True" }
-  };
-  <span class='commonType'>string</span> connectionString = connectionBuilder.ConnectionString;
-  <span class='commonType'>string</span> providerName = "System.Data.SqlClient";
-  dbDataAccess = <span class='keyWord'>new</span> <span class='userType'>DbDataAccess</span>(connectionString, providerName
-    , databaseName);
+    <span class='commonType'>string</span> databaseName = "DatabaseName";
+    connectionBuilder = <span class='keyWord'>new</span> <span class='userType'>DbConnectionStringBuilder</span>()
+    {
+        { "Data Source", "DataServiceName" },
+        { "Initial Catalog", databaseName },
+        { "Integrated Security", "True" }
+    };
+    <span class='commonType'>string</span> connectionString = connectionBuilder.ConnectionString;
+    <span class='commonType'>string</span> providerName = "System.Data.SqlClient";
+    dbDataAccess = <span class='keyWord'>new</span> <span class='userType'>DbDataAccess</span>(connectionString, providerName
+        , databaseName);
 
-  <span class='comment'>// Create the Data Access object for the desired communication type.</span>
-  <span class='comment'>//string endPointConfigurationName = "NetTcpBinding_IDbService";</span>
-  <span class='userType'>DbServiceRef</span> dbServiceRef = <span class='keyWord'>new</span> <span class='userType'>DbServiceRef</span>()
-  {
-    <span class='comment'>// Direct Message Data Access communication.</span>
-    <span class='userType'>DbDataAccess</span> = dbDataAccess,
+    <span class='comment'>// Create the Data Access object for the desired communication type.</span>
+    <span class='comment'>//string endPointConfigurationName = "NetTcpBinding_IDbService";</span>
+    <span class='userType'>DbServiceRef</span> dbServiceRef = <span class='keyWord'>new</span> <span class='userType'>DbServiceRef</span>()
+    {
+        <span class='comment'>// Direct Message Data Access communication.</span>
+        <span class='userType'>DbDataAccess</span> = dbDataAccess,
 
-    <span class='comment'>// Direct Database Service.</span>
-    <span class='comment'>//DbService = new DbService(),</span>
+        <span class='comment'>// Direct Database Service.</span>
+        <span class='comment'>//DbService = new DbService(),</span>
 
-    <span class='comment'>// Remote Database Service with Client Proxy.</span>
-    <span class='comment'>//DbServiceClient = new DbServiceClient(endPointConfigurationName)</span>
-  };
+        <span class='comment'>// Remote Database Service with Client Proxy.</span>
+        <span class='comment'>//DbServiceClient = new DbServiceClient(endPointConfigurationName)</span>
+    };
     
-  <span class='comment'>// Create the ObjectManager.</span>
-  <span class='comment'>//  - Creates the DataDefinition object.</span>
-  <span class='comment'>//  - Creates the DbRequest object with all data and key columns.</span>
-  <span class='comment'>//  - Sets and returns the database assigned values.</span>
-  <span class='userType'>ObjectManager</span>&lt;Person, Persons&gt; personManager;
-  personManager = <span class='keyWord'>new</span> <span class='userType'>ObjectManager</span>&lt;Person, Persons&gt;(dbServiceRef, <span class='keyWord'>null</span>
-    , "PersonTest");
+    <span class='comment'>// Create the ObjectManager.</span>
+    <span class='comment'>//  - Creates the DataDefinition object.</span>
+    <span class='comment'>//  - Creates the DbRequest object with all data and key columns.</span>
+    <span class='comment'>//  - Sets and returns the database assigned values.</span>
+    <span class='userType'>ObjectManager</span>&lt;Person, Persons&gt; personManager;
+    personManager = <span class='keyWord'>new</span> <span class='userType'>ObjectManager</span>&lt;Person, Persons&gt;(dbServiceRef, <span class='keyWord'>null</span>
+        , "PersonTest");
         
-  <span class='keyWord'>if</span> (personManager.IsSuccess)
-  {
-    <span class='comment'>// Map table names with property names or captions</span>
-    <span class='comment'>// that differ from the column names.</span>
-    personManager.MapNames("Id", "ID");
-
-    <span class='comment'>// Create the list of database assigned columns.</span>
-    <span class='comment'>// And make sure the AutoIncrement value is set.</span>
-    personManager.DbAssignedColumnNames = <span class='keyWord'>new</span> <span class='commonType'>string</span>[]
+    <span class='keyWord'>if</span> (personManager.IsSuccess)
     {
-      "Id"
-    };
+        <span class='comment'>// Map table names with property names or captions</span>
+        <span class='comment'>// that differ from the column names.</span>
+        personManager.MapNames("Id", "ID");
 
-    <span class='comment'>// Create the list of lookup column names.</span>
-    <span class='comment'>// This list must include the database assigned columns.</span>
-    personManager.LookupColumnNames = <span class='keyWord'>new</span> <span class='commonType'>string</span>[]
-    {
-      "Id",
-      "Name"
-    };
+        <span class='comment'>// Create the list of database assigned columns.</span>
+        <span class='comment'>// And make sure the AutoIncrement value is set.</span>
+        personManager.DbAssignedColumnNames = <span class='keyWord'>new</span> <span class='commonType'>string</span>[]
+        {
+            "Id"
+        };
 
-    <span class='userType'>Persons</span> persons = Load(personManager);
-    Add(personManager);
-    <span class='userType'>Person</span> person = Retrieve(personManager);
-    persons = Load(personManager);
-    Update(personManager);
-    persons = Load(personManager);
-    Delete(personManager);
-    persons = Load(personManager);
+        <span class='comment'>// Create the list of lookup column names.</span>
+        <span class='comment'>// This list must include the database assigned columns.</span>
+        personManager.LookupColumnNames = <span class='keyWord'>new</span> <span class='commonType'>string</span>[]
+        {
+            "Id",
+            "Name"
+        };
 
-    Add(personManager);
-    person = RetrieveClientSql(personManager);
-    persons = LoadClientSql(personManager);
-    ExecuteClientSql(personManager);
-    persons = LoadClientSql(personManager);
-  }
+        <span class='userType'>Persons</span> persons = Load(personManager);
+        Add(personManager);
+        <span class='userType'>Person</span> person = Retrieve(personManager);
+        persons = Load(personManager);
+        Update(personManager);
+        persons = Load(personManager);
+        Delete(personManager);
+        persons = Load(personManager);
+
+        Add(personManager);
+        person = RetrieveClientSql(personManager);
+        persons = LoadClientSql(personManager);
+        ExecuteClientSql(personManager);
+        persons = LoadClientSql(personManager);
+    }
 }</pre>
             </td>
           </tr>

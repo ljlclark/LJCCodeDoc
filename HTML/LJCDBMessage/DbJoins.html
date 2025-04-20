@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DbJoins.html -->
-<!-- Generated 9/29/2023 5:06 AM -->
+<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DbJoins</title>
@@ -102,14 +104,14 @@
 <span class='comment'>// A Person Data Record class.</span>
 <span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>Person</span>
 {
-  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Gets or sets the PersonId value.</span><span class='xmlComment'>&lt;/summary&gt;</span>
-  <span class='modifier'>public</span> <span class='commonType'>Int32</span> PersonId { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+    &lt;span class='xmlComment'&gt;/// &lt;summary&gt;</span><span class='comment'>Gets or sets the PersonId value.</span><span class='xmlComment'>&lt;/summary&gt;&lt;/span&gt;
+    <span class='modifier'>public</span> <span class='commonType'>Int32</span> PersonId { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
         
-  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Gets or sets the Name value.</span><span class='xmlComment'>&lt;/summary&gt;</span>
-  <span class='modifier'>public</span> <span class='commonType'>string</span> Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+    &lt;span class='xmlComment'&gt;/// &lt;summary&gt;</span><span class='comment'>Gets or sets the Name value.</span><span class='xmlComment'>&lt;/summary&gt;&lt;/span&gt;
+    <span class='modifier'>public</span> <span class='commonType'>string</span> Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
         
-  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Gets or sets the City value.</span><span class='xmlComment'>&lt;/summary&gt;</span>
-  <span class='modifier'>public</span> <span class='commonType'>string</span> City { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+    &lt;span class='xmlComment'&gt;/// &lt;summary&gt;</span><span class='comment'>Gets or sets the City value.</span><span class='xmlComment'>&lt;/summary&gt;&lt;/span&gt;
+    <span class='modifier'>public</span> <span class='commonType'>string</span> City { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
 }
         
 <span class='comment'>// Creating the Joins collection object.</span>
@@ -118,8 +120,8 @@
 <span class='userType'>DbJoins</span> dbJoins = <span class='keyWord'>new</span> <span class='userType'>DbJoins</span>();
 dbJoin = <span class='keyWord'>new</span> <span class='userType'>DbJoin</span>()
 {
-  TableName = "Address",
-  JoinType = "Left"
+    TableName = "Address",
+    JoinType = "Left"
 };
         
 <span class='comment'>// Create the JoinOn definitions and add them to the JoinOns collection.</span>
@@ -127,9 +129,9 @@ dbJoin = <span class='keyWord'>new</span> <span class='userType'>DbJoin</span>()
 <span class='userType'>DbJoinOns</span> dbJoinOns = <span class='keyWord'>new</span> <span class='userType'>DbJoinOns</span>();
 <span class='userType'>DbJoinOn</span> dbJoinOn = <span class='keyWord'>new</span> <span class='userType'>DbJoinOn</span>()
 {
-  FromColumnName = "ID",
-  ToColumnName = "PersonID",
-  JoinOnOperator = "=" // Default
+    FromColumnName = "ID",
+    ToColumnName = "PersonID",
+    JoinOnOperator = "=" // Default
 };
 dbJoinOns.Add(dbJoinOn);
 dbJoin.JoinOns = dbJoinOns;
@@ -140,9 +142,9 @@ dbJoin.JoinOns = dbJoinOns;
 <span class='userType'>DbColumns</span> columns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>();
 <span class='userType'>DbColumn</span> column = <span class='keyWord'>new</span> <span class='userType'>DbColumn</span>()
 {
-  ColumnName = "City_Name",
-  PropertyName = "City", // Defaults to same as ColumnName
-  DataTypeName = "String" // Default
+    ColumnName = "City_Name",
+    PropertyName = "City", // Defaults to same as ColumnName
+    DataTypeName = "String" // Default
 };
 columns.Add(column);
 dbJoin.Columns = columns;
@@ -160,13 +162,13 @@ dbJoins.Add(dbJoin);
 <span class='userType'>DbJoins</span> dbJoins = <span class='keyWord'>new</span> <span class='userType'>DbJoins</span>();
 dbJoin = <span class='keyWord'>new</span> <span class='userType'>DbJoin</span>()
 {
-  TableName = "Address",
-  JoinOns = <span class='keyWord'>new</span> <span class='userType'>DbJoinOns</span>() {
-    { "ID", "PersonID" }
-  },
-  Columns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>() {
-    { "City_Name", "City" }
-  }
+    TableName = "Address",
+    JoinOns = <span class='keyWord'>new</span> <span class='userType'>DbJoinOns</span>() {
+        { "ID", "PersonID" }
+    },
+    Columns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>() {
+        { "City_Name", "City" }
+    }
 };
 dbJoins.Add(dbJoin);
         
@@ -174,9 +176,9 @@ dbJoins.Add(dbJoin);
 <span class='comment'>// includes the DbJoins object.</span>
 <span class='userType'>DbRequest</span> dbRequest = <span class='keyWord'>new</span> <span class='userType'>DbRequest</span>("Select", "Person")
 {
-  DataConfigName = "PersonData",
-  Columns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>() { { "Name" }},
-  Joins = dbJoins
+    DataConfigName = "PersonData",
+    Columns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>() { { "Name" }},
+    Joins = dbJoins
 };
         
 <span class='comment'>// select</span>

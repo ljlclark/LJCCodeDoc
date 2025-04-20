@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!-- HTMLBuilder.html -->
+<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>HTMLBuilder</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+      / <a href="LJCNetCommon.html">LJCNetCommon</a>
+      / HTMLBuilder
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCNetCommon</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Class HTMLBuilder</div>
+    </div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public class HTMLBuilder 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>Provides methods for creating HTML text.</div>
+    <br />
+    <div class='Title1'>Constructor<br></div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.ctor.html'>#ctor</a>
+        </td>
+        <td class='ListTable'>Initializes an object instance.</td>
+      </tr>
+    </table>
+    <br />
+    <div class='Title1'>Methods<br></div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.AddIndent.html'>AddIndent</a>
+        </td>
+        <td class='ListTable'>Changes the IndentCount by the supplied value.</td>
+      </tr>
+    </table>
+    <br />
+    <div class='Title1'>Data<br></div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.ToString.html'>ToString</a>
+        </td>
+        <td class='ListTable'>Implements the ToString() method.</td>
+      </tr>
+    </table>
+    <br />
+    <div class='Title1'>Append Text<br></div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.AddLine.html'>AddLine</a>
+        </td>
+        <td class='ListTable'>Adds a text line without modification.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.AddText.html'>AddText</a>
+        </td>
+        <td class='ListTable'>Adds text without modification.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.Line.html'>Line</a>
+        </td>
+        <td class='ListTable'>Adds a modified text line to the builder.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.Text.html'>Text</a>
+        </td>
+        <td class='ListTable'>Adds modified text to the builder.</td>
+      </tr>
+    </table>
+    <br />
+    <div class='Title1'>Get Text<br></div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetAttribs.html'>GetAttribs</a>
+        </td>
+        <td class='ListTable'>Gets the attributes text.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetIndented.html'>GetIndented</a>
+        </td>
+        <td class='ListTable'>Gets a new line with indent.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetIndentString.html'>GetIndentString</a>
+        </td>
+        <td class='ListTable'>Returns the current indent string.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetLine.html'>GetLine</a>
+        </td>
+        <td class='ListTable'>Gets a modified text line.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetText.html'>GetText</a>
+        </td>
+        <td class='ListTable'>Gets potentially indented and wrapped text.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetWrapped.html'>GetWrapped</a>
+        </td>
+        <td class='ListTable'>Appends added text and new wrapped line if combined line > LineLimit.</td>
+      </tr>
+    </table>
+    <br />
+    <div class='Title1'>Append Element<br></div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.Begin.html'>Begin</a>
+        </td>
+        <td class='ListTable'>Appends the element begin tag.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.Create.html'>Create</a>
+        </td>
+        <td class='ListTable'>Appends an element.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.End.html'>End</a>
+        </td>
+        <td class='ListTable'>Appends the element end tag.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.Link.html'>Link</a>
+        </td>
+        <td class='ListTable'>Appends a &lt;link&gt; element for a style sheet.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.Meta.html'>Meta</a>
+        </td>
+        <td class='ListTable'>Appends a &lt;meta&gt; element.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.Metas.html'>Metas</a>
+        </td>
+        <td class='ListTable'>Appends common &lt;meta&rt; elements.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.Script.html'>Script</a>
+        </td>
+        <td class='ListTable'>Appends a &lt;script&gt; element.</td>
+      </tr>
+    </table>
+    <br />
+    <div class='Title1'>Get Element<br></div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.AddChildIndent.html'>AddChildIndent</a>
+        </td>
+        <td class='ListTable'>Adds the new (child) indents.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetBegin.html'>GetBegin</a>
+        </td>
+        <td class='ListTable'>Gets the element begin tag.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetBeginSelector.html'>GetBeginSelector</a>
+        </td>
+        <td class='ListTable'>Gets beginning of style selector.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetCreate.html'>GetCreate</a>
+        </td>
+        <td class='ListTable'>Gets an element.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetEnd.html'>GetEnd</a>
+        </td>
+        <td class='ListTable'>Gets the element end tag.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetLink.html'>GetLink</a>
+        </td>
+        <td class='ListTable'>Gets the link element for a style sheet.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetMeta.html'>GetMeta</a>
+        </td>
+        <td class='ListTable'>Gets a meta element.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetMetas.html'>GetMetas</a>
+        </td>
+        <td class='ListTable'>Gets common meta elements.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetScript.html'>GetScript</a>
+        </td>
+        <td class='ListTable'>Gets a &lt;script&gt; element.</td>
+      </tr>
+    </table>
+    <br />
+    <div class='Title1'>Append HTML<br></div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.HTMLBegin.html'>HTMLBegin</a>
+        </td>
+        <td class='ListTable'>Creates the HTML beginning up to and including head;.</td>
+      </tr>
+    </table>
+    <br />
+    <div class='Title1'>Get HTML<br></div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetHTMLBegin.html'>GetHTMLBegin</a>
+        </td>
+        <td class='ListTable'>Gets the HTML beginning up to and including &lt;head&gt;.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetHTMLEnd.html'>GetHTMLEnd</a>
+        </td>
+        <td class='ListTable'>Gets the HTML end &lt;body&gt; and &lt;html&gt;.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.GetHTMLHead.html'>GetHTMLHead</a>
+        </td>
+        <td class='ListTable'>Missing Summary</td>
+      </tr>
+    </table>
+    <br />
+    <div class='Title1'>Get Attributes<br></div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.Attribs.html'>Attribs</a>
+        </td>
+        <td class='ListTable'>Gets common element attributes.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.StartAttribs.html'>StartAttribs</a>
+        </td>
+        <td class='ListTable'>Creates the HTML start attributes.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\HTMLBuilder.TableAttribs.html'>TableAttribs</a>
+        </td>
+        <td class='ListTable'>Gets common table attributes.</td>
+      </tr>
+    </table>
+    </table>
+    <div class='Text'>35 Methods</div>
+    <br />
+    <div class='Title2'>Other Private Methods</div>
+    <table class='ListTable'>
+    </table>
+    <div class='Text'>1 Methods</div>
+    <br />
+    <div id='Title'>Properties</div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\HTMLBuilder.HasText.html'>HasText</a>
+        </td>
+        <td class='ListTable'>Indicates if the builder has text.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\HTMLBuilder.IndentCharCount.html'>IndentCharCount</a>
+        </td>
+        <td class='ListTable'>Gets or sets the indent character count.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\HTMLBuilder.IndentCount.html'>IndentCount</a>
+        </td>
+        <td class='ListTable'>Gets the indent count.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\HTMLBuilder.IndentLength.html'>IndentLength</a>
+        </td>
+        <td class='ListTable'>Gets the current indent length.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\HTMLBuilder.LineLength.html'>LineLength</a>
+        </td>
+        <td class='ListTable'>Gets the current length.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\HTMLBuilder.LineLimit.html'>LineLimit</a>
+        </td>
+        <td class='ListTable'>Gets or sets the character limit.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\HTMLBuilder.NewIndentCount.html'>NewIndentCount</a>
+        </td>
+        <td class='ListTable'>Gets or sets the new indent count.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\HTMLBuilder.WrapEnabled.html'>WrapEnabled</a>
+        </td>
+        <td class='ListTable'>Indicates if line wrapping is enabled.</td>
+      </tr>
+    </table>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>

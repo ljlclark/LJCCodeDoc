@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DbRequest.html -->
-<!-- Generated 9/29/2023 5:06 AM -->
+<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DbRequest</title>
@@ -240,72 +242,72 @@
 <span class='comment'>// A Person Data Record class.</span>
 <span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>Person</span>
 {
-  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Gets or sets the PersonId value.</span><span class='xmlComment'>&lt;/summary&gt;</span>
-  <span class='modifier'>public</span> <span class='commonType'>Int32</span> PersonId { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+    &lt;span class='xmlComment'&gt;/// &lt;summary&gt;</span><span class='comment'>Gets or sets the PersonId value.</span><span class='xmlComment'>&lt;/summary&gt;&lt;/span&gt;
+    <span class='modifier'>public</span> <span class='commonType'>Int32</span> PersonId { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
         
-  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Gets or sets the Name value.</span><span class='xmlComment'>&lt;/summary&gt;</span>
-  <span class='modifier'>public</span> <span class='commonType'>string</span> Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+    &lt;span class='xmlComment'&gt;/// &lt;summary&gt;</span><span class='comment'>Gets or sets the Name value.</span><span class='xmlComment'>&lt;/summary&gt;&lt;/span&gt;
+    <span class='modifier'>public</span> <span class='commonType'>string</span> Name { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
 }
         
 <span class='comment'>// A console program.</span>
 <span class='modifier'>internal</span> <span class='refType'>class</span> <span class='userType'>Program</span>
 {
-  <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> Main(string[] args)
-  {
-    <span class='comment'>// Create a Data Definition which is a collection of column definitions.</span>
-    <span class='comment'>// Column definitions are required to communicate with the database.</span>
-    <span class='comment'>// The collection initializer uses an available collection "Add" method.</span>
-    <span class='comment'>// public DbColumn Add(string name, string propertyName = null, string renameAs = null</span>
-    <span class='comment'>//   , string dataTypeName = "String", string caption = null)</span>
-    <span class='commonType'>string</span> personIDColumnName = "Person_ID";
-    <span class='commonType'>string</span> personIDDataPropertyName = "PersonId";
-    <span class='userType'>DbColumns</span> personDefinition = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>()
+    <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> Main(string[] args)
     {
-      { personIDColumnName, personIDDataPropertyName, "Int32"},
-      { "Name" } // Defaults to "String"
-    };
+        <span class='comment'>// Create a Data Definition which is a collection of column definitions.</span>
+        <span class='comment'>// Column definitions are required to communicate with the database.</span>
+        <span class='comment'>// The collection initializer uses an available collection "Add" method.</span>
+        <span class='comment'>// public DbColumn Add(string name, string propertyName = null, string renameAs = null</span>
+        <span class='comment'>//   , string dataTypeName = "String", string caption = null)</span>
+        <span class='commonType'>string</span> personIDColumnName = "Person_ID";
+        <span class='commonType'>string</span> personIDDataPropertyName = "PersonId";
+        <span class='userType'>DbColumns</span> personDefinition = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>()
+        {
+            { personIDColumnName, personIDDataPropertyName, "Int32"},
+            { "Name" } // Defaults to "String"
+        };
         
-    <span class='comment'>// Create a list of the columns to be retrieved.</span>
-    List&lt;string&gt; propertyNames = <span class='keyWord'>new</span> <span class='userType'>List</span>&lt;string&gt;()
-    {
-      "PersonId",
-      "Name"
-    };
+        <span class='comment'>// Create a list of the columns to be retrieved.</span>
+        List&lt;string&gt; propertyNames = <span class='keyWord'>new</span> <span class='userType'>List</span>&lt;string&gt;()
+        {
+            "PersonId",
+            "Name"
+        };
         
-    <span class='comment'>// Create a key record to specify the record to be retrieved.</span>
-    <span class='commonType'>var</span> keyColumns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>()
-    {
-      { "PersonId", 1}
-    };
+        <span class='comment'>// Create a key record to specify the record to be retrieved.</span>
+        <span class='commonType'>var</span> keyColumns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>()
+        {
+            { "PersonId", 1}
+        };
         
-    <span class='comment'>// Create the DbRequest object.</span>
-    <span class='commonType'>string</span> tableName = "Person";
-    <span class='userType'>DbRequest</span> dbRequest = <span class='keyWord'>new</span> <span class='userType'>DbRequest</span>("Select", tableName)
-    {
-      DataConfigName = "PersonData",
-      Columns = <span class='userType'>DbCommon</span>.GetRequestColumns(personDefinition, propertyNames),
-      KeyColumns = <span class='userType'>DbCommon</span>.GetRequestKeyColumns(keyColumns, personDefinition)
-    };
+        <span class='comment'>// Create the DbRequest object.</span>
+        <span class='commonType'>string</span> tableName = "Person";
+        <span class='userType'>DbRequest</span> dbRequest = <span class='keyWord'>new</span> <span class='userType'>DbRequest</span>("Select", tableName)
+        {
+            DataConfigName = "PersonData",
+            Columns = <span class='userType'>DbCommon</span>.GetRequestColumns(personDefinition, propertyNames),
+            KeyColumns = <span class='userType'>DbCommon</span>.GetRequestKeyColumns(keyColumns, personDefinition)
+        };
         
-    <span class='comment'>// Create the Request XML message.</span>
-    <span class='commonType'>string</span> request = dbRequest.Serialize();
+        <span class='comment'>// Create the Request XML message.</span>
+        <span class='commonType'>string</span> request = dbRequest.Serialize();
         
-    <span class='comment'>// Create the Data Service object.</span>
-    <span class='userType'>DbService</span> dbService = <span class='keyWord'>new</span> <span class='userType'>DbService</span>();
+        <span class='comment'>// Create the Data Service object.</span>
+        <span class='userType'>DbService</span> dbService = <span class='keyWord'>new</span> <span class='userType'>DbService</span>();
         
-    <span class='comment'>// Execute the Request and get the Result XML message.</span>
-    <span class='commonType'>string</span> result = dbService.Execute(request);
+        <span class='comment'>// Execute the Request and get the Result XML message.</span>
+        <span class='commonType'>string</span> result = dbService.Execute(request);
         
-    <span class='comment'>// Create a Data Record object to receive the values.</span>
-    <span class='userType'>Person</span> person = <span class='keyWord'>new</span> <span class='userType'>Person</span>();
+        <span class='comment'>// Create a Data Record object to receive the values.</span>
+        <span class='userType'>Person</span> person = <span class='keyWord'>new</span> <span class='userType'>Person</span>();
         
-    <span class='comment'>// Populate the Data Record object with the result values.</span>
-    <span class='comment'>// Uses resultData as an object and processes with reflection.</span>
-    <span class='userType'>DbCommon</span>.SetObjectValues(result, person);
+        <span class='comment'>// Populate the Data Record object with the result values.</span>
+        <span class='comment'>// Uses resultData as an object and processes with reflection.</span>
+        <span class='userType'>DbCommon</span>.SetObjectValues(result, person);
         
-    <span class='commonType'>int</span> id = person.PersonId;
-    <span class='commonType'>string</span> name = person.Name;
-  }
+        <span class='commonType'>int</span> id = person.PersonId;
+        <span class='commonType'>string</span> name = person.Name;
+    }
 }</pre>
             </td>
           </tr>

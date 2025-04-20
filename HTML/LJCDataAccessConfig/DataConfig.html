@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DataConfig.html -->
-<!-- Generated 9/27/2023 12:05 PM -->
+<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DataConfig</title>
@@ -126,7 +128,7 @@
     <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Properties\DataConfig.ConnectionTypeName.html'>ConnectionTypeName</a>
+          <a href='Properties\DataConfig.ConnectionType.html'>ConnectionType</a>
         </td>
         <td class='ListTable'>Gets or sets the ConnectionType value.</td>
       </tr>
@@ -180,17 +182,17 @@
 <span class='comment'>// Test DataConfig.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> TestDataConfig()
 {
-  <span class='userType'>DataConfigs</span> dataConfigs = <span class='keyWord'>new</span> <span class='userType'>DataConfigs</span>();
-  dataConfigs.LJCLoadData();
-  dataConfig = dataConfigs.LJCGetByName("ConfigName");
+    <span class='userType'>DataConfigs</span> dataConfigs = <span class='keyWord'>new</span> <span class='userType'>DataConfigs</span>();
+    dataConfigs.LJCLoadData();
+    dataConfig = dataConfigs.LJCGetByName("ConfigName");
 
-  <span class='commonType'>var</span> connTypeName = "SQLServer";
-  GetConnectionString(dataConfig);
-  GetConnectionString2(connTypeName);
-  GetConnectionStringFromText(dataConfig);
-  SQLIntegratedConnectionString(dataConfig);
-  GetProviderName(connTypeName);
-  GetProviderName2(dataConfig);
+    <span class='commonType'>var</span> connTypeName = "SQLServer";
+    GetConnectionString(dataConfig);
+    GetConnectionString2(connTypeName);
+    GetConnectionStringFromText(dataConfig);
+    SQLIntegratedConnectionString(dataConfig);
+    GetProviderName(connTypeName);
+    GetProviderName2(dataConfig);
 }</pre>
             </td>
           </tr>

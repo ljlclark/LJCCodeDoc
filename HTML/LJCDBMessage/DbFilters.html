@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DbFilters.html -->
-<!-- Generated 10/26/2023 10:03 AM -->
+<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DbFilters</title>
@@ -130,28 +132,28 @@
 <span class='userType'>DbConditions</span> dbConditions = <span class='keyWord'>new</span> <span class='userType'>DbConditions</span>();
 <span class='userType'>DbCondition</span> dbCondition = <span class='keyWord'>new</span> <span class='userType'>DbCondition</span>()
 {
-  FirstValue = "Name",
-  ComparisonOperator = "=",
-  SecondValue = "John"
+    FirstValue = "Name",
+    ComparisonOperator = "=",
+    SecondValue = "John"
 };
 dbConditions.Add(dbCondition);
       
 <span class='comment'>// Create the ConditionSet and add the Conditions collection.</span>
 <span class='userType'>DbConditionSet</span> dbConditionSet = <span class='keyWord'>new</span> <span class='userType'>DbConditionSet</span>()
 {
-  <span class='comment'>// The boolean operator is added before each condition except the first.</span>
-  BooleanOperator = "and",
-  Conditions = dbConditions
+    <span class='comment'>// The boolean operator is added before each condition except the first.</span>
+    BooleanOperator = "and",
+    Conditions = dbConditions
 };
       
 <span class='comment'>// Create the Filter and add the ConditionSet.</span>
 <span class='userType'>DbFilter</span> dbFilter = <span class='keyWord'>new</span> <span class='userType'>DbFilter</span>()
 {
-  Name = "Main Filter",
+    Name = "Main Filter",
       
-  <span class='comment'>// The boolean operator is added before each filter except the first.</span>
-  BooleanOperator = "and",
-  ConditionSet = dbConditionSet
+    <span class='comment'>// The boolean operator is added before each filter except the first.</span>
+    BooleanOperator = "and",
+    ConditionSet = dbConditionSet
 };
       
 <span class='comment'>// Create the Filters collection and add the Filter.</span>
@@ -165,16 +167,16 @@ conditions.Add("FirstName", "'John'");
 conditions.Add("LastName", "'Smith'");
 <span class='userType'>DbFilters</span> dbFilters = <span class='keyWord'>new</span> <span class='userType'>DbFilters</span>
 {
-  dbFilter
+    dbFilter
 };
       
 <span class='comment'>// The Data Service creates the following SQL from this request which.</span>
 <span class='comment'>// includes the DbFilters object.</span>
 <span class='userType'>DbRequest</span> dbRequest = <span class='keyWord'>new</span> <span class='userType'>DbRequest</span>("Select", "Person")
 {
-  DataConfigName = "PersonData",
-  Columns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>() { {"Name" }},
-  Filters = dbFilters
+    DataConfigName = "PersonData",
+    Columns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>() { {"Name" }},
+    Filters = dbFilters
 };
       
 <span class='comment'>// select</span>
@@ -185,7 +187,7 @@ conditions.Add("LastName", "'Smith'");
 <span class='comment'>// Adding an "or" filter.</span>
 <span class='userType'>DbFilter</span> secondFilter = <span class='keyWord'>new</span> <span class='userType'>DbFilter</span>
 {
-  BooleanOperator = "or"
+    BooleanOperator = "or"
 };
 <span class='userType'>DbConditions</span> secondConditions = secondFilter.ConditionSet.Conditions;
 secondConditions.Add("Street", "'Somewhere%'", "like");

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DataRoot.html -->
-<!-- Generated 7/23/2023 5:11 AM -->
+<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DataRoot</title>
@@ -62,19 +64,19 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='commonType'>var</span> dataConfigName = "ConfigName";
-  <span class='commonType'>var</span> dbServiceRef = <span class='keyWord'>new</span> <span class='userType'>DbServiceRef</span>()
-  {
-    <span class='userType'>DbDataAccess</span> = <span class='keyWord'>new</span> <span class='userType'>DbDataAccess</span>(dataConfigName)
-  };
-  <span class='commonType'>var</span> managers = <span class='keyWord'>new</span> <span class='userType'>ManagersDocGen</span>();
-  managers.SetDBProperties(dbServiceRef, dataConfigName);
+    <span class='commonType'>var</span> dbServiceRef = <span class='keyWord'>new</span> <span class='userType'>DbServiceRef</span>()
+    {
+        <span class='userType'>DbDataAccess</span> = <span class='keyWord'>new</span> <span class='userType'>DbDataAccess</span>(dataConfigName)
+    };
+    <span class='commonType'>var</span> managers = <span class='keyWord'>new</span> <span class='userType'>ManagersDocGen</span>();
+    managers.SetDBProperties(dbServiceRef, dataConfigName);
 
-  <span class='commonType'>var</span> assemblyGroupManager = managers.DocAssemblyGroupManager;
-  <span class='commonType'>var</span> assemblyGroups = assemblyGroupManager.Load();
+    <span class='commonType'>var</span> assemblyGroupManager = managers.DocAssemblyGroupManager;
+    <span class='commonType'>var</span> assemblyGroups = assemblyGroupManager.Load();
 
-  <span class='comment'>// Creates the DataAssemblies collection with the deserialized</span>
-  <span class='comment'>// "Doc" XML converted to the "Data" XML format.</span>
-  <span class='userType'>DataRoot</span> dataRoot = <span class='keyWord'>new</span> <span class='userType'>DataRoot</span>(assemblyGroups);</pre>
+    <span class='comment'>// Creates the DataAssemblies collection with the deserialized</span>
+    <span class='comment'>// "Doc" XML converted to the "Data" XML format.</span>
+    <span class='userType'>DataRoot</span> dataRoot = <span class='keyWord'>new</span> <span class='userType'>DataRoot</span>(assemblyGroups);</pre>
             </td>
           </tr>
         </tbody>

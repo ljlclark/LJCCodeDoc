@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DataAccess.html -->
-<!-- Generated 12/29/2023 8:59 AM -->
+<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DataAccess</title>
@@ -283,47 +285,47 @@
 <span class='comment'>// Test DataAccess.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> TestDataAccess()
 {
-  <span class='userType'>DataAccess</span> dataAccess;
-  <span class='commonType'>string</span> connectionString;
-  <span class='commonType'>string</span> providerName;
+    <span class='userType'>DataAccess</span> dataAccess;
+    <span class='commonType'>string</span> connectionString;
+    <span class='commonType'>string</span> providerName;
 
-  <span class='comment'>// Create Data Configuration values.</span>
-  <span class='commonType'>bool</span> useInternal = <span class='keyWord'>false</span>;
-  <span class='keyWord'>if</span> (useInternal)
-  {
-    <span class='comment'>// Use internal configuration.</span>
-    <span class='commonType'>var</span> connectionBuilder = <span class='keyWord'>new</span> <span class='userType'>DbConnectionStringBuilder</span>()
+    <span class='comment'>// Create Data Configuration values.</span>
+    <span class='commonType'>bool</span> useInternal = <span class='keyWord'>false</span>;
+    <span class='keyWord'>if</span> (useInternal)
     {
-      { "Data Source", "DataServiceName" },
-      { "Initial Catalog", "DatabaseName" },
-      { "Integrated Security", "True" }
-    };
-    connectionString = connectionBuilder.ConnectionString;
-    providerName = "System.Data.SqlClient";
-  }
-  <span class='keyWord'>else</span>
-  {
-    <span class='comment'>// Or use external configuration.</span>
-    <span class='userType'>DataConfigs</span> dataConfigs = <span class='keyWord'>new</span> <span class='userType'>DataConfigs</span>();
-    dataConfigs.LJCLoadData();
-    dataConfig = dataConfigs.LJCGetByName("ConfigName");
-    connectionString = dataConfig.GetConnectionString();
-    providerName = dataConfig.GetProviderName();
-  }
+        <span class='comment'>// Use internal configuration.</span>
+        <span class='commonType'>var</span> connectionBuilder = <span class='keyWord'>new</span> <span class='userType'>DbConnectionStringBuilder</span>()
+        {
+            { "Data Source", "DataServiceName" },
+            { "Initial Catalog", "DatabaseName" },
+            { "Integrated Security", "True" }
+        };
+        connectionString = connectionBuilder.ConnectionString;
+        providerName = "System.Data.SqlClient";
+    }
+    <span class='keyWord'>else</span>
+    {
+        <span class='comment'>// Or use external configuration.</span>
+        <span class='userType'>DataConfigs</span> dataConfigs = <span class='keyWord'>new</span> <span class='userType'>DataConfigs</span>();
+        dataConfigs.LJCLoadData();
+        dataConfig = dataConfigs.LJCGetByName("ConfigName");
+        connectionString = dataConfig.GetConnectionString();
+        providerName = dataConfig.GetProviderName();
+    }
 
-  <span class='comment'>// Create DataAccess object.</span>
-  dataAccess = <span class='keyWord'>new</span> <span class='userType'>DataAccess</span>(connectionString, providerName);
+    <span class='comment'>// Create DataAccess object.</span>
+    dataAccess = <span class='keyWord'>new</span> <span class='userType'>DataAccess</span>(connectionString, providerName);
 
-  <span class='comment'>// Method Tests.</span>
-  GetDataReader(dataAccess);
-  GetDataTable(dataAccess);
-  GetDataSet(dataAccess);
-  GetProcedureDataTable(dataAccess);
-  FillDataTable(dataAccess);
-  GetSchemaOnly(dataAccess);
-  ExecuteNonQuery(dataAccess);
-  ExecuteScript(dataAccess);
-  ExecuteScriptText(dataAccess);
+    <span class='comment'>// Method Tests.</span>
+    GetDataReader(dataAccess);
+    GetDataTable(dataAccess);
+    GetDataSet(dataAccess);
+    GetProcedureDataTable(dataAccess);
+    FillDataTable(dataAccess);
+    GetSchemaOnly(dataAccess);
+    ExecuteNonQuery(dataAccess);
+    ExecuteScript(dataAccess);
+    ExecuteScriptText(dataAccess);
 }
 
 <span class='userType'>IF</span> <span class='userType'>NOT</span> EXISTS(SELECT* FROM INFORMATION_SCHEMA.TABLES
@@ -331,12 +333,12 @@
 BEGIN
 <span class='userType'>CREATE</span> TABLE[dbo].[PersonTest]
 (
-  [Id][int] IDENTITY(1,1) <span class='userType'>NOT</span> NULL,
-  [Name] [nvarchar] (60) NULL,
-  [PrincipleFlag] [bit] <span class='userType'>NOT</span> NULL,
-  CONSTRAINT[PK_PersonTest]
-  <span class='userType'>PRIMARY</span> KEY CLUSTERED(
-  [Id] ASC),
+    [Id][int] IDENTITY(1,1) <span class='userType'>NOT</span> NULL,
+    [Name] [nvarchar] (60) NULL,
+    [PrincipleFlag] [bit] <span class='userType'>NOT</span> NULL,
+    CONSTRAINT[PK_PersonTest]
+    <span class='userType'>PRIMARY</span> KEY CLUSTERED(
+    [Id] ASC),
 )
 END
 GO</pre>
