@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- TextBuilder.html -->
-<!-- Generated 4/21/2025 6:15 AM -->
+<!-- Generated 4/21/2025 7:49 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -44,23 +44,43 @@
     <br />
     <div class='Text'>Provides methods for creating text.</div>
     <br />
-    <div class='Title1'>Public Methods</div>
+    <div class='Title1'>Constructor<br></div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.ctor.html'>#ctor</a>
+        </td>
+        <td class='ListTable'>Initializes an object instance.</td>
+      </tr>
+    </table>
+    <br />
+    <div class='Title1'>Data<br></div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.ToString.html'>ToString</a>
+        </td>
+        <td class='ListTable'>Retrieves the text.</td>
+      </tr>
+    </table>
+    <br />
+    <div class='Title1'>Methods<br></div>
     <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\TextBuilder.AddIndent.html'>AddIndent</a>
         </td>
-        <td class='ListTable'>
-      Changes the IndentCount by the provided value.
-    </td>
+        <td class='ListTable'>Changes the IndentCount by the provided value.</td>
       </tr>
+    </table>
+    <br />
+    <div class='Title1'>Append Text<br></div>
+    <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\TextBuilder.AddLine.html'>AddLine</a>
         </td>
-        <td class='ListTable'>
-      Adds a text line without modification.
-    </td>
+        <td class='ListTable'>Adds a text line without modification.</td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
@@ -70,26 +90,20 @@
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Methods\TextBuilder.GetDelimited.html'>GetDelimited</a>
+          <a href='Methods\TextBuilder.Line.html'>Line</a>
         </td>
-        <td class='ListTable'>
-      Adds a delimiter if not the first list item.
-    </td>
+        <td class='ListTable'>Adds a modified text line to the builder.</td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Methods\TextBuilder.GetIndented.html'>GetIndented</a>
+          <a href='Methods\TextBuilder.Text.html'>Text</a>
         </td>
-        <td class='ListTable'>
-      Gets a new potentially indented line.
-    </td>
+        <td class='ListTable'>Adds modified text to the builder.</td>
       </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TextBuilder.GetIndentString.html'>GetIndentString</a>
-        </td>
-        <td class='ListTable'>Returns the current indent string.</td>
-      </tr>
+    </table>
+    <br />
+    <div class='Title1'>Get Text<br></div>
+    <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\TextBuilder.GetLine.html'>GetLine</a>
@@ -100,16 +114,36 @@
         <td class='ListTable' width='25%'>
           <a href='Methods\TextBuilder.GetText.html'>GetText</a>
         </td>
-        <td class='ListTable'>
-      Gets potentially modified text.
-    </td>
+        <td class='ListTable'>Gets potentially indented and wrapped text.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.GetIndented.html'>GetIndented</a>
+        </td>
+        <td class='ListTable'>Gets a new potentially indented line.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.GetIndentString.html'>GetIndentString</a>
+        </td>
+        <td class='ListTable'>Returns the current indent string.</td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\TextBuilder.GetWrapped.html'>GetWrapped</a>
         </td>
+        <td class='ListTable'>Gets added text and new wrapped line if combined line > LineLimit.</td>
+      </tr>
+    </table>
+    <br />
+    <div class='Title1'>Other Public Methods</div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\TextBuilder.GetDelimited.html'>GetDelimited</a>
+        </td>
         <td class='ListTable'>
-      Gets added text and new wrapped line if combined line > LineLimit.
+      Adds a delimiter if not the first list item.
     </td>
       </tr>
       <tr>
@@ -121,39 +155,11 @@
       and adds a newline if line length is greater than CharLength.
     </td>
       </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TextBuilder.Line.html'>Line</a>
-        </td>
-        <td class='ListTable'>
-      Adds a modified text line to the builder.
-    </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TextBuilder.Text.html'>Text</a>
-        </td>
-        <td class='ListTable'>
-      Adds modified text to the builder.
-    </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TextBuilder.ToString.html'>ToString</a>
-        </td>
-        <td class='ListTable'>Implements the ToString() method.</td>
-      </tr>
     </table>
     <div class='Text'>13 Methods</div>
     <br />
-    <div class='Title2'>Private Methods</div>
+    <div class='Title2'>Other Private Methods</div>
     <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\TextBuilder.ctor.html'>#ctor</a>
-        </td>
-        <td class='ListTable'>Initializes an object instance.</td>
-      </tr>
     </table>
     <div class='Text'>1 Methods</div>
     <br />
