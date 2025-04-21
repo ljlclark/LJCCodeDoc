@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- NetCommon.HasData.html -->
-<!-- Generated 7/12/2023 4:53 AM -->
+<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>HasData</title>
@@ -31,7 +33,7 @@
     <br />
     <div class='Text'>Returns</div>
     <br />
-    <div class='Text'>True if the data table contains any rows.</div>
+    <div class='Text'>true if the data table contains rows; otherwise, false.</div>
     <br />
     <div class='Text'>Syntax</div>
     <br />
@@ -49,7 +51,7 @@
     </div>
     <br />
     <div class='Text'>
-      Checks a data table and returns true if it contains any rows. (E)
+      Checks a data table for rows. (E)
     </div>
     <br />
     <div class='Text'>Remarks</div>
@@ -71,10 +73,10 @@
         
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> HasData()
 {
-  <span class='userType'>DataTable</span> dataTable = <span class='keyWord'>new</span> <span class='userType'>DataTable</span>();
+    <span class='userType'>DataTable</span> dataTable = <span class='keyWord'>new</span> <span class='userType'>DataTable</span>();
     
-  <span class='comment'>// Returns false.</span>
-  <span class='commonType'>bool</span> result = <span class='userType'>NetCommon</span>.HasData(dataTable);
+    <span class='comment'>// Returns false.</span>
+    <span class='commonType'>bool</span> result = <span class='userType'>NetCommon</span>.HasData(dataTable);
 }</pre>
             </td>
           </tr>

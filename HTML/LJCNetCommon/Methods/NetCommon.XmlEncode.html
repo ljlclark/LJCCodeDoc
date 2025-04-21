@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- NetCommon.XmlEncode.html -->
-<!-- Generated 7/12/2023 4:53 AM -->
+<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>XmlEncode</title>
@@ -65,14 +67,14 @@
 <span class='comment'>// Encodes a string with XML escape values.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> XmlEncode()
 {
-  <span class='comment'>// Setup</span>
-  <span class='commonType'>string</span> xml = "&lt;text&gt;Here & There&lt;/text&gt;";
+    <span class='comment'>// Setup</span>
+    <span class='commonType'>string</span> xml = "&lt;text&gt;Here & There&lt;/text&gt;";
 
-  <span class='comment'>// Encodes a string with XML escape values.</span>
-  <span class='commonType'>string</span> encoded = <span class='userType'>NetCommon</span>.XmlEncode(xml);
+    <span class='comment'>// Encodes a string with XML escape values.</span>
+    <span class='commonType'>string</span> encoded = <span class='userType'>NetCommon</span>.XmlEncode(xml);
 
-  <span class='comment'>// Check the text.</span>
-  <span class='commonType'>string</span> text = <span class='userType'>NetCommon</span>.XmlDecode(encoded);
+    <span class='comment'>// Check the text.</span>
+    <span class='commonType'>string</span> text = <span class='userType'>NetCommon</span>.XmlDecode(encoded);
 }</pre>
             </td>
           </tr>

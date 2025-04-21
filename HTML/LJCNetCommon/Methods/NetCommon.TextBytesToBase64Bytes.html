@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- NetCommon.TextBytesToBase64Bytes.html -->
-<!-- Generated 7/12/2023 4:53 AM -->
+<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>TextBytesToBase64Bytes</title>
@@ -65,14 +67,14 @@
 <span class='comment'>// Encodes a Text byte array to a Base64 byte array.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> TextBytesToBase64Bytes()
 {
-  <span class='comment'>// Setup</span>
-  <span class='commonType'>byte</span>[] textBytes = <span class='userType'>NetCommon</span>.TextToBytes("Text");
+    <span class='comment'>// Setup</span>
+    <span class='commonType'>byte</span>[] textBytes = <span class='userType'>NetCommon</span>.TextToBytes("Text");
 
-  <span class='comment'>// Encodes a byte array to a Base64 byte array.</span>
-  <span class='commonType'>byte</span>[] base64Bytes = <span class='userType'>NetCommon</span>.TextBytesToBase64Bytes(textBytes);
+    <span class='comment'>// Encodes a byte array to a Base64 byte array.</span>
+    <span class='commonType'>byte</span>[] base64Bytes = <span class='userType'>NetCommon</span>.TextBytesToBase64Bytes(textBytes);
 
-  <span class='comment'>// Check the text.</span>
-  <span class='commonType'>string</span> text = <span class='userType'>NetCommon</span>.Base64BytesToText(base64Bytes);
+    <span class='comment'>// Check the text.</span>
+    <span class='commonType'>string</span> text = <span class='userType'>NetCommon</span>.Base64BytesToText(base64Bytes);
 }</pre>
             </td>
           </tr>

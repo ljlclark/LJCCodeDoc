@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- NetCommon.MemStreamToBytes.html -->
-<!-- Generated 7/12/2023 4:53 AM -->
+<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>MemStreamToBytes</title>
@@ -66,16 +68,16 @@
 <span class='comment'>// Copies a memory stream to a byte array.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> MemStreamToBytes()
 {
-  <span class='comment'>// Setup</span>
-  <span class='commonType'>byte</span>[] textBytes;
-  <span class='keyWord'>using</span> (Stream stream = <span class='userType'>NetCommon</span>.StringToMemStream("Text"))
-  {
-    <span class='comment'>// Copies a memory stream to a byte array.</span>
-    textBytes = <span class='userType'>NetCommon</span>.MemStreamToBytes(stream);
-  }
+    <span class='comment'>// Setup</span>
+    <span class='commonType'>byte</span>[] textBytes;
+    <span class='keyWord'>using</span> (Stream stream = <span class='userType'>NetCommon</span>.StringToMemStream("Text"))
+    {
+        <span class='comment'>// Copies a memory stream to a byte array.</span>
+        textBytes = <span class='userType'>NetCommon</span>.MemStreamToBytes(stream);
+    }
     
-  <span class='comment'>// Check the text.</span>
-  <span class='commonType'>string</span> text = <span class='userType'>NetCommon</span>.BytesToText(textBytes);
+    <span class='comment'>// Check the text.</span>
+    <span class='commonType'>string</span> text = <span class='userType'>NetCommon</span>.BytesToText(textBytes);
 }</pre>
             </td>
           </tr>

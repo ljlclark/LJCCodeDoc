@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- LJCAssemblyReflect.GetPropertySyntax.html -->
-<!-- Generated 7/12/2023 4:53 AM -->
+<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>GetPropertySyntax</title>
@@ -65,19 +67,19 @@
 <span class='keyWord'>using</span> LJC.Net.Common;
 
 <span class='modifier'>public</span> <span class='commonType'>string</span> RetrievePropertySyntax(string assemblyFileSpec, <span class='commonType'>string</span> fullTypeName
-  , <span class='commonType'>string</span> propertyName, <span class='commonType'>string</span> fullName)
+    , <span class='commonType'>string</span> propertyName, <span class='commonType'>string</span> fullName)
 {
-  <span class='commonType'>string</span> retValue = <span class='keyWord'>null</span>;
+    <span class='commonType'>string</span> retValue = <span class='keyWord'>null</span>;
 
-  <span class='comment'>// These calls are not required if an LJCAssemblyReflect reference is</span>
-  <span class='comment'>// used and the the following set methods have already been executed.</span>
-  <span class='userType'>LJCAssemblyReflect</span> assemblyReflect = <span class='keyWord'>new</span> <span class='userType'>LJCAssemblyReflect</span>();
-  assemblyReflect.SetAssembly(assemblyFileSpec);
-  assemblyReflect.SetTypeReference(fullTypeName);
-  assemblyReflect.SetPropertyInfo(propertyName, fullName);
+    <span class='comment'>// These calls are not required if an LJCAssemblyReflect reference is</span>
+    <span class='comment'>// used and the the following set methods have already been executed.</span>
+    <span class='userType'>LJCAssemblyReflect</span> assemblyReflect = <span class='keyWord'>new</span> <span class='userType'>LJCAssemblyReflect</span>();
+    assemblyReflect.SetAssembly(assemblyFileSpec);
+    assemblyReflect.SetTypeReference(fullTypeName);
+    assemblyReflect.SetPropertyInfo(propertyName, fullName);
     
-  retValue = assemblyReflect.GetPropertySyntax();
-  <span class='keyWord'>return</span> retValue;
+    retValue = assemblyReflect.GetPropertySyntax();
+    <span class='keyWord'>return</span> retValue;
 }</pre>
             </td>
           </tr>

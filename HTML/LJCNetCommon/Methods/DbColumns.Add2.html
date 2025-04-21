@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DbColumns.Add.html -->
-<!-- Generated 7/12/2023 4:53 AM -->
+<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Add</title>
@@ -30,6 +32,7 @@
     <div class='Text'>columnName - The column name.</div>
     <div class='Text'>value - The value object.</div>
     <div class='Text'>dataTypeName - The data type name.</div>
+    <div class='Text'>maxLength - The column length.</div>
     <br />
     <div class='Text'>Returns</div>
     <br />
@@ -43,7 +46,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public DbColumn Add(String columnName, Object value, String dataTypeName = String)
+              public DbColumn Add(String columnName, Object value, String dataTypeName = String, Int32 maxLength = 5)
             </td>
           </tr>
         </tbody>

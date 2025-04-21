@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- LJCAssemblyReflect.SetMethodInfo.html -->
-<!-- Generated 7/12/2023 4:53 AM -->
+<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>SetMethodInfo</title>
@@ -74,18 +76,18 @@
 <span class='keyWord'>using</span> LJC.Net.Common;
 
 <span class='modifier'>public</span> <span class='userType'>MethodInfo</span> RetrieveMethodInfo(string assemblyFileSpec, <span class='commonType'>string</span> fullTypeName
-  , <span class='commonType'>string</span> methodName, <span class='commonType'>string</span>[] parameterNames)
+    , <span class='commonType'>string</span> methodName, <span class='commonType'>string</span>[] parameterNames)
 {
-  <span class='userType'>MethodInfo</span> retValue = <span class='keyWord'>null</span>;
+    <span class='userType'>MethodInfo</span> retValue = <span class='keyWord'>null</span>;
 
-  <span class='comment'>// These calls are not required if an LJCAssemblyReflect reference is</span>
-  <span class='comment'>// used and the the following set methods have already been executed.</span>
-  <span class='userType'>LJCAssemblyReflect</span> assemblyReflect = <span class='keyWord'>new</span> <span class='userType'>LJCAssemblyReflect</span>();
-  <span class='userType'>Assembly</span> assembly = assemblyReflect.SetAssembly(assemblyFileSpec);
-  <span class='userType'>Type</span> typeReference = assemblyReflect.SetTypeReference(fullTypeName);
+    <span class='comment'>// These calls are not required if an LJCAssemblyReflect reference is</span>
+    <span class='comment'>// used and the the following set methods have already been executed.</span>
+    <span class='userType'>LJCAssemblyReflect</span> assemblyReflect = <span class='keyWord'>new</span> <span class='userType'>LJCAssemblyReflect</span>();
+    <span class='userType'>Assembly</span> assembly = assemblyReflect.SetAssembly(assemblyFileSpec);
+    <span class='userType'>Type</span> typeReference = assemblyReflect.SetTypeReference(fullTypeName);
     
-  retValue = assemblyReflect.SetMethodInfo(methodName, parameterNames);
-  <span class='keyWord'>return</span> retValue;
+    retValue = assemblyReflect.SetMethodInfo(methodName, parameterNames);
+    <span class='keyWord'>return</span> retValue;
 }</pre>
             </td>
           </tr>

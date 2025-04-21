@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- LJCReflect.SetPropertyValue.html -->
-<!-- Generated 7/12/2023 4:53 AM -->
+<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>SetPropertyValue</title>
@@ -65,13 +67,13 @@
 <span class='comment'>// Sets the data object values from the DbColumns object.</span>
 <span class='modifier'>public</span> <span class='modifier'>static</span> <span class='commonType'>void</span> SetObjectValues(<span class='userType'>DbColumns</span> dbColumns, <span class='commonType'>object</span> dataObject)
 {
-  <span class='userType'>LJCReflect</span> reflect;
+    <span class='userType'>LJCReflect</span> reflect;
 
-  reflect = <span class='keyWord'>new</span> <span class='userType'>LJCReflect</span>(dataObject);
-  <span class='keyWord'>foreach</span> (DbColumn dbColumn <span class='keyWord'>in</span> dbColumns)
-  {
-    reflect.SetPropertyValue(dbColumn.PropertyName, dbColumn.Value);
-  }
+    reflect = <span class='keyWord'>new</span> <span class='userType'>LJCReflect</span>(dataObject);
+    <span class='keyWord'>foreach</span> (DbColumn dbColumn <span class='keyWord'>in</span> dbColumns)
+    {
+        reflect.SetPropertyValue(dbColumn.PropertyName, dbColumn.Value);
+    }
 }</pre>
             </td>
           </tr>

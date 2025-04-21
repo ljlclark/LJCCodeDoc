@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- NetCommon.CompareNull.html -->
-<!-- Generated 7/12/2023 4:53 AM -->
+<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>CompareNull</title>
@@ -75,30 +77,30 @@
               <pre style='margin-left: 2px;'><span class='keyWord'>using</span> System;
 <span class='keyWord'>using</span> LJCNetCommon;
         
-<span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Sort and search on Name value.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+&lt;span class='xmlComment'&gt;/// &lt;summary&gt;</span><span class='comment'>Sort and search on Name value.</span><span class='xmlComment'>&lt;/summary&gt;&lt;/span&gt;
 <span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>NameComparer</span> : IComparer&lt;ClassName&gt;
 {
-  <span class='comment'>// Compares two objects.</span>
-  <span class='xmlComment'>/// &lt;include path='items/Compare/*' file='../../../CoreUtilities/LJCDocLib/Common/Data.xml'/&gt;</span>
-  <span class='modifier'>public</span> <span class='commonType'>int</span> Compare(<span class='userType'>ClassName</span> x, <span class='userType'>ClassName</span> y)
-  {
-    <span class='commonType'>int</span> retValue;
-
-    retValue = <span class='userType'>NetCommon</span>.CompareNull(x, y);
-    <span class='keyWord'>if</span> (-2 == retValue)
+    <span class='comment'>// Compares two objects.</span>
+    <span class='xmlComment'>/// &lt;include path='items/Compare/*' file='../../../CoreUtilities/LJCGenDoc/Common/Data.xml'/&gt;</span>
+    <span class='modifier'>public</span> <span class='commonType'>int</span> Compare(<span class='userType'>ClassName</span> x, <span class='userType'>ClassName</span> y)
     {
-      retValue = <span class='userType'>NetCommon</span>.CompareNull(x.Name, y.Name);
-      <span class='keyWord'>if</span> (-2 == retValue)
-      {
-        <span class='comment'>// Case sensitive.</span>
-        <span class='comment'>//retValue = x.Name.CompareTo(y.Name);</span>
+        <span class='commonType'>int</span> retValue;
 
-        <span class='comment'>// Not case sensitive.</span>
-        retValue = <span class='commonType'>string</span>.Compare(x.Name, y.Name, true);
-      }
+        retValue = <span class='userType'>NetCommon</span>.CompareNull(x, y);
+        <span class='keyWord'>if</span> (-2 == retValue)
+        {
+            retValue = <span class='userType'>NetCommon</span>.CompareNull(x.Name, y.Name);
+            <span class='keyWord'>if</span> (-2 == retValue)
+            {
+                <span class='comment'>// Case sensitive.</span>
+                <span class='comment'>//retValue = x.Name.CompareTo(y.Name);</span>
+
+                <span class='comment'>// Not case sensitive.</span>
+                retValue = <span class='commonType'>string</span>.Compare(x.Name, y.Name, true);
+            }
+        }
+        <span class='keyWord'>return</span> retValue;
     }
-    <span class='keyWord'>return</span> retValue;
-  }
 }</pre>
             </td>
           </tr>
