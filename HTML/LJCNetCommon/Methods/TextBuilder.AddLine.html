@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- TextBuilder.AddLine.html -->
-<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -43,7 +43,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public String AddLine(String text)
+              public String AddLine(String text = null)
             </td>
           </tr>
         </tbody>
@@ -72,13 +72,16 @@
               <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
 <span class='commonType'>var</span> tb = <span class='keyWord'>new</span> <span class='userType'>TextBuilder</span>();
 
-<span class='comment'>// Adds text with a new line.</span>
+<span class='comment'>// Example Method:</span>
+<span class='comment'>// Adds text that ends with a newline.</span>
 tb.AddLine("This <span class='keyWord'>is</span> an appended line.");
+
+tb.AddText(":");
 <span class='commonType'>var</span> result = tb.ToString();
 
 <span class='comment'>// result:</span>
 <span class='comment'>// This is an appended line.</span>
-<span class='comment'>// ""</span></pre>
+<span class='comment'>// :</span></pre>
             </td>
           </tr>
         </tbody>

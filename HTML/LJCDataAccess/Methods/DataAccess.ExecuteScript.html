@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DataAccess.ExecuteScript.html -->
-<!-- Generated 7/11/2023 9:14 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>ExecuteScript</title>
@@ -62,16 +64,16 @@
 <span class='comment'>// Executes a DB script file.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> ExecuteScript(<span class='userType'>DataAccess</span> dataAccess)
 {
-  <span class='comment'>// Create a DB Script file.</span>
-  StringBuilder builder = <span class='keyWord'>new</span> <span class='userType'>StringBuilder</span>(64);
-  builder.AppendLine("insert into <span class='userType'>TestTable</span> values('Name1');");
-  builder.AppendLine("go");
-  builder.AppendLine("delete from <span class='userType'>TestTable</span> where Name = 'Name1';");
-  builder.AppendLine("go");
-  <span class='commonType'>string</span> scriptText = builder.ToString();
-  <span class='userType'>File</span>.WriteAllText("TestScript.sql", scriptText);
+    <span class='comment'>// Create a DB Script file.</span>
+    StringBuilder builder = <span class='keyWord'>new</span> <span class='userType'>StringBuilder</span>(64);
+    builder.AppendLine("insert into <span class='userType'>TestTable</span> values('Name1');");
+    builder.AppendLine("go");
+    builder.AppendLine("delete from <span class='userType'>TestTable</span> where Name = 'Name1';");
+    builder.AppendLine("go");
+    <span class='commonType'>string</span> scriptText = builder.ToString();
+    <span class='userType'>File</span>.WriteAllText("TestScript.sql", scriptText);
 
-  dataAccess.ExecuteScript("TestScript.sql");
+    dataAccess.ExecuteScript("TestScript.sql");
 }</pre>
             </td>
           </tr>

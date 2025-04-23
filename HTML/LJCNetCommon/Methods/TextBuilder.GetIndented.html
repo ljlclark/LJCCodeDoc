@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- TextBuilder.GetIndented.html -->
-<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -63,12 +63,14 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
-<span class='commonType'>var</span> tb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuider</span>();
+<span class='commonType'>var</span> tb = <span class='keyWord'>new</span> <span class='userType'>TextBuilder</span>();
 
+<span class='comment'>// Example Method:</span>
 <span class='commonType'>var</span> result = tb.GetIndented("This text <span class='keyWord'>is</span> <span class='userType'>NOT</span> indented.");
 
 <span class='comment'>// The builder keeps track of the current number of indents.</span>
 tb.AddIndent(2);
+result += tb.GetLine();
 result += tb.GetIndented("This text <span class='keyWord'>is</span> indented.");
 
 <span class='comment'>// result:</span>

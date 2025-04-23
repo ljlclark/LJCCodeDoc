@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DbFilters.SoundexFilters.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>SoundexFilters</title>
@@ -27,14 +29,29 @@
     </div>
     <br />
     <div id='Title'>Parameters</div>
-    <div class='Text'>lColumnName - The Letter Soundex column name.</div>
-    <div class='Text'>lSearchValue - The Letter Search value.</div>
     <div class='Text'>pColumnName - The Phonetic Soundex column name.</div>
     <div class='Text'>pSearchValue - The Phonetic Search value.</div>
+    <div class='Text'>lColumnName - The Letter Soundex column name.</div>
+    <div class='Text'>lSearchValue - The Letter Search value.</div>
     <br />
     <div class='Text'>Returns</div>
     <br />
     <div class='Text'>The filters object.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public static DbFilters SoundexFilters(String pColumnName, String pSearchValue, String lColumnName = null, String lSearchValue = null)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <br />
     <div class='Text'>
       Creates the Soundex filters from the supplied values.

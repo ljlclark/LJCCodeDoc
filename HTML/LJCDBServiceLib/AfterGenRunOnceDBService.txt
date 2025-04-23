@@ -1,0 +1,5 @@
+cd ..\..\..\..\..\..\WebSitesDev\CodeDoc\LJCCodeDoc\HTML\LJCDBServiceLib
+xcopy ..\..\..\..\..\WebPages\LJCCodeDoc\HTML\LJCDBServiceLib\*.* ..\LJCDBServiceLibCompare\ /s /y
+
+copy DbService.html DbServiceGen.html
+copy DbServiceCustom.html DbService.html

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- XMLBuilder.html -->
-<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -42,11 +42,148 @@
       </table>
     </div>
     <br />
-    <div class='Text'>
-            Provides methods for creating XML text.
-            </div>
+    <div class='Text'>Provides methods for creating XML text.</div>
     <br />
     <div class='Title1'>Public Methods</div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.AddChildIndent.html'>AddChildIndent</a>
+        </td>
+        <td class='ListTable'>
+      Adds the new (child) indents.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.AddIndent.html'>AddIndent</a>
+        </td>
+        <td class='ListTable'>
+      Changes the IndentCount by the provided value.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.AddLine.html'>AddLine</a>
+        </td>
+        <td class='ListTable'>
+      Adds a text line without modification.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.AddText.html'>AddText</a>
+        </td>
+        <td class='ListTable'>
+      Adds text without modification.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.Begin.html'>Begin</a>
+        </td>
+        <td class='ListTable'>
+      Appends the element begin tag.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.GetAttribs.html'>GetAttribs</a>
+        </td>
+        <td class='ListTable'>
+      Gets the attributes text.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.GetBegin.html'>GetBegin</a>
+        </td>
+        <td class='ListTable'>
+      Gets the element begin tag.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.GetEnd.html'>GetEnd</a>
+        </td>
+        <td class='ListTable'>
+      Gets the element end tag.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.GetIndented.html'>GetIndented</a>
+        </td>
+        <td class='ListTable'>
+      Gets a new potentially indented line.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.GetIndentString.html'>GetIndentString</a>
+        </td>
+        <td class='ListTable'>
+      Returns the current indent string.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.GetLine.html'>GetLine</a>
+        </td>
+        <td class='ListTable'>
+      Gets a modified text line.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.GetText.html'>GetText</a>
+        </td>
+        <td class='ListTable'>
+      Gets potentially indented and wrapped text.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.GetWrapped.html'>GetWrapped</a>
+        </td>
+        <td class='ListTable'>
+      Gets added text and new wrapped line if combined line > LineLimit.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.Line.html'>Line</a>
+        </td>
+        <td class='ListTable'>
+      Adds a modified text line to the builder.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.StartAttribs.html'>StartAttribs</a>
+        </td>
+        <td class='ListTableMissing'>Missing Summary</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.Text.html'>Text</a>
+        </td>
+        <td class='ListTable'>
+      Adds modified text to the builder.
+    </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Methods\XMLBuilder.ToString.html'>ToString</a>
+        </td>
+        <td class='ListTable'>
+      Retrieves the XML text.
+    </td>
+      </tr>
+    </table>
+    <div class='Text'>17 Methods</div>
+    <br />
+    <div class='Title2'>Private Methods</div>
     <table class='ListTable'>
       <tr>
         <td class='ListTable' width='25%'>
@@ -59,81 +196,40 @@
           <a href='Methods\XMLBuilder.Create.html'>Create</a>
         </td>
         <td class='ListTable'>
-      Creates an XML element.
+      Appends an element.
     </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Methods\XMLBuilder.End.html'>End</a>
         </td>
-        <td class='ListTable'>
-      Creates the element end tag.
-    </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\XMLBuilder.GetIndentString.html'>GetIndentString</a>
-        </td>
-        <td class='ListTable'>Returns the current XML indent string.</td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\XMLBuilder.StartAttributes.html'>StartAttributes</a>
-        </td>
-        <td class='ListTable'>
-      Creates the XML start attributes.
-    </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\XMLBuilder.Text.html'>Text</a>
-        </td>
-        <td class='ListTable'>
-      Adds a newline if line length is greater than LineLimit.
-    </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\XMLBuilder.ToString.html'>ToString</a>
-        </td>
-        <td class='ListTable'>Implements the ToString() method.</td>
-      </tr>
-    </table>
-    <div class='Text'>7 Methods</div>
-    <br />
-    <div class='Title2'>Private Methods</div>
-    <table class='ListTable'>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\XMLBuilder.AddIndent.html'>AddIndent</a>
-        </td>
         <td class='ListTableMissing'>Missing Summary</td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
-          <a href='Methods\XMLBuilder.Begin.html'>Begin</a>
+          <a href='Methods\XMLBuilder.GetCreate.html'>GetCreate</a>
         </td>
         <td class='ListTable'>
-      Creates the element begin tag.
+      Gets an element.
     </td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\XMLBuilder.GetIndented.html'>GetIndented</a>
-        </td>
-        <td class='ListTable'>Gets a new line with prefixed indent.</td>
-      </tr>
-      <tr>
-        <td class='ListTable' width='25%'>
-          <a href='Methods\XMLBuilder.GetWrapped.html'>GetWrapped</a>
-        </td>
-        <td class='ListTableMissing'>Missing Summary</td>
       </tr>
     </table>
     <div class='Text'>4 Methods</div>
     <br />
     <div id='Title'>Properties</div>
     <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\XMLBuilder.Builder.html'>Builder</a>
+        </td>
+        <td class='ListTable'>The internal StringBuilder class.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\XMLBuilder.HasText.html'>HasText</a>
+        </td>
+        <td class='ListTable'>Indicates if the builder has text.</td>
+      </tr>
       <tr>
         <td class='ListTable' width='25%'>
           <a href='Properties\XMLBuilder.IndentCharCount.html'>IndentCharCount</a>
@@ -145,6 +241,12 @@
           <a href='Properties\XMLBuilder.IndentCount.html'>IndentCount</a>
         </td>
         <td class='ListTable'>Gets or sets the current indent value.</td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Properties\XMLBuilder.IndentLength.html'>IndentLength</a>
+        </td>
+        <td class='ListTable'>Gets the current indent length.</td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'>
@@ -163,6 +265,16 @@
           <a href='Properties\XMLBuilder.WrapEnabled.html'>WrapEnabled</a>
         </td>
         <td class='ListTable'>Indicates if line wrapping is enabled.</td>
+      </tr>
+    </table>
+    <br />
+    <div id='Title'>Fields</div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'>
+          <a href='Fields\XMLBuilder.DebugText.html'>DebugText</a>
+        </td>
+        <td class='ListTableMissing'>Missing Summary</td>
       </tr>
     </table>
     <br />

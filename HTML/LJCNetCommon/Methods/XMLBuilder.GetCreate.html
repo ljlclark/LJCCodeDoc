@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- XMLBuilder.GetCreate.html -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>GetCreate</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCNetCommon">Assembly List</a>
+      / <a href="../LJCNetCommon.html">LJCNetCommon</a>
+      / <a href="../XMLBuilder.html">XMLBuilder</a>
+      / GetCreate
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCNetCommon</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method GetCreate</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>name - The element name.</div>
+    <div class='Text'>text - The element content text.</div>
+    <div class='Text'>textState - The current text state values.</div>
+    <div class='Text'>attribs - The element attributes.</div>
+    <div class='Text'>addIndent - 
+      Indicates if the element can be indented.
+    </div>
+    <div class='Text'>childIndent - 
+      Indicates if the child indent should be applied.
+    </div>
+    <div class='Text'>isEmpty - Indicates if an empty element.</div>
+    <div class='Text'>close - Indicates if the element will be closed.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The HTML element.</div>
+    <br />
+    <div class='Text'>
+      Gets an element.
+    </div>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
+      GetCreate() is a "GetText" method which creates the element or element
+      opening tag and returns the text value. It is called from other element
+      create methods.<br />
+      The addIndent parameter defaults to true, which starts the text with the
+      current indent string.<br />
+      The isEmpty element defaults to false, which does not add the empty
+      element slash.<br />
+      If isEmpty is true, the empty element slash is added and the close
+      parameter is ignored. The element will not include the closing tag.
+      <br />
+      The ChildIndentCount is incremented if the element is not empty and
+      not closed.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+<span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuider</span>();
+
+<span class='commonType'>var</span> result = hb.GetCreate("head");
+result += hb.GetEnd("head");
+
+<span class='comment'>// result:</span>
+<span class='comment'>// &lt;head&gt;</span>
+<span class='comment'>// &lt;/head&gt;</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>

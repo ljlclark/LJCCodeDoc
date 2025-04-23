@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTMLBuilder.GetText.html -->
-<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -87,8 +87,15 @@
 
 <span class='comment'>// The builder keeps track of the current number of indents.</span>
 hb.AddIndent();
-<span class='commonType'>var</span> result += hb.GetText("This <span class='keyWord'>is</span> an indented line.");
-<span class='commonType'>var</span> result = hb.ToString();
+result += hb.GetLine();
+
+<span class='comment'>// Example Method:</span>
+<span class='comment'>// Starts the text with a newline if the builder already has text</span>
+<span class='comment'>// and param allowNewLine = true.</span>
+<span class='comment'>// The text begins with the current indent string if param</span>
+<span class='comment'>// addIndent = true.</span>
+<span class='comment'>// Defaults: addIndent = true, allowNewLine = true.</span>
+result += hb.GetText("This <span class='keyWord'>is</span> an indented line.");
 
 <span class='comment'>// result:</span>
 <span class='comment'>// This is an appended line.</span>

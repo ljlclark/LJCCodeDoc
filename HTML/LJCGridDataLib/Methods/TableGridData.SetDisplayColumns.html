@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- TableGridData.SetDisplayColumns.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 8/17/2023 9:48 AM -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>SetDisplayColumns</title>
@@ -64,9 +64,9 @@
 {
   <span class='userType'>DbColumns</span> retValue = <span class='keyWord'>null</span>;
 
-  <span class='commonType'>var</span> sql = "select * from Province";
+  <span class='commonType'>var</span> sql = "select * from TableName";
   <span class='commonType'>var</span> dataTable = dataAccess.GetDataTable(sql);
-  <span class='keyWord'>if</span> (NetCommon.HasData(dataTable))
+  <span class='keyWord'>if</span> (NetCommon.HasColumns(dataTable))
   {
     <span class='commonType'>var</span> tableGridData = <span class='keyWord'>new</span> <span class='userType'>TableGridData</span>(LJCDataGridName);
     tableGridData.SetDisplayColumns(dataTable.Columns);

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<!-- MethodTemplate.htm -->
+<!-- DbDataAccess.Delete.html -->
+<!-- Generated 4/20/2025 4:14 PM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Delete</title>
@@ -67,34 +70,37 @@
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='comment'>// Deletes a record.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> Delete(<span class='userType'>DbDataAccess</span> dbDataAccess
-  , <span class='userType'>DbColumns</span> dataDefinition)
+    , <span class='userType'>DbColumns</span> dataDefinition)
 {
-  <span class='comment'>// Create Key Columns.</span>
-  <span class='commonType'>var</span> keyColumns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>()
-  {
-    { "Name", (object)"TestNameUpdated" }
-  };
-  dataDefinition.LJCSetExcludeKeyValue("PrincipleFlag");
+    <span class='comment'>// Create Key Columns.</span>
+    <span class='commonType'>var</span> keyColumns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>()
+    {
+        { "Name", (object)"TestNameUpdated" }
+    };
+    dataDefinition.LJCSetExcludeKeyValue("PrincipleFlag");
 
-  <span class='commonType'>var</span> queryKeyColumns = DbCommon.QueryKeys(keyColumns, dataDefinition);
-  DbRequest dbRequest = <span class='keyWord'>new</span> <span class='userType'>DbRequest</span>()
-  {
-    KeyColumns = queryKeyColumns
-    QueryType = QueryType.Delete.ToString(),
-    TableName = "PersonTest",
-  };
-  <span class='userType'>DbResult</span> dbResult = dbDataAccess.Execute(dbRequest);
+    <span class='commonType'>var</span> queryKeyColumns = <span class='userType'>DbCommon</span>.QueryKeys(keyColumns, dataDefinition);
+    <span class='userType'>DbRequest</span> dbRequest = <span class='keyWord'>new</span> <span class='userType'>DbRequest</span>()
+    {
+        KeyColumns = queryKeyColumns
+        <span class='userType'>QueryType</span> = <span class='userType'>QueryType</span>.Delete.ToString(),
+        TableName = "PersonTest",
+    };
+    <span class='userType'>DbResult</span> dbResult = dbDataAccess.Execute(dbRequest);
 
-  <span class='keyWord'>if</span> (dbResult != null)
-  {
-    <span class='commonType'>string</span> sqlStatement = dbResult.ExecutedSql;
-  }
+    <span class='keyWord'>if</span> (dbResult != null)
+    {
+        <span class='commonType'>string</span> sqlStatement = dbResult.ExecutedSql;
+    }
 }</pre>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
     <br />
   </div>
 </body>

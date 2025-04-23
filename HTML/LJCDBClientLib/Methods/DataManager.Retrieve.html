@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DataManager.Retrieve.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Retrieve</title>
@@ -135,10 +137,10 @@
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='comment'>// This is an example of the code to use the Person Manager Retrieve()</span>
 <span class='comment'>// method.</span>
-PersonManager personManager = <span class='keyWord'>new</span> <span class='userType'>PersonManager</span>();
+<span class='userType'>PersonManager</span> personManager = <span class='keyWord'>new</span> <span class='userType'>PersonManager</span>();
 <span class='userType'>Person</span> personKey = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
 {
-  PersonId = 1
+PersonId = 1
 };
 <span class='userType'>Person</span> person = personManager.Retrieve(personKey);
 
@@ -149,30 +151,30 @@ PersonManager personManager = <span class='keyWord'>new</span> <span class='user
 <span class='keyWord'>using</span> LJCNetCommon;
 <span class='keyWord'>using</span> LJCDBMessage;
 
-<span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Provides Person specific data manipulation methods.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+&lt;span class='xmlComment'&gt;/// &lt;summary&gt;</span><span class='comment'>Provides Person specific data manipulation methods.</span><span class='xmlComment'>&lt;/summary&gt;&lt;/span&gt;
 <span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>PersonManager</span>
 {
-  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Retrieves a person record from the database.</span><span class='xmlComment'>&lt;/summary&gt;</span>
-  <span class='xmlComment'>/// &lt;param name="</span>keyObject<span class='xmlComment'>"&gt;</span><span class='comment'>The record containing the key field values.</span><span class='xmlComment'>&lt;/param&gt;</span>
-  <span class='xmlComment'>/// &lt;param name="</span>propertyNames<span class='xmlComment'>"&gt;</span><span class='comment'>The incuded column property names.</span><span class='xmlComment'>&lt;/param&gt;</span>
-  <span class='xmlComment'>/// &lt;param name="</span>filters<span class='xmlComment'>"&gt;</span><span class='comment'>The filter values.</span><span class='xmlComment'>&lt;/param&gt;</span>
-  <span class='xmlComment'>/// &lt;param name="</span>dbJoins<span class='xmlComment'>"&gt;</span><span class='comment'>The join values.</span><span class='xmlComment'>&lt;/param&gt;</span>
-  <span class='xmlComment'>/// &lt;returns&gt;</span><span class='comment'>A person object.</span><span class='xmlComment'>&lt;/returns&gt;</span>
-  <span class='modifier'>public</span> <span class='userType'>Person</span> Retrieve(<span class='userType'>Person</span> keyObject, <span class='libType'>List</span>&lt;<span class='commonType'>string</span>&gt; propertyNames = <span class='keyWord'>null</span>
-    , <span class='userType'>DbFilters</span> filters = <span class='keyWord'>null</span>, <span class='userType'>DbJoins</span> dbJoins = null)
-  {
-    <span class='userType'>Person</span> retValue = <span class='keyWord'>null</span>;
-    
-    <span class='userType'>DbResult</span> dbResult = mDataManager.Retrieve(keyObject, propertyNames, filters, dbJoins);
-    SQLStatement = mDataManager.SQLStatement;
-    <span class='keyWord'>if</span> (dbResult != <span class='keyWord'>null</span> && dbResult.DbRecords.Count &gt; 0)
-    {
-      <span class='comment'>// Populate a data object with the result values.</span>
-      retValue = <span class='keyWord'>new</span> <span class='userType'>Person</span>();
-      DbCommon.SetObjectValues(dbResult.DbRecords[0], retValue);
-    }
-    <span class='keyWord'>return</span> retValue;
-  }
+&lt;span class='xmlComment'&gt;/// &lt;summary&gt;</span><span class='comment'>Retrieves a person record from the database.</span><span class='xmlComment'>&lt;/summary&gt;&lt;/span&gt;
+<span class='xmlComment'>/// &lt;param name="</span>keyObject<span class='xmlComment'>"&gt;</span><span class='comment'>The record containing the key field values.</span><span class='xmlComment'>&lt;/param&gt;</span>
+<span class='xmlComment'>/// &lt;param name="</span>propertyNames<span class='xmlComment'>"&gt;</span><span class='comment'>The incuded column property names.</span><span class='xmlComment'>&lt;/param&gt;</span>
+<span class='xmlComment'>/// &lt;param name="</span>filters<span class='xmlComment'>"&gt;</span><span class='comment'>The filter values.</span><span class='xmlComment'>&lt;/param&gt;</span>
+<span class='xmlComment'>/// &lt;param name="</span>dbJoins<span class='xmlComment'>"&gt;</span><span class='comment'>The join values.</span><span class='xmlComment'>&lt;/param&gt;</span>
+&lt;span class='xmlComment'&gt;/// &lt;returns&gt;</span><span class='comment'>A person object.</span><span class='xmlComment'>&lt;/returns&gt;&lt;/span&gt;
+<span class='modifier'>public</span> <span class='userType'>Person</span> Retrieve(<span class='userType'>Person</span> keyObject, <span class='libType'>List</span>&lt;<span class='commonType'>string</span>&gt; propertyNames = <span class='keyWord'>null</span>
+, <span class='userType'>DbFilters</span> filters = <span class='keyWord'>null</span>, <span class='userType'>DbJoins</span> dbJoins = null)
+{
+<span class='userType'>Person</span> retValue = <span class='keyWord'>null</span>;
+
+<span class='userType'>DbResult</span> dbResult = mDataManager.Retrieve(keyObject, propertyNames, filters, dbJoins);
+SQLStatement = mDataManager.SQLStatement;
+<span class='keyWord'>if</span> (dbResult != <span class='keyWord'>null</span> && dbResult.DbRecords.Count &gt; 0)
+{
+<span class='comment'>// Populate a data object with the result values.</span>
+retValue = <span class='keyWord'>new</span> <span class='userType'>Person</span>();
+<span class='userType'>DbCommon</span>.SetObjectValues(dbResult.DbRecords[0], retValue);
+}
+<span class='keyWord'>return</span> retValue;
+}
 }</pre>
             </td>
           </tr>

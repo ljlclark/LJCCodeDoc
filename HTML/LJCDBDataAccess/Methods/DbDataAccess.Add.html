@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<!-- MethodTemplate.htm -->
+<!-- DbDataAccess.Add.html -->
+<!-- Generated 4/20/2025 4:14 PM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Add</title>
@@ -67,101 +70,104 @@
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='comment'>// Adds a Person record.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> Add(<span class='userType'>DbDataAccess</span> dbDataAccess
-  , <span class='userType'>DbColumns</span> dataDefinition)
+    , <span class='userType'>DbColumns</span> dataDefinition)
 {
-  <span class='comment'>// Create the list of included columns.</span>
-  <span class='comment'>// This list must not include the database assigned columns</span>
-  <span class='comment'>// or the database assigned columns must have the AutoIncrement</span>
-  <span class='comment'>// value set to "true".</span>
-  List&lt;string&gt; columnNames = <span class='keyWord'>new</span> <span class='userType'>List</span>&lt;string&gt;();
-  <span class='keyWord'>foreach</span> (DbColumn column <span class='keyWord'>in</span> dataDefinition)
-  {
-    <span class='keyWord'>if</span> (column.ColumnName != "Id")
+    <span class='comment'>// Create the list of included columns.</span>
+    <span class='comment'>// This list must not include the database assigned columns</span>
+    <span class='comment'>// or the database assigned columns must have the AutoIncrement</span>
+    <span class='comment'>// value set to "true".</span>
+    List&lt;string&gt; columnNames = <span class='keyWord'>new</span> <span class='userType'>List</span>&lt;string&gt;();
+    <span class='keyWord'>foreach</span> (DbColumn column <span class='keyWord'>in</span> dataDefinition)
     {
-      columnNames.Add(column.ColumnName);
+        <span class='keyWord'>if</span> (column.ColumnName != "Id")
+        {
+            columnNames.Add(column.ColumnName);
+        }
     }
-  }
 
-  <span class='comment'>// The inserted columns must not include the DB assigned columns.</span>
-  <span class='userType'>Person</span> dataRecord = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
-  {
-    Name = "TestName",
-    PrincipleFlag = <span class='keyWord'>false</span>
-  };
+    <span class='comment'>// The inserted columns must not include the DB assigned columns.</span>
+    <span class='userType'>Person</span> dataRecord = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
+    {
+        Name = "TestName",
+        PrincipleFlag = <span class='keyWord'>false</span>
+    };
 
-  <span class='comment'>// Create a Data Columns object with the included data definitions</span>
-  <span class='comment'>// and values from the data record.</span>
-  <span class='commonType'>var</span> dataColumns = DbCommon.QueryDataColumns(dataRecord, columnList
-    , dataDefinition);
-
-  <span class='comment'>// This code is needed only if there are database assigned columns.</span>
-  <span class='userType'>DbColumns</span> keyColumns = GetKeyColumns(dataRecord, dataDefinition);
-
-  <span class='comment'>// Create query with columns containing values from the record.</span>
-  DbRequest dbRequest = <span class='keyWord'>new</span> <span class='userType'>DbRequest</span>()
-  {
-    Columns = dataColumns,
-    KeyColumns = keyColumns
-    QueryType = QueryType.Insert.ToString(),
-    TableName = "PersonTest",
-  };
-  <span class='userType'>DbResult</span> dbResult = dbDataAccess.Execute(dbRequest);
-
-  <span class='keyWord'>if</span> (dbResult != null)
-  {
-    <span class='commonType'>string</span> sqlStatement = dbResult.ExecutedSql;
+    <span class='comment'>// Create a Data Columns object with the included data definitions</span>
+    <span class='comment'>// and values from the data record.</span>
+    <span class='commonType'>var</span> dataColumns = <span class='userType'>DbCommon</span>.QueryDataColumns(dataRecord, columnList
+        , dataDefinition);
 
     <span class='comment'>// This code is needed only if there are database assigned columns.</span>
-    <span class='keyWord'>if</span> (dbResult.DbRecords != <span class='keyWord'>null</span> && dbResult.DbRecords.Count &gt; 0)
+    <span class='userType'>DbColumns</span> keyColumns = GetKeyColumns(dataRecord, dataDefinition);
+
+    <span class='comment'>// Create query with columns containing values from the record.</span>
+    <span class='userType'>DbRequest</span> dbRequest = <span class='keyWord'>new</span> <span class='userType'>DbRequest</span>()
     {
-      SetAssignedValues(dataRecord, dbResult.DbRecords[0]);
+        Columns = dataColumns,
+        KeyColumns = keyColumns
+        <span class='userType'>QueryType</span> = <span class='userType'>QueryType</span>.Insert.ToString(),
+        TableName = "PersonTest",
+    };
+    <span class='userType'>DbResult</span> dbResult = dbDataAccess.Execute(dbRequest);
+
+    <span class='keyWord'>if</span> (dbResult != null)
+    {
+        <span class='commonType'>string</span> sqlStatement = dbResult.ExecutedSql;
+
+        <span class='comment'>// This code is needed only if there are database assigned columns.</span>
+        <span class='keyWord'>if</span> (dbResult.DbRecords != <span class='keyWord'>null</span> && dbResult.DbRecords.Count &gt; 0)
+        {
+            SetAssignedValues(dataRecord, dbResult.DbRecords[0]);
+        }
     }
-  }
 }
 
 <span class='comment'>// Gets the key columns if there are database assigned columns.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='userType'>DbColumns</span> GetKeyColumns(<span class='userType'>Person</span> person
-  , <span class='userType'>DbColumns</span> dataDefinition)
+    , <span class='userType'>DbColumns</span> dataDefinition)
 {
-  <span class='userType'>DbColumns</span> retValue = <span class='keyWord'>null</span>;
+    <span class='userType'>DbColumns</span> retValue = <span class='keyWord'>null</span>;
 
-  <span class='comment'>// Create the list of database assigned and lookup column names.</span>
-  <span class='comment'>// This list must include the database assigned column definitions.</span>
-  <span class='userType'>List</span>&lt;<span class='commonType'>string</span>&gt; lookupColumnNames = <span class='keyWord'>new</span> <span class='userType'>List</span>&lt;<span class='commonType'>string</span>&gt;()
-  {
-    "Id",
-    "Name"
-  };
+    <span class='comment'>// Create the list of database assigned and lookup column names.</span>
+    <span class='comment'>// This list must include the database assigned column definitions.</span>
+    <span class='userType'>List</span>&lt;<span class='commonType'>string</span>&gt; lookupColumnNames = <span class='keyWord'>new</span> <span class='userType'>List</span>&lt;<span class='commonType'>string</span>&gt;()
+    {
+        "Id",
+        "Name"
+    };
 
-  <span class='comment'>// Create a Lookup Keys object with the lookup data definitions</span>
-  <span class='comment'>// and values from the data record.</span>
-  <span class='comment'>// This is the unique key to find the inserted record for obtaining</span>
-  <span class='comment'>// the database assigned values.</span>
-  retValue = DbCommon.QueryDataKeys(person, dataDefinintion
-    , lookupColumnNames);
+    <span class='comment'>// Create a Lookup Keys object with the lookup data definitions</span>
+    <span class='comment'>// and values from the data record.</span>
+    <span class='comment'>// This is the unique key to find the inserted record for obtaining</span>
+    <span class='comment'>// the database assigned values.</span>
+    retValue = <span class='userType'>DbCommon</span>.QueryDataKeys(person, dataDefinintion
+        , lookupColumnNames);
 
-  <span class='comment'>// Create the list of database assigned columns and updates</span>
-  <span class='comment'>// the key columns.</span>
-  <span class='userType'>List</span>&lt;<span class='commonType'>string</span>&gt; dbAssignedColumnNames = <span class='keyWord'>new</span> <span class='userType'>List</span>&lt;<span class='commonType'>string</span>&gt;()
-  {
-    "Id"
-  };
-  DbCommon.SetDatabaseAssignedKeys(retValue, dbAssignedColumnNames);
-  <span class='keyWord'>return</span> retValue;
+    <span class='comment'>// Create the list of database assigned columns and updates</span>
+    <span class='comment'>// the key columns.</span>
+    <span class='userType'>List</span>&lt;<span class='commonType'>string</span>&gt; dbAssignedColumnNames = <span class='keyWord'>new</span> <span class='userType'>List</span>&lt;<span class='commonType'>string</span>&gt;()
+    {
+        "Id"
+    };
+    <span class='userType'>DbCommon</span>.SetDatabaseAssignedKeys(retValue, dbAssignedColumnNames);
+    <span class='keyWord'>return</span> retValue;
 }
 
 <span class='comment'>// Set the database assigned values.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> SetAssignedValues(<span class='userType'>Person</span> person, <span class='userType'>DbValues</span> resultRecord)
 {
-  <span class='userType'>Person</span> addedPerson = <span class='keyWord'>new</span> <span class='userType'>Person</span>();
-  DbCommon.SetObjectValues(resultRecord, addedPerson);
-  person.ID = addedPerson.ID;
+    <span class='userType'>Person</span> addedPerson = <span class='keyWord'>new</span> <span class='userType'>Person</span>();
+    <span class='userType'>DbCommon</span>.SetObjectValues(resultRecord, addedPerson);
+    person.ID = addedPerson.ID;
 }</pre>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
     <br />
   </div>
 </body>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- TextDataReader.LJCSetObjectValues.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/20/2025 4:14 PM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>LJCSetObjectValues</title>
@@ -75,8 +77,8 @@
 
 <span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>Person</span>
 {
-  <span class='modifier'>public</span> <span class='commonType'>string</span> FirstName { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
-  <span class='modifier'>public</span> <span class='commonType'>string</span> LastName { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+    <span class='modifier'>public</span> <span class='commonType'>string</span> FirstName { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
+    <span class='modifier'>public</span> <span class='commonType'>string</span> LastName { <span class='keyWord'>get</span>; <span class='keyWord'>set</span>; }
 }
 
 <span class='comment'>// The hasHeadingLine defaults to true if the parameter is not included.</span>
@@ -84,9 +86,9 @@
 
 <span class='commonType'>string</span>[] lines = <span class='keyWord'>new</span> <span class='commonType'>string</span>[]
 {
-  "FirstName, LastName",
-  "John, Doe",
-  "Jane, Doe"
+    "FirstName, LastName",
+    "John, Doe",
+    "Jane, Doe"
 };
 
 <span class='comment'>// The field delimiter defaults to "," if the parameter is not included.</span>
@@ -94,10 +96,10 @@ textReader.LJCSetLines(lines);
 
 <span class='keyWord'>while</span>(textReader.ReadLine())
 {
-  <span class='userType'>Person</span> person = <span class='keyWord'>new</span> <span class='userType'>Person</span>();
-  textReader.LJCSetObjectValues(person);
-  <span class='comment'>// First record person.FirstName = "John", person.LastName = "Doe"</span>
-  <span class='comment'>// second record person.FirstName = "Jane", person.LastName = "Doe"</span>
+    <span class='userType'>Person</span> person = <span class='keyWord'>new</span> <span class='userType'>Person</span>();
+    textReader.LJCSetObjectValues(person);
+    <span class='comment'>// First record person.FirstName = "John", person.LastName = "Doe"</span>
+    <span class='comment'>// second record person.FirstName = "Jane", person.LastName = "Doe"</span>
 }</pre>
             </td>
           </tr>

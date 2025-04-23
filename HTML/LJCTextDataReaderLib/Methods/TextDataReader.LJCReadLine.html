@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- TextDataReader.LJCReadLine.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/20/2025 4:14 PM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>LJCReadLine</title>
@@ -28,7 +30,7 @@
     <br />
     <div class='Text'>Returns</div>
     <br />
-    <div class='Text'>True if read successfully, otherwise false.</div>
+    <div class='Text'>true if read successfully; otherwise, false.</div>
     <br />
     <div class='Text'>Syntax</div>
     <br />
@@ -72,9 +74,9 @@
 
 <span class='commonType'>string</span>[] lines = <span class='keyWord'>new</span> <span class='commonType'>string</span>[]
 {
-  "FirstName, LastName",
-  "John, Doe",
-  "Jane, Doe"
+    "FirstName, LastName",
+    "John, Doe",
+    "Jane, Doe"
 };
 
 <span class='comment'>// The field delimiter defaults to "," if the parameter is not included.</span>
@@ -82,11 +84,11 @@ textReader.LJCSetLines(lines);
 
 <span class='keyWord'>while</span>(textReader.ReadLine())
 {
-  <span class='comment'>// Get the current line values as strings.</span>
-  <span class='keyWord'>for</span> <span class='commonType'>int</span> index = 0; index &lt; textReader.FieldCount; index++)
-  {
-    <span class='commonType'>string</span> data = textReader.GetString(index);
-  }
+    <span class='comment'>// Get the current line values as strings.</span>
+    <span class='keyWord'>for</span> <span class='commonType'>int</span> index = 0; index &lt; textReader.FieldCount; index++)
+    {
+        <span class='commonType'>string</span> data = textReader.GetString(index);
+    }
 }</pre>
             </td>
           </tr>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- TextDataReader.Read.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/20/2025 4:14 PM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Read</title>
@@ -28,7 +30,7 @@
     <br />
     <div class='Text'>Returns</div>
     <br />
-    <div class='Text'>True if read successfully, otherwise false.</div>
+    <div class='Text'>true if read successfully; otherwise, false.</div>
     <br />
     <div class='Text'>Syntax</div>
     <br />
@@ -79,19 +81,19 @@ textReader.LJCSetFile("InputFileSpec.txt");
 
 <span class='keyWord'>while</span>(textReader.Read())
 {
-  <span class='comment'>// Get the current line values by index.</span>
-  <span class='keyWord'>for</span> <span class='commonType'>int</span> index = 0; index &lt; textReader.FieldCount; index++)
-  {
-    <span class='commonType'>object</span> fieldValue = textReader[index];
-    <span class='commonType'>string</span> text = textReader.GetString(index);
-  }
+    <span class='comment'>// Get the current line values by index.</span>
+    <span class='keyWord'>for</span> <span class='commonType'>int</span> index = 0; index &lt; textReader.FieldCount; index++)
+    {
+        <span class='commonType'>object</span> fieldValue = textReader[index];
+        <span class='commonType'>string</span> text = textReader.GetString(index);
+    }
 
-  <span class='comment'>// Get the current line values by name.</span>
-  <span class='keyWord'>foreach</span> <span class='commonType'>string</span> fieldName <span class='keyWord'>in</span> textReader.LJCGetFieldNames())
-  {
-    <span class='commonType'>object</span> fieldValue = textReader[fieldName];
-    <span class='commonType'>string</span> text = textReader.GetString(fieldName);
-  }
+    <span class='comment'>// Get the current line values by name.</span>
+    <span class='keyWord'>foreach</span> <span class='commonType'>string</span> fieldName <span class='keyWord'>in</span> textReader.LJCGetFieldNames())
+    {
+        <span class='commonType'>object</span> fieldValue = textReader[fieldName];
+        <span class='commonType'>string</span> text = textReader.GetString(fieldName);
+    }
 }</pre>
             </td>
           </tr>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- TableGridData.RowSetValues.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 8/19/2023 9:48 AM -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>RowSetValues</title>
@@ -27,7 +27,7 @@
     </div>
     <br />
     <div id='Title'>Parameters</div>
-    <div class='Text'>gridRow - The Grid row object.</div>
+    <div class='Text'>ljcGridRow - The LJCGridRow object.</div>
     <div class='Text'>dataRow - The DataRow object.</div>
     <br />
     <div class='Text'>Syntax</div>
@@ -38,7 +38,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public Void RowSetValues(LJCGridRow gridRow, DataRow dataRow)
+              public Void RowSetValues(LJCGridRow ljcGridRow, DataRow dataRow)
             </td>
           </tr>
         </tbody>
@@ -66,19 +66,19 @@
   <span class='commonType'>var</span> dataTable = dataAccess.GetDataTable(sql);
   <span class='keyWord'>if</span> (NetCommon.HasData(dataTable))
   {
-    <span class='comment'>// Create the Display column definitions.</span>
+    <span class='comment'>// Create the Grid column definitions.</span>
     <span class='commonType'>var</span> tableGridData = <span class='keyWord'>new</span> <span class='userType'>TableGridData</span>(LJCDataGridName);
-    tableGridData.SetDisplayColumns(dataTable.Columns);
+    tableGridData.SetGridColumns(dataTable.Columns);
 
     <span class='comment'>// Configure the grid columns.</span>
     <span class='userType'>LJCDataGridName</span>.Columns.Clear();
-    <span class='userType'>LJCDataGridName</span>.LJCAddDisplayColumns(tableGridData.DisplayColumns);
+    <span class='userType'>LJCDataGridName</span>.LJCAddColumns(tableGridData.GridColumns);
 
     <span class='comment'>// Create and load the grid rows individually.</span>
-    <span class='keyWord'>foreach</span> (DataRow row <span class='keyWord'>in</span> dataTable.Rows)
+    <span class='keyWord'>foreach</span> (DataRow dataRow <span class='keyWord'>in</span> dataTable.Rows)
     {
-      <span class='commonType'>var</span> gridRow = <span class='userType'>LJCDataGridName</span>.LJCRowAdd();
-      tableGridData.RowSetValues(gridRow, row);
+      <span class='commonType'>var</span> ljcGridRow = <span class='userType'>LJCDataGridName</span>.LJCRowAdd();
+      tableGridData.RowSetValues(ljcGridRow, dataRow);
     }
   }
 }</pre>

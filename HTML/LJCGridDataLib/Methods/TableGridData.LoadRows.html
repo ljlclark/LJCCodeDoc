@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- TableGridData.LoadRows.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 8/19/2023 9:48 AM -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>LoadRows</title>
@@ -45,7 +45,7 @@
     </div>
     <br />
     <div class='Text'>
-      Loads the grid rows from the DataRows collection.
+      Loads grid rows from the DataRows collection.
     </div>
     <br />
     <div class='Text'>Example</div>
@@ -65,13 +65,13 @@
   <span class='commonType'>var</span> dataTable = dataAccess.GetDataTable(sql);
   <span class='keyWord'>if</span> (NetCommon.HasData(dataTable))
   {
-    <span class='comment'>// Create the Display column definitions.</span>
+    <span class='comment'>// Create the Grid column definitions.</span>
     <span class='commonType'>var</span> tableGridData = <span class='keyWord'>new</span> <span class='userType'>TableGridData</span>(LJCDataGridName);
-    tableGridData.SetDisplayColumns(dataTable.Columns);
+    tableGridData.SetGridColumns(dataTable.Columns);
 
     <span class='comment'>// Configure the grid columns.</span>
     <span class='userType'>LJCDataGridName</span>.Columns.Clear();
-    <span class='userType'>LJCDataGridName</span>.LJCAddDisplayColumns(tableGridData.DisplayColumns);
+    <span class='userType'>LJCDataGridName</span>.LJCAddColumns(tableGridData.GridColumns);
 
     <span class='comment'>// Load the grid rows.</span>
     tableGridData.LoadRows(dataTable);

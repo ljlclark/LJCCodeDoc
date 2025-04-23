@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- ObjectManager`2.Retrieve.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Retrieve</title>
@@ -65,19 +67,19 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='comment'>// Retrieves a Person record.</span>
-<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='userType'>Person</span> Retrieve(<span class='userType'>ObjectManager</span>&lt;Person, Persons&gt; personManager)
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='userType'>Person</span> Retrieve(ObjectManager&lt;Person, <span class='userType'>Persons&gt</span>; personManager)
 {
-  <span class='userType'>Person</span> retValue;
+    <span class='userType'>Person</span> retValue;
 
-  <span class='comment'>// Create Key Columns.</span>
-  <span class='commonType'>var</span> keyColumns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>()
-  {
-    Name = "TestName"
-  };
+    <span class='comment'>// Create Key Columns.</span>
+    <span class='commonType'>var</span> keyColumns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>()
+    {
+        Name = "TestName"
+    };
 
-  <span class='comment'>// Retrieve the record.</span>
-  retValue = personManager.Retrieve(keyColumns);
-  <span class='keyWord'>return</span> retValue;
+    <span class='comment'>// Retrieve the record.</span>
+    retValue = personManager.Retrieve(keyColumns);
+    <span class='keyWord'>return</span> retValue;
 }</pre>
             </td>
           </tr>

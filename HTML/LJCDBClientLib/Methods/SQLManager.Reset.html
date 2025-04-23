@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- SQLManager.Reset.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Reset</title>
@@ -29,6 +31,8 @@
     <div id='Title'>Parameters</div>
     <div class='Text'>dataConfigName - The data configuration name.</div>
     <div class='Text'>tableName - The database table name.</div>
+    <div class='Text'>connectionString - The Connection string.</div>
+    <div class='Text'>providerName - The Provider name.</div>
     <br />
     <div class='Text'>Syntax</div>
     <br />
@@ -38,7 +42,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public Void Reset(String dataConfigName, String tableName)
+              public Void Reset(String dataConfigName, String tableName, String connectionString = null, String providerName = null)
             </td>
           </tr>
         </tbody>

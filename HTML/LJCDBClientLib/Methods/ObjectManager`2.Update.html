@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- ObjectManager`2.Update.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Update</title>
@@ -61,27 +63,27 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='comment'>// Updates a record.</span>
-<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> Update(<span class='userType'>ObjectManager</span>&lt;Person, Persons&gt; personManager)
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> Update(ObjectManager&lt;Person, <span class='userType'>Persons&gt</span>; personManager)
 {
-  <span class='comment'>// Create the list of included columns.</span>
-  <span class='comment'>// This list must not include the DB assigned columns</span>
-  <span class='comment'>// or the database assigned columns must have the AutoIncrement</span>
-  <span class='comment'>// value set to "true".</span>
-  List&lt;string&gt; columnNames = <span class='keyWord'>new</span> <span class='userType'>List</span>&lt;string&gt;() { "Name" };
+    <span class='comment'>// Create the list of included columns.</span>
+    <span class='comment'>// This list must not include the DB assigned columns</span>
+    <span class='comment'>// or the database assigned columns must have the AutoIncrement</span>
+    <span class='comment'>// value set to "true".</span>
+    List&lt;string&gt; columnNames = <span class='keyWord'>new</span> <span class='userType'>List</span>&lt;string&gt;() { "Name" };
 
-  <span class='userType'>Person</span> dataObject = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
-  {
-    Name = "TestNameUpdated"
-  };
+    <span class='userType'>Person</span> dataObject = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
+    {
+        Name = "TestNameUpdated"
+    };
 
-  <span class='comment'>// Create Key Columns.</span>
-  <span class='commonType'>var</span> keyColumns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>()
-  {
-    Name = "TestName"
-  };
+    <span class='comment'>// Create Key Columns.</span>
+    <span class='commonType'>var</span> keyColumns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>()
+    {
+        Name = "TestName"
+    };
 
-  <span class='comment'>// Update the record.</span>
-  personManager.Update(dataObject, keyColumns, columnNames);
+    <span class='comment'>// Update the record.</span>
+    personManager.Update(dataObject, keyColumns, columnNames);
 }</pre>
             </td>
           </tr>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- ObjectManager`2.ExecuteClientSql.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>ExecuteClientSql</title>
@@ -58,16 +60,16 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='comment'>// Executes a non-query SQL statement.</span>
-<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> ExecuteClientSql(<span class='userType'>ObjectManager</span>&lt;Person, Persons&gt; personManager)
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> ExecuteClientSql(ObjectManager&lt;Person, <span class='userType'>Persons&gt</span>; personManager)
 {
-  StringBuilder builder = <span class='keyWord'>new</span> <span class='userType'>StringBuilder</span>(64);
-  builder.AppendLine("update PersonTest");
-  builder.AppendLine("set Name = 'TestNameUpdated'");
-  builder.AppendLine("where Name = 'TestName'");
-  <span class='commonType'>string</span> sql = builder.ToString();
+    StringBuilder builder = <span class='keyWord'>new</span> <span class='userType'>StringBuilder</span>(64);
+    builder.AppendLine("update PersonTest");
+    builder.AppendLine("set Name = 'TestNameUpdated'");
+    builder.AppendLine("where Name = 'TestName'");
+    <span class='commonType'>string</span> sql = builder.ToString();
 
-  <span class='comment'>// Update the record.</span>
-  personManager.ExecuteClientSql(sql);
+    <span class='comment'>// Update the record.</span>
+    personManager.ExecuteClientSql(sql);
 }</pre>
             </td>
           </tr>

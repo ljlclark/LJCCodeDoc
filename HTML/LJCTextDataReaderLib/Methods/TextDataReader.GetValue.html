@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- TextDataReader.GetValue.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/20/2025 4:14 PM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>GetValue</title>
@@ -74,9 +76,9 @@
 
 <span class='commonType'>string</span>[] lines = <span class='keyWord'>new</span> <span class='commonType'>string</span>[]
 {
-  "FirstName, LastName",
-  "John, Doe",
-  "Jane, Doe"
+    "FirstName, LastName",
+    "John, Doe",
+    "Jane, Doe"
 };
 
 <span class='comment'>// The field delimiter defaults to "," if the parameter is not included.</span>
@@ -84,19 +86,19 @@ textReader.LJCSetLines(lines);
 
 <span class='keyWord'>while</span>(textReader.ReadLine())
 {
-  <span class='comment'>// Get the current line values as strings.</span>
-  <span class='keyWord'>for</span> <span class='commonType'>int</span> index = 0; index &lt; textReader.FieldCount; index++)
-  {
-    <span class='comment'>// All statements lines retrieve the same data.</span>
-    <span class='commonType'>object</span> data = textReader.GetValue(index);
-    data = textReader[index];
+    <span class='comment'>// Get the current line values as strings.</span>
+    <span class='keyWord'>for</span> <span class='commonType'>int</span> index = 0; index &lt; textReader.FieldCount; index++)
+    {
+        <span class='comment'>// All statements lines retrieve the same data.</span>
+        <span class='commonType'>object</span> data = textReader.GetValue(index);
+        data = textReader[index];
     
-    <span class='commonType'>string</span> name = textReader.GetName(index);
-    data = textReader[name];
+        <span class='commonType'>string</span> name = textReader.GetName(index);
+        data = textReader[name];
         
-    DbColumn dataField = textReader.LJCDataFields[index];
-    data = dataField.Value;
-  }
+        <span class='userType'>DbColumn</span> dataField = textReader.LJCDataFields[index];
+        data = dataField.Value;
+    }
 }</pre>
             </td>
           </tr>

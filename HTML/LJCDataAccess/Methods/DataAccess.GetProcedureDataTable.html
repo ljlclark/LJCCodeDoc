@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DataAccess.GetProcedureDataTable.html -->
-<!-- Generated 7/11/2023 9:14 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>GetProcedureDataTable</title>
@@ -73,27 +75,27 @@
 <span class='comment'>// Executes a Select statement and retrieves the DataTable object.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> GetProcedureDataTable(<span class='userType'>DataAccess</span> dataAccess)
 {
-  <span class='comment'>// Add(string parameterName, SqlDbType sqlDbType, int size</span>
-  <span class='comment'>//   , object value = null, ParameterDirection direction = ParameterDirection.Input)</span>
-  <span class='commonType'>var</span> parameters = <span class='keyWord'>new</span> <span class='userType'>ProcedureParameters</span>()
-  {
-    { "@ID", SqlDbType.Int, 0, 8 }
-  };
-
-  <span class='commonType'>string</span> procedureName = "dbo.sp_RetrieveByID";
-
-  <span class='commonType'>var</span> dataTable = dataAccess.GetProcedureDataTable(procedureName
-    , parameters);
-  <span class='keyWord'>if</span> (dataTable != null)
-  {
-    <span class='keyWord'>foreach</span> (DataRow dataRow <span class='keyWord'>in</span> dataTable.Rows)
+    <span class='comment'>// Add(string parameterName, SqlDbType sqlDbType, int size</span>
+    <span class='comment'>//   , object value = null, ParameterDirection direction = ParameterDirection.Input)</span>
+    <span class='commonType'>var</span> parameters = <span class='keyWord'>new</span> <span class='userType'>ProcedureParameters</span>()
     {
-      <span class='keyWord'>for</span> <span class='commonType'>int</span> index = 0; index &lt; dataTable.Columns.Count; index++)
-      {
-        <span class='commonType'>string</span> value = dataRow[index].ToString();
-      }
+        { "@ID", SqlDbType.Int, 0, 8 }
+    };
+
+    <span class='commonType'>string</span> procedureName = "dbo.sp_RetrieveByID";
+
+    <span class='commonType'>var</span> dataTable = dataAccess.GetProcedureDataTable(procedureName
+        , parameters);
+    <span class='keyWord'>if</span> (dataTable != null)
+    {
+        <span class='keyWord'>foreach</span> (DataRow dataRow <span class='keyWord'>in</span> dataTable.Rows)
+        {
+            <span class='keyWord'>for</span> <span class='commonType'>int</span> index = 0; index &lt; dataTable.Columns.Count; index++)
+            {
+                <span class='commonType'>string</span> value = dataRow[index].ToString();
+            }
+        }
     }
-  }
 }</pre>
             </td>
           </tr>

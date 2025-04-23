@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- TextBuilder.AddIndent.html -->
-<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -67,6 +67,7 @@
               <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
 <span class='commonType'>var</span> tb = <span class='keyWord'>new</span> <span class='userType'>TextBuilder</span>();
 
+<span class='comment'>// Example Method:</span>
 <span class='comment'>// The builder keeps track of the current number of indents.</span>
 <span class='comment'>// Adds 1 indent by default.</span>
 tb.AddIndent();
@@ -74,9 +75,11 @@ tb.AddIndent();
 <span class='comment'>// Adds text without modification.</span>
 tb.AddText("This text <span class='keyWord'>is</span> not indented.");
 
-<span class='comment'>// Adds a new line before adding the text if the builder</span>
-<span class='comment'>// already has text.</span>
-<span class='comment'>// Starts with the current indent string.</span>
+<span class='comment'>// Starts the text with a newline if the builder already has text</span>
+<span class='comment'>// and param allowNewLine = true.</span>
+<span class='comment'>// The text begins with the current indent string if param</span>
+<span class='comment'>// addIndent = true.</span>
+<span class='comment'>// Defaults: addIndent = true, allowNewLine = true.</span>
 tb.Text("This text <span class='keyWord'>is</span> indented.");
 
 <span class='comment'>// No Indent</span>
@@ -84,13 +87,13 @@ tb.Text("This text <span class='keyWord'>is</span> indented.");
 tb.Text("Not indented.", addIndent);
 
 <span class='comment'>// Do not start a new line.</span>
-tb.Text("No New Line.", allowNewLine: false);
+tb.Text("No start with newline.", allowNewLine: false);
 <span class='commonType'>var</span> result = tb.ToString();
 
 <span class='comment'>// result:</span>
 <span class='comment'>// This text is not indented.</span>
 <span class='comment'>//   This text is indented.</span>
-<span class='comment'>// Not Indented.  No New Line</span></pre>
+<span class='comment'>// Not Indented.  No start with newline.</span></pre>
             </td>
           </tr>
         </tbody>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- TextDataReader.GetOrdinal.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/20/2025 4:14 PM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>GetOrdinal</title>
@@ -74,9 +76,9 @@
 
 <span class='commonType'>string</span>[] lines = <span class='keyWord'>new</span> <span class='commonType'>string</span>[]
 {
-  "FirstName, LastName",
-  "John, Doe",
-  "Jane, Doe"
+    "FirstName, LastName",
+    "John, Doe",
+    "Jane, Doe"
 };
 
 <span class='comment'>// The field delimiter defaults to "," if the parameter is not included.</span>
@@ -84,11 +86,11 @@ textReader.LJCSetLines(lines);
 
 <span class='keyWord'>while</span>(textReader.ReadLine())
 {
-  <span class='comment'>// Get the current line values as strings.</span>
-  <span class='commonType'>int</span> firstNameIndex = textReader.GetOrdinal("FirstName");
-  <span class='commonType'>int</span> lastNameIndex = textReader.GetOrdinal("LastName");
-  <span class='commonType'>string</span> firstName = textReader.GetString(firstNameIndex);
-  <span class='commonType'>string</span> lastName = textReader.GetString(lastNameIndex);
+    <span class='comment'>// Get the current line values as strings.</span>
+    <span class='commonType'>int</span> firstNameIndex = textReader.GetOrdinal("FirstName");
+    <span class='commonType'>int</span> lastNameIndex = textReader.GetOrdinal("LastName");
+    <span class='commonType'>string</span> firstName = textReader.GetString(firstNameIndex);
+    <span class='commonType'>string</span> lastName = textReader.GetString(lastNameIndex);
 }</pre>
             </td>
           </tr>

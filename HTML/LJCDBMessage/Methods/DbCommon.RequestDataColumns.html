@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DbCommon.RequestDataColumns.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>RequestDataColumns</title>
@@ -30,6 +32,7 @@
     <div class='Text'>dataObject - The record object.</div>
     <div class='Text'>baseDefinition - The Base DataDefinition columns.</div>
     <div class='Text'>propertyNames - The column property names.</div>
+    <div class='Text'>includeNull - Include columns with null value.</div>
     <br />
     <div class='Text'>Returns</div>
     <br />
@@ -46,7 +49,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public static DbColumns RequestDataColumns(Object dataObject, DbColumns baseDefinition, List&lt;String&gt; propertyNames = null)
+              public static DbColumns RequestDataColumns(Object dataObject, DbColumns baseDefinition, List&lt;String&gt; propertyNames = null, Boolean includeNull = False)
             </td>
           </tr>
         </tbody>
@@ -54,7 +57,7 @@
     </div>
     <br />
     <div class='Text'>
-      Gets Request data columns from the baseDefinition using the propertyNames.
+      Gets Request Value columns from the baseDefinition using the propertyNames.
     </div>
     <br />
     <div class='Text'>Remarks</div>
@@ -93,7 +96,7 @@
       </div>
     <br />
     <div class='Text'>
-        The value is set to "null" if the original value is "-null" or "-".
+        The value is set to "null" if the original value is "-null".
       </div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />

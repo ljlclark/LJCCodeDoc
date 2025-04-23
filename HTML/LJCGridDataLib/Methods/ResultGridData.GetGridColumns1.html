@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- ResultGridData.GetGridColumns.html -->
+<!-- Generated 8/19/2023 9:48 AM -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>GetGridColumns</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCGridDataLib">Assembly List</a>
+      / <a href="../LJCGridDataLib.html">LJCGridDataLib</a>
+      / <a href="../ResultGridData.html">ResultGridData</a>
+      / GetGridColumns
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCGridDataLib</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method GetGridColumns</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>dataObject - The Data object.</div>
+    <div class='Text'>propertyNames - The included columns.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public DbColumns GetGridColumns(Object dataObject, List&lt;String&gt; propertyNames = null)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Configure the Grid Columns from the Data object properties.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// See the DataManager setup code on the ResultGridData class page.</span>
+
+<span class='keyWord'>using</span> LJCDBClientLib;
+<span class='keyWord'>using</span> LJCGridDataLib;
+
+<span class='comment'>// Configure the Grid Columns from the Data object properties.</span>
+<span class='modifier'>private</span> <span class='userType'>DbColumns</span> SetGridColumns2(<span class='userType'>DataManager</span> dataManager)
+{
+<span class='userType'>DbColumns</span> retValue;
+
+<span class='commonType'>var</span> dataObject = <span class='keyWord'>new</span> <span class='userType'>ADataObject</span>();
+
+<span class='comment'>// Create the Grid columns.</span>
+<span class='commonType'>var</span> resultGridData = <span class='keyWord'>new</span> <span class='userType'>ResultGridData</span>(LJCDataGridName);
+retValue = resultGridData.GetGridColumns(dataObject);
+<span class='keyWord'>return</span> retValue;
+}</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>

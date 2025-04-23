@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTMLBuilder.Line.html -->
-<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -30,6 +30,8 @@
     <br />
     <div id='Title'>Parameters</div>
     <div class='Text'>text - The add text.</div>
+    <div class='Text'>addIndent - Indicates if the element can be indented.</div>
+    <div class='Text'>allowNewLine - Indicates if a new line can be added.</div>
     <br />
     <div class='Text'>Returns</div>
     <br />
@@ -43,7 +45,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public String Line(String text)
+              public String Line(String text = null, Boolean addIndent = True, Boolean allowNewLine = True)
             </td>
           </tr>
         </tbody>
@@ -61,6 +63,45 @@
       a new line after the text. The text is then added to the builder.
       <br />
       Line() works the same as Text() except it appends a new line.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+<span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuilder</span>();
+
+hb.Text("This <span class='keyWord'>is</span> an appended line.");
+
+<span class='comment'>// The builder keeps track of the current number of indents.</span>
+hb.AddIndent();
+
+<span class='comment'>// Example Method:</span>
+<span class='comment'>// Starts the text with a newline if the builder already has text</span>
+<span class='comment'>// and param allowNewLine = true.</span>
+<span class='comment'>// The text begins with the current indent string if param</span>
+<span class='comment'>// addIndent = true.</span>
+<span class='comment'>// Ends the text with a newline.</span>
+<span class='comment'>// Defaults: addIndent = true, allowNewLine = true.</span>
+hb.Line("");
+
+hb.Text("This <span class='keyWord'>is</span> an indented line.");
+<span class='commonType'>var</span> result = hb.ToString();
+
+<span class='comment'>// result:</span>
+<span class='comment'>// This is an appended line.</span>
+<span class='comment'>//</span>
+<span class='comment'>//</span>
+<span class='comment'>//   This is an indented line.</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DataManager.Add.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Add</title>
@@ -29,6 +31,7 @@
     <div id='Title'>Parameters</div>
     <div class='Text'>dataObject - The record object.</div>
     <div class='Text'>propertyNames - The included column property names.</div>
+    <div class='Text'>includeNull - Includes columns with null value.</div>
     <br />
     <div class='Text'>Returns</div>
     <br />
@@ -42,7 +45,7 @@
           <tr><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public DbResult Add(Object dataObject, List&lt;String&gt; propertyNames = null)
+              public DbResult Add(Object dataObject, List&lt;String&gt; propertyNames = null, Boolean includeNull = False)
             </td>
           </tr>
         </tbody>
@@ -69,14 +72,31 @@
     <div class='Text'>
         Creates an "Insert"
         <span class="userType">DbRequest</span>
-        object, which is available in the Request property. The request object is
-        passed to the
-        <span class="commonType">ExecuteRequest()</span>
-        method.
+        object. The
+        <span class="userType">DbRequest.Columns</span>
+        object includes the definitions for the columns to be updated in the base
+        table.
       </div>
     <br />
     <div class='Text'>
-        The Key Columns are assigned from the LookupColumnNames property.
+        The DbRequest.Columns include all columns from the BaseDefinition by default;
+        except it does not include AutoIncrement columns or columns with null
+        values. To include a null column value, set the column value to "-null". It
+        only includes the columns contained in the optional propertyNames parameter
+        if provided. It uses the columns in the ChangedNames object if it exists and
+        the propertyNames parameter is null.
+      </div>
+    <br />
+    <div class='Text'>
+        The DbRequest.Columns do not include AutoIncrement columns or columns with
+        null values. To include a null column value, set the column value to
+        "-null".
+      </div>
+    <br />
+    <div class='Text'>
+        The Key Columns are assigned from the LookupColumnNames property. The
+        keyColumn.ColumnName must be available in the BaseDefinition object to
+        be included.
       </div>
     <br />
     <div class='Text'>
@@ -86,17 +106,22 @@
       </div>
     <br />
     <div class='Text'>
-        The Key Columns must include the DB Assigned columns for the assigned
+        The keyColumns do not use keys with null values or invalid dates. To include
+        a null column value, set the column value to "'-null'".
+      </div>
+    <br />
+    <div class='Text'>
+        Verify: The Key Columns must include the DB Assigned columns for the assigned
         values to be returned to the calling program. The value must be set to
         zero to prevent including it as a key value?
       </div>
     <br />
     <div class='Text'>
-        The Lookup Retrieve call will not include keys with a value of "0".
+        Verify: The Lookup Retrieve call will not include keys with a value of "0".
       </div>
     <br />
     <div class='Text'>
-        The Add Data Object property names must be the same as the Request Column
+        Verify: The Add Data Object property names must be the same as the Request Column
         property names to map the values into the Key Columns.
       </div>
     <br />
@@ -132,43 +157,43 @@
 <span class='keyWord'>using</span> LJCNetCommon;
 <span class='keyWord'>using</span> LJCDBMessage;
     
-<span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Provides Person specific data manipulation methods.</span><span class='xmlComment'>&lt;/summary&gt;</span>
+&lt;span class='xmlComment'&gt;/// &lt;summary&gt;</span><span class='comment'>Provides Person specific data manipulation methods.</span><span class='xmlComment'>&lt;/summary&gt;&lt;/span&gt;
 <span class='modifier'>public</span> <span class='refType'>class</span> <span class='userType'>PersonManager</span>
 {
-  <span class='xmlComment'>/// &lt;summary&gt;</span><span class='comment'>Adds a person record to the database.</span><span class='xmlComment'>&lt;/summary&gt;</span>
-  <span class='xmlComment'>/// &lt;param name="</span>dataObject<span class='xmlComment'>"&gt;</span><span class='comment'>The data record.</span><span class='xmlComment'>&lt;/param&gt;</span>
-  <span class='xmlComment'>/// &lt;param name="</span>propertyNames<span class='xmlComment'>"&gt;</span><span class='comment'>The included column property names.</span><span class='xmlComment'>&lt;/param&gt;</span>
-  <span class='xmlComment'>/// &lt;returns&gt;</span><span class='comment'>A person object with the DB assigned key values.</span><span class='xmlComment'>&lt;/returns&gt;</span>
-  <span class='modifier'>public</span> <span class='userType'>Person</span> Add(<span class='userType'>Person</span> dataObject, <span class='libType'>List</span>&lt;<span class='commonType'>string</span>&gt; propertyNames = null)
-  {
-    <span class='userType'>Person</span> retValue = <span class='keyWord'>null</span>;
-    
-    <span class='comment'>// The database assigned column names.</span>
-    mDataManager.SetDbAssignedColumnNames(new <span class='commonType'>string</span>[]
+    &lt;span class='xmlComment'&gt;/// &lt;summary&gt;</span><span class='comment'>Adds a person record to the database.</span><span class='xmlComment'>&lt;/summary&gt;&lt;/span&gt;
+    <span class='xmlComment'>/// &lt;param name="</span>dataObject<span class='xmlComment'>"&gt;</span><span class='comment'>The data record.</span><span class='xmlComment'>&lt;/param&gt;</span>
+    <span class='xmlComment'>/// &lt;param name="</span>propertyNames<span class='xmlComment'>"&gt;</span><span class='comment'>The included column property names.</span><span class='xmlComment'>&lt;/param&gt;</span>
+    &lt;span class='xmlComment'&gt;/// &lt;returns&gt;</span><span class='comment'>A person object with the DB assigned key values.</span><span class='xmlComment'>&lt;/returns&gt;&lt;/span&gt;
+    <span class='modifier'>public</span> <span class='userType'>Person</span> Add(<span class='userType'>Person</span> dataObject, <span class='libType'>List</span>&lt;<span class='commonType'>string</span>&gt; propertyNames = null)
     {
-      "Id"
-    });
+        <span class='userType'>Person</span> retValue = <span class='keyWord'>null</span>;
     
-    <span class='comment'>// The lookup column names to find the inserted record for</span>
-    <span class='comment'>// the Add() method to retrieve the DB assigned column values.</span>
-    mDataManager.AddLookupColumnNames(new <span class='commonType'>string</span>[]
-    {
-      "Name"
-    });
+        <span class='comment'>// The database assigned column names.</span>
+        mDataManager.SetDbAssignedColumnNames(new <span class='commonType'>string</span>[]
+        {
+            "Id"
+        });
     
-    <span class='userType'>DbResult</span> dbResult = mDataManager.Add(dataObject, propertyNames);
-    AffectedCount = mDataManager.AffectedCount;
-    SQLStatement = mDataManager.SQLStatement;
-    <span class='keyWord'>if</span> (dbResult != <span class='keyWord'>null</span> && dbResult.DbRecords.Count &gt; 0)
-    {
-      <span class='comment'>// Populate a data object with the result values.</span>
-      retValue = <span class='keyWord'>new</span> <span class='userType'>Person</span>();
-      DbCommon.SetObjectValues(dbResult.DbRecords[0], retValue);
+        <span class='comment'>// The lookup column names to find the inserted record for</span>
+        <span class='comment'>// the Add() method to retrieve the DB assigned column values.</span>
+        mDataManager.AddLookupColumnNames(new <span class='commonType'>string</span>[]
+        {
+            "Name"
+        });
+    
+        <span class='userType'>DbResult</span> dbResult = mDataManager.Add(dataObject, propertyNames);
+        AffectedCount = mDataManager.AffectedCount;
+        SQLStatement = mDataManager.SQLStatement;
+        <span class='keyWord'>if</span> (dbResult != <span class='keyWord'>null</span> && dbResult.DbRecords.Count &gt; 0)
+        {
+            <span class='comment'>// Populate a data object with the result values.</span>
+            retValue = <span class='keyWord'>new</span> <span class='userType'>Person</span>();
+            <span class='userType'>DbCommon</span>.SetObjectValues(dbResult.DbRecords[0], retValue);
+        }
+    
+        <span class='commonType'>int</span> personId = retValue.PersonId;
+        <span class='keyWord'>return</span> retValue;
     }
-    
-    <span class='commonType'>int</span> personId = retValue.PersonId;
-    <span class='keyWord'>return</span> retValue;
-  }
 }</pre>
             </td>
           </tr>

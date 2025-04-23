@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- TextBuilder.GetText.html -->
-<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -81,18 +81,25 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
-<span class='commonType'>var</span> tb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuilder</span>();
+<span class='commonType'>var</span> tb = <span class='keyWord'>new</span> <span class='userType'>TextBuilder</span>();
 
 <span class='commonType'>var</span> result = tb.GetText("This <span class='keyWord'>is</span> an appended line.");
 
 <span class='comment'>// The builder keeps track of the current number of indents.</span>
 tb.AddIndent();
-<span class='commonType'>var</span> result += tb.GetText("This <span class='keyWord'>is</span> an indented line.");
-<span class='commonType'>var</span> result = tb.ToString();
+result += tb.GetLine();
+
+<span class='comment'>// Example Method:</span>
+<span class='comment'>// Starts the text with a newline if the builder already has text</span>
+<span class='comment'>// and param allowNewLine = true.</span>
+<span class='comment'>// The text begins with the current indent string if param</span>
+<span class='comment'>// addIndent = true.</span>
+<span class='comment'>// Defaults: addIndent = true, allowNewLine = true.</span>
+result += tb.GetText("This <span class='keyWord'>is</span> an indented line.");
 
 <span class='comment'>// result:</span>
-<span class='comment'>// This is an appended line.</span>
-<span class='comment'>//   This is an indented line.</span></pre>
+<span class='comment'>//   This is an appended line.</span>
+<span class='comment'>//     This is an indented line.</span></pre>
             </td>
           </tr>
         </tbody>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- XMLBuilder.GetIndented.html -->
-<!-- Generated 4/21/2025 8:03 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -28,7 +28,59 @@
       <div id='Title'>Method GetIndented</div>
     </div>
     <br />
-    <div class='Text'>Gets a new line with prefixed indent.</div>
+    <div id='Title'>Parameters</div>
+    <div class='Text'>text - The add text.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The potentially indented new text value.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public String GetIndented(String text)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Gets a new potentially indented line.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+<span class='commonType'>var</span> xb = <span class='keyWord'>new</span> <span class='userType'>XMLBuilder</span>();
+
+<span class='comment'>// Example Method:</span>
+<span class='commonType'>var</span> result = xb.GetIndented("This text <span class='keyWord'>is</span> <span class='userType'>NOT</span> indented.");
+
+<span class='comment'>// The builder keeps track of the current number of indents.</span>
+xb.AddIndent(2);
+result += xb.GetLine();
+result += xb.GetIndented("This text <span class='keyWord'>is</span> indented.");
+
+<span class='comment'>// result:</span>
+<span class='comment'>// This text is NOT indented.</span>
+<span class='comment'>//     This text is indented.</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
 Licensed under the MIT License.</div>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- ObjectManager`2.Add.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Add</title>
@@ -63,21 +65,21 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='comment'>// Adds a Person record.</span>
-<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> Add(<span class='userType'>ObjectManager</span>&lt;Person, Persons&gt; personManager)
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> Add(ObjectManager&lt;Person, <span class='userType'>Persons&gt</span>; personManager)
 {
-  <span class='comment'>// The inserted columns must not include the DB assigned columns.</span>
-  <span class='userType'>Person</span> dataObject = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
-  {
-    Name = "TestName",
-    PrincipleFlag = <span class='keyWord'>false</span>
-  };
+    <span class='comment'>// The inserted columns must not include the DB assigned columns.</span>
+    <span class='userType'>Person</span> dataObject = <span class='keyWord'>new</span> <span class='userType'>Person</span>()
+    {
+        Name = "TestName",
+        PrincipleFlag = <span class='keyWord'>false</span>
+    };
 
-  <span class='comment'>// Insert record and return the database assigned values.</span>
-  <span class='userType'>Person</span> resultPerson = personManager.Add(dataObject);
-  <span class='keyWord'>if</span> (resultPerson != null)
-  {
-    dataObject.ID = resultPerson.ID;
-  }
+    <span class='comment'>// Insert record and return the database assigned values.</span>
+    <span class='userType'>Person</span> resultPerson = personManager.Add(dataObject);
+    <span class='keyWord'>if</span> (resultPerson != null)
+    {
+        dataObject.ID = resultPerson.ID;
+    }
 }</pre>
             </td>
           </tr>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DataAccess.FillDataTable.html -->
-<!-- Generated 7/11/2023 9:14 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>FillDataTable</title>
@@ -76,20 +78,20 @@
 <span class='comment'>// Executes a Select statement and fills the specified DataTable.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> FillDataTable(<span class='userType'>DataAccess</span> dataAccess)
 {
-  <span class='commonType'>string</span> sql = "select * from TableName";
-  <span class='userType'>DataTable</span> dataTable = <span class='keyWord'>new</span> <span class='userType'>DataTable</span>();
+    <span class='commonType'>string</span> sql = "select * from TableName";
+    <span class='userType'>DataTable</span> dataTable = <span class='keyWord'>new</span> <span class='userType'>DataTable</span>();
 
-  dataAccess.FillDataTable(sql, dataTable);
-  <span class='keyWord'>if</span> (dataTable != null)
-  {
-    <span class='keyWord'>foreach</span> (DataRow dataRow <span class='keyWord'>in</span> dataTable.Rows)
+    dataAccess.FillDataTable(sql, dataTable);
+    <span class='keyWord'>if</span> (dataTable != null)
     {
-      <span class='keyWord'>for</span> <span class='commonType'>int</span> index = 0; index &lt; dataTable.Columns.Count; index++)
-      {
-        <span class='commonType'>string</span> value = dataRow[index].ToString();
-      }
+        <span class='keyWord'>foreach</span> (DataRow dataRow <span class='keyWord'>in</span> dataTable.Rows)
+        {
+            <span class='keyWord'>for</span> <span class='commonType'>int</span> index = 0; index &lt; dataTable.Columns.Count; index++)
+            {
+                <span class='commonType'>string</span> value = dataRow[index].ToString();
+            }
+        }
     }
-  }
 }</pre>
             </td>
           </tr>

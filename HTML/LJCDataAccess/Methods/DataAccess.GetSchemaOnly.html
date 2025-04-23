@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- DataAccess.GetSchemaOnly.html -->
-<!-- Generated 7/11/2023 9:14 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>GetSchemaOnly</title>
@@ -73,16 +75,16 @@
 <span class='comment'>// Retrieves the DataTable object with schema only.</span>
 <span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> GetSchemaOnly(<span class='userType'>DataAccess</span> dataAccess)
 {
-  <span class='commonType'>string</span> sql = "select * from TableName";
+    <span class='commonType'>string</span> sql = "select * from TableName";
 
-  <span class='commonType'>var</span> dataTable = dataAccess.GetSchemaOnly(sql);
-  <span class='keyWord'>if</span> (dataTable != null)
-  {
-    <span class='keyWord'>foreach</span> (DataColumn dataColumn <span class='keyWord'>in</span> dataTable.Columns)
+    <span class='commonType'>var</span> dataTable = dataAccess.GetSchemaOnly(sql);
+    <span class='keyWord'>if</span> (dataTable != null)
     {
-      <span class='commonType'>string</span> value = dataColumn.ColumnName;
+        <span class='keyWord'>foreach</span> (DataColumn dataColumn <span class='keyWord'>in</span> dataTable.Columns)
+        {
+            <span class='commonType'>string</span> value = dataColumn.ColumnName;
+        }
     }
-  }
 }</pre>
             </td>
           </tr>

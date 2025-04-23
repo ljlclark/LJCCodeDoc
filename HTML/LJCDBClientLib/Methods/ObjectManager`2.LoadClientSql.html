@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- ObjectManager`2.LoadClientSql.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>LoadClientSql</title>
@@ -62,17 +64,17 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='comment'>// Selects multiple records with an SQL statement.</span>
-<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> LoadClientSql(<span class='userType'>ObjectManager</span>&lt;Person, Persons&gt; personManager)
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> LoadClientSql(ObjectManager&lt;Person, <span class='userType'>Persons&gt</span>; personManager)
 {
-  <span class='userType'>Persons</span> retValue = <span class='keyWord'>null</span>;
+    <span class='userType'>Persons</span> retValue = <span class='keyWord'>null</span>;
 
-  StringBuilder builder = <span class='keyWord'>new</span> <span class='userType'>StringBuilder</span>(64);
-  builder.AppendLine("select * from PersonTest");
-  <span class='commonType'>string</span> sql = builder.ToString();
+    StringBuilder builder = <span class='keyWord'>new</span> <span class='userType'>StringBuilder</span>(64);
+    builder.AppendLine("select * from PersonTest");
+    <span class='commonType'>string</span> sql = builder.ToString();
 
-  <span class='comment'>// Load the records.</span>
-  retValue = personManager.LoadClientSql(sql);
-  <span class='keyWord'>return</span> retValue;
+    <span class='comment'>// Load the records.</span>
+    retValue = personManager.LoadClientSql(sql);
+    <span class='keyWord'>return</span> retValue;
 }</pre>
             </td>
           </tr>

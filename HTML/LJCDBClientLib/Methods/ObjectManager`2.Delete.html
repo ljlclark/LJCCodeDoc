@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- ObjectManager`2.Delete.html -->
-<!-- Generated 3/30/2023 7:50 AM -->
+<!-- Generated 4/23/2025 8:58 AM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Delete</title>
@@ -59,16 +61,16 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'><span class='comment'>// Deletes a record.</span>
-<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> Delete(<span class='userType'>ObjectManager</span>&lt;Person, Persons&gt; personManager)
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>void</span> Delete(ObjectManager&lt;Person, <span class='userType'>Persons&gt</span>; personManager)
 {
-  <span class='comment'>// Create Key Columns.</span>
-  <span class='commonType'>var</span> keyColumns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>()
-  {
-    Name = "TestNameUpdated"
-  };
+    <span class='comment'>// Create Key Columns.</span>
+    <span class='commonType'>var</span> keyColumns = <span class='keyWord'>new</span> <span class='userType'>DbColumns</span>()
+    {
+        Name = "TestNameUpdated"
+    };
 
-  <span class='comment'>// Delete the record.</span>
-  personManager.Delete(keyColumns);
+    <span class='comment'>// Delete the record.</span>
+    personManager.Delete(keyColumns);
 }</pre>
             </td>
           </tr>
