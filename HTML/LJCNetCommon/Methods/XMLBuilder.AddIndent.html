@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- XMLBuilder.AddIndent.html -->
-<!-- Generated 4/23/2025 9:26 AM -->
+<!-- Generated 4/25/2025 5:04 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -76,7 +76,8 @@ xb.AddIndent();
 xb.AddText("This text <span class='keyWord'>is</span> not indented.");
 
 <span class='comment'>// Starts the text with a newline if the builder already has text</span>
-<span class='comment'>// and param allowNewLine = true.</span>
+<span class='comment'>// and param allowNewLine = true and builder text does not end with</span>
+<span class='comment'>// a newline.</span>
 <span class='comment'>// The text begins with the current indent string if param</span>
 <span class='comment'>// addIndent = true.</span>
 <span class='comment'>// Defaults: addIndent = true, allowNewLine = true.</span>
@@ -93,7 +94,7 @@ xb.Text("No start with newline.", allowNewLine: false);
 <span class='comment'>// result:</span>
 <span class='comment'>// This text is not indented.</span>
 <span class='comment'>//   This text is indented.</span>
-<span class='comment'>// Not Indented.  No start with newLine.</span></pre>
+<span class='comment'>// Not indented.  No start with newLine.</span></pre>
             </td>
           </tr>
         </tbody>

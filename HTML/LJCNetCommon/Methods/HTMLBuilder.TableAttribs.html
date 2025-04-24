@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTMLBuilder.TableAttribs.html -->
-<!-- Generated 4/23/2025 9:26 AM -->
+<!-- Generated 4/25/2025 5:04 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -66,18 +66,22 @@
           <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
-<span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuider</span>();
+              <pre style='margin-left: 2px;'><span class='comment'>// Root Method Begin</span>
+<span class='commonType'>var</span> textState = <span class='keyWord'>new</span> <span class='userType'>TextState</span>();
 
-<span class='commonType'>var</span> result = hb.TableAttribs();
+<span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuilder</span>(textState);
+
+<span class='comment'>// Example Method:</span>
+<span class='commonType'>var</span> border = 1;
+<span class='commonType'>var</span> cellspacing = 2;
+<span class='commonType'>var</span> cellpadding = 3;
+<span class='comment'>// Defaults: border = 1, cellspacing = 0, cellpadding = 2.</span>
+<span class='commonType'>var</span> attribs = hb.TableAttribs(border, cellspacing, cellpadding);
+
+<span class='commonType'>var</span> result = hb.GetAttribs(attribs, textState);
 
 <span class='comment'>// result:</span>
-<span class='commonType'>var</span> result = <span class='keyWord'>new</span> <span class='userType'>Attributes</span>()
-{
-    { "border", "1" },
-    { "cellspacing", "0" },
-    { "cellpadding", "2" },
-};</pre>
+<span class='comment'>// border="1" cellspacing="2" cellpadding="3"</span></pre>
             </td>
           </tr>
         </tbody>

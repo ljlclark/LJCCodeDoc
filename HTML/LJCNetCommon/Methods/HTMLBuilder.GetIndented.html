@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTMLBuilder.GetIndented.html -->
-<!-- Generated 4/23/2025 9:26 AM -->
+<!-- Generated 4/25/2025 5:04 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -67,11 +67,14 @@
 
 <span class='comment'>// Example Method:</span>
 <span class='commonType'>var</span> result = hb.GetIndented("This text <span class='keyWord'>is</span> <span class='userType'>NOT</span> indented.");
+hb.AddText(result);
 
 <span class='comment'>// The builder keeps track of the current number of indents.</span>
 hb.AddIndent(2);
-result += hb.GetLine();
-result += hb.GetIndented("This text <span class='keyWord'>is</span> indented.");
+hb.AddLine();
+result = hb.GetIndented("This text <span class='keyWord'>is</span> indented.");
+hb.AddText(result);
+result = hb.ToString();
 
 <span class='comment'>// result:</span>
 <span class='comment'>// This text is NOT indented.</span>

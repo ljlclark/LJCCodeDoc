@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTMLBuilder.GetText.html -->
-<!-- Generated 4/23/2025 9:26 AM -->
+<!-- Generated 4/25/2025 5:04 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -83,19 +83,21 @@
               <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
 <span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuilder</span>();
 
-<span class='commonType'>var</span> result = hb.GetText("This <span class='keyWord'>is</span> an appended line.");
+hb.Text("This <span class='keyWord'>is</span> an appended line.");
 
 <span class='comment'>// The builder keeps track of the current number of indents.</span>
 hb.AddIndent();
-result += hb.GetLine();
 
 <span class='comment'>// Example Method:</span>
 <span class='comment'>// Starts the text with a newline if the builder already has text</span>
-<span class='comment'>// and param allowNewLine = true.</span>
+<span class='comment'>// and param allowNewLine = true and builder text does not end with</span>
+<span class='comment'>// a newline.</span>
 <span class='comment'>// The text begins with the current indent string if param</span>
 <span class='comment'>// addIndent = true.</span>
 <span class='comment'>// Defaults: addIndent = true, allowNewLine = true.</span>
-result += hb.GetText("This <span class='keyWord'>is</span> an indented line.");
+<span class='commonType'>var</span> text = hb.GetText("This <span class='keyWord'>is</span> an indented line.");
+hb.AddText(text);
+<span class='commonType'>var</span> result = hb.ToString();
 
 <span class='comment'>// result:</span>
 <span class='comment'>// This is an appended line.</span>

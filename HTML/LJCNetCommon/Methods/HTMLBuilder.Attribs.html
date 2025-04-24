@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTMLBuilder.Attribs.html -->
-<!-- Generated 4/23/2025 9:26 AM -->
+<!-- Generated 4/25/2025 5:04 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -53,6 +53,35 @@
     <br />
     <div class='Text'>
       Gets common element attributes.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Root Method Begin</span>
+<span class='commonType'>var</span> textState = <span class='keyWord'>new</span> <span class='userType'>TextState</span>();
+
+<span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuilder</span>(textState);
+
+<span class='comment'>// Example Method:</span>
+<span class='commonType'>var</span> className = "className";
+<span class='commonType'>var</span> id = "id";
+<span class='userType'>Attributes</span> attribs = hb.Attribs(className, id);
+
+<span class='comment'>// result:</span>
+<span class='comment'>// List&lt;string&gt;()</span>
+<span class='comment'>// {</span>
+<span class='comment'>//   { "className", "id" },</span>
+<span class='comment'>// };</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />

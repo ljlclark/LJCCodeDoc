@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTMLBuilder.AddChildIndent.html -->
-<!-- Generated 4/23/2025 9:26 AM -->
+<!-- Generated 4/25/2025 5:04 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -57,6 +57,47 @@
       Adds an indent for following child elements.<br />
       The indent will only be added if the createText length > 0 and the
       textState.ChildIndentCount > 0.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Root Method Begin</span>
+<span class='commonType'>var</span> textState = <span class='keyWord'>new</span> <span class='userType'>TextState</span>();
+
+<span class='commonType'>var</span> result = CustomBegin("body", textState);
+
+<span class='comment'>// result:</span>
+<span class='comment'>// &lt;body&gt;</span>
+
+<span class='modifier'>private</span> <span class='modifier'>static</span> <span class='commonType'>string</span> CustomBegin(string name, <span class='userType'>TextState</span> textState
+    , <span class='userType'>Attributes</span> attribs = <span class='keyWord'>null</span>, <span class='commonType'>bool</span> addIndent = <span class='keyWord'>true</span>
+    , <span class='commonType'>bool</span> childIndent = true)
+{
+    <span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+    <span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuilder</span>(textState);
+
+    <span class='commonType'>var</span> createText = hb.GetBegin(name, textState, attribs, addIndent
+        , childIndent);
+    <span class='comment'>// Use NoIndent after a "GetText" method.</span>
+    hb.Text(createText, NoIndent);
+    <span class='comment'>// Use AddChildIndent after beginning an element.</span>
+    hb.AddChildIndent(createText, textState);
+    <span class='commonType'>var</span> result = hb.ToString();
+
+    <span class='comment'>// Append Method</span>
+    <span class='comment'>//hb.UpdateState(textState);</span>
+    <span class='keyWord'>return</span> result;
+}</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />

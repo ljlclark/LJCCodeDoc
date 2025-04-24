@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTMLBuilder.GetEnd.html -->
-<!-- Generated 4/23/2025 9:26 AM -->
+<!-- Generated 4/25/2025 5:04 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -73,14 +73,18 @@
           <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
-<span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuider</span>();
+              <pre style='margin-left: 2px;'><span class='comment'>// Root Method Begin</span>
+<span class='commonType'>var</span> textState = <span class='keyWord'>new</span> <span class='userType'>TextState</span>();
 
-<span class='commonType'>var</span> result = hb.GetCreate("head");
-result += hb.GetEnd("head");
+<span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+<span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuilder</span>(textState);
+
+<span class='comment'>// Example Method:</span>
+<span class='comment'>// Defaults: close = true.</span>
+hb.End("head", textState);
+<span class='commonType'>var</span> result = hb.ToString();
 
 <span class='comment'>// result:</span>
-<span class='comment'>// &lt;head&gt;</span>
 <span class='comment'>// &lt;/head&gt;</span></pre>
             </td>
           </tr>

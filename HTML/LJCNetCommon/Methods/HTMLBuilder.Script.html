@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTMLBuilder.Script.html -->
-<!-- Generated 4/23/2025 9:26 AM -->
+<!-- Generated 4/25/2025 5:04 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -63,14 +63,18 @@
           <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
-<span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuider</span>();
+              <pre style='margin-left: 2px;'><span class='comment'>// Root Method Begin</span>
+<span class='commonType'>var</span> textState = <span class='keyWord'>new</span> <span class='userType'>TextState</span>();
 
-hb.Script("fileName.js");
+<span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+<span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuilder</span>(textState);
+
+<span class='comment'>// Example Method:</span>
+hb.Script("File.js", textState);
 <span class='commonType'>var</span> result = hb.ToString();
 
 <span class='comment'>// result:</span>
-<span class='comment'>// &lt;script src="fileName.js"&gt;&lt;&gt;</span></pre>
+<span class='comment'>// &lt;script src="File.js"&gt;&lt;&gt;</span></pre>
             </td>
           </tr>
         </tbody>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- XMLBuilder.GetWrapped.html -->
-<!-- Generated 4/23/2025 9:26 AM -->
+<!-- Generated 4/25/2025 5:04 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -52,6 +52,38 @@
     <br />
     <div class='Text'>
       Gets added text and new wrapped line if combined line > LineLimit.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+<span class='commonType'>var</span> xb = <span class='keyWord'>new</span> <span class='userType'>XMLBuilder</span>()
+{
+    WrapEnabled = <span class='keyWord'>true</span>
+};
+
+<span class='comment'>// Example Method:</span>
+<span class='commonType'>var</span> b = <span class='keyWord'>new</span> <span class='userType'>XMLBuilder</span>();
+b.AddText("Now <span class='keyWord'>is</span> the time <span class='keyWord'>for</span> all good men to come to the aid of their");
+b.AddText(" country.");
+b.AddText(" Now <span class='keyWord'>is</span> the time <span class='keyWord'>for</span> all good men to come to the aid of their");
+b.AddText(" country.");
+<span class='commonType'>var</span> text = b.ToString();
+<span class='commonType'>var</span> result = xb.GetWrapped(text);
+
+<span class='comment'>// result:</span>
+<span class='comment'>// Now is the time for all good men to come to the aid of</span>
+<span class='comment'>// their country.</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />

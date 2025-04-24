@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTMLBuilder.GetIndentString.html -->
-<!-- Generated 4/23/2025 9:26 AM -->
+<!-- Generated 4/25/2025 5:04 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -66,8 +66,10 @@ hb.AddIndent(1);
 
 <span class='comment'>// Example Method:</span>
 <span class='commonType'>var</span> result = hb.GetIndentString();
+hb.AddText(result);
 
-result += hb.GetText(":", false);
+hb.AddText(":");
+result = hb.ToString();
 
 <span class='comment'>// result:</span>
 <span class='comment'>//   :</span></pre>
