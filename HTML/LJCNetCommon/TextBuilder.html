@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- TextBuilder.html -->
-<!-- Generated 4/25/2025 5:04 AM -->
+<!-- Generated 4/26/2025 9:20 PM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -42,7 +42,56 @@
       </table>
     </div>
     <br />
-    <div class='Text'>Provides methods for creating text.</div>
+    <div class='Text'>
+      Provides methods for creating text.
+    </div>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
+      The TextBuilder class is designed for creating text. It is similar
+      in principle to the StringBuilder class which is designed for creating
+      strings.<br />
+      <br />
+
+      The TextBuilder class - like the StringBuilder class - stores the text
+      internally. The text is retrieved with the ToString() method.<br />
+      <br />
+
+      <b>Add Text Methods</b><br />
+      The "Add" methods are similar to StringBuilder methods:<br />
+      AddLine() - StringBuilder.AppendLine()<br />
+      AddText() - StringBuilder.Append()<br />
+      "Add" methods add text to the builder unmodified except for AddLine()
+      which appends a newline.<br />
+      <br />
+
+      <b>Append Text Methods</b><br />
+      Item(), Line(), Text()<br />
+      "Append" methods add the potentially indented and wrapped text to the
+      builder.<br />
+      The Text() method creates the added text without an ending newline This
+      behavior is done for consistency and it allows the developer to append to
+      the existing text.<br />
+      "Append" methods start the text with a newline if the builder already has
+      text, param allowNewLine = true and builder text does not end with a
+      newline.<br />
+      The Line() and Text() methods should have the addIndent property set to
+      false if it applies text retrieved with a "Get" method as the "Get" method
+      has already applied the indent.<br />
+      <br />
+
+      The AddIndent() method manually controls the current indent count.
+      The indent string length is calculated with the properties
+      (IndentCount * IndentCharCount) and can be retrieved with the
+      IndentLength property.<br />
+      <br />
+
+      <b>Get Text Methods</b><br />
+      GetItem(), GetLine(), GetText()<br />
+      All "Get" methods create and return the potentialy indented and
+      wrapped text but do not add it to the builder.<br />
+    </div>
     <br />
     <div class='Title1'>Constructor<br></div>
     <table class='ListTable'>
@@ -158,7 +207,7 @@
         <td class='ListTable'>Indicates if the builder text ends with a newline.</td>
       </tr>
     </table>
-    <div class='Text'>4 Methods</div>
+    <div class='Text'>14 Methods</div>
     <br />
     <div class='Title2'>Other Private Methods</div>
     <table class='ListTable'>
@@ -175,7 +224,7 @@
         <td class='ListTable'>Allow text to start with a newline.</td>
       </tr>
     </table>
-    <div class='Text'>13 Methods</div>
+    <div class='Text'>3 Methods</div>
     <br />
     <div id='Title'>Properties</div>
     <table class='ListTable'>
