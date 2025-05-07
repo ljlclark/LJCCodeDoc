@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- TextBuilder.AddText.html -->
-<!-- Generated 4/25/2025 5:04 AM -->
+<!-- Generated 5/8/2025 3:46 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -28,7 +28,59 @@
       <div id='Title'>Method AddText</div>
     </div>
     <br />
-    <div class='RedText'>Missing Summary</div>
+    <div id='Title'>Parameters</div>
+    <div class='Text'>text - The add text.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The added text.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public Void AddText(String text)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>Adds text without modification.</div>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
+      AddText() is an "Append" method. It adds the unmodified text to the builder.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+<span class='commonType'>var</span> tb = <span class='keyWord'>new</span> <span class='userType'>TextBuilder</span>();
+
+<span class='comment'>// Example Method:</span>
+<span class='comment'>// Adds text without modification.</span>
+tb.AddText("This <span class='keyWord'>is</span> some appended text.");
+<span class='commonType'>var</span> result = tb.ToString();
+
+<span class='comment'>// result:</span>
+<span class='comment'>// This is some appended text.</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
 Licensed under the MIT License.</div>

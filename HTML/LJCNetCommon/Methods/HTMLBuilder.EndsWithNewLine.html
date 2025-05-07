@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTMLBuilder.EndsWithNewLine.html -->
-<!-- Generated 4/25/2025 5:04 AM -->
+<!-- Generated 5/8/2025 3:46 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -28,6 +28,12 @@
       <div id='Title'>Method EndsWithNewLine</div>
     </div>
     <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>
+      true if builder text ends with a newline; otherwise false.
+    </div>
+    <br />
     <div class='Text'>Syntax</div>
     <br />
     <div class='SectionContainer'>
@@ -43,7 +49,30 @@
       </table>
     </div>
     <br />
-    <div class='Text'>Indicates if the builder text ends with a newline.</div>
+    <div class='Text'>
+      Indicates if the builder text ends with a newline.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='commonType'>var</span> hb = <span class='keyWord'>new</span> <span class='userType'>HTMLBuilder</span>();
+
+<span class='commonType'>bool</span> retValue = hb.EndsWithNewLine();
+<span class='commonType'>var</span> result = retValue.ToString();
+
+<span class='comment'>// result:</span>
+<span class='comment'>// False</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
 Licensed under the MIT License.</div>

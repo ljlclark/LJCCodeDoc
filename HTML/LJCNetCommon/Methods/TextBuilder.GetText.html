@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- TextBuilder.GetText.html -->
-<!-- Generated 4/25/2025 5:04 AM -->
+<!-- Generated 5/8/2025 3:46 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -28,7 +28,85 @@
       <div id='Title'>Method GetText</div>
     </div>
     <br />
-    <div class='RedText'>Missing Summary</div>
+    <div id='Title'>Parameters</div>
+    <div class='Text'>text - The text value.</div>
+    <div class='Text'>addIndent - Indicates if the text can be indented.</div>
+    <div class='Text'>allowNewLine - Indicates if a new line can be added.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The potentially indented and wrapped new text value.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public String GetText(String text, Boolean addIndent = True, Boolean allowNewLine = True)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Gets potentially indented and wrapped text.
+    </div>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
+      GetText() is a "GetString" method. It creates and returns the potentially
+      indented and wrapped text. It will start the returned text with a new line
+      if the builder already has text.<br />
+      The applied indent is the product of the class properties IndentCount
+      and IndentCharCount. (IndentCount * IndentCharCount).<br />
+      The "addIndent" parameter defaults to true. Set it to false to prevent
+      indenting the line further.<br />
+      The "allowNewLine" parameter defaults to true. Set it to false to prevent
+      starting with a new line.<br />
+      Wraps the text with a newline if the WrapEnabled parameter is true and the
+      line length is greater than LineLimit.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+<span class='commonType'>var</span> tb = <span class='keyWord'>new</span> <span class='userType'>TextBuilder</span>();
+
+tb.Text("This <span class='keyWord'>is</span> an appended line.");
+
+<span class='comment'>// The builder keeps track of the current number of indents.</span>
+tb.AddIndent();
+
+<span class='comment'>// Example Method:</span>
+<span class='comment'>// Starts the text with a newline if the builder already has text</span>
+<span class='comment'>// and param allowNewLine = true and builder text does not end with</span>
+<span class='comment'>// a newline.</span>
+<span class='comment'>// The text begins with the current indent string if param</span>
+<span class='comment'>// addIndent = true.</span>
+<span class='comment'>// Defaults: addIndent = true, allowNewLine = true.</span>
+<span class='commonType'>var</span> tempText = tb.GetText("This <span class='keyWord'>is</span> an indented line.");
+tb.AddText(tempText);
+<span class='commonType'>var</span> result = tb.ToString();
+
+<span class='comment'>// result:</span>
+<span class='comment'>// This is an appended line.</span>
+<span class='comment'>//   This is an indented line.</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
 Licensed under the MIT License.</div>

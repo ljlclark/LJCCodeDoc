@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTMLBuilder.AddIndent.html -->
-<!-- Generated 4/25/2025 5:04 AM -->
+<!-- Generated 5/8/2025 3:46 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -84,17 +84,18 @@ hb.AddText("This text <span class='keyWord'>is</span> not indented.");
 hb.Text("This text <span class='keyWord'>is</span> indented.");
 
 <span class='comment'>// No Indent</span>
-<span class='commonType'>var</span> addIndent = <span class='keyWord'>false</span>;
-hb.Text("Not indented.", addIndent);
+<span class='commonType'>var</span> NoIndent = <span class='keyWord'>false</span>;
+hb.Text("Not indented.", NoIndent);
 
 <span class='comment'>// Do not start a newline.</span>
-hb.Text("No start with newline.", allowNewLine: false);
+<span class='commonType'>var</span> NoNewLine = <span class='keyWord'>false</span>;
+hb.Text(" No start with newline.", NoIndent, NoNewLine);
 <span class='commonType'>var</span> result = hb.ToString();
 
 <span class='comment'>// result:</span>
 <span class='comment'>// This text is not indented.</span>
 <span class='comment'>//   This text is indented.</span>
-<span class='comment'>// Not indented.  No start with newline.</span></pre>
+<span class='comment'>// Not indented. No start with newline.</span></pre>
             </td>
           </tr>
         </tbody>

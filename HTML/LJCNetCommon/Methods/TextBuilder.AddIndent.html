@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- TextBuilder.AddIndent.html -->
-<!-- Generated 4/25/2025 5:04 AM -->
+<!-- Generated 5/8/2025 3:46 AM -->
 <!-- Copyright (c) Lester J. Clark and Contributors -->
 <!-- Licensed under the MIT license. -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -28,7 +28,78 @@
       <div id='Title'>Method AddIndent</div>
     </div>
     <br />
-    <div class='RedText'>Missing Summary</div>
+    <div id='Title'>Parameters</div>
+    <div class='Text'>increment - 
+      The amount to increment or decrement the indent count.
+    </div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>The current indent count.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public Int32 AddIndent(Int32 increment = 1)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Changes the IndentCount by the provided value.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='comment'>// Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.</span>
+<span class='commonType'>var</span> tb = <span class='keyWord'>new</span> <span class='userType'>TextBuilder</span>();
+
+<span class='comment'>// Example Method:</span>
+<span class='comment'>// The builder keeps track of the current number of indents.</span>
+<span class='comment'>// Adds 1 indent by default.</span>
+tb.AddIndent();
+
+<span class='comment'>// Adds text without modification.</span>
+tb.AddText("This text <span class='keyWord'>is</span> not indented.");
+
+<span class='comment'>// Starts the text with a newline if the builder already has text</span>
+<span class='comment'>// and param allowNewLine = true and builder text does not end with</span>
+<span class='comment'>// a newline.</span>
+<span class='comment'>// The text begins with the current indent string if param</span>
+<span class='comment'>// addIndent = true.</span>
+<span class='comment'>// Defaults: addIndent = true, allowNewLine = true.</span>
+tb.Text("This text <span class='keyWord'>is</span> indented.");
+
+<span class='comment'>// No Indent</span>
+<span class='commonType'>var</span> addIndent = <span class='keyWord'>false</span>;
+tb.Text("Not indented.", addIndent);
+
+<span class='comment'>// Do not start a new line.</span>
+tb.Text("No start with newline.", allowNewLine: false);
+<span class='commonType'>var</span> result = tb.ToString();
+
+<span class='comment'>// result:</span>
+<span class='comment'>// This text is not indented.</span>
+<span class='comment'>//   This text is indented.</span>
+<span class='comment'>// Not Indented.  No start with newline.</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <br />
     <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
 Licensed under the MIT License.</div>
