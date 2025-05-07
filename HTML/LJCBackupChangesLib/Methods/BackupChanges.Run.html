@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- BackupChanges.Run.html -->
+<!-- Generated 5/7/2025 1:40 PM -->
+<!-- Copyright (c) Lester J. Clark and Contributors -->
+<!-- Licensed under the MIT license. -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Run</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../../CodeDoc.html#LJCBackupChangesLib">Assembly List</a>
+      / <a href="../LJCBackupChangesLib.html">LJCBackupChangesLib</a>
+      / <a href="../BackupChanges.html">BackupChanges</a>
+      / Run
+    </div>
+    <br />
+    <div id='Title'>Namespace - LJCBackupChangesLib</div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Method Run</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>targetRoot - The Target root path.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public Void Run(String targetRoot)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Applies the change commands.
+    </div>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
+        The Run() method copies files to, or deletes files from,
+        the target root folder and subfolders using a filespec based on the
+        targetRoot, each source "Changes" filespec and the startFolder
+        value.<br />
+        <br />
+        For Example:<br />
+        targetRoot = "C:\Visual Studio 2022\LJCProjects"<br />
+        sourceSpec = "C:\Visual Studio 2022\LJCProjectsDev\CoreUtilities\LJCBackupChanges\LJCBackupChanges.sln"
+        <br />
+        startFolder = "LJCProjectsDev";<br />
+        The targetRoot is combined with the remainder of the sourceSpec
+        starting after the startFolder.<br />
+        targetSpec = "C:\Visual Studio 2022\LJCProjects\CoreUtilities\LJCBackupChanges\LJCBackupChanges.sln"
+      </div>
+    <br />
+    <div class='Text'>
+        Target and source paths that do not match can be handled with the
+        startFolder entry.
+      </div>
+    <br />
+    <div class='Text'>
+        The Run() method takes the targetRoot parameter. The startFolder and
+        changesFilespec are initialized in the BackupChanges constructor.
+      </div>
+    <br />
+    <div class='Text'>
+        targetRoot - The full path to the target files root folder. The files in
+        this folder and all subfolders are the target of the backup.<br />
+      </div>
+    <br />
+    <div class='Text'>
+        changesFileSpec - The full file specification for the "Changes" file.
+      </div>
+    <br />
+    <div class='Text'>
+        startFolder - The targetFilespec is created by using the targetRoot
+        combined with the remainder of the sourceSpec starting after the
+        startFolder.
+      </div>
+    <br />
+    <div class='Text'>
+        Target and source paths that do not match can be handled with the
+        startFolder entry.<br />
+        <br />
+        Example 1: targetRoot is shorter than sourceSpec:<br />
+        targetRoot = "C:\LJCProjects"<br />
+        sourceSpec = "C:\Visual Studio 2022\LJCProjectsDev\CoreUtilities\LJCBackupChanges\LJCBackupChanges.sln"
+        <br />
+        startFolder = "LJCProjectsDev"<br />
+        targetSpec = "C:\LJCProjects\CoreUtilities\LJCBackupChanges\LJCBackupChanges.sln"
+        <br />
+        <br />
+        Example 2: targetRoot is longer than sourceSpec:<br />
+        targetRoot = "C:\Visual Studio 2022\LJCProjects"<br />
+        sourceSpec = "C:\LJCProjectsDev\CoreUtilities\LJCBackupChanges\LJCBackupChanges.sln"
+        <br />
+        startFolder = "LJCProjectsDev"<br />
+        targetSpec = "C:\Visual Studio 2022\LJCProjects\CoreUtilities\LJCBackupChanges\LJCBackupChanges.sln"
+        <br />
+      </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>C#</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'><span class='keyWord'>using</span> LJCCreateFileChangesLib;
+<span class='keyWord'>using</span> LJCBackupChangesLib;
+
+<span class='comment'>// Create parameter values.</span>
+<span class='commonType'>var</span> sourceRoot = "C:\Visual Studio 2022\LJCProjectsDev";
+<span class='commonType'>var</span> targetRoot = "C:\Visual Studio 2022\LJCProjects";
+<span class='commonType'>var</span> changesFilespec = "C:\Visual Studio 2022\LJCProjectsDev\ChangesFile.txt";
+<span class='commonType'>var</span> includeFilter = "*.cs|*.sln|*.csproj|*.Designer.cs|*.resx|*.config";
+includeFilter += "|*.cmd|*.txt|*.sql|Doc\*.xml";
+<span class='commonType'>var</span> skipFiles="?Build*.cmd|ClearBuild.cmd|UpdateAll.cmd|Build.txt";
+skipFiles += "|ChangesFile.txt|BackupLog.txt|MissingFolders.txt";
+
+<span class='comment'>// Create the "Changes" file.</span>
+<span class='commonType'>var</span> createFileChanges = <span class='keyWord'>new</span> <span class='userType'>CreateFileChanges</span>(sourceRoot, targetRoot
+, changesFileSpec, includeFilter);
+<span class='commonType'>var</span> skipList = skipFiles.Split('|').ToList&lt;string&gt;();
+createFileChanges.SkipFiles = skipList;
+createFileChanges.Run();
+        
+<span class='comment'>// Create parameter values.</span>
+<span class='commonType'>var</span> startFolder = "LJCProjectsDev";
+
+<span class='comment'>// Backup from LJCProjectsDev to LJCProjects.</span>
+<span class='commonType'>var</span> backupChanges = <span class='keyWord'>new</span> <span class='userType'>BackupChanges</span>(startFolder, changesFilespec);
+backupChanges.Run(targetRoot);</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- LJCCreateFileChanges.html -->
+<!-- Generated 5/7/2025 1:40 PM -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LJCCreateFileChanges</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <meta name="author" content="Lester J. Clark" />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../CodeDoc.html#LJCCreateFileChanges">Assembly List</a>
+      / LJCCreateFileChanges
+    </div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Assembly LJCCreateFileChanges</div>
+    </div>
+    <br />
+    <div class='Text'>
+        The backup process runs in two parts. This is done to allow the user to
+        review the proposed changes if desired before updating the target files.
+      </div>
+    <br />
+    <div class='Text'>
+        1. Run the LJCCreateFileChanges.exe program to create the "Changes"
+        file.<br />
+        2. Run the LJCBackupChanges.exe program to perform the "Copy" and
+        "Delete" messages in the "Change" file.
+      </div>
+    <br />
+    <div class='Text'>
+        The LJCCreateFileChanges.exe program's main functionality is provided in
+        the file LJCCreateFileChangesLib.dll, class CreateFileChanges.
+      </div>
+    <br />
+    <div class='Text'>
+        The LJCCreateFileChanges.exe program creates a "Changes" file with the
+        copy and delete commands for the updated files. The file commands
+        contain the source filespec.
+      </div>
+    <br />
+    <div class='Text'>
+        The program takes four required parameters and one optional parameter.
+      </div>
+    <br />
+    <div class='Text'>
+        sourceRoot - The full path to the source files root folder. The files in
+        this folder and all subfolders are available for backup.
+      </div>
+    <br />
+    <div class='Text'>
+        targetRoot - The full path to the target files root folder. The files in
+        this folder and all subfolders are the target of the backup.<br />
+        Note: Only those folders that exist in the target will be updated.This
+        is how the user controls what folders to backup. The target folders must
+        be manually created to be included in the backup. The source folders and
+        target folders must have matching names.<br />
+        This implicit approach prevents the user from having to specifically
+        list the folders that are available for backup. The MissingFolders.txt
+        file is written to show those folders that are not included.
+      </div>
+    <br />
+    <div class='Text'>
+        changesFileSpec - The full file specification for the "Changes" file.
+      </div>
+    <br />
+    <div class='Text'>
+        includeFilter - This is a list of file names that will are available for
+        backup. The file names are separated with a vertial bar and can include
+        wild cards and partial paths.
+        Example: "*.cs|Doc\*.xml" This includes all files that end with the
+        extension "cs" and all files that are in a "Doc" folder and end with the
+        extension "xml".
+      </div>
+    <br />
+    <div class='Text'>
+        skipFiles - This optional parameter is a list of files that will not be
+        changed.The file names are separated with a vertical bar and can include
+        wild cards.<br />
+        Example: "Changes*.txt|?Build*.cmd" Files matching these names will not
+        be updated or deleted.
+      </div>
+    <br />
+    <div class='Text'>
+        If the "Source" file is different from the "Target" file, then a "Copy"
+        record is written to the "Changes" file.<br />
+        If a "Source" file is missing from the "Target", then a "Copy" record is
+        written to the "Changes" file.<br />
+        If a file exists in the "Target" folder but does not exist in the
+        "Source" folder, then a "Delete" record is written to the "Changes"
+        file.
+      </div>
+          <br />
+          <div class='Title1'>Classes<br></div>
+          <table class='ListTable'>
+            <tr>
+              <td class='ListTable' width='25%'>
+                <a href='Program.html'>Program</a>
+              </td>
+              <td class='ListTable'>
+      The Create File Changes program.
+    </td>
+            </tr>
+          </table>
+    <div class='Text'>1 Types</div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- LJCBackupChanges.html -->
+<!-- Generated 5/7/2025 1:40 PM -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LJCBackupChanges</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <meta name="author" content="Lester J. Clark" />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+  <link rel='stylesheet' type='text/css' href='../../CSS/Syntax.css' />
+</head>
+<body>
+  <div class="page">
+    <br />
+    <div class="PathText">
+      / <a href="../../CodeDoc.html#LJCBackupChanges">Assembly List</a>
+      / LJCBackupChanges
+    </div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Assembly LJCBackupChanges</div>
+    </div>
+    <br />
+    <div class='Text'>
+        The backup process runs in two parts. This is done to allow the user to
+        review the proposed changes if desired before updating the target files.
+      </div>
+    <br />
+    <div class='Text'>
+        1. Run the LJCCreateFileChanges.exe program to create the "Changes"
+        file.<br />
+        2. Run the LJCBackupChanges.exe program to perform the "Copy" and
+        "Delete" messages in the "Change" file.
+      </div>
+    <br />
+    <div class='Text'>
+        The LJCBackupChanges.exe program's main functionality is provided in
+        the file LJCBackupChangesLib.dll, class BackupChanges.
+      </div>
+    <br />
+    <div class='Text'>
+        The LJCBackupChanges.exe program copies files to, or deletes files from,
+        the target root folder and subfolders using a filespec based on the
+        targetRoot, each source "Changes" filespec and the startFolder
+        value.<br />
+      </div>
+    <br />
+    <div class='Text'>
+        The program takes two required parameters.
+      </div>
+    <br />
+    <div class='Text'>
+        targetRoot - The full path to the target files root folder. The files in
+        this folder and all subfolders are the target of the backup.<br />
+        The targetRoot is considered to not have a drive identifier if the
+        targetRoot does not have a colon ":" in character position 2. In this
+        case the program will prompt the user for a drive
+        identifier.<br />
+        This is to support multiple external backup drives which may have
+        different drive identifier assignments.
+      </div>
+    <br />
+    <div class='Text'>
+        startFolder - The targetFilespec is created by using the targetRoot
+        combined with the remainder of the sourceSpec starting after the
+        startFolder.
+      </div>
+          <br />
+          <div class='Title1'>Classes<br></div>
+          <table class='ListTable'>
+            <tr>
+              <td class='ListTable' width='25%'>
+                <a href='Program.html'>Program</a>
+              </td>
+              <td class='ListTable'>
+      The Backup File Changes program.
+    </td>
+            </tr>
+          </table>
+    <div class='Text'>1 Types</div>
+    <br />
+    <div class="SmallText">Copyright &copy Lester J. Clark and Contributors.<br />
+Licensed under the MIT License.</div>
+    <br />
+  </div>
+</body>
+</html>
