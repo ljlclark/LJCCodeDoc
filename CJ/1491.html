@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<!-- Copyright (c) Lester J. Clark and Contributors. -->
+<!-- Licensed under the MIT License. -->
+<!-- 1491.html -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Page 2</title>
+  <meta name="description" content="Page 2">
+  <meta name='author' content='Lester J. Clark' />
+  <meta name='viewport' content='width=device-width initial-scale=1' />
+  <style>
+    .center {
+      text-align: center;
+    }
+  </style>
+  <script>
+    function DocumentClick(event)
+    {
+      if (event.pageY < window.innerHeight / 2)
+      {
+        window.location.href = "1489.html";
+      }
+      else
+      {
+        window.location.href = "1492.html";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="center">
+    <img src="1491.png" alt="Page 2" height="500" />
+  </div>
+  <script>
+    document.addEventListener("click", DocumentClick.bind(this));
+  </script>
+</body>
+</html>
