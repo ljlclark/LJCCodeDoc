@@ -15,15 +15,32 @@
     }
   </style>
   <script>
-    function DocumentClick(event)
+    // Handles the Document "click" event.
+    function DocumentClick(pointerEvent)
     {
-      if (event.pageY < window.innerHeight / 2)
+      if (pointerEvent.pageY < window.innerHeight / 2)
       {
         window.location.href = "1499.html";
       }
       else
       {
         window.location.href = "1501.html";
+      }
+    }
+
+    // Handles the Document "touchstart" event.
+    function DocumentTouchStart(touchEvent)
+    {
+      touchEvent.preventDefault();
+      const touch = touchEvent.targetTouches[0];
+      let view = touchEvent.view;
+      if (touch.pageY < view.innerHeight / 2)
+      {
+        view.location.href = "index.html";
+      }
+      else
+      {
+        view.location.href = "1491.html";
       }
     }
   </script>
@@ -34,7 +51,7 @@
   </div>
   <script>
     document.addEventListener("click", DocumentClick.bind(this));
-    document.addEventListener("touchstart", DocumentClick.bind(this));
+    //document.addEventListener("touchstart", DocumentTouchStart.bind(this));
   </script>
 </body>
 </html>
