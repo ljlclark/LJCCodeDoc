@@ -18,10 +18,8 @@
     // Handles the Document "click" event.
     function DocumentClick(pointerEvent)
     {
-      //const half = window.innerHeight / 2;
       const half = image.height / 2;
       text.innerText = `Click ${half}, ${pointerEvent.pageY}`;
-
       if (pointerEvent.pageY < half)
       {
       }
@@ -37,11 +35,8 @@
       touchEvent.preventDefault();
       const touch = touchEvent.targetTouches[0];
       let view = touchEvent.view;
-
-      //const half = view.innerHeight / 2;
       const half = image.height / 2;
       text.innerText = `Touch ${half}, ${touch.pageY}`;
-
       if (touch.pageY < half)
       {
       }
