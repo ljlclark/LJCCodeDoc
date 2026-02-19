@@ -18,10 +18,11 @@
     // Handles the Document "click" event.
     function DocumentClick(pointerEvent)
     {
-      const half = window.innerHeight / 2
+      //const half = window.innerHeight / 2;
+      const half = image.height / 2;
       text.innerText = `${half}, ${pointerEvent.pageY}`;
 
-      if (pointerEvent.pageY < window.innerHeight / 2)
+      if (pointerEvent.pageY < half)
       {
       }
       else
@@ -37,10 +38,11 @@
       const touch = touchEvent.targetTouches[0];
       let view = touchEvent.view;
 
-      const half = view.innerHeight / 2
+      //const half = view.innerHeight / 2;
+      const half = image.height / 2;
       text.innerText = `${half}, ${touch.pageY}`;
 
-      if (touch.pageY < view.innerHeight / 2)
+      if (touch.pageY < half)
       {
       }
       else
@@ -52,7 +54,7 @@
 </head>
 <body>
   <div class="center">
-    <img src="1489.png" alt="Page 1" height="500" />
+    <img id="image" src="1489.png" alt="Page 1" height="500" />
   </div>
   <div id="text" class="center">
   </div>
