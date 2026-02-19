@@ -18,7 +18,8 @@
     // Handles the Document "click" event.
     function DocumentClick(pointerEvent)
     {
-      if (pointerEvent.pageY < window.innerHeight / 2)
+      const half = image.height / 2;
+      if (pointerEvent.pageY < half)
       {
         window.location.href = "1491.html";
       }
@@ -27,31 +28,14 @@
         window.location.href = "1493.html";
       }
     }
-
-    // Handles the Document "touchstart" event.
-    function DocumentTouchStart(touchEvent)
-    {
-      touchEvent.preventDefault();
-      const touch = touchEvent.targetTouches[0];
-      let view = touchEvent.view;
-      if (touch.pageY < view.innerHeight / 2)
-      {
-        view.location.href = "1491.html";
-      }
-      else
-      {
-        view.location.href = "1493.html";
-      }
-    }
   </script>
 </head>
 <body>
   <div class="center">
-    <img src="1492.png" alt="Page 3" height="500" />
+    <img id="image" src="1492.png" alt="Page 3" height="500" />
   </div>
   <script>
     document.addEventListener("click", DocumentClick.bind(this));
-    document.addEventListener("touchstart", DocumentTouchStart.bind(this));
   </script>
 </body>
 </html>
